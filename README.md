@@ -26,12 +26,12 @@
 
 Se realizaron dos prototipos por cada una de las integrantes del equipo. Los prototipos simulaban pantallas de dos dispositivos: móvil y escritorio. Cada uno fue testeado (hasta dos personas por prototipo). Estos test se basaron en la técnica de guerrilla testing para poder realizar un análisis rápido y obtener feedback sobre el diseño de la interfaz. Los participantes manifestaron interés en el tema del producto (Pokémon). Después de los test se utilizaron las recomendaciones y feedback de los entrevistados para realizar un prototipo digital.
 
-Parte de los prototipos utilizados en este proceso para la primera y segunda historia de usuario, se muetran a continuación.
+Parte de los prototipos utilizados en este proceso para la primera y segunda historia de usuario, se muestran a continuación.
 
-![Alt text](./media-sources/prototipos-bajafidelidad/mobile-1.jpg "Home-mobile")
-![Alt text](./media-sources/prototipos-bajafidelidad/mobile-2.jpg "Welcome-mobile")
-![Alt text](./media-sources/prototipos-bajafidelidad/desktop-1.jpg "Home-desktop")
-![Alt text](./media-sources/prototipos-bajafidelidad/desktop-2.jpg "Welcome-desktop")
+![Alt text](./sources-media/prototipos-bajafidelidad/mobile-1.jpg "Home-mobile")
+![Alt text](./sources-media/prototipos-bajafidelidad/mobile-2.jpg "Welcome-mobile")
+![Alt text](./sources-media/prototipos-bajafidelidad/desktop-1.jpg "Home-desktop")
+![Alt text](./sources-media/prototipos-bajafidelidad/desktop-2.jpg "Welcome-desktop")
 
 ### Prototipos de alta fidelidad
 
