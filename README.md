@@ -6,11 +6,6 @@
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Historias de usuario](#3-historias-de-usuario)
 * [4. Diseño de la interfaz de usuario](#4-diseño-de-la-interfaz-de-usuario)
-* [5. Diseño de la interfaz de usuario](#5-diseño-de-la-interfaz-de-usuario)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
 
 ***
 
@@ -35,4 +30,4 @@ Parte de los prototipos utilizados en este proceso para la primera y segunda his
 
 ### Prototipos de alta fidelidad
 
-Una vez que se acordaron las recomendaciones que se incluirían en los prototipos (móvil y escritorio), se seleccionaron los elementos que formarían parte del diseño de la interfaz: paleta de colores, tipo de fuente y assets. Los prototipos fueron realizados en Figma de forma colaborativa.
+Una vez que se acordaron las recomendaciones que se incluirían en los prototipos (móvil y escritorio), se seleccionaron los elementos que formarían parte del diseño de la interfaz: paleta de colores, tipo de fuente y assets. Los prototipos fueron realizados de forma colaborativa con la herramienta Figma.
