@@ -1,0 +1,32 @@
+body {
+  width: 0px auto;
+  background: gra;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+}
+#header {
+  width: 0px auto;
+}
+
+#banner {
+  width: 100%;
+}
+
+#navContainer {
+  /* Flexbox */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ordenado {
+}
+
+#menu ul {
+  display: none;
+}
+
+#datosgral {
+}
