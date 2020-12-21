@@ -1,38 +1,54 @@
-/*import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-
-console.log(example, data);*/
-
 import data from './data/pokemon/pokemon.js';
 console.log(data.pokemon);
+//Se une la función "poke" al botón:
+document.getElementById("home-main--button").addEventListener('click', infoPrincPokemon);
+//Función "poke"
 
-const pokemonData = document.getElementById("home-main--button");
-pokemonData.addEventListener('click', showData, false);
+let namePokemon = [];
+let numberPokemon = [];
+let imgPokemon = [];
 
+function infoPrincPokemon () {
+    document.getElementById("home-main--section").style.display = 'none';
+    let allPokemon = data.pokemon;
+    for (let i = 0; i < allPokemon.length; i++){
+        namePokemon[i] = allPokemon[i].name;
+        imgPokemon[i] = allPokemon[i].img;
+        numberPokemon[i] = allPokemon[i].num;
+        let infoPokeContainer = document.createElement("div");
+        let imgPokeContainer = document.createElement("div");
+        let buttonPoke = document.createElement("button");
+        let linkPoke = document.createElement("a");
+        let imgPoke = document.createElement("img");
+        let pPoke = document.createElement("p");
+        let pokeName = document.createTextNode(namePokemon[i]);
+        let pokeNum = document.createTextNode(numberPokemon[i]);
+        infoPokeContainer.appendChild(imgPokeContainer);
+        imgPokeContainer.appendChild(buttonPoke);
+        buttonPoke.appendChild(linkPoke);
+        linkPoke.appendChild(imgPoke);
+        infoPokeContainer.appendChild(pPoke);
+        pPoke.appendChild(pokeName);
+        pPoke.appendChild(pokeNum);
+        infoPokeContainer.className = 'ind-info-pokemon-container';
+        //infoPokeContainer.idName = 'pokemon00' + numberPokemon[i];
+        imgPokeContainer.className = 'img-pokemon-container';
+        buttonPoke.className = 'button-infoPoke';
+        buttonPoke.setAttribute = ('onclick');
+        buttonPoke.onclick = function () {infoEachPoke(namePokemon[i]);};
+        imgPoke.src = imgPokemon[i];
+        document.getElementById("home-pokemon-info-container").appendChild(infoPokeContainer);
+        }
 
-let pokemonName = [];
-let pokemonImage = [];
-
-function showData () {
-    const allPokemon = data.pokemon;
-    let nameP = allPokemon[0];
-    console.log(nameP);
-    for (let i = 0; i < allPokemon.length; i++) {
-        pokemonName[i] =  allPokemon[i].name;
-        pokemonImage[i] = allPokemon[i].img;
+        function infoEachPoke (name) {
+          console.log(name);
+          let index = parseInt(namePokemon.indexOf(name));
+          console.log(typeof index);
+          /*console.log(allPokemon.name[index]);*/
+          let namePoke = allPokemon[index].name;
+          let numPoke = allPokemon[index].num;
+          let imgPoke = allPokemon[index].img;
+          console.log(namePoke + " " + numPoke + " " + imgPoke);
+          document.getElementById("home-section-info-container").style.display = 'none';
+        }
       }
-      console.log(pokemonName);
-      document.getElementById("pokemon-container").innerHTML = pokemonName;
-    }
-    
-    /*const pokemonName = allPokemon.name;
-    console.log(pokemonName);
-    for (const property in pokemonName) {
-        console.log(`${property}: ${pokemonName[property]}`);
-      }
-    /*allPokemon.forEach(function (pokemon, index) {
-        document.getElementById("pokemon-container").innerHTML += index + ":" + pokemon + "<br>";
-    });¨*/
-
