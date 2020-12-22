@@ -58,3 +58,34 @@ function infoPrincPokemon () {
           document.getElementById("home-section-info-container").style.display = 'none';
         }
       }
+
+
+
+
+// Funciones para Selects despeglables con checkboxes (Filtros)
+var expanded = false;
+
+function showCheckboxesNumber() {
+  var checkboxes = document.getElementById("checkboxesNumber");
+  if (!expanded) {
+    checkboxesNumber.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxesNumber.style.display = "none";
+    expanded = false;
+  }
+}
+document.getElementById("selectWeaknessesNumber").addEventListener('click', showCheckboxesNumber)
+
+function showCheckboxesType() {
+  var checkboxes = document.getElementById("checkboxesType");
+  if (!expanded) {
+    checkboxesType.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxesType.style.display = "none";
+    expanded = false;
+  }
+}
+
+document.getElementById("selectPokemonType").addEventListener('click',  showCheckboxesType)
