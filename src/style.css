@@ -69,16 +69,25 @@ nav {
     box-shadow: 5px 5px 10px var(--shadow-button);
 }
 
+body{
+    background-image: url('./assets/fondo-pokemon-bosque.jpg');
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    background-size: cover;
+    background-attachment: scroll;
+    
+  }
 .home-main {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    width: 100%;
+    background-color: rgb(243, 243, 243,0.5);
+    /*width: 100%;
     min-width: 400px;
     height: 100%;
-    background-image: url('./assets/fondo-intro1.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
 }
 
 .home-main--section {
@@ -215,4 +224,3 @@ nav {
         grid-template-columns: 1fr 1fr;
     }
 }
-
