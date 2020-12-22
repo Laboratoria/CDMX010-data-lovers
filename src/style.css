@@ -31,7 +31,7 @@ html{
 }*/
 
 header {
-    position: relative;
+    /*position: relative;*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
@@ -42,7 +42,7 @@ header {
 
 nav {
     grid-column-start: 2;
-    grid-column: 3;
+    grid-column-end: 3;
     display: grid;
 }
 
