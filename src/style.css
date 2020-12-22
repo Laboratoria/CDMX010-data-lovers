@@ -42,7 +42,7 @@ header {
 
 nav {
     grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column: 3;
     display: grid;
 }
 
@@ -70,14 +70,14 @@ nav {
 }
 
 body{
-    background-image: url('./assets/fondo-pokemon-bosque.jpg');
-    background-repeat: no-repeat;
     height: 100%;
     margin: 0;
+    background-image: url('./assets/fondo-pokemon-bosque.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    
-  }
+}
+
 .home-main {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
@@ -150,28 +150,30 @@ body{
     box-shadow: 5px 5px 10px var(--shadow-button);
 }
 
-
-
 .home-section-info-container {
-    grid-column-start: 2;
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    align-items: center;
+    justify-items: center;
 }
 
 .home-pokemon-info-container {
-    width: 100%;
-    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 6;
+    width: 100%;
+    height: 100%;
 }
 
 .ind-info-pokemon-container {
     display: inline-grid;
-    /*width: 15%;
-    height: 24%;*/
     width: 210px;
     height: 230px;
     margin: 10%;
-    /*grid-row-gap: 10%;
-    grid-column-gap: 10%;*/
     background-color: var(--secondary-blue);
     border-radius: 5px;
 }
@@ -224,3 +226,44 @@ body{
         grid-template-columns: 1fr 1fr;
     }
 }
+
+.home-section-info-container figure {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+.home-section-info-container figure img {
+    position: relative;
+    top: 20%;
+    width: 350px;
+    /*agregado*/
+}
+
+.main-order-container {
+    /*position: fixed;
+    left: 50%;
+    top: 25%;*/
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: 100px;
+    height: 100px;
+    background-color: #66c210;
+}
+.main-filter-container {
+    /*position: fixed;
+    top: 50%;
+    left: 15%;*/
+    align-self: flex-start;
+    grid-column-start: 1;
+    grid-row: 4;
+    width: 100px;
+    height: 100px;
+    background-color: #c26010;
+}
+
