@@ -3,6 +3,9 @@ console.log(data.pokemon);
 //Se une la función "poke" al botón:
 document.getElementById("home-main--button").addEventListener('click', infoPrincPokemon);
 //Función "poke"
+document.getElementById("main-logo-container").style.display = 'none';
+document.getElementById("main-order-container").style.display = 'none';
+document.getElementById("main-filter-container").style.display = 'none';
 
 let namePokemon = [];
 let numberPokemon = [];
@@ -10,6 +13,9 @@ let imgPokemon = [];
 
 function infoPrincPokemon () {
     document.getElementById("home-main--section").style.display = 'none';
+    document.getElementById("main-logo-container").style.display = 'block';
+    document.getElementById("main-order-container").style.display = 'block';
+    document.getElementById("main-filter-container").style.display = 'block';
     let allPokemon = data.pokemon;
     for (let i = 0; i < allPokemon.length; i++){
         namePokemon[i] = allPokemon[i].name;
