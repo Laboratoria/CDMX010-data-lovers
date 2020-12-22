@@ -31,7 +31,7 @@ function infoPrincPokemon () {
         pPoke.appendChild(pokeName);
         pPoke.appendChild(pokeNum);
         infoPokeContainer.className = 'ind-info-pokemon-container';
-        //infoPokeContainer.idName = 'pokemon00' + numberPokemon[i];
+        /*infoPokeContainer.idName = 'pokemon00' + numberPokemon[i];*/
         imgPokeContainer.className = 'img-pokemon-container';
         buttonPoke.className = 'button-infoPoke';
         buttonPoke.setAttribute = ('onclick');
