@@ -1,32 +1,66 @@
 body {
-  width: 0px auto;
-  background: gra;
-}
-
-#container {
   display: flex;
-  flex-direction: column;
-}
-#header {
   width: 0px auto;
 }
 
-#banner {
-  width: 100%;
-}
-
-#navContainer {
-  /* Flexbox */
-  display: flex;
+header {
+  width: 0px auto;
+  height: 35%;
+  background-color: black;
+  text-align: center;
+  color: blanchedalmond;
+  font-size: larger;
+  font-family: "Schoolbell", cursive;
+  display: flexbox;
   flex-wrap: wrap;
 }
 
-ordenado {
+#menu {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background-color: yellow;
+  left: -200px;
+  transition: all 500ms linear;
 }
 
-#menu ul {
-  display: none;
+#menu.desplazar {
+  left: 0;
 }
 
-#datosgral {
+#menu ul li {
+  color: rgba(20, 16, 16, 0.856);
+  text-align: center;
+  list-style: none;
+  padding: 15px 10px;
+  border-bottom: 1px solid rgb(100, 100, 100, 0.3);
+}
+
+#menu ul li :hover {
+  color: blue;
+}
+#menu .icono {
+  position: absolute;
+  left: 230px;
+  top: 20px;
+  cursor: pointer;
+}
+
+#menu .icono img {
+  display: block;
+  width: 40px;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid rgba(20, 16, 16, 0.856);
+}
+
+section {
+  margin-left: 300px;
+  width: 500px;
+  display: inline-block;
+  text-align: center;
+}
+
+table {
+  text-align: center;
 }

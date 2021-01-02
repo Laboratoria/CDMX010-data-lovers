@@ -1,62 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+</head>
 
 <body>
-	<div id="container">
-		<div id="header">
-			<header>
-				<img id="banner" src="bannerTitulo.png" alt="">
-      </header>
-    </div>
-    
-		<div id="navContainer">
-      <nav >
-        <div id="menu">
-          <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAExJREFUSEtjZKAxYKSx+QyjFhAM4QEJov8EnYVfAYqjsfmA5hZQ6AFU7QMSBzT3Ac3jgOYW0DyIhr4FNI8Dmlsw9ONg1AcoIUDz0hQAbegGGXzv/l0AAAAASUVORK5CYII="/>
-          <ul>
-            <li>filtro 1</li>
-              <ul>
-                <li>filtro 1.1</li>
-                <li>filtro 1.2</li>
-                <li>filtro 1.3</li>
-              </ul>
-            <li>filtro 2</li>
-              <ul>
-                <li>filtro 2.1</li>
-                <li>filtro 2.2</li>
-                <li>filtro 2.3</li>
-              </ul>
-            <li>filtro 3</li>
-              <ul>
-                <li>filtro 3.1</li>
-                <li>filtro 3.2</li>
-                <li>filtro 3.3</li>
-              </ul>
-          </ul>
+  <header>
+    <h1>RICK AND MORTY</h1>
+  </header>
+  <main>
+    <div class="container">
+      <nav id="menu">
+        <div class="icono">
+          <img src="./icons/bars-solid.svg" />
         </div>
-        <div id="ordenado">
-          <input width="300px"></inpu>
-        </div>
+        <ul>
+          <li> <a href=>Localidad</a>
+            <ul>
+              <li id="1">Tierra </li>
+              <li id="1">Otro lugar</li>
+            </ul>
+          </li>
+          <li> <a href="">Genero</a>
+            <ul>
+              <li>Masculino</li>
+              <li>Femenino</li>
+            </ul>
+          </li>
+          <li> <a href="">Especie</a>
+            <ul>
+              <li>Humano</li>
+              <li>Alien</li>
+            </ul>
+          </li>
+        </ul>
       </nav>
-    </div>
 
-    <div id="datosgral">
-      <section>
-        <div id="filtro1">
-          <h1> PERSONAJES PRINCIPALES </h1>
-  
-        </div>
-      </section>
-    </div>
+      <h2>Data de Rick and morty</h2>
 
-  </div>
-  
-    <script src="main.js" type="module"></script>
-  </body>
+      <section id="grid"></section>
+    </div>
+  </main>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
