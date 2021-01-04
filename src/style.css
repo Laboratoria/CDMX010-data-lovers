@@ -1,66 +1,47 @@
 body {
-  display: flex;
-  width: 0px auto;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-  width: 0px auto;
-  height: 35%;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 70px;
   background-color: black;
-  text-align: center;
-  color: blanchedalmond;
-  font-size: larger;
-  font-family: "Schoolbell", cursive;
-  display: flexbox;
-  flex-wrap: wrap;
-}
-
-#menu {
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  width: 200px;
-  height: 100%;
-  background-color: yellow;
-  left: -200px;
-  transition: all 500ms linear;
-}
-
-#menu.desplazar {
+  top: 0;
   left: 0;
 }
-
-#menu ul li {
-  color: rgba(20, 16, 16, 0.856);
-  text-align: center;
-  list-style: none;
-  padding: 15px 10px;
-  border-bottom: 1px solid rgb(100, 100, 100, 0.3);
+header img {
+  height: 100%;
+  max-width: 80%;
 }
-
-#menu ul li :hover {
-  color: blue;
-}
-#menu .icono {
+.menu {
+  height: 50%;
   position: absolute;
-  left: 230px;
-  top: 20px;
-  cursor: pointer;
+  left: 10px;
 }
-
-#menu .icono img {
+nav {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+}
+nav .filtros {
+  background-color: sandybrown;
+  width: 60%;
+  height: 100%;
   display: block;
-  width: 40px;
-  text-align: center;
-  font-size: 30px;
-  border: 1px solid rgba(20, 16, 16, 0.856);
+  max-width: 250px;
+  display: none;
 }
 
-section {
-  margin-left: 300px;
-  width: 500px;
-  display: inline-block;
-  text-align: center;
-}
-
-table {
-  text-align: center;
+main {
+  margin-top: 40%;
+  display: flex;
 }

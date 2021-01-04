@@ -1,4 +1,4 @@
-import { example } from "./data.js";
+import { humans } from "./data.js";
 
 // import data from './data/lol/lol.js';
 //import data from "./data/pokemon/pokemon.js";
@@ -20,11 +20,28 @@ function templateCard(props) {
 
 let templateCards = "";
 const characters = data.results;
-for (let i = 0, len = characters.length; i < len; i++) {
-  templateCards += templateCard(characters[i]);
-}
+characters.forEach((character) => {
+  templateCards += templateCard(character);
+});
 
 document.getElementById("grid").innerHTML = templateCards;
+/*
+let human = "";
+for (let i = 0; i < characters.length; i++) {
+  if (characters[i].species === "Human") human.push(characters[i]);
+}
+
+const isHuman = function (character) {
+  return character.species === "Human";
+};
+//let human = characters.filter(isHuman);
+*/
+
+const human = characters.filter(function (characters) {
+  return characters.species === "Human";
+});
+
+console.log(human);
 
 // const btnMenu = document.querySelector(".icono");
 // btnMenu.addEventListener("click", function () {

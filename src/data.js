@@ -1,7 +1,7 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
-  return "example";
+export const humans = () => {
+  return;
 };
 
 export const anotherExample = () => {
