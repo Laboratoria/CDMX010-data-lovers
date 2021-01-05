@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <header>
-      <img class="menu" src="./icons/bars-solid.svg" />
-      <img src="./imagen/bannerTitulo.png" alt="">
+      <img class="menu" id="menu" src="./icons/bars-solid.svg" />
+      <img src="./imagen/bannerTitulo.png" alt="" />
     </header>
 
-    <nav>
-    <div class="filtros"></div>
+    <nav id="menus" class="menus">
+      <div class="filtros">
+        <ul>
+          <li><a href="#">Localidad</a></li>
+          <li><a href="#">Genero</a></li>
+          <li><a href="#">Especie</a></li>
+        </ul>
+      </div>
     </nav>
-
     <main>
-        <div id="data"></div>
+      <div id="data"></div>
     </main>
 
-  <script src="main.js" type="module"></script>
+    <script src="main.js" type="module"></script>
   </body>
-
 </html>

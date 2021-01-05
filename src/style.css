@@ -44,43 +44,43 @@ main {
   margin-top: 10%;
   display: flex;
 }
+/* Estilos del menu*/
+
 /*ESTILOS DE LAS CARDS*/
-#data{
+#data {
   /*background-color: red;se quita*/
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.cards{
-  display: flex;  
-  padding: 25px; 
+.cards {
+  display: flex;
+  padding: 25px;
   /*background-color:pink ;se quita*/
 }
-.card{
-  background-color: #07B0CE;  
- box-shadow: 0 0 10px rgba(0,0,0,18);
-
+.card {
+  background-color: #07b0ce;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 18);
 }
-.card-image{
+.card-image {
   display: flex;
   justify-content: center;
 }
 
-.card-image img{
+.card-image img {
   width: 65%;
   display: block;
   border: 5px solid #fff;
   margin-top: 1em;
 }
-.details p{
+.details p {
   color: #ffff;
   padding-left: 2em;
   font-size: 16px;
   margin-top: -10px;
 }
-.details h2{
-  color:#F0F035;
+.details h2 {
+  color: #f0f035;
   text-align: center;
   margin-top: -20px;
-
 }
