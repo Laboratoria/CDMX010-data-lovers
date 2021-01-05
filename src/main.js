@@ -1,30 +1,28 @@
-import { humans } from "./data.js";
+import { human, templateCards } from "./data.js";
 
 // import data from './data/lol/lol.js';
 //import data from "./data/pokemon/pokemon.js";
 import data from "./data/rickandmorty/rickandmorty.js";
 
-function templateCard(props) {
-  return `<div class="card" data-id="${props.id}">
-    <div class="card-image">
-      <img src="${props.image}" />
-    </div>
-    <p class="card-name">${props.name}</p>
-    <p class="card-status">${props.status}</p>
-    <p class="card-specie">${props.species}</p>
-    <p class="card-origin">${props.origin.name}</p>
-    <p class="card-gender">${props.gender}</p>
-    <p class="card-location">${props.location.name}</p>
-  </div>`;
-}
+export const characters = data.results;
 
-let templateCards = "";
-const characters = data.results;
-characters.forEach((character) => {
-  templateCards += templateCard(character);
-});
+//const human = characters.filter((character) => character.species === "Human");
 
+//document.getElementById("grid").innerHTML = human;
 document.getElementById("grid").innerHTML = templateCards;
+
+//boton y funcionalidad del menu
+
+let menu = document.getElementById("menu");
+function showMenu() {
+  let menus = document.getElementById("menus");
+}
+menu.addEventListener("click", showMenu);
+if (menus.classList.cotains("menus")) {
+  console.log("mostrar");
+} else {
+  console.log("ocultar");
+}
 /*
 let human = "";
 for (let i = 0; i < characters.length; i++) {
@@ -37,13 +35,4 @@ const isHuman = function (character) {
 //let human = characters.filter(isHuman);
 */
 
-const human = characters.filter(function (characters) {
-  return characters.species === "Human";
-});
-
 console.log(human);
-
-// const btnMenu = document.querySelector(".icono");
-// btnMenu.addEventListener("click", function () {
-//   document.getElementById("menu").classList.toggle("desplazar");
-// });

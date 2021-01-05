@@ -8,39 +8,82 @@ header {
   display: flex;
   width: 100%;
   height: 70px;
-  background-color: black;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
   left: 0;
+  background-color: black;
 }
 header img {
   height: 100%;
   max-width: 80%;
 }
 .menu {
-  height: 50%;
+  height: 30%;
   position: absolute;
   left: 10px;
+}
+
+.menus {
+  display: none;
+}
+.menus {
+  display: block;
 }
 nav {
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  top: 0;
+  top: 55px;
   left: 0;
 }
 nav .filtros {
-  background-color: sandybrown;
-  width: 60%;
+  /*outline: 1px solid red;*/
+  background-color: rgb(224, 211, 21);
+  width: 100%;
   height: 100%;
   display: block;
   max-width: 250px;
-  display: none;
 }
 
+ul {
+  display: block;
+  /*outline: 1px solid blue;*/
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  height: 70px;
+}
+
+li {
+  display: block;
+  /*outline: 1px solid aqua;*/
+  margin-left: 0;
+  width: 100%;
+  padding: 0;
+  height: 100%;
+  line-height: 65px;
+  text-align: center;
+}
+
+a {
+  /*outline: 1px solid violet;*/
+  display: block;
+  height: 100%;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  background: #498b13;
+  color: aliceblue;
+}
+
+a:active {
+  background: aqua;
+}
 main {
   margin-top: 40%;
   display: flex;
