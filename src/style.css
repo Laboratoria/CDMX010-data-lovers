@@ -4,10 +4,10 @@ body {
 }
 
 header {
-  position: relative;
+  position: absolute;
   display: flex;
   width: 100%;
-  height: 70px;
+  height: 100px;
   background-color: black;
   justify-content: center;
   align-items: center;
@@ -28,8 +28,7 @@ nav {
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  top: 0;
+  /*background-color: rgba(0, 0, 0, 0.7);*/
   left: 0;
 }
 nav .filtros {
@@ -42,6 +41,46 @@ nav .filtros {
 }
 
 main {
-  margin-top: 40%;
+  margin-top: 10%;
   display: flex;
+}
+/*ESTILOS DE LAS CARDS*/
+#data{
+  /*background-color: red;se quita*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cards{
+  display: flex;  
+  padding: 25px; 
+  /*background-color:pink ;se quita*/
+}
+.card{
+  background-color: #07B0CE;  
+ box-shadow: 0 0 10px rgba(0,0,0,18);
+
+}
+.card-image{
+  display: flex;
+  justify-content: center;
+}
+
+.card-image img{
+  width: 65%;
+  display: block;
+  border: 5px solid #fff;
+  margin-top: 1em;
+}
+.details p{
+  color: #ffff;
+  padding-left: 2em;
+  font-size: 16px;
+  margin-top: -10px;
+}
+.details h2{
+  color:#F0F035;
+  text-align: center;
+  margin-top: -20px;
+
 }
