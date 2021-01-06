@@ -6,6 +6,16 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Schoolbell&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap"
       rel="stylesheet"
@@ -14,21 +24,38 @@
 
   <body>
     <header>
-      <img class="menu" id="menu" src="./icons/bars-solid.svg" />
+      <img class="menu" id="btn" src="./icons/bars-solid.svg" />
       <img src="./imagen/bannerTitulo.png" alt="" />
     </header>
-
-    <nav id="menus" class="menus">
+    <nav id="nav" class="ocultar-menus">
       <div class="filtros">
-        <ul>
-          <li><a href="#">Localidad</a></li>
-          <li><a href="#">Genero</a></li>
-          <li><a href="#">Especie</a></li>
+        <ul class="elemts">
+          <li class="tipos">
+            Especie <img src="icons/angle-down-solid.svg" />
+            <ul class="hide-menu">
+              <li id="humans">humano</li>
+              <li id="aliens">alien</li>
+            </ul>
+          </li>
+          <li class="tipos">
+            Género<img src="icons/angle-down-solid.svg" />
+            <ul class="hide.menu">
+              <li id="male">Masculino</li>
+              <li id="female">Femenino</li>
+            </ul>
+          </li>
+          <li class="tipos">
+            Localidad<img src="icons/angle-down-solid.svg" />
+            <ul class="hide-menu">
+              <li id="earth">Tierra</li>
+              <li id="unknown">Desconocido</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </nav>
     <main>
-      <div id="data"></div>
+      <section id="data"></section>
     </main>
 
     <script src="main.js" type="module"></script>

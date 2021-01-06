@@ -1,32 +1,51 @@
-import { humans } from "./data.js";
-
 import data from "./data/rickandmorty/rickandmorty.js";
+import { filterHumans, templateCard, filterAliens } from "./data.js";
 
-function templateCard(props) {
-  return `<div class="cards" data-id="${props.id}">
-    <div class="card" >
-      <div class="card-image">
-        <img src="${props.image}" />
-      </div>
-      <div class="details">
-        <p class="card-name"><h2>${props.name}</h2></p>
-        <p class="card-status">Estatus: ${props.status}</p>
-        <p class="card-specie">Especie: ${props.species}</p>
-        <p class="card-origin">Origen: ${props.origin.name}</p>
-        <p class="card-gender">Genero: ${props.gender}</p>
-      </div>
-    </div>
-  </div>`;
+//recibe listado de los personajes
+function renderCards(list) {
+  let elements = "";
+  //construye los HTML
+  list.forEach((character) => {
+    elements += templateCard(character);
+  });
+  document.getElementById("data").innerHTML = elements;
+}
+//renderiza todos
+renderCards(data.results);
+
+//boton y funcionalidad del menu
+
+let btn = document.getElementById("btn");
+function showMenu() {
+  let menu = document.getElementById("nav");
+  if (menu.classList.contains("ocultar-menus")) {
+    menu.classList.remove("ocultar-menus");
+    menu.classList.add("mostrar-menus");
+  } else {
+    menu.classList.add("ocultar-menus");
+    menu.classList.remove("mostrar-menus");
+  }
 }
 
-
-let templateCards = "";
-const characters = data.results;
-const human = characters.filter(function (character) {
-  return character.species === "Human";
+btn.addEventListener("click", showMenu);
+//filtrado de humanos
+const btnHumans = document.getElementById("humans");
+//filtrar humanos del arreglo original
+btnHumans.addEventListener("click", function () {
+  const humans = filterHumans(data.results);
+  renderCards(humans);
 });
-human.forEach((character) => {
-  templateCards += templateCard(character);
+//filtrado de aliens
+const btnAliens = document.getElementById("aliens");
+btnAliens.addEventListener("click", function () {
+  const aliens = filterAliens(data.results);
+  renderCards(aliens);
 });
 
-document.getElementById("data").innerHTML = templateCards;
+// mostrar submenu
+/*let tiposFiltros = document.getElementsByClassName("tipos");
+for (let i = 0; i < tiposFiltros.length; i++) {
+  tiposFiltros[i].addEventListener("click", mostrarFiltros);
+}
+function mostrarFiltros() {}
+*/

@@ -14,37 +14,114 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  background-color: black;
 }
 header img {
   height: 100%;
   max-width: 80%;
 }
+
 .menu {
-  height: 50%;
+  height: 30%;
   position: absolute;
   left: 10px;
+  cursor: pointer;
 }
+.menu:hover {
+  background: rgba(44, 43, 43, 0.568);
+}
+/*Estilos del menu*/
 nav {
+  /*outline: 3px solid greenyellow;*/
   position: fixed;
   height: 100%;
+  margin-top: 36px;
   width: 100%;
-  /*background-color: rgba(0, 0, 0, 0.7);*/
+  background-color: rgba(0, 0, 0, 0.7);
   left: 0;
 }
-nav .filtros {
-  background-color: sandybrown;
-  width: 60%;
+.filtros {
+  /*outline: 1px solid red;*/
+  margin-top: -18px;
+  background-color: #f0f035;
+  width: 100%;
   height: 100%;
   display: block;
   max-width: 250px;
+}
+
+.mostrar-menus {
+  display: block;
+}
+
+.ocultar-menus {
   display: none;
+}
+ul.elements {
+  display: block;
+  border: 2px solid rgb(6, 7, 1);
+  list-style: none;
+  padding: 10px;
+  margin-left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.elemts li {
+  display: block;
+  /*outline: 1px solid aqua;*/
+  margin-left: -37px;
+  padding: 10px;
+  height: 100%;
+  line-height: 6opx;
+  text-align: left;
+  border: 1px solid rgba(175, 175, 172, 0.432);
+  font-family: "Schoolbell", cursive;
+  text-decoration: none;
+  color: rgb(10, 10, 10);
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.filtro-menu {
+  width: 25px;
+  height: 25px;
+  padding-top: 20px;
+  padding-right: 15px;
+  color: #fff;
+}
+
+ul li img {
+  width: auto;
+  height: 30px;
+  color: #fff;
+  padding-top: 15px;
+  padding-left: 20px;
+}
+#subm {
+  /*outline: 2px solid chocolate;*/
+  display: inline-block;
+  width: 93%;
+  height: 100%;
+  margin-left: -16px;
+}
+
+.submenu li {
+  background-color: rgb(104, 128, 172);
+}
+
+li:hover {
+  background: #07b0ce;
+  color: #fff;
+}
+li:active {
+  background: green;
 }
 
 main {
   margin-top: 10%;
   display: flex;
 }
-/* Estilos del menu*/
 
 /*ESTILOS DE LAS CARDS*/
 #data {
@@ -78,9 +155,11 @@ main {
   padding-left: 2em;
   font-size: 16px;
   margin-top: -10px;
+  font-family: "Coming Soon", cursive;
 }
 .details h2 {
   color: #f0f035;
   text-align: center;
-  margin-top: -20px;
+  margin-top: -17px;
+  font-family: "Schoolbell", cursive;
 }
