@@ -61,6 +61,7 @@ function infoPrincPokemon () {
         }
       }
 
+
 let expanded = false;
 
 function showCheckboxesNumber() {
