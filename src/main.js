@@ -59,14 +59,27 @@ function infoPrincPokemon () {
           let imgPoke = allPokemon[index].img;
           let typePoke = allPokemon[index].type;
           let rarityPoke = allPokemon[index]["pokemon-rarity"];
+          ///////Variables para Debilidades
           let resistantPoke = allPokemon[index].resistant;
+          console.log(resistantPoke);
+          let numberResistantPoke= resistantPoke.length;
+          console.log(numberResistantPoke);
+          let resistantPokemon = [];
+          let pResistant = [];
+          let nodeResistant =[];
+          ///////Variables para Debilidades
           let weaknessesPoke = allPokemon[index].weaknesses;
+          console.log(weaknessesPoke);
+          let numberWeaknessesPoke= weaknessesPoke.length;
+          console.log(numberWeaknessesPoke);
+          let weaknessesPokemon = [];
+          let pWeaknesses = [];
+          let nodeWeaknesses =[];
+          ///////Variables para Peso y Altura
           let sizePoke= allPokemon[index].size; 
-          console.log(sizePoke);
           let weightPoke = sizePoke.weight;
-          console.log(weightPoke);
           let heightPoke = sizePoke.height;
-          console.log(heightPoke);
+          
           /////////////////////////////////////////////////////////////////////
           //Ficha Técnica
           document.getElementById("data-sheet-container").style.display = 'block';
@@ -170,13 +183,29 @@ function infoPrincPokemon () {
           dataSheetResistantContainer.appendChild(h3PokeResistant);
           dataSheetResistantContainer.appendChild(pPokeResistant);
           h3PokeResistant.appendChild(resistantTitle);
-          pPokeResistant.appendChild(dataSheetResistant);
+          //pPokeResistant.appendChild(dataSheetResistant);
+          for (let i = 0; i < numberResistantPoke; i++){
+            resistantPokemon[i]= resistantPoke[i];
+            pResistant[i] = document.createElement('p');
+            nodeResistant[i] = document.createTextNode(resistantPokemon[i]);
+            console.log(resistantPokemon[i]);
+            dataSheetResistantContainer.appendChild(pResistant[i]);
+            pResistant[i].appendChild(nodeResistant[i]);
+          }
           //Debilidades
           dataSheetBodySection1.appendChild(dataSheetWeaknessesContainer);
           dataSheetWeaknessesContainer.appendChild(h3PokeWeaknesses);
           dataSheetWeaknessesContainer.appendChild(pPokeWeaknesses);
           h3PokeWeaknesses.appendChild(weaknessesTitle);
-          pPokeWeaknesses.appendChild(dataSheetWeaknesses);
+          //pPokeWeaknesses.appendChild(dataSheetWeaknesses);
+          for (let i = 0; i < numberWeaknessesPoke; i++){
+            weaknessesPokemon[i]= weaknessesPoke[i];
+            pWeaknesses[i] = document.createElement('p');
+            nodeWeaknesses[i] = document.createTextNode(weaknessesPokemon[i]);
+            console.log(weaknessesPokemon[i]);
+            dataSheetWeaknessesContainer.appendChild(pWeaknesses[i]);
+            pWeaknesses[i].appendChild(nodeWeaknesses[i]);
+          }
           //AppendChilds Secciones del Data Sheet Body Section1
           dataSheetBodySection2.appendChild(physicalDataContainer);
           physicalDataContainer.appendChild(h4PokeWeight); 
