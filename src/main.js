@@ -1,23 +1,24 @@
+
 import data from './data/pokemon/pokemon.js';
 console.log(data.pokemon);
 //Se une la función "poke" al botón:
 document.getElementById("home-main--button").addEventListener('click', infoPrincPokemon);
 //Función "poke"
 document.getElementById("main-logo-container").style.display = 'none';
-document.getElementById("main-order-container").style.display = 'none';
 document.getElementById("main-filter-container").style.display = 'none';
+
 
 let namePokemon = [];
 let numberPokemon = [];
 let imgPokemon = [];
 
 function infoPrincPokemon () {
-    document.getElementById("home-main--section").style.display = 'none';
-    document.getElementById("main-logo-container").style.display = 'block';
-    document.getElementById("main-order-container").style.display = 'block';
-    document.getElementById("main-filter-container").style.display = 'block';
+    document.getElementById("home-main-section--welcome").style.display = 'none';
+    document.getElementById("home-main-section--img").style.display = 'none';
+    document.getElementById("main-logo-container").style.display = 'flex';
+    document.getElementById("main-filter-container").style.display = 'flex';
     let allPokemon = data.pokemon;
-    for (let i = 0; i < allPokemon.length; i++){
+    for (let i = 0; i < allPokemon.length; i++) {
         namePokemon[i] = allPokemon[i].name;
         imgPokemon[i] = allPokemon[i].img;
         numberPokemon[i] = allPokemon[i].num;
@@ -26,19 +27,21 @@ function infoPrincPokemon () {
         let buttonPoke = document.createElement("button");
         let linkPoke = document.createElement("a");
         let imgPoke = document.createElement("img");
+        let divpPoke = document.createElement("div");
         let pPoke = document.createElement("p");
-        let pokeName = document.createTextNode(namePokemon[i]);
+        let pokeName = document.createTextNode(namePokemon[i] + " ");
         let pokeNum = document.createTextNode(numberPokemon[i]);
         infoPokeContainer.appendChild(imgPokeContainer);
         imgPokeContainer.appendChild(buttonPoke);
         buttonPoke.appendChild(linkPoke);
         linkPoke.appendChild(imgPoke);
-        infoPokeContainer.appendChild(pPoke);
+        infoPokeContainer.appendChild(divpPoke);
+        divpPoke.appendChild(pPoke);
         pPoke.appendChild(pokeName);
         pPoke.appendChild(pokeNum);
         infoPokeContainer.className = 'ind-info-pokemon-container';
-        /*infoPokeContainer.idName = 'pokemon00' + numberPokemon[i];*/
         imgPokeContainer.className = 'img-pokemon-container';
+        divpPoke.className = 'text-pokemon-container';
         buttonPoke.className = 'button-infoPoke';
         buttonPoke.setAttribute = ('onclick');
         buttonPoke.onclick = function () {infoEachPoke(namePokemon[i]);};
@@ -50,7 +53,6 @@ function infoPrincPokemon () {
           console.log(name);
           let index = parseInt(namePokemon.indexOf(name));
           console.log(typeof index);
-          /*console.log(allPokemon.name[index]);*/
           let namePoke = allPokemon[index].name;
           let numPoke = allPokemon[index].num;
           let imgPoke = allPokemon[index].img;
@@ -58,3 +60,31 @@ function infoPrincPokemon () {
           document.getElementById("home-section-info-container").style.display = 'none';
         }
       }
+
+let expanded = false;
+
+function showCheckboxesNumber() {
+  let checkboxes = document.getElementById("checkboxesNumber");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+}
+
+document.getElementById("selectWeaknessesNumber").addEventListener('click', showCheckboxesNumber);
+
+function showCheckboxesType() {
+  let checkboxes = document.getElementById("checkboxesType");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+      checkboxes.style.display = "none";
+      expanded = false;
+    }
+}
+
+document.getElementById("selectPokemonType").addEventListener('click',  showCheckboxesType);
