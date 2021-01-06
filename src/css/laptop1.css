@@ -1,0 +1,21 @@
+
+.home-main-section--img {
+    display: flex;
+    align-items: flex-end;
+    justify-items: center;
+}
+
+.home-main-section--img figure {
+    justify-self: center;
+    width: auto;
+}
+
+.home-main-section--img figure img {
+    width: 150%;
+    margin-bottom: 50%;
+    margin-left: 10%;
+}
+
+
+
+
