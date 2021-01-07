@@ -14,18 +14,52 @@ function renderCards(list) {
 renderCards(data.results);
 
 //boton y funcionalidad del menu
+const drop_btn = document.querySelector(".drop-menu");
+const menu_wrapper = document.querySelector(".wrapper");
+const menu_bar = document.querySelector(".menu-bar");
+const specie_drop = document.querySelector(".specie-drop");
+const gender_drop = document.querySelector(".gender-drop");
+const location_drop = document.querySelector(".location-drop");
+const species_items = document.querySelector(".species-items");
+const gender_items = document.querySelector(".gender-items");
+const location_items = document.querySelector(".location-items");
+const back_species = document.querySelector(".back-species");
+const back_gender = document.querySelector(".back-gender");
+const back_location = document.querySelector(".back-location");
+drop_btn.onclick = () => {
+  menu_wrapper.classList.toggle("show");
+};
+species_items.onclick = () => {
+  menu_bar.style.marginLeft = "-400px";
+  setTimeout(() => {
+    specie_drop.style.display = "block";
+  }, 100);
+};
+gender_items.onclick = () => {
+  menu_bar.style.marginLeft = "-400px";
+  setTimeout(() => {
+    gender_drop.style.display = "block";
+  }, 100);
+};
+location_items.onclick = () => {
+  menu_bar.style.marginLeft = "-400px";
+  setTimeout(() => {
+    location_drop.style.display = "block";
+  }, 100);
+};
+back_species.onclick = () => {
+  menu_bar.style.marginLeft = "0px";
+  specie_drop.style.display = "none";
+};
+back_gender.onclick = () => {
+  menu_bar.style.marginLeft = "0px";
+  gender_drop.style.display = "none";
+};
+back_location.onclick = () => {
+  menu_bar.style.marginLeft = "0px";
+  location_drop.style.display = "none";
+};
 
-let btn = document.getElementById("btn");
-function showMenu() {
-  let menu = document.getElementById("nav");
-  if (menu.classList.contains("ocultar-menus")) {
-    menu.classList.remove("ocultar-menus");
-    menu.classList.add("mostrar-menus");
-  } else {
-    menu.classList.add("ocultar-menus");
-    menu.classList.remove("mostrar-menus");
-  }
-}
 btn.addEventListener("click", showMenu);
 
 //filtrado de humanos
@@ -42,10 +76,4 @@ btnAliens.addEventListener("click", function () {
   renderCards(aliens);
 });
 
-// mostrar submenu
-/*let tiposFiltros = document.getElementsByClassName("tipos");
-for (let i = 0; i < tiposFiltros.length; i++) {
-  tiposFiltros[i].addEventListener("click", mostrarFiltros);
-}
 function mostrarFiltros() {}
-*/

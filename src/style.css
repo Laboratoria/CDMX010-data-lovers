@@ -4,128 +4,117 @@ body {
 }
 
 header {
-  position: absolute;
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   height: 70px;
   background-color: black;
-  justify-content: center;
+  /*justify-content: center;*/
   align-items: center;
   position: fixed;
   top: 0;
   left: 0;
+  background-color: rgb(88, 212, 50);
+}
+.div-img-banner {
   background-color: black;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
 }
 header img {
-  height: 100%;
-  max-width: 80%;
+  height: 70px;
+  max-width: 95%;
 }
+/*ESTILO DEL NAV (MENU)*/
 
-.menu {
-  height: 30%;
+nav .drop-menu {
+  width: 400px;
+  background: #242526;
+  color: #b0b3b8;
+  padding: 0 10px;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 50px;
+  border-radius: 5px;
+}
+nav .wrapper {
   position: absolute;
-  left: 10px;
-  cursor: pointer;
-}
-.menu:hover {
-  background: rgba(44, 43, 43, 0.568);
-}
-/*Estilos del menu*/
-nav {
-  /*outline: 3px solid greenyellow;*/
-  position: fixed;
-  height: 100%;
-  margin-top: 36px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  left: 0;
-}
-.filtros {
-  /*outline: 1px solid red;*/
-  margin-top: -18px;
-  background-color: #f0f035;
-  width: 100%;
-  height: 100%;
-  display: block;
-  max-width: 250px;
-}
-
-.mostrar-menus {
-  display: block;
-}
-
-.ocultar-menus {
+  top: 130px;
+  display: flex;
+  width: 400px;
+  background: #242526;
+  border-radius: 5px;
+  overflow: hidden;
   display: none;
 }
-ul.elements {
+nav .wrapper.show {
   display: block;
-  border: 2px solid rgb(6, 7, 1);
-  list-style: none;
-  padding: 10px;
-  margin-left: 0;
-  width: 100%;
-  height: auto;
+  display: flex;
 }
-
-.elemts li {
-  display: block;
-  /*outline: 1px solid aqua;*/
-  margin-left: -37px;
-  padding: 10px;
-  height: 100%;
-  line-height: 6opx;
-  text-align: left;
-  border: 1px solid rgba(175, 175, 172, 0.432);
-  font-family: "Schoolbell", cursive;
-  text-decoration: none;
-  color: rgb(10, 10, 10);
-  font-size: 30px;
+nav .wrapper .specie-drop,
+nav .wrapper .gender-drop,
+nav .wrapper .location-drop {
+  display: none;
+}
+nav .drop-menu span {
+  float: right;
+  line-height: 50px;
+  font-size: 20px;
   cursor: pointer;
 }
-
-.filtro-menu {
-  width: 25px;
-  height: 25px;
-  padding-top: 20px;
-  padding-right: 15px;
-  color: #fff;
+nav .wrapper ul {
+  list-style: none;
+  color: #b0b3b8;
+  width: 400px;
+  padding: 10px;
+  transition: all 0.03s ea;
 }
-
-ul li img {
-  width: auto;
-  height: 30px;
-  color: #fff;
-  padding-top: 15px;
-  padding-left: 20px;
+nav .wrapper ul li {
+  line-height: 55px;
 }
-#subm {
-  /*outline: 2px solid chocolate;*/
-  display: inline-block;
-  width: 93%;
-  height: 100%;
-  margin-left: -16px;
+nav .wrapper ul li a {
+  text-decoration: none;
+  color: #b0b3b8;
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 10px;
+  align-items: center;
+  border-radius: 8px;
 }
-
-.submenu li {
-  background-color: rgb(104, 128, 172);
+nav .wrapper ul li:hover a {
+  background: #f0f035;
 }
-
-li:hover {
-  background: #07b0ce;
-  color: #fff;
+nav .wrapper ul li a i {
+  position: absolute;
+  right: 10px;
+  font-size: 25px;
+  pointer-events: none;
 }
-li:active {
-  background: green;
+.wrapper .specie-drop li {
+  padding-left: 10px;
+  font-size: 20px;
+  color: #b0b3b8;
+  font-weight: 500;
+  cursor: pointer;
 }
-
+.wrapper .specie-drop span {
+  margin-right: 15px;
+}
 main {
   margin-top: 10%;
   display: flex;
 }
-
+/*fILTRADO POR PERSONAJE*/
+.card-filter {
+  outline: 2px solid blue;
+  display: block;
+  flex-wrap: wrap;
+}
 /*ESTILOS DE LAS CARDS*/
 #data {
-  /*background-color: red;se quita*/
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
