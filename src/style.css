@@ -7,7 +7,7 @@ header {
   position: absolute;
   display: flex;
   width: 100%;
-  height: 100px;
+  height: 70px;
   background-color: black;
   justify-content: center;
   align-items: center;
@@ -132,12 +132,13 @@ main {
 }
 .cards {
   display: flex;
-  padding: 25px;
+  padding: 30px;
   /*background-color:pink ;se quita*/
 }
 .card {
   background-color: #07b0ce;
   box-shadow: 0 0 10px rgba(0, 0, 0, 18);
+  width: 250px;
 }
 .card-image {
   display: flex;
@@ -147,7 +148,7 @@ main {
 .card-image img {
   width: 65%;
   display: block;
-  border: 5px solid #fff;
+  border: 5px solid rgba(255, 255, 255, 0.801);
   margin-top: 1em;
 }
 .details p {
@@ -160,6 +161,6 @@ main {
 .details h2 {
   color: #f0f035;
   text-align: center;
-  margin-top: -17px;
+  margin-top: -14px;
   font-family: "Schoolbell", cursive;
 }

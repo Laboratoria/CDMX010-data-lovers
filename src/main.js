@@ -26,8 +26,8 @@ function showMenu() {
     menu.classList.remove("mostrar-menus");
   }
 }
-
 btn.addEventListener("click", showMenu);
+
 //filtrado de humanos
 const btnHumans = document.getElementById("humans");
 //filtrar humanos del arreglo original
