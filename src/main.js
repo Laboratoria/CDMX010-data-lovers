@@ -1,5 +1,5 @@
 import data from "./data/rickandmorty/rickandmorty.js";
-import { filterHumans, templateCard, filterAliens } from "./data.js";
+import { templateCard, filterSearch } from "./data.js";
 
 //recibe listado de los personajes
 function renderCards(list) {
@@ -59,21 +59,29 @@ back_location.onclick = () => {
   menu_bar.style.marginLeft = "0px";
   location_drop.style.display = "none";
 };
-
-btn.addEventListener("click", showMenu);
-
+/*
 //filtrado de humanos
 const btnHumans = document.getElementById("humans");
 //filtrar humanos del arreglo original
 btnHumans.addEventListener("click", function () {
-  const humans = filterHumans(data.results);
+  const humans = filterData(data.results, "Human");
   renderCards(humans);
 });
 //filtrado de aliens
 const btnAliens = document.getElementById("aliens");
 btnAliens.addEventListener("click", function () {
-  const aliens = filterAliens(data.results);
+  const aliens = filterData(data.results, "");
   renderCards(aliens);
 });
+*/
 
-function mostrarFiltros() {}
+//filtrado por nombre
+
+const inputSearch = document.getElementById("search");
+inputSearch.addEventListener("change", function (e) {
+  let text = e.currentTarget.value;
+  console.log(text);
+  const names = filterSearch(data.results, text);
+  console.log(names);
+  renderCards(names);
+});

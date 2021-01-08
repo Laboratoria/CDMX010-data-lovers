@@ -29,7 +29,7 @@
         <img src="./imagen/bannerTitulo.png" alt="" />
       </div>
       <nav id="nav" class="menu-nav">
-        <div>
+        <div class="filtros">
           <div class="drop-menu">
             Filtros
             <span class="material-icons"> arrow_drop_down_circle </span>
@@ -61,8 +61,8 @@
                 <span class="material-icons">arrow_back</span>
                 Especie
               </li>
-              <li><a href="#">Humano </a></li>
-              <li><a href="#">Alien </a></li>
+              <li id="humans"><a href="#">Humano </a></li>
+              <li id="aliens"><a href="#">Alien </a></li>
             </ul>
             <!--Submenu-Gender-->
             <ul class="gender-drop">
@@ -85,10 +85,12 @@
           </div>
         </div>
         <div>
+          <label for="nombre">Busca tu personaje favorito</label>
           <input
             type="search"
             placeholder="buscar personaje"
             class="card-filter"
+            id="search"
           />
         </div>
       </nav>

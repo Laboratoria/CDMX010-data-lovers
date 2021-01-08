@@ -28,16 +28,33 @@ header img {
   max-width: 95%;
 }
 /*ESTILO DEL NAV (MENU)*/
+nav {
+  outline: 2px solid salmon;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 0);
+}
+
+.filtros {
+  display: block;
+  outline: 2px solid aqua;
+  width: 300px;
+}
 
 nav .drop-menu {
-  width: 400px;
-  background: #242526;
+  width: 300px;
+  background: rgb(0, 0, 0);
   color: #b0b3b8;
   padding: 0 10px;
-  font-size: 20px;
-  font-weight: 200;
+  font-size: 25px;
+  font-weight: 200px;
   line-height: 50px;
-  border-radius: 5px;
+  font-family: "Schoolbell", cursive;
+  text-align: center;
 }
 nav .wrapper {
   position: absolute;
@@ -108,11 +125,22 @@ main {
   display: flex;
 }
 /*fILTRADO POR PERSONAJE*/
+label {
+  outline: 2px solid rgba(255, 255, 255, 0.801);
+  height: 100%;
+  display: block;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.801);
+  font-family: "Coming Soon", cursive;
+}
 .card-filter {
   outline: 2px solid blue;
-  display: block;
-  flex-wrap: wrap;
+  display: flex;
+  width: 200px;
+  padding: 5px;
+  margin: 10px;
 }
+
 /*ESTILOS DE LAS CARDS*/
 #data {
   display: flex;

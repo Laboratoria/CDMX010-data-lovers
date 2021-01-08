@@ -15,17 +15,18 @@ export function templateCard(propiedades) {
   </div>`;
 }
 //recibe parametros hace calculos y retorna un resultado
-export function filterHumans(characters) {
+/*export function filterSpecies(characters, condition) {
   const humans = characters.filter((character) => {
     //retorna un true o false
-    return character.species === "Human";
+    return character.species === condition;
   });
   return humans;
 }
+*/
 
-export function filterAliens(characters) {
-  const aliens = characters.filter((character) => {
-    return character.species === "Alien";
+export function filterSearch(characters, textInput) {
+  const names = characters.filter((character) => {
+    return character.name.toLowerCase().includes(textInput.toLowerCase());
   });
-  return aliens;
+  return names;
 }
