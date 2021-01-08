@@ -14,7 +14,6 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgb(88, 212, 50);
 }
 .div-img-banner {
   background-color: black;
@@ -27,7 +26,7 @@ header img {
   height: 70px;
   max-width: 95%;
 }
-/*ESTILO DEL NAV (MENU)*/
+/*ESTILO DEL NAV (MENU)
 nav {
   outline: 2px solid salmon;
   width: 100%;
@@ -124,7 +123,7 @@ main {
   margin-top: 10%;
   display: flex;
 }
-/*fILTRADO POR PERSONAJE*/
+/*fILTRADO POR PERSONAJE
 label {
   outline: 2px solid rgba(255, 255, 255, 0.801);
   height: 100%;
@@ -141,8 +140,9 @@ label {
   margin: 10px;
 }
 
-/*ESTILOS DE LAS CARDS*/
+ESTILOS DE LAS CARDS*/
 #data {
+  margin-top: 70px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -156,6 +156,7 @@ label {
   background-color: #07b0ce;
   box-shadow: 0 0 10px rgba(0, 0, 0, 18);
   width: 250px;
+  line-height: 23px;
 }
 .card-image {
   display: flex;
@@ -163,21 +164,24 @@ label {
 }
 
 .card-image img {
-  width: 65%;
+  width: 85%;
   display: block;
-  border: 5px solid rgba(255, 255, 255, 0.801);
+  border: 5px solid rgba(9, 10, 73, 0.719);
   margin-top: 1em;
+  border-radius: 6px;
+  box-shadow: 0 0 5px;
 }
 .details p {
-  color: #ffff;
-  padding-left: 2em;
+  color: rgb(242, 248, 245);
+  padding-left: 1em;
   font-size: 16px;
   margin-top: -10px;
   font-family: "Coming Soon", cursive;
+  font-weight: bolder;
 }
 .details h2 {
-  color: #f0f035;
+  color: #ecec11;
   text-align: center;
-  margin-top: -14px;
-  font-family: "Schoolbell", cursive;
+  margin-bottom: 25px;
+  font-family: "Coming Soon", cursive;
 }
