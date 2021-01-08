@@ -40,7 +40,7 @@
     font-size: 60px;
   } */
 
-  #mainMenu ul {
+  /* #mainMenu ul {
     list-style:none;
     margin: 0;
     padding: 0;
@@ -74,5 +74,103 @@
 
  #mainMenu #item:hover #deploy {
    display: block;
+ } */
+
+ *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Special Elite', cursive;
  }
 
+ header{
+   height: 150px;
+   background: #000000;
+   color: #90C944;
+   display: flex;
+   justify-content:flex-start;
+   align-items: center;
+ 
+ }
+
+ #sidebarButton {
+  /* display: block; */
+   display: none;
+ }
+
+ header label {
+   font-size: 30px;
+   cursor: pointer;
+   display: none;
+ }
+
+ #mainMenu {
+   padding-top: 35%;
+ }
+
+ #mainMenu ul {
+  background: #11AFC9;
+  color: black;
+  /* display: flex; */
+  list-style: none;
+ }
+
+ #mainMenu ul ul {
+   display: none;
+ }
+
+ #mainMenu a{
+   display: block;
+   padding: 15px 20px;
+   color: black;
+   text-decoration: none;
+ }
+
+ #mainMenu a:hover {
+  background: #000000;
+  color: rgb(255, 255, 255);
+ }
+
+ #mainMenu ul li:hover ul {
+  display: block;
+  position: absolute;
+ }
+
+ @media (max-width:768px) {
+   header label {
+     display: block;
+   }
+   #mainMenu {
+    padding-top: 10%;
+    position: absolute; 
+    top: 50px;
+    left: 0;
+    width: 100%;
+    transform: translateX(-100);
+    transition:all 0.3s;
+   }
+
+   #mainMenu ul {
+     display: block; 
+     background: #11AFC9;
+     color: black; 
+   }
+
+   #mainMenu ul li:hover ul {
+     display: none;
+     position:static;
+   }
+
+  #sidebarButton:checked ~ #mainMenu {
+    transform: translateX(0%);
+  }
+
+  #mainMenu ul ul {
+    background: rgba(0,0,0,0.4);
+  }
+  
+  #mainMenu ul ul a {
+    padding: 15px 40px;
+  }
+
+ }

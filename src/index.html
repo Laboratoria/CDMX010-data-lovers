@@ -6,6 +6,9 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   </head>
 
   <body>
@@ -22,16 +25,17 @@
     </header>
  </div> -->
 
- 
- <div id="sidebar">  
+ <header> 
+    <input type="checkbox" id="sidebarButton">
+    <label for="sidebarButton" class="icon-menu"></label>
     <nav id=mainMenu>
       <ul>
-        <li id="item">
+        <li>
           <a href="#">Premise</a>
         </li>
-        <li id="item">
+        <li class="submenu"> 
           <a href="#">Characters</a>
-            <ul id="deploy">
+            <ul>
               <li>
                 <input type="checkbox" id="" name="NameCharacters">
                 <label for="NameCharacters"> Name</label>
@@ -66,25 +70,25 @@
               </li>
             </ul>
         </li>
-        <li id="item">
+        <li>
           <a href="#">Cast</a>
         </li>
-        <li id="item">
+        <li>
           <a href="#">Episodes</a>
         </li>
-        <li id="item">
+        <li>
           <a href="#">Awards and nominations</a>
         </li>
-        <li id="item">
+        <li>
           <a href="#">Reception</a>
         </li>
-        <li id="item"> 
+        <li> 
           <a href="#">Media and products</a>
         </li>
-        <li id="item"> 
+        <li> 
           <a href="#">Contact</a>
         </li>
-        <li id="item"> 
+        <li> 
           <a title="Listen Us in Spotify!" href="https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215?si=OSM9W15WQBKjyA_k0oPXBg"> 
             <img class="#" src="img/spotify.png" alt="Spotify">
           </a>
@@ -101,8 +105,11 @@
     <div>
       <img src="" alt="">
     </div>
+  </header>
 
     <div id="root"></div>
     <script src="main.js" type="module"></script>
+    <script src="menu.js"></script>
+    
   </body>
 </html>
