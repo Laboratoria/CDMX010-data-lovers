@@ -288,9 +288,9 @@ nav {
 
 .checkboxes {
     display: none;
-    border: 1px #dadada solid;
+    border: 1px #dadada solid
 }
-
+  
 .checkboxes label {
     display: block;
     font-family: lato;
