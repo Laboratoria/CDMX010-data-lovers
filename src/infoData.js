@@ -17,24 +17,17 @@ export const infoEachPokePrinc = (pokemon) => {
           </a>
         </button>
       </div>
-      <div class = 'text-pokemon-container' id= '${pokemon.name}'>
+      <div class = 'text-pokemon-container'>
         <p>${pokemon.name}</p>
         <p>${pokemon.num}</p>
       </div>
     </div>`
   };
   namePokemon = nameAllPokemon.push(pokemon.name);
+  console.log(namePokemon);
   let infoPrinPoke = infoPokeContainer(pokemon);
   return infoPrinPoke;
   }
-
-export const setClass = (elements) => {
-  for(var i = 0; i < elements.length; i++){
-    elements[i].addEventListener('click',function() {
-    infoEachPoke(this);
-    });
-  }
-}
 
 export const infoEachPoke = (btnValNamePoke) => {
   document.getElementById("data-sheet-container").style.display = 'block';
@@ -48,18 +41,18 @@ export const infoEachPoke = (btnValNamePoke) => {
   let rarityPoke = objectPoke["pokemon-rarity"];
   let resistantPoke = objectPoke.resistant;
   console.log(resistantPoke);
-  let numberResistantPoke = resistantPoke.length;
+  let numberResistantPoke= resistantPoke.length;
   console.log(numberResistantPoke);
   let resistantPokemon = [];
   for (let i = 0; i < numberResistantPoke; i++){
-    resistantPokemon[i] = resistantPoke[i];
+    resistantPokemon[i]= resistantPoke[i];
   }
 
   let dataSheet = `
       <div class = "data-sheet" id= "${objectPoke.name}">
         <div class = "exit-container">
-          <button class = "exit-button">
-            <img>
+          <button class = "exit-button" id= "${objectPoke.num}">
+            <img src= "./assets/icon-Xgray.svg" class= "exit-icon">
           </button>
         </div>
         <div class="data-sheet-head">
@@ -105,6 +98,14 @@ export const infoEachPoke = (btnValNamePoke) => {
         </div>
       </div>
       <div class="data-sheet-footer"></div>`
-    document.getElementById('data-sheet-container').innerHTML = dataSheet;
+  document.getElementById('data-sheet-container').innerHTML = dataSheet;
+  //Borrar ficha técnica
+  let nodoABorrar = document.getElementById(objectPoke.name);
+  let exit = document.getElementById(objectPoke.num);
+  console.log(exit);
+  exit.addEventListener('click', function () {
+    nodoABorrar.parentNode.removeChild(nodoABorrar);
+    document.getElementById("data-sheet-container").style.display = 'none';
     console.log(dataSheet);
+  })
 }
