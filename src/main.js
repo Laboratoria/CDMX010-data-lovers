@@ -90,3 +90,4 @@ searchPoke.addEventListener("click", function() {
   console.log(child);
   agregarClase(child);
 })
+
