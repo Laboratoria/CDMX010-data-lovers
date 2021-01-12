@@ -1,0 +1,58 @@
+/*Estilos Generales*/
+* {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+body {
+        font-family: 'Open Sans', sans-serif;
+        background: white;
+}
+
+/*Estilos Header*/
+
+
+header {
+        background-color: #10375c ;
+        width: auto;
+        height: 80px;
+        padding: 30px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+}
+
+header .logo img {
+        width: 95px;
+        height: 60px;
+        margin-left: 40px;
+}
+
+header .option-data select, 
+header .option-data input {
+        margin: 10px;
+        padding: 3px;
+        color: rgb(73, 73, 73);
+        margin-right: 30px;
+        font-size: 18px;
+        opacity: 50%;
+        border-radius: 7px;
+}
+
+.main-table {
+    border: 1px solid gray;
+}
+
+footer{
+        background-color:#F3C623;
+        height: 50px;
+}
+
+footer.img{
+        justify-content: center;
+        align-items: center;
+}
