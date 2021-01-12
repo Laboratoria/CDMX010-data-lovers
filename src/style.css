@@ -174,3 +174,28 @@
   }
 
  }
+
+
+
+ /**
+  * umarquez's C0d3
+  */
+
+  body {
+    font-size: 14px;
+  }
+
+  #legales {
+    background-color: #AAAAAA;
+    max-width: 150px;
+  }
+
+  #legales h1 {
+    color: #333333;
+    font-size: 1.2em;
+  }
+
+  #legales p {
+    color: rgba(0, 30, 80, .7);
+    font-size: 1em;
+  }
