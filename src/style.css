@@ -1,0 +1,175 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* html, body {
+  height: 100%;
+  width: 100%;
+} */
+
+body {
+  background: url('img/portal.jpg') no-repeat;
+  background-size: cover;
+  font-family: 'Special Elite', cursive;
+  width: 100%;
+  /* display: flex;
+  flex-direction: column; */
+
+}
+
+header {
+  height: 125px;
+  width: 100%;
+  background-color: #000;
+  padding: 10px;
+}
+
+/* main {
+  flex: auto;
+  width: 100%;
+  align-items: flex-end;
+} */
+
+@keyframes entrar {
+  0%{transform: translate(0px);}
+  25%{transform: translate(900px);}
+  50%{transform: translate(450px);}
+  75%{transform: translate(100px);}
+  100%{transform: translate(0px);}
+}
+
+h1 {
+  color: #90C944;
+  padding-top: 50px;
+  font-size: 50px;
+  display: inline-block;
+  font-family: 'Get Schwifty';
+  animation-name: entrar;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+.btn-menu {
+  background: url('img/menu-icon.png') no-repeat; 
+  background-size: cover;
+  border-radius: 20px;
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  margin: 20px;
+} 
+
+@keyframes colors-nav {
+  0%{background-color: #90C944;}
+  15%{background-color: #A5F043;}
+  30%{background-color: #B8D9EC;}
+  45%{background-color: #13D2F0;}
+  60%{background-color: #11AFC9;}
+  75%{background-color: #FFFABF;}
+  90%{background-color: #EEEC75;}
+  100%{background-color: #90C944;}
+}
+
+.nav {
+  width: 30%;
+  text-align: center;
+  background-color: #11AFC9;
+  font-size: 18px;
+  margin-top: -12px;
+  animation-name: colors-nav;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  border-radius: 10px;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 10px;
+}
+
+.nav li {
+  padding: 8px;
+}
+
+.nav .itemList li {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+li:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #fff;
+  font-size: 20px;
+}
+
+.enable-menu {
+  display: block;
+}
+
+.disable-menu {
+  display: none;
+}
+
+label:hover {
+  color: #fff;
+}
+
+@font-face {
+  font-family: 'Get Schwifty';
+  src: local('get_schwifty'),
+       url('font/get_schwifty.ttf') format('truetype');
+  /* font-weight: normal;
+  font-style: normal;
+  unicode-range: "U+0-10FFFF"; */
+}
+
+@media screen and (max-width:800px){
+  .btn-menu {
+    width: 10%;
+    height: 90%;
+  }
+
+  .nav {
+    width: 50%;
+  }
+
+  body {
+    width: 100%;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width:400px){
+  .btn-menu {
+    width: 30%;
+    height: 90%;
+  }
+
+  .nav {
+    width: 50%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+}
