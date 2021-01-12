@@ -43,7 +43,7 @@ header .option-data input {
 
 /*Estilos MAIN*/
 main {
-        border: 1px solid gray;
+        border: 2px solid gray;
         border-radius: 1em/2em;
         height:500px;
         width:75%;
