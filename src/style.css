@@ -1,13 +1,44 @@
 .main-table {
-    border: 1px solid gray;
+        border: 2px solid gray;
+        border-radius: 1em/2em;
+        height:300px;
+        width:900px;
+        font-family: black,'Segoe Ui', sans-serif;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+}
+
+.fila1 {
+        border: 1px #f4f6ff;
+        font-family: black,'Segoe Ui', sans-serif;
+}
+.fila2 {
+        border: 1px #f4f6ff;
+        font-family: black,'Segoe Ui', sans-serif;
+}
+.fila3 {
+        border: 1px #f4f6ff;
+        font-family: black,'Segoe Ui', sans-serif;
+}
+.fila4 {
+        border: 1px #f4f6ff;
+        font-family: black,'Segoe Ui', sans-serif;
+}
+.fila5 {
+        border: 1px  #f4f6ff;
+        font-family: black,'Segoe Ui', sans-serif;
 }
 
 footer{
         background-color:#F3C623;
         height: 50px;
-}
-
-footer.img{
+        display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
+}
+
+footer .img{
+       margin: 0 15px;
 }
