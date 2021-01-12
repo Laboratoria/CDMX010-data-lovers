@@ -14,11 +14,16 @@
   <body>
 
     <header>
-      <button class="btn-menu" id="btn-menu"></button>
-      
+      <div class="menuIcon">
+      <!-- <button class="btn-menu" id="btn-menu"></button> -->
+        <a class="btn-menu" id="btn-menu" href="#"><img src="img/menu-icon.png" alt="Menu"></a>
+      </div>     
       <h1>Rick and Morty</h1>
+    </header>
 
-      <div class="container-nav">
+    <main>
+      <!-- <div class="container-nav"> -->
+        <!-- <nav class="nav disable-menu" id="nav"> -->
         <nav class="nav disable-menu" id="nav">
           <ul>
             <li><a href="#">Premise</a></li>
@@ -43,17 +48,18 @@
                 <a target="_blank" href="https://www.instagram.com/rickandmorty/?hl=es"><img src="img/instagram.png" alt="instagram"></a></li>
           </ul>
         </nav>
-      </div>
 
-    </header>
+        <div id="content">
+          Aquí va nuestra info.
+        </div>
 
-    <!-- <main>
-      
-    </main> -->
+      <!-- </div> -->
+    </main>
 
     <div id="root"></div>
+
     <script src="main.js" type="module"></script>
     <script src="menu.js"></script>
 
   </body>
-  </html>>
+  </html>
