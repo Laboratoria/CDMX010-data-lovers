@@ -1,0 +1,13 @@
+.main-table {
+    border: 1px solid gray;
+}
+
+footer{
+        background-color:#F3C623;
+        height: 50px;
+}
+
+footer.img{
+        justify-content: center;
+        align-items: center;
+}
