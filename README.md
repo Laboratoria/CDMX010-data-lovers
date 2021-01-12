@@ -11,7 +11,7 @@
 
 ## 1. Definición del producto
 
-Pokemon Go _La Colección _ (nombre provisional de la app jajaja) es una aplicación dirigida a todxs aquellxs “Maestrxs Pokémon” que necesiten consultar con facilidad la información más importante acerca de los pokemón de su interés dentro de las regiones Kanto y Johto.
+Pokemon Go _La Colección _ es una aplicación dirigida a todxs aquellxs “Maestrxs Pokémon” que necesiten consultar con facilidad la información más importante acerca de los pokemón de su interés dentro de las regiones Kanto y Johto.
 
 ## 2. Resumen del proyecto
 
@@ -33,7 +33,10 @@ La aplicación permite combinar el uso de ambos filtros en una misma búsqueda. 
 
 Se trabajó con las siguientes historias de usuario:
 
-* Yo como jugador de Pokemon quiero ver en el navegador todos los pokémon para descubrir nuevos pokémon y conocer sus características
+* Yo como jugador de Pokémon quiero ver en el navegador todos los pokémon para descubrir nuevos pokémon y conocer sus características
+* Yo como jugador de Pokémon quiero filtrar los Pokémon por su tipo para poder ver seleccionarlos por esta característica.
+* Yo como jugador de Pokémon quiero filtrar los Pokémon por su cantidad de debilidad para poder ver los pokemones que me interesan.
+* Yo como jugador de Pokemon quiero filtrar los Pokémon por su nombre para poder conocer sus características individualmente.
 
 ## 4. Diseño de la interfaz de usuario
 

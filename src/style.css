@@ -301,137 +301,175 @@ nav {
     background-color: #1e90ff;
 }
 
+
+.main-search-container {
+    padding: 0 5% 0 5%;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+}
+
+.main-search-input-container {
+    width: 100%;
+    justify-items: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+}
+
+.main-search-input-container input {
+    width: 90%;
+    height: 30px;
+    background: var(--background-gray);
+    border: none;
+    font-size: 1.6rem;
+    float: left;
+    color: black;
+    padding-left: 45px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.main-search-input-container .searchByNameButton {
+    position: absolute;
+    top: 50%;
+    margin-left: 10px;
+    margin-top: 7px;
+    border: none;
+    z-index: 1;
+    color: #4f5b66;
+}
+
 #data-sheet-container{
     background-color:rgb(243, 243, 243,0.2);;
-        color: #FFFFFF;
-        position: fixed;
-        top: 0%;
-        bottom: 0%;
-        left: 0%;
-        right: 0%;
-        display: none;
+    color: #FFFFFF;
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    display: none;
+}
+
+.exit-container{
+    background-color: gray;
+    max-width:3%;
+    height: 3.5%;
+    position: relative;
+    left: 97%;
+    padding: 0;
+    margin: 0;
+}
+
+.exit-icon{
+    width: 15px;
+    height: 15px;
+}
+
+.data-sheet{
+    background-color: rgba(250, 244, 244, 0.671);
+    position: fixed;
+    top: 5%;
+    bottom: 2%;
+    left: 25%;
+    right: 25%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 0%;
     }
-    
-    .exit-container{
-        background-color: gray;
-        max-width:3%;
-        height: 3.5%;
-        position: relative;
-        left: 97%;
-        padding: 0;
-        margin: 0;
+
+.data-sheet-head{
+    background-color: #D7DFE3;
+    max-height: 30%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1.5fr;
+    padding: 4%;
     }
-    
-    .exit-icon{
-        width: 15px;
-        height: 15px;
-    }
-    
-    .data-sheet{
-        background-color: rgba(250, 244, 244, 0.671);
-        position: fixed;
-        top: 5%;
-        bottom: 2%;
-        left: 25%;
-        right: 25%;
-        padding-top: 1%; 
-        padding-bottom: 1%;
-        padding-left: 2%;
-        padding-right: 2%;
-        margin: 0%;
-    }
-    
-    .data-sheet-head{
-        background-color: #D7DFE3;
-        max-height: 30%;
-        display: grid;
-        justify-content: center;
-        grid-template-columns: 1fr 1.5fr;
-        padding: 4%;
-    }
-    
-    .data-sheet-img-container{
-        background-image: url('./assets/background-pokemon.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        max-width: 80%;
-        height: 100%;
-        grid-column-start: 1;
-        border-radius: 5%;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .general-data{
-        background-color: #E9D17B ;
-        color: black;
-        font-size: small ;
-        font-family: lato;
-        max-width: 100%;
-        display: inline;
-        height: 100%;
-        grid-column-start: 2;
-        border-radius: 5%;
-        text-align: center;
-        padding: 4%;
-    }
-    
-    .data-sheet-body{
-        background-color: #D1F4EE;
-        height: 40%;
-        color: black; 
-        display: grid;
-        grid-template-rows: 1fr 1.5fr;
-        padding: 4%;
-    
-    }
-    
-    .data-sheet-body-section1{
-        grid-row-start: 1;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    .data-sheet-resistant-container{
-        grid-column-start: 1;
-        background-color: rgb(251, 251, 251);
-        width: 75%;
-        height: 100%;
-        border-radius: 5%;
-        text-align: center;
-        justify-self: center;
-        padding: 4%;
-    }
-    .data-sheet-weaknesses-container{
-        grid-column-start: 2;
-        background-color: rgb(248, 218, 183);
-        width: 75%;
-        height: 100%;
-        border-radius: 5%;
-        text-align: center;
-        justify-self: center;
-        padding: 4%;
-    }
-    
-    .data-sheet-body-section2{
-        grid-row-start: 2;
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        padding-top: 4%;
-    }
-    
-    .physical-data-container{
-        grid-column-start: 2;
-        background-color: rgb(171, 210, 232);
-        text-align: center;
-        padding: 4%;
-        border-radius: 5%;
-        justify-self: center;
-        width: 60%;
-    
-    }
-    
-    .data-sheet-footer{
-        background-color: #ADDAAC;
-        height: 25%;
-    }
+
+.data-sheet-img-container{
+    background-image: url('./assets/background-pokemon.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 80%;
+    height: 100%;
+    grid-column-start: 1;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.general-data{
+    background-color: #E9D17B ;
+    color: black;
+    font-size: small ;
+    font-family: lato;
+    max-width: 100%;
+    display: inline;
+    height: 100%;
+    grid-column-start: 2;
+    border-radius: 5%;
+    text-align: center;
+    padding: 4%;
+}
+
+.data-sheet-body{
+    background-color: #D1F4EE;
+    height: 40%;
+    color: black; 
+    display: grid;
+    grid-template-rows: 1fr 1.5fr;
+    padding: 4%;
+
+}
+
+.data-sheet-body-section1{
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.data-sheet-resistant-container{
+    grid-column-start: 1;
+    background-color: rgb(251, 251, 251);
+    width: 75%;
+    height: 100%;
+    border-radius: 5%;
+    text-align: center;
+    justify-self: center;
+    padding: 4%;
+}
+.data-sheet-weaknesses-container{
+    grid-column-start: 2;
+    background-color: rgb(248, 218, 183);
+    width: 75%;
+    height: 100%;
+    border-radius: 5%;
+    text-align: center;
+    justify-self: center;
+    padding: 4%;
+}
+
+.data-sheet-body-section2{
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-top: 4%;
+}
+
+.physical-data-container{
+    grid-column-start: 2;
+    background-color: rgb(171, 210, 232);
+    text-align: center;
+    padding: 4%;
+    border-radius: 5%;
+    justify-self: center;
+    width: 60%;
+}
+.data-sheet-footer{
+    background-color: #ADDAAC;
+    height: 25%;
+}
+
 
