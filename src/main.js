@@ -1,5 +1,5 @@
 import data from "./data/rickandmorty/rickandmorty.js";
-import { filterHumans, templateCard, filterAliens } from "./data.js";
+import { templateCard } from "./data.js";
 
 //recibe listado de los personajes
 function renderCards(list) {
@@ -60,9 +60,35 @@ back_location.onclick = () => {
   location_drop.style.display = "none";
 };
 
-btn.addEventListener("click", showMenu);
+//FILTRADO
+const raceElements = document.getElementsByName("race");
+//console.log(raceElements);
+for (let i = 0; i < raceElements.length; i++) {
+  raceElements[i].addEventListener("click", function filter(e) {
+    const value = e.target.dataset.value;
 
-//filtrado de humanos
+    let dataFiltered = "";
+    if (value === "Human" || value === "Alien") {
+      dataFiltered = data.results.filter((character) => {
+        return character.species === value;
+      });
+      return renderCards(dataFiltered);
+    } else if (value === "Female" || value === "Male") {
+      dataFiltered = data.results.filter((character) => {
+        return character.gender === value;
+      });
+      return renderCards(dataFiltered);
+    } else if (value === "Alive" || value === "Dead") {
+      dataFiltered = data.results.filter((character) => {
+        return character.status === value;
+      });
+
+      return renderCards(dataFiltered);
+    }
+  });
+}
+
+/*filtrado de humanos
 const btnHumans = document.getElementById("humans");
 //filtrar humanos del arreglo original
 btnHumans.addEventListener("click", function () {
@@ -75,5 +101,4 @@ btnAliens.addEventListener("click", function () {
   const aliens = filterAliens(data.results);
   renderCards(aliens);
 });
-
-function mostrarFiltros() {}
+*/
