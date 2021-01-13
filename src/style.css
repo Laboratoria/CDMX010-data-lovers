@@ -146,8 +146,9 @@ nav {
 
 .home-pokemon-info-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column: 2;
+    grid-template-columns: 1fr 1fr;
+    grid-column-start: 1;
+    grid-column-end: 4;
     grid-row-start: 3;
     grid-row-gap: 0.2%;
     justify-items: center;
@@ -189,10 +190,12 @@ nav {
 }
 
 .ind-info-pokemon-container .text-pokemon-container {
-    align-items: center;
+    display: flex;
+    justify-content: space-around;
     width: 90%;
     height: 30px;
     margin-top: 15px;
+    padding-top: 5spx;
     background-color: var(--background-gray);
     border-radius: 5px;
 }
@@ -273,6 +276,8 @@ nav {
     right: 0;
     top: 0;
     bottom: 0;
+    height: 30px;
+    border-radius: 5px;
 }
 
 .selectBox {
@@ -282,18 +287,20 @@ nav {
 .selectBox select {
     width: 100%;
     height: 30px;
-    font-family: lato;
+    /*font-family: 'Lato', sans-serif;*/
+    font-size: 1.6rem;
     border-radius: 5px;
+    color: #4f5b66;
 }
 
 .checkboxes {
     display: none;
-    border: 1px #dadada solid
+    border: 1px #dadada solid;
 }
-  
+
 .checkboxes label {
     display: block;
-    font-family: lato;
+    font-family: 'Lato', sans-serif;
     background-color: white;
 }
 
@@ -303,10 +310,10 @@ nav {
 
 
 .main-search-container {
-    padding: 0 5% 0 5%;
     justify-content: center;
     width: 100%;
     height: 30px;
+    margin-left: 18px;
 }
 
 .main-search-input-container {
@@ -320,7 +327,7 @@ nav {
 .main-search-input-container input {
     width: 90%;
     height: 30px;
-    background: var(--background-gray);
+    /*background: var(--background-gray);*/
     border: none;
     font-size: 1.6rem;
     float: left;
@@ -334,142 +341,229 @@ nav {
     position: absolute;
     top: 50%;
     margin-left: 10px;
-    margin-top: 7px;
+    margin-top: 12px;
     border: none;
-    z-index: 1;
+    /*z-index: 1;*/
     color: #4f5b66;
 }
 
-#data-sheet-container{
-    background-color:rgb(243, 243, 243,0.2);;
-    color: #FFFFFF;
+.data-sheet-container {
+    display: none;
     position: fixed;
     top: 0%;
     bottom: 0%;
     left: 0%;
     right: 0%;
-    display: none;
+    background-color:rgb(243, 243, 243,0.2);
+    color: #FFFFFF;
 }
 
-.exit-container{
-    background-color: gray;
-    max-width:3%;
-    height: 3.5%;
+.exit-container {
     position: relative;
     left: 97%;
+    max-width:3%;
+    height: 3.5%;
     padding: 0;
     margin: 0;
+    background-color: gray;
 }
 
-.exit-icon{
+.exit-icon {
     width: 15px;
     height: 15px;
 }
 
-.data-sheet{
+.data-sheet {
     background-color: rgba(250, 244, 244, 0.671);
     position: fixed;
     top: 5%;
     bottom: 2%;
     left: 25%;
     right: 25%;
+    height: fit-content;
     padding-top: 1%;
     padding-bottom: 1%;
     padding-left: 2%;
     padding-right: 2%;
     margin: 0%;
+    font-size: 2rem;
     }
 
-.data-sheet-head{
-    background-color: #D7DFE3;
-    max-height: 30%;
+.data-sheet-head {
     display: grid;
-    justify-content: center;
     grid-template-columns: 1fr 1.5fr;
+    max-height: 30%;
+    justify-content: center;
     padding: 4%;
+    background-color: #D7DFE3;
     }
 
-.data-sheet-img-container{
+.data-sheet-img-container {
+    display: flex;
+    grid-column-start: 1;
+    max-width: 80%;
+    height: 100%;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5%;
     background-image: url('./assets/background-pokemon.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 80%;
-    height: 100%;
-    grid-column-start: 1;
-    border-radius: 5%;
-    display: flex;
-    justify-content: center;
+}
+.data-sheet-img-container img {
+    width: 50%;
+    min-width: 100px;
+    /*height: 0%;*/
 }
 
-.general-data{
-    background-color: #E9D17B ;
-    color: black;
+.general-data {
+    display: inline;
+    grid-column-start: 2;
+    max-width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 4%;
+    border-radius: 5%;
     font-size: small ;
     font-family: lato;
-    max-width: 100%;
-    display: inline;
-    height: 100%;
-    grid-column-start: 2;
-    border-radius: 5%;
-    text-align: center;
-    padding: 4%;
+    background-color: #E9D17B ;
+    color: black;
 }
 
-.data-sheet-body{
-    background-color: #D1F4EE;
-    height: 40%;
-    color: black; 
+.general-data h2 {
+    text-transform: capitalize;
+}
+
+.data-sheet-body {
     display: grid;
     grid-template-rows: 1fr 1.5fr;
+    height: 300px;
     padding: 4%;
+    background-color: #D1F4EE;
+    color: black;
 
 }
 
-.data-sheet-body-section1{
-    grid-row-start: 1;
+.data-sheet-body-section1 {
     display: grid;
+    grid-row-start: 1;
     grid-template-columns: 1fr 1fr;
 }
-.data-sheet-resistant-container{
+
+.data-sheet-resistant-container {
     grid-column-start: 1;
+    width: 75%;
+    height: 100%;
+    border-radius: 5%;
+    text-align: center;
+    justify-self: center;
+    padding: 4%;
     background-color: rgb(251, 251, 251);
-    width: 75%;
-    height: 100%;
-    border-radius: 5%;
-    text-align: center;
-    justify-self: center;
-    padding: 4%;
 }
-.data-sheet-weaknesses-container{
+.data-sheet-weaknesses-container {
     grid-column-start: 2;
-    background-color: rgb(248, 218, 183);
     width: 75%;
     height: 100%;
-    border-radius: 5%;
     text-align: center;
     justify-self: center;
     padding: 4%;
+    border-radius: 5%;
+    background-color: rgb(248, 218, 183);
 }
 
-.data-sheet-body-section2{
-    grid-row-start: 2;
+.data-sheet-body-section2 {
     display: grid;
+    grid-row-start: 2;
     grid-template-columns: 2fr 1fr;
     padding-top: 4%;
+    height: initial;
 }
 
-.physical-data-container{
-    grid-column-start: 2;
-    background-color: rgb(171, 210, 232);
+.physical-data-container {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    height: 60%;
     text-align: center;
     padding: 4%;
     border-radius: 5%;
     justify-self: center;
-    width: 60%;
+    background-color: rgb(171, 210, 232);
 }
-.data-sheet-footer{
+
+
+
+.data-sheet-footer {
+    width: 100%;
+    height: 250px;
+    /*background-color: #ADDAAC;*/
+}
+
+.evolution-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    background-color: #F1EDED;
+}
+
+.evolution-container img {
+    width: 80%;
+    align-self: center;
+}
+
+.evolution-container h1 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    color: black;
+}
+
+.preEvolution-container {
+    display: flex;
+    width: 40%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #C6A5A5;
+}
+
+.nextEvolution-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    min-width: 40%;
+    background-color: #C6A5A5;
+    border-radius: 5px;
+}
+
+.nextEvolutionImg-container, .preEvolutionImg-container  {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.currencyState-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    min-width: 20%;
     background-color: #ADDAAC;
-    height: 25%;
+    border-radius: 5px;
 }
+
+
 
 
