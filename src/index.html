@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pokémon la colección</title>
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 768px)">
         <link rel="stylesheet" href="./css/laptop1.css" media="(min-width: 1100px)">
@@ -34,7 +33,7 @@
                     <p>Conoce a los 251 Pokémon de la región de Kanto y Johto</p>
                 </div>
                 <div class= "home-main-button--container">
-                    <button class= "home-main--button" id= "home-main--button" value= "Hola">Iniciar</button>
+                    <button class= "home-main--button" id= "home-main--button">Iniciar</button>
                 </div>
             </section>
             <section class= "home-section-info-container" id= "home-section-info-container">
@@ -46,14 +45,6 @@
                 <div class= "main-filter-container" id= "main-filter-container">
 
                     <form action="">
-                        <div class= "main-search-container">
-                            <div class= "main-search-input-container">
-                                <button type= "button" class= "searchByNameButton" id= "searchByNameButton">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                                <input type="search" id= "namePokeToSearch" placeholder= "Búsqueda por nombre">
-                            </div>
-                        </div>
                         <div class= "main-filter--pokemonType">
                             <div class= "multiselect">
                                 <div class= "selectBox" id= "selectPokemonType">
@@ -65,41 +56,41 @@
                             </div>
                             <div class="checkboxes" id= "checkboxesType">
                                 <label for="planta">
-                                    <input type="checkbox" id= "planta" name= "pokemonType" value="planta">Planta</label>
+                                    <input type="checkbox" id= "planta" name= "pokemonType" value="grass">Planta</label>
                                 <label for="fuego">
-                                    <input type="checkbox" id= "fuego" name= "pokemonType" value="fuego">Fuego</label>
+                                    <input type="checkbox" id= "fuego" name= "pokemonType" value="fire">Fuego</label>
                                 <label for="agua">
-                                    <input type="checkbox" id="agua" name="pokemonType" value="agua">Agua</label>
+                                    <input type="checkbox" id="agua" name="pokemonType" value="water">Agua</label>
                                 <label for="normal">
                                     <input type="checkbox" id="normal" name="pokemonType" value="normal">Normal</label>
                                 <label for="electrico">
-                                    <input type="checkbox" id="electrico" name="pokemonType" value="electrico">Eléctrico</label>
+                                    <input type="checkbox" id="electrico" name="pokemonType" value="electric">Eléctrico</label>
                                 <label for="bicho">
-                                    <input type="checkbox" id="bicho" name="pokemonType" value="bicho">Bicho</label>
+                                    <input type="checkbox" id="bicho" name="pokemonType" value="bug">Bicho</label>
                                 <label for="volador">
-                                    <input type="checkbox" id="volador" name="pokemonType" value="volador">Volador</label>
+                                    <input type="checkbox" id="volador" name="pokemonType" value="flying">Volador</label>
                                 <label for="veneno">
-                                    <input type="checkbox" id="veneno" name="pokemonType" value="veneno">Veneno</label>
+                                    <input type="checkbox" id="veneno" name="pokemonType" value="poison">Veneno</label>
                                 <label for="roca">
-                                    <input type="checkbox" id="roca" name="pokemonType" value="roca">Roca</label>
+                                    <input type="checkbox" id="roca" name="pokemonType" value="rock">Roca</label>
                                 <label for="tierra">
-                                    <input type="checkbox" id="tierra" name="pokemonType" value="tierra">Tierra</label>
+                                    <input type="checkbox" id="tierra" name="pokemonType" value="ground">Tierra</label>
                                 <label for="fantasma">
-                                    <input type="checkbox" id="fantasma" name="pokemonType" value="fantasma">Fantasma</label>
+                                    <input type="checkbox" id="fantasma" name="pokemonType" value="ghost">Fantasma</label>
                                 <label for="psiquico">
-                                    <input type="checkbox" id="psiquico" name="pokemonType" value="psiquico">Psíquico</label>
+                                    <input type="checkbox" id="psiquico" name="pokemonType" value="psychic">Psíquico</label>
                                 <label for="acero">
-                                    <input type="checkbox" id="acero" name="pokemonType" value="acero">Acero</label>
+                                    <input type="checkbox" id="acero" name="pokemonType" value="steel">Acero</label>
                                 <label for="lucha">
-                                    <input type="checkbox" id="lucha" name="pokemonType" value="lucha">Lucha</label>
+                                    <input type="checkbox" id="lucha" name="pokemonType" value="fighting">Lucha</label>
                                 <label for="hielo">
-                                    <input type="checkbox" id="hielo" name="pokemonType" value="hielo">Hielo</label>
+                                    <input type="checkbox" id="hielo" name="pokemonType" value="ice">Hielo</label>
                                 <label for="dragon">
                                     <input type="checkbox" id="dragon" name="pokemonType" value="dragon">Dragón</label>
                                 <label for="siniestro">
-                                    <input type="checkbox" id="siniestro" name="pokemonType" value="siniestro">Siniestro</label>
+                                    <input type="checkbox" id="siniestro" name="pokemonType" value="dark">Siniestro</label>
                                 <label for="hada">
-                                    <input type="checkbox" id="hada" name="pokemonType" value="hada">Hada</label>
+                                    <input type="checkbox" id="hada" name="pokemonType" value="fairy">Hada</label>
                             </div>
                         </div>
                         <br>
@@ -112,28 +103,25 @@
                             </div>
                             <div class="checkboxes" id="checkboxesNumber">
                                 <label for="one">
-                                    <input type="checkbox" id="one" name="numberWeaknesses" value="1">1</label>
+                                    <input type="radio" id="one" name="numberWeaknesses" value="1">1</label>
                                 <label for="two">
-                                    <input type="checkbox" id="two" name="numberWeaknesses" value="2">2</label>
+                                    <input type="radio" id="two" name="numberWeaknesses" value="2">2</label>
                                 <label for="three">
-                                    <input type="checkbox" id="three" name="numberWeaknesses" value="3">3</label>
+                                    <input type="radio" id="three" name="numberWeaknesses" value="3">3</label>
                                 <label for="four">
-                                    <input type="checkbox" id="four" name="numberWeaknesses" value="4">4</label>
+                                    <input type="radio" id="four" name="numberWeaknesses" value="4">4</label>
                                 <label for="five">
-                                    <input type="checkbox" id="five" name="numberWeaknesses" value="5">5</label>
+                                    <input type="radio" id="five" name="numberWeaknesses" value="5">5</label>
                                 <label for="six">
-                                    <input type="checkbox" id="six" name="numberWeaknesses" value="6">6</label>
+                                    <input type="radio" id="six" name="numberWeaknesses" value="6">6</label>
                                 <label for="seven">
-                                    <input type="checkbox" id="seven" name="numberWeaknesses" value="7">7</label>
+                                    <input type="radio" id="seven" name="numberWeaknesses" value="7">7</label>
                             </div>
                         </div>
                     </form>               
                 </div>
                 <div class= "home-pokemon-info-container" id = "home-pokemon-info-container">
                 </div>
-                <div class= "main-searchPoke-container" id= "main-searchPoke-container">
-                </div>
-                <div class= "data-sheet-container" id="data-sheet-container"></div>
             </section>
         </main>
         <div id="data-sheet-container"></div>
