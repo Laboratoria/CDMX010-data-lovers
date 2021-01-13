@@ -1,0 +1,54 @@
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+h1 {
+    padding-left: 10%;
+}
+
+/*SECCION DERECHA*/
+.derecha {
+    margin: 10px;
+    width: 300px;
+    height: 450px;
+    background-color: thistle;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+.titulo {
+    background-color: violet;
+    width: auto;
+    height: 100px;
+}
+
+/*SECCIN MEDIO*/
+.medio {
+    margin: 10px;
+    width: 300px;
+    height: 450px;
+    background-color: thistle;
+}
+
+/*SECCION IZQUIERDA*/
+.izquierda {
+    margin: 10px;
+    width: 300px;
+    height: 450px;
+    background-color: thistle;
+}
+
+/*FOOTER*/
+footer {
+    text-align: center;
+}
