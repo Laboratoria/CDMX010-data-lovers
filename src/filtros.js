@@ -1,6 +1,7 @@
 import data from './data/pokemon/pokemon.js';
 console.log(data.pokemon);
 let allPokemon = data.pokemon;
+console.log(allPokemon);
 let weaknessesEachPokemon= [];
 let filterNumber = 0;
 let numberWeaknessesEachPokemon= [];
@@ -34,10 +35,10 @@ export const filterFunctions = {
 
 
 
-export const filterFunctions = (typeDefinition, pokemon) => {
+export const filterFunctions = () => {
         console.log(data.pokemon);
         console.log(allPokemon.name);
-        conjunto[typeDefinition] = [];
+        /*conjunto[typeDefinition] = [];
         let namesToPokemonType = function(element){
         let memoriaT= element.type;
             for (const value of memoriaT) {
@@ -50,5 +51,6 @@ export const filterFunctions = (typeDefinition, pokemon) => {
         allPokemon.forEach(namesToPokemonType);
         console.log(conjunto[filterNumber]);
         
-        return conjunto[filterNumber];
+        return conjunto[filterNumber];*/
 }
+filterFunctions();

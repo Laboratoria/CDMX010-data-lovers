@@ -10,6 +10,7 @@ document.getElementById("main-logo-container").style.display = 'none';
 document.getElementById("main-filter-container").style.display = 'none';
 const allPokemon = data.pokemon;
 console.log(typeof allPokemon);
+
 let namePokemon = [];
 
 let nameAllPokemon = [];
@@ -40,6 +41,10 @@ function agregarClase (elements) {
     });
   }
 }
+
+
+
+
 
 let expanded = false
 
@@ -93,119 +98,43 @@ const searchPoke = document.getElementById("searchByNameButton");
   console.log(child);
   agregarClase(child);
 })*/
+/*
+console.log(allPokemon[0].name);
+*/
+let filterNumber = 2;
+//let allPokemon = data.pokemon;
+let conjunto=[];
+let filtroFinal= [];
+let resultFilterWeaknessesNumber=[];
+weaknessesNumberFilterAdd();
+function weaknessesNumberFilterAdd(){
+  conjunto[filterNumber] = [];
+  let namesToWeaknessesNumber = function(element){
+    let memoria= element.weaknesses;
+    if(memoria.length== filterNumber){
+      let nameWeaknesses= element.name; 
+      conjunto[filterNumber].push(nameWeaknesses);
+    } 
+  }
+  allPokemon.forEach(namesToWeaknessesNumber);
+  console.log(conjunto[filterNumber]);
+  resultFilterWeaknessesNumber = conjunto[filterNumber];
+  console.log(resultFilterWeaknessesNumber);
 
-let checkboxTypePokemon1 = document.getElementById('planta');
-let checkboxTypePokemon2 = document.getElementById('fuego');
-let checkboxTypePokemon3 = document.getElementById('agua');
-let checkboxTypePokemon4 = document.getElementById('normal');
-let checkboxTypePokemon5 = document.getElementById('electrico');
-let checkboxTypePokemon6 = document.getElementById('bicho');
-let checkboxTypePokemon7 = document.getElementById('volador');
-let checkboxTypePokemon8 = document.getElementById('veneno');
-let checkboxTypePokemon9 = document.getElementById('roca');
-let checkboxTypePokemon10 = document.getElementById('tierra');
-let checkboxTypePokemon11 = document.getElementById('fantasma');
-let checkboxTypePokemon12 = document.getElementById('psiquico');
-let checkboxTypePokemon13 = document.getElementById('acero');
-let checkboxTypePokemon14 = document.getElementById('lucha');
-let checkboxTypePokemon15 = document.getElementById('hielo');
-let checkboxTypePokemon16 = document.getElementById('dragon');
-let checkboxTypePokemon17 = document.getElementById('siniestro');
-let checkboxTypePokemon18 = document.getElementById('hada');
-
-let positionArrayType1 = 7;
-let positionArrayType2 = 8;
-let positionArrayType3 = 9;
-let positionArrayType4 = 10;
-let positionArrayType5 = 11;
-let positionArrayType6 = 12;
-let positionArrayType7 = 13;
-let positionArrayType8 = 14;
-let positionArrayType9 = 15;
-let positionArrayType10 = 16;
-let positionArrayType11 = 17;
-let positionArrayType12 = 18;
-let positionArrayType13 = 19;
-let positionArrayType14 = 20;
-let positionArrayType15 = 21;
-let positionArrayType16 = 22;
-let positionArrayType17 = 23;
-let positionArrayType18 = 24;
-
-
+}
 
 
 let typeDefinition= "grass"; 
 let positionArrayType = 7;
 let resultFilterType= [];
-function checkedChangesCheckboxes(checkboxTypePokemon, positionArrayType){
-  checkboxTypePokemon.addEventListener('change', e => {
-  if(e.target.checked){
-    typeDefinition= checkboxTypePokemon.value;
-    console.log(typeDefinition);
-    console.log(positionArrayType);
-    pokemonTypeFilterAdd();
-    
-  }else{
-    alert('Adiossssss');
-  }
-});
-}
 
-checkedChangesCheckboxes(checkboxTypePokemon1, positionArrayType1);
-checkedChangesCheckboxes(checkboxTypePokemon2, positionArrayType2);
-checkedChangesCheckboxes(checkboxTypePokemon3, positionArrayType3);
-checkedChangesCheckboxes(checkboxTypePokemon4, positionArrayType4);
-checkedChangesCheckboxes(checkboxTypePokemon5, positionArrayType5);
-checkedChangesCheckboxes(checkboxTypePokemon6, positionArrayType6);
-checkedChangesCheckboxes(checkboxTypePokemon7, positionArrayType7);
-checkedChangesCheckboxes(checkboxTypePokemon8, positionArrayType8);
-checkedChangesCheckboxes(checkboxTypePokemon9, positionArrayType9);
-checkedChangesCheckboxes(checkboxTypePokemon10, positionArrayType10);
-checkedChangesCheckboxes(checkboxTypePokemon11, positionArrayType11);
-checkedChangesCheckboxes(checkboxTypePokemon12, positionArrayType12);
-checkedChangesCheckboxes(checkboxTypePokemon13, positionArrayType13);
-checkedChangesCheckboxes(checkboxTypePokemon14, positionArrayType14);
-checkedChangesCheckboxes(checkboxTypePokemon15, positionArrayType15);
-checkedChangesCheckboxes(checkboxTypePokemon16, positionArrayType16);
-checkedChangesCheckboxes(checkboxTypePokemon17, positionArrayType17);
-checkedChangesCheckboxes(checkboxTypePokemon18, positionArrayType18);
-
-
-let allPokemonData = data.pokemon;
-verDatos();
-function verDatos(){
-  for (const property in allPokemonData) {
-    console.log(`${allPokemonData[property]}`);
-  }
-  console.log(allPokemon.name);
-}
-console.log(pokemon);
-//allPokemon = data.pokemon;
-let weaknessesEachPokemon= [];
-let filterNumber = 0;
-let numberWeaknessesEachPokemon= [];
-let namePokePoke = ['w1','w2','w3','w4','w5','w6','w7','t1','t2','t3','t4','t5','t6','t7','t8','t9','t10','t11','t12','t13','t14','t15','t16','t17','t18'];
-
-let conjunto=[];
-let filtroFinal= [];
-let resultFilterWeaknessesNumber=[];
-let conjuntoDEtipos= [];
 function pokemonTypeFilterAdd(){
   conjunto[typeDefinition] = [];
-  allPokemon.forEach((pokemon) => {
-    conjuntoDEtipos= conjunto[typeDefinition].push(pokemon.type);
-    console.log(conjuntoDEtipos)
-  });
-for (const property in allPokemon) {
-  console.log(`${object[property]}`);
-}
-console.log(allPokemon.name);
-  let namesToPokemonType = function(pokemon){
-    let memoriaT= pokemon.type;
+  let namesToPokemonType = function(element){
+    let memoriaT= element.type;
     for (const value of memoriaT) {
       if(value ==typeDefinition){
-        let nameType= pokemon.name;
+        let nameType= element.name;
         conjunto[typeDefinition].push(nameType);
       }
     }
@@ -246,30 +175,3 @@ namePokePoke.splice(positionArrayType,1,conjunto[typeDefinition]);
   }
 }
 
-let radioWeaknesses1 = document.getElementById('one');
-let radioWeaknesses2 = document.getElementById('two');
-let radioWeaknesses3 = document.getElementById('three');
-let radioWeaknesses4 = document.getElementById('four');
-let radioWeaknesses5 = document.getElementById('five');
-let radioWeaknesses6 = document.getElementById('six');
-let radioWeaknesses7 = document.getElementById('seven');
-let valorFiltro = 0;
-
-function checkedChangesRadiosWeaknesses(radioWeaknesses){
-  radioWeaknesses.addEventListener('change', e => {
-  if(e.target.checked){
-    valorFiltro = parseInt(radioWeaknesses.value)
-    console.log(valorFiltro);
-  }else{
-    console.log(bye);
-  }
-});
-}
-
-checkedChangesRadiosWeaknesses(radioWeaknesses1);
-checkedChangesRadiosWeaknesses(radioWeaknesses2);
-checkedChangesRadiosWeaknesses(radioWeaknesses3);
-checkedChangesRadiosWeaknesses(radioWeaknesses4);
-checkedChangesRadiosWeaknesses(radioWeaknesses5);
-checkedChangesRadiosWeaknesses(radioWeaknesses6);
-checkedChangesRadiosWeaknesses(radioWeaknesses7);
