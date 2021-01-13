@@ -9,7 +9,9 @@ document.getElementById("main-filter-container").style.display = 'none';
 let allPokemon = data.pokemon;
 console.log(typeof allPokemon);
 let namePokemon = [];
+
 let nameAllPokemon = [];
+
 
 let infoPrincPokemon = document.getElementById("home-main--button");
 infoPrincPokemon.addEventListener("click", function () {
