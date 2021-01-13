@@ -1,0 +1,109 @@
+*{
+  /*box-sizing: border-box;*/
+  background-color:#88efef;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+h1{
+  letter-spacing: 5px;
+  margin-left: 15%;
+}
+
+/*INICIA POKEDEX*/
+
+.caja {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  background: pink;
+  border-radius: 20px;
+}
+
+.caja {
+  height: 150px;
+  width: 500px;
+}
+
+.titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  color: white;
+  background: pink;
+}
+
+.pokeContainer {
+  margin-top: 45px;
+}
+
+.pokeContainer {
+  width: 500px;
+  height: 300px;
+  background:red;
+}
+
+/*INICIA BOTON 01*/
+
+/*button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 5px;
+  margin-right: 1%;
+}*/
+
+button {
+  margin-top: 10px;
+  margin-left: 30%;
+  margin
+}
+
+button {
+  width: 80px;
+  height: 40px;
+  border: 2px solid black;
+  color: black;
+  background-color: white;
+  font-size: .6em;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  border-radius: 6px;
+}
+
+button:hover {
+  cursor:pointer;
+  transform: scale(1.2);
+}
+
+/*FOOTER*/
+
+#footer-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.social-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center
+}
+
+.social-bar P {
+  background: black;
+}

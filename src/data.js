@@ -1,6 +1,11 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
+
+//Capturando a Bulbasaur en consola
+
+
+
+export const catchPokemon= () => { //PARA USAR ESTA FUNCIÓN EN OTRO JS DE TIPO MODULO
   return 'example';
 };
 
