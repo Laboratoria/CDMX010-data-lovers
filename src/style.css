@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Suranna&display=swap");
+/*
+*
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}*/
+
+
+html {
+    font-size: 62.5%;
+}
+
+
+h1{
+font-family: Exo;
+font-size: 4rem;
+color:rgb(3, 70, 129);
+text-align: center;
+}
+
+.logo{
+    display:flex;
+    width: 30%;
+    display:block;
+    margin:auto;
+}
+
+.buttonshowall{
+align-items: center;
+font-family: Rubik;
+font-size:1.6rem;
+height: 26px;
+background:rgb(28, 156, 2);
+color: white;
+border-radius: 4px;
+width: 45%;
+border: none;
+box-shadow: 0px 4px 4px rgb(102, 110, 100);
+}
+
+.buttonshowall:hover {
+background-color:rgb(11, 97, 3);
+}
+
+.buttonshowall:active {
+    background-color:rgb(11, 63, 1);
+    }
+
+.search1{
+    font-family: Rubik;
+    font-size:1.9rem;    
+    color: rgb(28, 156, 2);
+    width: 45%;
+    border:.1rem;
+    border-bottom: .2rem solid #c7c7c7; 
+    }
+
+.inputs{
+    font-family: Rubik;
+    font-size:1.3rem;    
+    color: rgb(28, 156, 2);
+    width: 13%;
+    margin:5px;
+    border:1px;
+    border-bottom: 2px solid #c7c7c7; 
+}
+
+
+.buttonsearch2{
+    font-family: Rubik;
+    font-size:1.6rem;
+    height: 26px;
+    background:rgb(3, 70, 129);
+    color: white;
+    border-radius: 4px;
+    width: 200px;
+    border: none;
+    display:block; 
+    margin: 0 auto;
+    box-shadow: 0px 3px 3px rgb(102, 110, 100);
+    }
+
+.buttonsearch2:hover {
+        background-color:rgb(18, 12, 97);
+        }
+
+.buttonsearch2:active {
+            background-color:rgb(4, 1, 48);
+            }
+
+        
+h3{
+    font-family:rubik;
+    font-size: 2.4rem;
+    text-align:center;
+}
+.cabecera-tabla{
+    font-family: Rubik;
+    font-size:1.6rem;
+    height: 2.8rem;
+    background:rgb(3, 70, 129);
+    color: white;
+    border-radius: .4rem;
+    width: 18rem;
+    border: none;
+    margin:.5rem;
+    display:block; 
+    margin: 0 auto;
+    box-shadow: 0rem .3rem .3rem rgb(102, 110, 100);
+    display:inline-block;
+    text-align: center;
+    margin:.3rem;
+}
+
+#div-buttonshowall{
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#div-menusdecategorias{
+    display: inline-block;
+   
+}
+
