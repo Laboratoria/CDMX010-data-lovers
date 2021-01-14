@@ -2,7 +2,7 @@
 
 export const example = () => {
   /*example.filter(lugar => example.name === "kanto")*/
-  const datos = require ('./pokemon');
+  const datos = require ('./pokemon/pokemon.js');
   fetch(datos)
     .then((res) => {
       return res.json();
