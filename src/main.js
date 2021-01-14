@@ -96,8 +96,8 @@ searchPoke.addEventListener("click", function() {
 ///////////FiltroDebilidades/////////////////
 let filterNumber = 0;
 let conjunto=[];
-let filtroFinal= [];
 let resultFilterWeaknessesNumber=[];
+let finalFilter = nameAllPokemon;
 
 function weaknessesNumberFilterAdd(){
   conjunto[filterNumber] = [];
@@ -111,8 +111,26 @@ function weaknessesNumberFilterAdd(){
   allPokemon.forEach(namesToWeaknessesNumber);
   console.log(conjunto[filterNumber]);
   resultFilterWeaknessesNumber = conjunto[filterNumber];
+  ////COMBINANDO FILTROS////
+  finalFilter = [];
+  if(resultFilterType==0){
+    finalFilter= resultFilterWeaknessesNumber;
+  } else{
+    for(const value of resultFilterWeaknessesNumber){
+      let namepokeD = value;
+      for(const value of resultFilterType){
+        if(value == namepokeD){
+          finalFilter.push(value);
+        }
+      }
+    }
+  }
+  console.log(finalFilter);
   //agregado Brenda
-  getObjects(resultFilterWeaknessesNumber); //obtiene los elementos finales y crea contenedor de cada uno
+  //getObjects(finalFilter); //obtiene los elementos finales y crea contenedor de cada uno
+  //if(finalFilter.length==0){
+    //alert('oops! No hay pokemones que cumplan con estas características, prueba con otro filtrado');
+  //}
 }
 
 //código agregado para mostrar resultados
@@ -159,16 +177,26 @@ let objectsPokeFil = []; // y esta también :)
 
 function weaknessesNumberFilterQuit(){
   resultFilterWeaknessesNumber =[];
-  /*if(resultFilterType.length==0){
-    filtroFinal= resultFilterWeaknessesNumber;
-    console.log('no hay ningun filtro');
-  } else{
-    filtroFinal= resultFilterType; 
+  ////COMBINANDO FILTROS////
+  finalFilter = [];
+  if(resultFilterWeaknessesNumber.length==0 && resultFilterType.length!=0){
+    finalFilter= resultFilterType;
+  } else if(resultFilterWeaknessesNumber.length==0 && resultFilterType.length==0){
+    finalFilter= nameAllPokemon;
   }
-    console.log(filtroFinal);*/
+  console.log(finalFilter);
 
-  getObjects(nameAllPokemon);
+  //getObjects(finalFilter);
 }
+
+  document.getElementById('removeFilterOption').style.display= 'none';
+  document.getElementById('removeFilterLink').addEventListener('change', e => {
+    if(e.target.checked){
+      weaknessesNumberFilterQuit();
+      document.getElementById('removeFilterOption').style.display= 'none';
+      getObjects(finalFilter);
+    }
+  });
 
   let radioWeaknesses1 = document.getElementById('one');
   let radioWeaknesses2 = document.getElementById('two');
@@ -178,7 +206,7 @@ function weaknessesNumberFilterQuit(){
   let radioWeaknesses6 = document.getElementById('six');
   let radioWeaknesses7 = document.getElementById('seven');
   let valorFiltro = 0;
-
+  
   function checkedChangesRadiosWeaknesses(radioWeaknesses){
     radioWeaknesses.addEventListener('change', e => {
     if(e.target.checked){
@@ -186,12 +214,11 @@ function weaknessesNumberFilterQuit(){
       console.log(valorFiltro);
       filterNumber= valorFiltro; 
     weaknessesNumberFilterAdd();
-    }else{
-      valorFiltro = parseInt(radioWeaknesses.value);
-    console.log(valorFiltro);
-    filterNumber= valorFiltro; 
-    console.log('borrar');
-    weaknessesNumberFilterQuit();
+    document.getElementById('removeFilterOption').style.display= 'block';
+    getObjects(finalFilter);
+    if(finalFilter.length==0){
+      alert('oops! No hay pokemones que cumplan con estas características, prueba con otro filtrado');
+    }
     }
   });
   }
@@ -210,6 +237,7 @@ let namePokePoke = ['w','t1','t2','t3','t4','t5','t6','t7','t8','t9','t10','t11'
 let typeDefinition= "grass"; 
 let positionArrayType = 7;
 let resultFilterType= [];
+
 function pokemonTypeFilterAdd(){
   conjunto[typeDefinition] = [];
   let namesToPokemonType = function(element){
@@ -251,23 +279,27 @@ namePokePoke.splice(positionArrayType,1,conjunto[typeDefinition]);
   })
   console.log(deleteNamesRepeat);
   resultFilterType= deleteNamesRepeat;
-  getObjects(resultFilterType);
-  //AQUI EMPIEZA EL DEBUGGGGGGGG
-  /*if(resultFilterType.length==0){
-    filtroFinal= resultFilterWeaknessesNumber;
+  ////COMBINANDO FILTROS////
+  finalFilter = [];
+  if(resultFilterWeaknessesNumber.length==0){
+    finalFilter= resultFilterType;
   } else{
     for(const value of resultFilterWeaknessesNumber){
-      let namepokeD= value;
+      let namepokeD = value;
       for(const value of resultFilterType){
         if(value == namepokeD){
-          filtroFinal.push(value);
+          finalFilter.push(value);
         }
       }
     }
   }
-  console.log(filtroFinal);*/
+  console.log(finalFilter);
+  //getObjects(finalFilter);
+  //if(finalFilter.length==0){
+    //alert('oops! No hay pokemones que cumplan con estas características');
+  //}
 }
-//pokemonTypeFilter()
+
 function pokemonTypeFilterQuit(){
   let filterTypeNumber= positionArrayType;
   console.log(filterTypeNumber);
@@ -292,30 +324,31 @@ function pokemonTypeFilterQuit(){
     }
   }
   console.log(TodosLosNombresJuntos);
-  resultFilterType= TodosLosNombresJuntos;
-if(resultFilterType.length==0){
-  getObjects(nameAllPokemon);
-} else{
-  getObjects(resultFilterType);
-}
-
-  /*//console.log(resultFilterType);
-  //AQUÍ EMPIEZA EL DEBUGGGG
-  if(resultFilterType.length==0){
-    filtroFinal= resultFilterWeaknessesNumber;
-  } else if(resultFilterType.length!=0 && resultFilterType.length==0){
-    filtroFinal= resultFilterType; 
-  } else if(resultFilterType.length!=0 && resultFilterType.length!=0){
+  let deleteNamesRepeat = TodosLosNombresJuntos.filter((item,index)=>{
+    return TodosLosNombresJuntos.indexOf(item) === index;
+  })
+  console.log(deleteNamesRepeat);
+  resultFilterType= deleteNamesRepeat;
+  ////COMBINANDO FILTROS////
+  finalFilter = [];
+  if(resultFilterWeaknessesNumber.length==0 && resultFilterType.length!=0){
+    finalFilter= resultFilterType;
+  } else if(resultFilterWeaknessesNumber.length!=0 && resultFilterType.length!=0){
     for(const value of resultFilterWeaknessesNumber){
-      let namepokeD= value;
+      let namepokeD = value;
       for(const value of resultFilterType){
         if(value == namepokeD){
-          filtroFinal.push(value);
+          finalFilter.push(value);
         }
       }
     }
+  } else if(resultFilterWeaknessesNumber.length!=0 && resultFilterType==0){
+    finalFilter= resultFilterWeaknessesNumber;
+  } else if(resultFilterWeaknessesNumber.length==0 && resultFilterType==0){
+    finalFilter= nameAllPokemon;
   }
-    console.log(filtroFinal);*/
+  console.log(finalFilter);
+  //getObjects(finalFilter);
 }
 let checkboxTypePokemon1 = document.getElementById('planta');
 let checkboxTypePokemon2 = document.getElementById('fuego');
@@ -361,13 +394,17 @@ function checkedChangesCheckboxes(checkboxTypePokemon, positionArrayTypeDefiniti
     console.log(typeDefinition);
     console.log(positionArrayType);
     pokemonTypeFilterAdd();
-    
+    getObjects(finalFilter);
+    if(finalFilter.length==0){
+      alert('oops! No hay pokemones que cumplan con estas características, prueba con otro filtrado');
+    }
   }else{
     typeDefinition= checkboxTypePokemon.value;
     positionArrayType = positionArrayTypeDefinition;
     console.log(typeDefinition);
     console.log(positionArrayType);
     pokemonTypeFilterQuit();
+    getObjects(finalFilter);
   }
 });
 }
