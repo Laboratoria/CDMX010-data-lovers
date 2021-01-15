@@ -2,11 +2,52 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de los juegos olímpicos Rio 2016 organizados en Rio de Janeiro
+    que muestra, filtra y ordena por diversas categorias, los medallistas de esos juegos">
+    <title>Río de Janeiro 2016</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/8095b5a0de.js" crossorigin="anonymous"></script>
+
   </head>
   <body>
     <div id="root"></div>
+    <header>
+      <h1>Welcome to the Site of Olympics Games</h1>
+    <img src="assets/logo rio de janeiro.png" class="logo">
+    <br>
+    <br>
+  </header>
+  <main>
+    <div id="div-buttonshowall">
+  <button class="buttonshowall"><i class="fas fa-search"></i>   Show all</button>
+  <input name="search" type="search" placeholder="Search by words" class="search1">
+</div>
+  <br>
+  <br>
+  <div id="div-menusdecategorias">
+  <i class="fas fa-globe-americas"></i><input name="country" type="country" placeholder="Country" class="inputs"> 
+  <i class="fas fa-venus-mars"></i><input name="search" type="search" placeholder="Gender" class="inputs">
+  <i class="fas fa-running"></i><input name="search" type="search" placeholder="Sport" class="inputs">
+  <i class="fas fa-swimmer"></i><input name="search" type="search" placeholder="Event" class="inputs">
+  <i class="fas fa-medal"></i><input name="search" type="search" placeholder="Medal" class="inputs">
+</div>
+  <br>
+  <br>
+  <button class="buttonsearch2"><i class="fas fa-search"></i> Search</button>
+  <br>
+  <br>
+  <div class="results">
+  <h3>Results</h3>
+<span class="cabecera-tabla">Name</span>
+<span class="cabecera-tabla">Country</span>
+<span class="cabecera-tabla">Gender</span>
+<Span class="cabecera-tabla">Sport</Span>
+<Span class="cabecera-tabla">Event</Span>
+<span class="cabecera-tabla">Medal</span>
+</div>
+  
+  </main>
     <script src="main.js" type="module"></script>
   </body>
 </html>
