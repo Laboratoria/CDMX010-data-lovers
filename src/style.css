@@ -70,7 +70,7 @@ body {
 /*Estilos TABLA*/
 
 /*Estilos MAIN*/
-main {
+section {
         border: 2px solid gray;
         border-radius: 1em/2em;
         width:90%;
@@ -79,6 +79,8 @@ main {
         font-family: black,'Segoe Ui', sans-serif;
         display: inline-block;
         align-items: space-between;
+        margin-top: 15px;
+        margin-bottom: 10px;
 }
 
 /*Estilos TABLE*/
