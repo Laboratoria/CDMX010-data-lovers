@@ -111,18 +111,17 @@ input.addEventListener("keyup", e => {
      
   }
 });
-
+let finalFilterS = [];
 function buscar(){
-  finalFilter = [];
+  //finalFilter = [];
+  finalFilterS = [];
   let texto = input.value.toLowerCase();
-  for( const nombre of nameAllPokemon){
+  for( const nombre of finalFilter){
     if(nombre.indexOf(texto)!==-1){
-      finalFilter.push(nombre);
+      finalFilterS.push(nombre);
     }
-    //
-    
   }
-  getObjects(finalFilter);
+  getObjects(finalFilterS);
   //console.log(arraySearch);
 }
 
