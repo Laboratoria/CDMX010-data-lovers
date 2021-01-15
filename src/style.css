@@ -45,6 +45,10 @@ body {
                    height: auto;
                 }
 
+                .nav {
+                    padding: 30px 30px;
+                }
+
                 .nav select,
                 .nav input {
                     padding: 8px 16px;
