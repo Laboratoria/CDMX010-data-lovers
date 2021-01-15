@@ -22,82 +22,57 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    
   </head>
 
   <body>
     <header>
-      <!-- <div class="div-img-banner">
-        <img src="./imagen/bannerTitulo.png" alt="" />
+      <img id="menu" src="./icons/bars-solid.svg" alt="" />
+      <div class="div-img-banner"> 
+        <img src="./imagen/bannerTitulo.png"/>
       </div>
-      <nav id="nav" class="menu-nav">
-        <div class="filtros">
-          <div class="drop-menu">
-            Filtros
-            <span class="material-icons"> arrow_drop_down_circle </span>
-          </div>
-          <div class="wrapper">
-            <ul class="menu-bar">
-              <li class="species-items">
-                <a href="#"
-                  ><i><span class="material-icons">chevron_right </span></i>
-                  Especie
-                </a>
-              </li>
-              <li class="gender-items">
-                <a href="#"
-                  ><i><span class="material-icons">chevron_right </span></i>
-                  Género
-                </a>
-              </li>
-              <li class="location-items">
-                <a href="#"
-                  ><i><span class="material-icons">chevron_right </span></i>
-                  Localidad
-                </a>
-              </li>
-            </ul>
-            Submenu-Specie
-            <ul class="specie-drop">
-              <li class="back-species">
-                <span class="material-icons">arrow_back</span>
-                Especie
-              </li>
-              <li id="humans"><a href="#">Humano </a></li>
-              <li id="aliens"><a href="#">Alien </a></li>
-            </ul>
-            <!--Submenu-Gender
-            <ul class="gender-drop">
-              <li class="back-gender">
-                <span class="material-icons">arrow_back</span>
-                Género
-              </li>
-              <li><a href="#">Femenino </a></li>
-              <li><a href="#">Masculino </a></li>
-            </ul>
-            <!--Submenu-Location
-            <ul class="location-drop">
-              <li class="back-location">
-                <span class="material-icons">arrow_back</span>
-                Localidad
-              </li>
-              <li><a href="#">Tierra </a></li>
-              <li><a href="#">Desconocida </a></li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <label for="nombre">Busca tu personaje favorito</label>
-          <input
-            type="search"
-            placeholder="buscar personaje"
-            class="card-filter"
-            id="search"
-          />
-        </div>
-      </nav>-->
     </header>
-
+    <nav id="nav" class="menu-nav">
+      <div class="filter-name">
+        <img class="icon-name" src="./icons/search-solid.svg">
+        <input
+          type="search"
+          placeholder="buscar personaje"
+          class="card-filter"
+          id="search"
+        />
+      </div>
+        <div class="orders">
+        <select id="sort">
+          <option value="asc">Ascendente (A-Z)</option>
+          <option value="desc">Descendente (z-A)</option>
+        </select>
+      </div>
+     
+    </nav>
     <main>
+      <section class="filtros">
+          <ul>
+            <li class="filter-one">Especie
+              <ul>
+              <li class="menu-element" data-filter="species" data-value="Human">Human</li>
+              <li class="menu-element" data-filter="species" data-value="Alien">Alien</li>
+            </ul> 
+          </li>
+          <li class="filter_two">Estatus
+            <ul>
+            <li class="menu-element" data-filter="status" data-value="Alive">Vivo</li>
+            <li class="menu-element" data-filter="status" data-value="Dead">Muerto</li>
+          </ul>
+          <li class="filter-three">Genero
+            <ul>
+              <li class="menu-element" data-filter="gender" data-value="Female">Femenino</li>
+              <li class="menu-element" data-filter="gender" data-value="Male">Masculino</li>
+            </ul>
+          </li>
+          </li>
+          </ul>
+      </section>
       <section id="data"></section>
     </main>
 

@@ -7,130 +7,75 @@ header {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 70px;
+  height: 60px;
   background-color: black;
-  /*justify-content: center;*/
+  justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 10px;
 }
 .div-img-banner {
+  outline: 1px solid rgb(239, 237, 241);
   background-color: black;
-  width: 100%;
-  height: 70px;
+  width: 70%;
+  height: 100%;
   display: flex;
   justify-content: center;
 }
+
 header img {
-  height: 70px;
+  height: 90%;
   max-width: 95%;
 }
-/*ESTILO DEL NAV (MENU)
+
+#menu {
+  position: absolute;
+  display: flex;
+  left: 30px;
+  width: 25px;
+}
+/*ESTILO DEL NAV (MENU) */
 nav {
-  outline: 2px solid salmon;
   width: 100%;
+  height: 30px;
+  outline: 2px solid salmon;
+  position: fixed;
+  top: 60px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(14, 13, 13);
+  align-items: baseline;
+  justify-content: flex-end;
 }
 
-.filtros {
-  display: block;
-  outline: 2px solid aqua;
-  width: 300px;
+nav div {
+  outline: 2px solid #ecec11;
+  display: flex;
+  margin-right: 10px;
 }
 
-nav .drop-menu {
-  width: 300px;
-  background: rgb(0, 0, 0);
-  color: #b0b3b8;
-  padding: 0 10px;
-  font-size: 25px;
-  font-weight: 200px;
-  line-height: 50px;
-  font-family: "Schoolbell", cursive;
-  text-align: center;
+.filter-name {
+  outline: 2px solid rgb(224, 20, 58);
+  height: 100%;
 }
-nav .wrapper {
-  position: absolute;
-  top: 130px;
-  display: flex;
-  width: 400px;
-  background: #242526;
-  border-radius: 5px;
-  overflow: hidden;
-  display: none;
+.orders {
+  outline: 2px solid rgb(84, 187, 187);
 }
-nav .wrapper.show {
-  display: block;
+.icone-name {
+  outline: 2px solid ghostwhite;
   display: flex;
 }
-nav .wrapper .specie-drop,
-nav .wrapper .gender-drop,
-nav .wrapper .location-drop {
-  display: none;
+#search {
+  height: 20px;
+  margin-top: 5px;
+  margin-left: 0%;
 }
-nav .drop-menu span {
-  float: right;
-  line-height: 50px;
-  font-size: 20px;
-  cursor: pointer;
-}
-nav .wrapper ul {
-  list-style: none;
-  color: #b0b3b8;
-  width: 400px;
-  padding: 10px;
-  transition: all 0.03s ea;
-}
-nav .wrapper ul li {
-  line-height: 55px;
-}
-nav .wrapper ul li a {
-  text-decoration: none;
-  color: #b0b3b8;
-  display: flex;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 0 10px;
-  align-items: center;
-  border-radius: 8px;
-}
-nav .wrapper ul li:hover a {
-  background: #f0f035;
-}
-nav .wrapper ul li a i {
-  position: absolute;
-  right: 10px;
-  font-size: 25px;
-  pointer-events: none;
-}
-.wrapper .specie-drop li {
-  padding-left: 10px;
-  font-size: 20px;
-  color: #b0b3b8;
-  font-weight: 500;
-  cursor: pointer;
-}
-.wrapper .specie-drop span {
-  margin-right: 15px;
-}
+
 main {
   margin-top: 10%;
   display: flex;
-}
-/*fILTRADO POR PERSONAJE
-label {
-  outline: 2px solid rgba(255, 255, 255, 0.801);
-  height: 100%;
-  display: block;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.801);
-  font-family: "Coming Soon", cursive;
+  width: 100px;
 }
 .card-filter {
   outline: 2px solid blue;
@@ -140,7 +85,7 @@ label {
   margin: 10px;
 }
 
-ESTILOS DE LAS CARDS*/
+/*ESTILOS DE LAS CARDS*/
 #data {
   margin-top: 70px;
   display: flex;
