@@ -10,14 +10,6 @@ body {
         background: white;
 }
 
-<<<<<<< HEAD
-/*Estilos HEADER*/
-header {
-        background-color: #10375c ;
-        width: auto;
-        height: 80px;
-        padding: 30px 0;
-=======
 .contenedor-padre{
         display: flex;
         flex-flow: column nowrap;
@@ -64,7 +56,6 @@ header {
 .texto-inicial {
         /* background:tomato */
         height: 500px;
->>>>>>> Valeria
         display: flex;
         align-items: center;
     }
