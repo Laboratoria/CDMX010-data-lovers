@@ -4,170 +4,116 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <meta name="viewport" content="width=device-width,  user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<<<<<<< HEAD
-=======
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
->>>>>>> Valeria
     <link rel="stylesheet" href="style.css" />
   </head>
-  <h1>hola data lovers</h1>
   <body>
-      <header>
+    <div class="contenedor-padre">
 
-        <div class="logo">
-          <img src="img/logo.png" alt="">
-        </div>
-  
-        <div class="option-data">
-          <select>
-            <option value="" selected>Ordenar por:</option>
-            <option id="name"></option>
-           </select>
-           <select>
-             <option value="" selected>Categoria por: </option>
-             <option id="fuerza"></option>
-           </select>
-           <input type="text" placeholder="Buscar por nombre: ">
-        </div>
-  
+      <header class="header margen-interno">
+          <div class="menu">
+              <div class="logo">
+                  <a href="#"><img src="./img/logo.png" alt=""></a>
+              </div>
+
+              <nav class="nav">
+                  <select name="" id="" >
+                      <optgroup label="Ordenar por: ">
+                          <option value="">A - Z</option>
+                          <option value="">Peso (KG)</option>
+                          <option value="">Altura (MTS)</option>
+                      </optgroup>>
+                  </select>
+                  <select name="" id="" >
+                      <optgroup label="Categoría por: ">
+                          <option value="">Resistencia</option>
+                          <option value="">Tipo</option>
+                          <option value="">Debilidad</option>
+                      </optgroup>
+                  </select>
+                  <input type="text" name="" id=""placeholder="Buscar por nombre: ">
+              </nav>
+          </div>
+
+          <div class="texto-inicial">
+              <h1>Pokémon GO es un videojuego de realidad aumentada basado en la localización desarrollado por Niantic.
+                  <br>El juego consiste en buscar y capturar personajes de la saga Pokémon escondidos en ubicaciones del mundo real 
+                  y luchar con ellos,<br> lo que implica desplazarse físicamente por las calles de la ciudad para progresar. La aplicación 
+                  comporta un elemento de interacción social,  ya que promueve reuniones físicas de los usuarios en distintas ubicaciones
+                  de sus poblaciones y bosques entre otros.
+              </h1>
+          </div>
+
       </header>
 
-<<<<<<< HEAD
-      <div class="option-data">
-        <select>
-          <option value="" selected>Ordenar por:</option>
-          <option id="name"></option>
-         </select>
-         <select>
-           <option value="" selected>Categoría por. </option>
-           <option id="fuerza"></option>
-         </select>
-         <input type="text" placeholder="Buscar por nombre: ">
-      </div>
-=======
-      <main>
->>>>>>> Valeria
-
-      <div class="slides">
-          <img src="img/slide-1.jpg" alt="">
-          <img src="img/slide-2.jpg" alt="">
-          <img src="img/slide-3.jpg" alt="">
-      </div>
-
-<<<<<<< HEAD
-    </header>
-    <main>
-      <table class="main-table">
-        <thead>
-          <tr>
-            <th scope="col">Pokémon</th>
-            <th scope="col">Identificador</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Regiones</th>
-            <th scope="col">Detalles</th>
-          </tr>
-        </thead>
-          <tr>
-            <td class="fila1" id="Poke-r1"></td>
-            <td class="fila1" id="id-r1"></td>    
-            <td class="fila1" id="name-r1"></td>
-            <td class="fila1" id="region-r1"></td>
-            <td class="fila1" id="details-r1"></td> 
-         </tr>
-         <tr>
-            <td class="fila2" id="Poke-r2"></td>
-            <td class="fila2" id="id-r2"></td>    
-            <td class="fila2" id="name-r2"></td>
-            <td class="fila2" id="region-r2"></td>
-            <td class="fila2" id="details-r2"></td> 
-          </tr>
-          <tr>
-            <td class="fila3" id="Poke-r3"></td>
-            <td class="fila3" id="id-r3"></td>    
-            <td class="fila3" id="name-r3"></td>
-            <td class="fila3" id="region-r3"></td>
-            <td class="fila3" id="details-r3"></td> 
-          </tr>
-          <tr>
-            <td class="fila4" id="Poke-r4"></td>
-            <td class="fila4" id="id-r4"></td>    
-            <td class="fila4" id="name-r4"></td>
-            <td class="fila4" id="region-r4"></td>
-            <td class="fila4" id="details-r4"></td> 
-          </tr>
-          <tr>
-            <td class="fila5" id="Poke-r5">1</td>
-            <td class="fila5" id="id-r5">2</td>    
-            <td class="fila5" id="name-r5">3</td>
-            <td class="fila5" id="region-r5">4</td>
-            <td class="fila5" id="details-r5">5</td> 
-          </tr>
-      </table>
-      </main>
-
-      <footer>
-        <a class="img" href="https://twitter.com/pokemongoapp"><img id=tw src="img/twitter2.png"/></a>
-        <a class="img" href="https://www.facebook.com/PokemonGO"><img id=fb src="img/facebook.png"/></a>
-        <a class="img" href="https://www.instagram.com/pokemongoapp"><img id= ig src="img/instagram.png"/></a>
-      </footer>
-=======
+      <main class= "margen-interno">
         <table class="main-table">
           <thead>
             <tr>
               <th scope="col">Pokémon</th>
               <th scope="col">Identificador</th>
               <th scope="col">Nombre</th>
-              <th scope="col">Regiones</th>
+              <th scope="col">Región</th>
               <th scope="col">Detalles</th>
             </tr>
           </thead>
             <tr>
-              <td id="Poke-r1"></td>
-              <td id="id-r1"></td>    
-              <td id="name-r1"></td>
-              <td id="region-r1"></td>
-              <td id="details-r1"></td> 
+              <td class="fila1" id="Poke-r1">1</td>
+              <td class="fila1" id="id-r1">2</td>    
+              <td class="fila1" id="name-r1">3</td>
+              <td class="fila1" id="region-r1">4</td>
+              <td class="fila1" id="details-r1">
+                <a class="img"><img id="detail" src="img/pokebola.png"/></a>
+              </td> 
            </tr>
            <tr>
-              <td id="Poke-r2"></td>
-              <td id="id-r2"></td>    
-              <td id="name-r2"></td>
-              <td id="region-r2"></td>
-             <td id="details-r2"></td> 
+              <td class="fila2" id="Poke-r2">A</td>
+              <td class="fila2" id="id-r2">B</td>    
+              <td class="fila2" id="name-r2">C</td>
+              <td class="fila2" id="region-r2">D</td>
+              <td class="fila2" id="details-r2">
+                <a class="img"><img id="detail" src="img/pokebola.png"/></a>
+              </td> 
             </tr>
             <tr>
-              <td id="Poke-r3"></td>
-              <td id="id-r3"></td>    
-              <td id="name-r3"></td>
-              <td id="region-r3"></td>
-              <td id="details-r3"></td> 
+              <td class="fila3" id="Poke-r3">A</td>
+              <td class="fila3" id="id-r3">B</td>    
+              <td class="fila3" id="name-r3">C</td>
+              <td class="fila3" id="region-r3">D</td>
+              <td class="fila3" id="details-r3">
+                <a class="img"><img id="detail" src="img/pokebola.png"/></a>
+              </td> 
             </tr>
             <tr>
-              <td id="Poke-r4"></td>
-              <td id="id-r4"></td>    
-              <td id="name-r4"></td>
-              <td id="region-r4"></td>
-              <td id="details-r4"></td> 
+              <td class="fila4" id="Poke-r4">A</td>
+              <td class="fila4" id="id-r4">B</td>    
+              <td class="fila4" id="name-r4">C</td>
+              <td class="fila4" id="region-r4">D</td>
+              <td class="fila4" id="details-r4">
+                <a class="img"><img id="detail" src="img/pokebola.png"/></a>
+              </td> 
             </tr>
             <tr>
-              <td id="Poke-r5">1</td>
-              <td id="id-r5">2</td>    
-              <td id="name-r5">3</td>
-              <td id="region-r5">4</td>
-              <td id="details-r5">5</td> 
+              <td class="fila5" id="Poke-r5">1</td>
+              <td class="fila5" id="id-r5">2</td>    
+              <td class="fila5" id="name-r5">3</td>
+              <td class="fila5" id="region-r5">4</td>
+              <td class="fila5" id="details-r5">
+                <a class="img"><img id="detail" src="img/pokebola.png"/></a>
+              </td> 
             </tr>
         </table>
+    </main>
 
-      </main>
+    <div class="margen-interno">
+      <footer class="footer margen-interno">
+        <a class="img" href="https://www.youtube.com/pokemongo"><img id=tw src="img/youtube.png"/></a>
+        <a class="img" href="https://www.facebook.com/PokemonGO"><img id=fb src="img/facebook.png"/></a>
+        <a class="img" href="https://www.instagram.com/pokemongoapp"><img id= ig src="img/instagram.png"/></a>
+      </footer>
+   </div>
 
-        <footer>
-          <a href="https://www.facebook.com/PokemonGO"><img id=fb src="C:\Users\talia\Desktop\DATA LOVERS\CDMX010-data-lovers\src\assets\facebook.png"/></a>
-          <a href="https://twitter.com/pokemongoapp"><img id=tw src="C:\Users\talia\Desktop\DATA LOVERS\CDMX010-data-lovers\src\assets\twitter.png"/></a>
-          <a href="https://www.instagram.com/pokemongoapp"><img id= ig src="C:\Users\talia\Desktop\DATA LOVERS\CDMX010-data-lovers\src\assets\instagram.png"/></a>
-        </footer>
->>>>>>> Valeria
-
-    <script src="main.js" type="module"></script>
+        <script src="main.js" type="module"></script>
   </body>
 </html>
