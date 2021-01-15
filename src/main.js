@@ -95,6 +95,37 @@ searchPoke.addEventListener("click", function() {
 })
 
 
+let finalFilter = nameAllPokemon;
+/// AL PRESIONAR ENTER EN EL BUSCADOR SE EJECUTA LA FUNCIÓN DE BUSCAR
+let arraySearch = [];
+let input = document.getElementById('namePokeToSearch');
+input.addEventListener("keyup", e => {
+  console.log(e.key);
+  if(e.key=='Enter'){
+    console.log('e.key');
+    e.preventDefault();
+    document.getElementById("searchByNameButton").click();
+  }else{
+    buscar();
+    //console.log(arraySearch);
+     
+  }
+});
+
+function buscar(){
+  finalFilter = [];
+  let texto = input.value.toLowerCase();
+  for( const nombre of nameAllPokemon){
+    if(nombre.indexOf(texto)!==-1){
+      finalFilter.push(nombre);
+    }
+    //
+    
+  }
+  getObjects(finalFilter);
+  //console.log(arraySearch);
+}
+
 
 
 //código agregado para mostrar resultados
@@ -116,9 +147,9 @@ let objectsPokeFil = []; // y esta también :)
   document.getElementById('home-pokemon-info-container').innerHTML = infoPrinPokeFil;
   let container = document.getElementById('home-pokemon-info-container');
   let child = container.getElementsByClassName('buttonEachPokeC');
-  console.log(child);
+  //console.log(child);
   agregarClase(child);
-  console.log(infoPrinPokeFil);
+  //console.log(infoPrinPokeFil);
 }
 //
 /*
@@ -141,7 +172,7 @@ let objectsPokeFil = []; // y esta también :)
 
 
 ////////VARIABLES PARA FILTRO DEBILIDADES Y TIPO///////
-let finalFilter = nameAllPokemon;
+//let finalFilter = nameAllPokemon;
 let valorFiltro = 0;
 let filterNumber = 0;
 let typeDefinition= "grass"; 
