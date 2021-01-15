@@ -73,8 +73,9 @@ body {
 main {
         border: 2px solid gray;
         border-radius: 1em/2em;
-        height:500px;
-        width:75%;
+        width:90%;
+        height:auto;
+        margin: auto;
         font-family: black,'Segoe Ui', sans-serif;
         display: inline-block;
         align-items: space-between;
@@ -82,11 +83,11 @@ main {
 
 /*Estilos TABLE*/
 .main-table {
-        border: 1px solid gray;
+        border: 1px solid white;
  }
 
 th {
-        height:100px;
+        height:auto;
         width:24%;
         align-items: space-between;
 }
@@ -94,28 +95,28 @@ th {
 .fila1 {
         border: 1px #f4f6ff;
         font-family: black,'Segoe Ui', sans-serif;
-        height:10px;
+        height:auto;
 }
 .fila2 {
         border: 1px #f4f6ff;
         font-family: black,'Segoe Ui', sans-serif;
-        height:10px;
+        height:auto;
 }
 .fila3 {
         border: 1px #f4f6ff;
         font-family: black,'Segoe Ui', sans-serif; height:20px;
-        height:10px;
+        height:auto;
 }
 .fila4 {
         border: 1px #f4f6ff;
         font-family: black,'Segoe Ui', sans-serif;
-        height:10px;
+        height:auto;
         
 }
 .fila5 {
         border: 1px  #f4f6ff;
         font-family: black,'Segoe Ui', sans-serif;
-        height:10px;
+        height:auto;
 }
 
 footer {
