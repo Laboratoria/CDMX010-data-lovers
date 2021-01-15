@@ -13,15 +13,21 @@
 ## 1. Resumen del proyecto
 
 * [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
+  Con el objetivo de ofrecer a los usuarios de Pokemon Go una mejor experiencia para decidir qué pokémones pueden tener una mejor respuesta durante una batalla, es necesario conocer las características específicas de los 251 Pokémon de las regiones: Kanto y Johto. A partir de los resultados obtenidos durante la investigación de usuarios, el proyecto cuenta con un buscador para que el jugador pueda obtener información por nombre del pokémon, y un filtro para identificar y agrupar mediante características como: tipo, región, identificador, peso, estatura, ataques, habilidades, debilidades y cantidad de dulces para evolucionar. 
   [Pokémon GO](http://pokemongolive.com).
   - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
 
 
-## 2. UX/UI "Usuario"
+## 2. UX/UI 
 
-* Aquí editaremos conforme a proceso de desarrollo.
+### Investigación 
+Para el desarrollo del producto a partir de las necesidades de usuarios, realizamos 5 entrevistas. Debido a la contingencia por Covid - 19, estas entrevistas no podían ser presenciales y  se realizaron a través de plataformas de mensajería. Las preguntas fueron las siguientes: 
+- ¿Qué información necesitas conocer sobre tus Pokémon antes de iniciar una batalla en Pokémon Go?
+- En un listado extenso de Pokémones ¿Qué información te gustaría recibir? 
+- En una tarjeta o card sobre un Pokémon ¿Qué información te gustaría obtener?
+Una vez que las entrevistas fueron realizadas, el equipo de desarrollo trabajó en el prototipado de baja y alta calidad. Es importante mencionar que ambos se pusieron a consideración de los 5 usuarios, quienes realizaron sugerencias al diseño, basadas en sus necesidades y objetivos al consultar un Pokédex. 
+
+### Diseño
 
 ## 3. Herramientas de Desarrollo
 

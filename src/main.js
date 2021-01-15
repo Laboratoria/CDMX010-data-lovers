@@ -3,6 +3,7 @@ import { example } from './data.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
+<<<<<<< HEAD
 console.log(data);
 
 let filtro = data.filter(function(nombre) {
@@ -10,3 +11,14 @@ let filtro = data.filter(function(nombre) {
 })
 
 
+=======
+const url = './data/pokemon/pokemon.json';
+
+fetch()
+    .then(function(){
+
+    })
+    .catch(function(){
+
+    });
+>>>>>>> develop

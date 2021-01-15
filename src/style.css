@@ -1,4 +1,4 @@
-/*Estilos Generales*/
+/*Estilos GENERALES*/
 * {
         margin: 0;
         padding: 0;
@@ -73,16 +73,67 @@ body {
         }
 /*Estilos TABLA*/
 
-.main-table {
-    border: 1px solid gray;
+/*Estilos MAIN*/
+section {
+        border: 2px solid gray;
+        border-radius: 1em/2em;
+        width:90%;
+        height:auto;
+        margin: auto;
+        font-family: black,'Segoe Ui', sans-serif;
+        display: inline-block;
+        align-items: space-between;
+        margin-top: 15px;
+        margin-bottom: 10px;
 }
 
-footer{
+/*Estilos TABLE*/
+.main-table {
+        border: 1px solid white;
+ }
+
+th {
+        height:auto;
+        width:24%;
+        align-items: space-between;
+}
+
+.fila1 {
+        border: 1px #f4f6ff;
+        font-family: black,'Segoe Ui', sans-serif;
+        height:auto;
+}
+.fila2 {
+        border: 1px #f4f6ff;
+        font-family: black,'Segoe Ui', sans-serif;
+        height:auto;
+}
+.fila3 {
+        border: 1px #f4f6ff;
+        font-family: black,'Segoe Ui', sans-serif; height:20px;
+        height:auto;
+}
+.fila4 {
+        border: 1px #f4f6ff;
+        font-family: black,'Segoe Ui', sans-serif;
+        height:auto;
+        
+}
+.fila5 {
+        border: 1px  #f4f6ff;
+        font-family: black,'Segoe Ui', sans-serif;
+        height:auto;
+}
+
+footer {
         background-color:#F3C623;
         height: 50px;
-}
-
-footer.img{
+        display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
+}
+
+footer .img{
+       margin: 0 15px;
 }
