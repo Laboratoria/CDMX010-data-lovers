@@ -7,10 +7,6 @@
 html{
     font-size: 62.5%;
     font-family: 'Lato', sans-serif;
-    background-image: url('./assets/background-principal.jpg');
-    background-position: center;
-    background-repeat: repeat-y;
-    background-size: cover;
 }
 
 :root {
@@ -36,6 +32,13 @@ nav {
     display: grid;
 }
 
+body {
+    background-image: url('./assets/background-principal.jpg');
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
 .home-header-button--container {
     width: 100%;
@@ -66,6 +69,7 @@ nav {
     min-width: 500px;
     height: auto;
     background-color: rgba(243, 243, 243,0.5);
+    background-attachment: fixed;
 }
 
 .home-main-section--welcome{
@@ -134,7 +138,7 @@ nav {
 }
 
 .home-section-info-container {
-    display: grid;
+    display: none;
     grid-template-columns: 2fr 3fr 2fr;
     grid-column-start: 1;
     grid-column-end: 4;
@@ -195,7 +199,7 @@ nav {
     width: 90%;
     height: 30px;
     margin-top: 15px;
-    padding-top: 5spx;
+    padding-top: 5px;
     background-color: var(--background-gray);
     border-radius: 5px;
 }
@@ -211,14 +215,16 @@ nav {
     border: none;
     width: 60%;
     height: 70%;
+    border-radius: 5px;
 }
 
 .ind-info-pokemon-container button:hover {
-    background-color: #a1d2eb9c;
+    background-color: #7092a56b;
     transition: background-color .5s;
 }
 
 .main-logo-container {
+    display: none;
     width: auto;
     height: auto;
     align-items: center;
@@ -240,11 +246,12 @@ nav {
 }
 
 .main-filter-container {
+    display: none;
     grid-column: 2;
     align-items: center;
     justify-content: center;
     width: 70%;
-    min-width: 250px;
+    min-width: 350px;
     height: auto;
     min-height: 80%;
     margin: auto;
@@ -305,8 +312,9 @@ nav {
 }
 
 .checkboxes label:hover {
-    background-color: #1e90ff;
+    background-color: var(--button-blue);
 }
+
 
 .main-search-container {
     justify-content: center;
@@ -326,7 +334,6 @@ nav {
 .main-search-input-container input {
     width: 90%;
     height: 30px;
-    /*background: var(--background-gray);*/
     border: none;
     font-size: 1.6rem;
     float: left;
@@ -339,11 +346,18 @@ nav {
 .main-search-input-container .searchByNameButton {
     position: absolute;
     top: 50%;
-    margin-left: 10px;
-    margin-top: 12px;
+    width: 7%;
+    height: 30px;
+    margin-top: 5px;
     border: none;
+    border-radius: 4px;
     /*z-index: 1;*/
     color: #4f5b66;
+}
+
+.searchByNameButton:hover {
+    background-color: #7092a586;
+    transition: background-color .5s;
 }
 
 .data-sheet-container {
@@ -353,7 +367,7 @@ nav {
     bottom: 0%;
     left: 0%;
     right: 0%;
-    background-color:rgb(243, 243, 243,0.2);
+    background-color:rgb(243, 243, 243,0.01);
     color: #FFFFFF;
 }
 
@@ -562,9 +576,3 @@ nav {
     background-color: #ADDAAC;
     border-radius: 5px;
 }
-
-
-
-
-
-
