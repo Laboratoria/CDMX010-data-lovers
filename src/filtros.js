@@ -1,6 +1,6 @@
 let conjunto=[];
 let resultFilterWeaknessesNumber=[];
-let namePokePoke = ['w','t1','t2','t3','t4','t5','t6','t7','t8','t9','t10','t11','t12','t13','t14','t15','t16','t17','t18'];
+let namePokePoke = ['t1','t2','t3','t4','t5','t6','t7','t8','t9','t10','t11','t12','t13','t14','t15','t16','t17','t18'];
 let resultFilterType= [];
 ///////////FILTRO NUM DEBILIDADES/////////////////
 export const weaknessesNumberFilterAdd = (filterNumber, allPokemon, finalFilter) =>{
@@ -63,14 +63,15 @@ export const pokemonTypeFilterAdd= (typeDefinition, allPokemon, positionArrayTyp
     allPokemon.forEach(namesToPokemonType);
     console.log(allPokemon);
     console.log(conjunto[typeDefinition]);
-    namePokePoke.splice(positionArrayType,1,conjunto[typeDefinition]);
+    //para colocar el arreglo en su posición asignada
+    let positionInarray= positionArrayType -1;
+    namePokePoke.splice(positionInarray,1,conjunto[typeDefinition]);
     // PARA TENER TODOS LOS NOMBRES DE LOS FILROS EN UN SOLO ARREGLO.
     let TodosLosNombresJuntos = [];
     for (const value of namePokePoke){
-        let posisionValue = namePokePoke.indexOf(value);
-        if(value == 'w'){
-            //console.log('w'+ iMas1);
-        } else if(value == 't' + posisionValue){
+        let positionValue = namePokePoke.indexOf(value);
+        let tNumberToArray = positionValue + 1;
+        if(value == 't' + tNumberToArray){
             //console.log('t'+ iMenos6);
         } else {
             let arrayN= value;
@@ -109,17 +110,16 @@ export const pokemonTypeFilterAdd= (typeDefinition, allPokemon, positionArrayTyp
 
 //////////QUITAR FILTRO TIPO POKEMON//////////
 export const pokemonTypeFilterQuit= (positionArrayType, finalFilter, nameAllPokemon)=>{
-    let filterTypeNumber= positionArrayType;
-    console.log(filterTypeNumber);
-    namePokePoke.splice(positionArrayType,1,'t' + filterTypeNumber);
+    //para retirar el arreglo correspondiente
+    let positionInarray= positionArrayType -1;
+    namePokePoke.splice(positionInarray,1,'t' + positionArrayType);
     console.log(namePokePoke); 
     // PARA TENER TODOS LOS NOMBRES DE LOS FILROS EN UN SOLO ARREGLO.
     let TodosLosNombresJuntos = [];
     for (const value of namePokePoke){
-        let posisionValue = namePokePoke.indexOf(value);
-        if(value == 'w'){
-            //console.log('w'+ iMas1);
-        } else if(value == 't' + posisionValue){
+        let positionValue = namePokePoke.indexOf(value);
+        let tNumberToArray = positionValue + 1;
+        if(value == 't' + tNumberToArray){
             //console.log('t'+ iMenos6);
         } else {
             let arrayN= value;
