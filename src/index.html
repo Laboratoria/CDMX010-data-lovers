@@ -51,7 +51,7 @@
               <li class="location-items">
                 <a href="#"
                   ><i><span class="material-icons">chevron_right </span></i>
-                  Localidad
+                  Estatus
                 </a>
               </li>
             </ul>
@@ -61,8 +61,12 @@
                 <span class="material-icons">arrow_back</span>
                 Especie
               </li>
-              <li name="race"><a href="#" data-value="Human">Humano </a></li>
-              <li name="race"><a href="#" data-value="Alien">Alien </a></li>
+              <li id="humans" name="race">
+                <a href="#" data-value="Human">Humano </a>
+              </li>
+              <li id="aliens" name="race">
+                <a href="#" data-value="Alien">Alien </a>
+              </li>
             </ul>
             <!--Submenu-Gender-->
             <ul class="gender-drop">
@@ -79,16 +83,35 @@
                 <span class="material-icons">arrow_back</span>
                 Estatus
               </li>
-              <li name="race"><a href="#" data-value="Alive">Vivo</a></li>
-              <li name="race"><a href="#" data-value="Dead">Muerto</a></li>
+              <li name="race"><a href="#" data-value="Alive">Vivo </a></li>
+              <li name="race"><a href="#" data-value="Dead">Muerto </a></li>
             </ul>
           </div>
         </div>
+        <!--Buscador-->
         <div>
+          <div class="drop-menu-order">
+            Ordenar
+            <span class="material-icons"> arrow_drop_down_circle </span>
+          </div>
+          <div class="wrapper-order">
+            <ul class="menu-bar">
+              <li name="race" value="desc" id="btn-order-asc" class="ascendant">
+                <button id="asc">Ascendente A-Z</button>
+              </li>
+              <li name="race" id="btn-order-desc" class="descending">
+                <button id="desc" data-value="desc">Descendente Z-A</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="filter-name">
+          <img src="./icons/search-solid.svg" />
           <input
-            type="search"
-            placeholder="buscar personaje"
+            type="seach"
+            placeholder="Buscar personaje"
             class="card-filter"
+            id="seach"
           />
         </div>
       </nav>
@@ -97,7 +120,15 @@
     <main>
       <section id="data"></section>
     </main>
-
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="div-img-modal">
+          <img id="img-modal" src="./imagen/image-5.png" alt="" />
+        </div>
+      </div>
+    </div>
     <script src="main.js" type="module"></script>
   </body>
 </html>
