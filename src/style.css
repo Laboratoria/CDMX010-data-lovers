@@ -2,8 +2,6 @@
 * {
         margin: 0;
         padding: 0;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
         box-sizing: border-box;
 }
 
@@ -12,34 +10,73 @@ body {
         background: white;
 }
 
+<<<<<<< HEAD
 /*Estilos HEADER*/
 header {
         background-color: #10375c ;
         width: auto;
         height: 80px;
         padding: 30px 0;
+=======
+.contenedor-padre{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-flow: column nowrap;
+    }
+    
+    .margen-interno {
+        padding: 3px 50px;
+    }
+
+/*Estilos Header*/
+.header {
+        background: url("./img/slide-2.png");
+        background-position: center;
+        background-attachment: contain;
+        background-size: cover;
+        display: flex;
+        flex-flow: column wrap;
+    }
+        .menu {
+            background: rgba(0, 0, 0, .5);
+            display: flex;
+            flex-flow: row nowrap;
+            height: 100px;
+            align-items: center;
+            border-bottom: 1px solid rgb(255, 255, 255, .5);
+        }
+            .logo {
+                flex: 1 1 auto;
+                padding: 30px 30px;
+            }
+                .logo img {
+                   width: 100px;
+                   height: auto;
+                }
+
+                .nav select,
+                .nav input {
+                    padding: 8px 16px;
+                    opacity: 60%;
+                    display: inline-flex;
+                    border-radius: 5px;
+                }
+/*Estilos SLIDES*/
+.texto-inicial {
+        /* background:tomato */
+        height: 500px;
+>>>>>>> Valeria
+        display: flex;
         align-items: center;
-}
-
-header .logo img {
-        width: 95px;
-        height: 60px;
-        margin-left: 40px;
-}
-
-header .option-data select, 
-header .option-data input {
-        margin: 10px;
-        padding: 3px;
-        color: rgb(73, 73, 73);
-        margin-right: 30px;
-        font-size: 18px;
-        opacity: 50%;
-        border-radius: 7px;
-}
+    }
+        h1 {
+            font-family: 'Open Sans', serif;
+            font-size: 21px;
+            color: #fff;
+            font-weight: 300;
+            text-align: center;
+            line-height: 1.6;
+        }
+/*Estilos TABLA*/
 
 /*Estilos MAIN*/
 main {
