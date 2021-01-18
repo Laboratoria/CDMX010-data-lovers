@@ -4,19 +4,13 @@
   box-sizing: border-box;
 }
 
-/* html, body {
-  height: 100%;
-  width: 100%;
-} */
-
 body {
   /* background: url('img/portal.jpg') no-repeat;
   background-size: cover; */
+  background-color: rgba(0, 0, 0,0.9);
   font-family: 'Special Elite', cursive;
   width: 100%;
-  /* display: flex;
-  flex-direction: column; */
-
+  height: 100%;
 }
 
 header {
@@ -29,9 +23,7 @@ header {
 
 header h1 {
     color: #90C944;
-    /* padding-top: 50px; */
     font-size: 50px;
-    /* display: inline-block; */
     font-family: 'Get Schwifty';
     align-items: center;
     animation-name: entrar;
@@ -49,9 +41,6 @@ main {
   display: flex;
   flex-flow: row wrap;
   height: 100%;
-  /* flex: auto;
-  width: 100%;
-  align-items: flex-end; */
 } 
 
 @keyframes entrar {
@@ -61,17 +50,6 @@ main {
   75%{transform: translate(100px);}
   100%{transform: translate(0px);}
 }
-
-/* h1 {
-  color: #90C944;
-  padding-top: 50px;
-  font-size: 50px;
-  display: inline-block;
-  font-family: 'Get Schwifty';
-  animation-name: entrar;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-} */
 
 .btn-menu {
   /* background: url('img/menu-icon.png') no-repeat; 
@@ -96,16 +74,13 @@ main {
 
 .nav {
   width: 30%;
-  /* height: 100%; */
-  height: 895px;
+  display: flex;
+  height: 100%;                                   
   text-align: center;
-  background-color: #11AFC9;
-  font-size: 30px;
-  /* margin-top: -12px; */
+  font-size: 25px;
   animation-name: colors-nav;
   animation-duration: 4s;
   animation-iteration-count: infinite;
-  /* border-radius: 10px; */
 }
 
 .nav ul {
@@ -117,9 +92,6 @@ main {
   padding: 8px;
 }
 
-nav li span{
-
-}
 .nav .itemList li {
   display: block;
 }
@@ -134,18 +106,11 @@ nav li span{
 
 ul .show {
   text-align: left;
-  margin-left: 170px;
 }
-/* 
-li:hover {
-  background-color: rgba(0, 0, 0);
-   color: #fff; 
-  cursor: pointer;
-} */
 
 ul li:hover {
-  background-color: rgba(0, 0, 0,0.1);
-  /* color: #fff; */
+  background-color: rgba(0, 0, 0,0.5);
+  color: #fff; 
   cursor: pointer;
 }
 
@@ -153,10 +118,6 @@ a {
   text-decoration: none;
   color: #000;
 }
-
-/* a:hover {
-  color: #fff;
-} */
 
 .enable-menu {
   display: block;
@@ -166,35 +127,64 @@ a {
   display: none;
 }
 
-/* label:hover {
-  color: #fff;
-} */
-
 input{
   position: relative;
   left: -10px;
 }
 
 #content{
-  background: url('img/NOP.gif') no-repeat;
+  /* background: url('img/portal.jpg') no-repeat; */
   background-size: 100%;
-  /* flex-grow: 1; */
   /* background-color: #444444; */
   flex-grow: 1;
-  height: 895px;
+  height: 100%;
   padding: 25px;
   width: auto;
   color: rgb(255, 255, 255);
   font-size: 30px;  
 }
 
+#character {
+  width: 25%;
+  height: 100%;
+  color: #000;
+  line-height: 150%;
+  font-size: 18px;
+  border-radius: 20px;
+  padding: 1%;
+  text-align: center;
+  animation-name: colors-nav;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+
+}
+
+/* .card {
+  width: 25%;
+  height: 100%;
+  color: #000;
+  line-height: 150%;
+  font-size: 18px;
+  border-radius: 20px;
+  padding: 1%;
+  margin: 5%;
+  text-align: center;
+  animation-name: colors-nav;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+
+} */
+
+#character img {
+  width: 90%;
+  border-radius: 20px;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.6)
+}
+
 @font-face {
   font-family: 'Get Schwifty';
   src: local('get_schwifty'),
        url('font/get_schwifty.ttf') format('truetype');
-  /* font-weight: normal;
-  font-style: normal;
-  unicode-range: "U+0-10FFFF"; */
 }
 
 @media screen and (max-width:800px){
