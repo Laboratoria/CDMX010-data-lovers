@@ -15,7 +15,7 @@ function createCard(pokemon) {
   `;
 
   return card;
-};
+}
 
 
 // ESTA FUNCION COLOCA INFORMACION DE CADA POKEMON DESDE JS 
@@ -25,10 +25,9 @@ function setCards() {
   data.pokemon.forEach(poke => emptyCard += createCard(poke));
 
   containerCards.innerHTML = emptyCard;
-};
+}
 
 setCards();
 
 // tarea: domContentLoaded
 // tarea: window.addEventListener
-
