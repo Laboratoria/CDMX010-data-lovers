@@ -14,11 +14,11 @@ const $cards = document.querySelector(".card"),
     $characters.forEach((role) => {
         $template.querySelector("h2").textContent = role.name;
         $template.querySelector("img").setAttribute("src", role.image);
-        $template.querySelector(".p1").textContent = role.status;
-        $template.querySelector(".p2").textContent = role.species;
-        $template.querySelector(".p3").textContent = role.gender;
-        $template.querySelector(".p4").textContent = role.origin.name;
-        $template.querySelector(".p5").textContent = role.location.name;
+        $template.querySelector(".p1").textContent = "Status: " + role.status;
+        $template.querySelector(".p2").textContent = "Specie: " + role.species;
+        $template.querySelector(".p3").textContent = "Gender: " + role.gender;
+        $template.querySelector(".p4").textContent = "Origin: " + role.origin.name;
+        $template.querySelector(".p5").textContent = "Location: " + role.location.name;
 
         let $clone = document.importNode($template, true);
         $fragment.appendChild($clone);
