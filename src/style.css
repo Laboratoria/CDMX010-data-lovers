@@ -15,7 +15,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
-
   background-color: #f6f0c4;
   background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);
   background-repeat: no-repeat; 
@@ -124,8 +123,6 @@ img{
 
 
 /*INICIA BOTON 01*/
-
-
 button {
   width: 80px;
   height: 40px;
@@ -171,4 +168,3 @@ button:hover {
   color: white;
   font-size: .7em;
 }
-
