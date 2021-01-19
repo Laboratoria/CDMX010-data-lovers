@@ -23,7 +23,7 @@ export const infoEachPokePrinc = (pokemon) => {
         <p>${pokemon.num}</p>
       </div>
     </div>`
-  };
+  }
   namePokemon = nameAllPokemon.push(pokemon.name);
   let infoPrinPoke = infoPokeContainer(pokemon);
   return infoPrinPoke;
