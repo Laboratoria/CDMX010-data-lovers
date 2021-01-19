@@ -92,10 +92,16 @@ section {
         border: 1px solid white;
  }
 
+<<<<<<< HEAD
 th, td {
         text-transform: capitalize;
         text-align: center;
         /* border: 1px solid black; */
+=======
+ th, td {
+        text-transform: capitalize;
+        text-align: center;
+>>>>>>> talia
         height:auto;
         width:24%;
         align-items: space-between;
