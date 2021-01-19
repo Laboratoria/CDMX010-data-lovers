@@ -7,7 +7,6 @@
 const resultado = document.getElementById('table-poke');
 const url = './data/pokemon/pokemon.json';
 
-
 fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -45,3 +44,18 @@ let pokedex = fetch (url)
     });
     console.log(pokedex);
 });
+
+let pokedexList = fetch (url)
+    .then((response)=> response.json ())
+    .then((data) => {
+    let pokedexList = data.pokemon;
+    pokedexList.sort(function compare (b, a) {
+   if (b.name < a.name
+   ) return 1;
+   if (b.name > a.name
+   ) return -1;
+   return 0;
+});
+    console.log(pokedexList)
+});
+
