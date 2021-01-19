@@ -1,6 +1,5 @@
 import data from './data/pokemon/pokemon.js';
 import {searchEvolutions} from './data.js';
-console.log(data.pokemon);
 
 let allPokemon = data.pokemon;
 let namePokemon = [];
@@ -31,7 +30,7 @@ export const infoEachPokePrinc = (pokemon) => {
   }
 
 export const infoEachPoke = (btnValNamePoke) => {
-  document.getElementById("data-sheet-container").style.display = 'block';
+  document.getElementById("data-sheet-container").style.display = 'flex';
   let namePoke = btnValNamePoke.value;
   let index = parseInt(nameAllPokemon.indexOf(namePoke));
   let objectPoke = allPokemon[index];
@@ -51,7 +50,6 @@ export const infoEachPoke = (btnValNamePoke) => {
           </div>
           <div class="general-data">
             <h2>${objectPoke.name}</h2>
-            <br>
             <p>No. Pokedex: ${objectPoke.num}</p>
             <p>Tipo: ${objectPoke.type}</p>
             <p>Rareza: ${rarityPoke}</p>
@@ -59,36 +57,33 @@ export const infoEachPoke = (btnValNamePoke) => {
         </div>
       <div/>
       <div class="data-sheet-body">
-        <div class="data-sheet-body-section1">
           <div class="data-sheet-resistant-container" id= "data-sheet-resistant-container">
             <h3>Resistente:</h3>
           </div>
           <div class= "data-sheet-weaknesses-container" id= "data-sheet-weaknesses-container">
             <h3>Debilidades:</h3>
           </div>
-        </div>
-        <div class="data-sheet-body-section2">
           <div class="physical-data-container">
             <h4>Peso: </h4>
             <p>${sizePoke.weight}</p>
             <h4>Altura:</h4>
             <p>${sizePoke.height}</p>
           </div>
-        </div>
       </div>
       <div class="data-sheet-footer" id = "data-sheet-footer">
         <div class= "evolution-container" id="evolution-container">
           <div class= "preEvolution-container" id = "prevEvolution-container">
-            <h1>Evoluciones anteriores</h1>
+            <h4>Evoluciones anteriores</h4>
             <div class= "preEvolutionImg-container" id = "prevEvolutionImg-container"></div>
           </div>
           <div class= "currencyState-container" id = "currencyState-container">
-            <h1>Estado actual</h1>
+            <h4>Estado actual</h4>
             <div class="currencyStateImg-container" id = "currencyStateImg-container" ></div>
           </div>
           <div class= "nextEvolution-container" id= "nextEvolution-container">
-            <h1>Evoluciones próximas</h1>
+            <h4>Evoluciones próximas</h4>
             <div class= "nextEvolutionImg-container" id = "nextEvolutionImg-container"></div>
+            <div class= "nextEvolutionCandies-container" id = "nextEvolutionCandies-container"></div>
           </div>
       </div>`
   document.getElementById('data-sheet-container').innerHTML = dataSheet;
@@ -124,8 +119,12 @@ function evolutions (pokemon) {
   searchEvolutions(pokemon, 'prev-evolution', prevEvolutions);
   let nextEvoCont = "";
   let prevEvoCont= "";
+  let candiesCont = "";
   evaluate(nextEvolutions, nextEvoCont, 'nextEvolutionImg-container', 'nextEvolution-container');
   evaluate(prevEvolutions, prevEvoCont, 'prevEvolutionImg-container', 'prevEvolution-container');
+  addCandies(nextEvolutions, candiesCont);
+  console.log(nextEvolutions);
+  console.log(candiesCont);
   document.getElementById('currencyStateImg-container').innerHTML = currencyPoke;
 }
 
@@ -139,10 +138,9 @@ function evaluate (arrayEv, arrayCont, containeradd, containererase) {
 
 function createContainersEv (arrayEv, arrayCont, containeradd) {
   arrayEv.forEach((pokemon) => {
-    arrayCont += addImgs (pokemon[0]);
+    arrayCont += addImgs (pokemon);
   });
   document.getElementById(containeradd).innerHTML= arrayCont;
-  console.log(arrayCont);
   return arrayCont;
 }
 
@@ -150,7 +148,31 @@ function addImgs (pokemon) {
   let containers = `
   <div class= 'imgEvolution-container'>
     <img src = ${pokemon.img}>
+    <p>${pokemon.name}</p>
   </div>
   `
   return containers
 }
+
+function addCandies (arrayNextEv, arrayCandies) {
+  console.log(arrayNextEv);
+  arrayNextEv.forEach((pokemon) => {
+    arrayCandies += createContCandy(pokemon);
+    console.log(arrayCandies);
+  });
+  document.getElementById("nextEvolutionCandies-container").innerHTML= arrayCandies;
+  console.log(arrayCandies);
+  return arrayCandies
+}
+
+function createContCandy (pokemon) {
+  console.log(pokemon);
+  let candies = pokemon.evolution['prev-evolution'][0]['candy-cost'];
+  let candiesCont = `
+  <p>${candies} caramelos</p>
+  `;
+  console.log(candies);
+  return candiesCont
+}
+
+

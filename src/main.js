@@ -1,10 +1,7 @@
 
 import { infoEachPokePrinc, infoEachPoke} from './infoData.js';
-import {searchPokemon} from './data.js';
+import {searchEvolutions, searchPokemon} from './data.js';
 import data from './data/pokemon/pokemon.js';
-//import pokemon from './data/pokemon/pokemon.js';
-console.log(data.pokemon);
-//document.getElementById("home-main--button").addEventListener('click', infoPrincPokemon);
 
 let allPokemon = data.pokemon;
 console.log(typeof allPokemon);
@@ -70,12 +67,62 @@ function showCheckboxesType() {
 
 const searchPoke = document.getElementById("searchByNameButton");
 
+
 searchPoke.addEventListener("click", function() {
+  let pokeFounded = 0;
+  let namePokeToSearch = document.getElementById("namePokeToSearch").value.toLowerCase();
+  document.getElementById('home-pokemon-info-container').style.display='none';
+  if (nameAllPokemon.includes(namePokeToSearch)) {
+    document.getElementById('main-errormsg-container').style.display='none';
+    document.getElementById('main-searchPoke-container').style.display='flex';
+    pokeFounded = searchPokemon(allPokemon, namePokeToSearch);
+    let pokeFoundedInfo = infoEachPokePrinc(pokeFounded[0]);
+    document.getElementById('main-searchPoke-container').innerHTML = pokeFoundedInfo;
+    let container = document.getElementById('main-searchPoke-container');
+    let child = container.getElementsByClassName('buttonEachPokeC');
+    setFunction(child);
+  } else {
+    document.getElementById('main-errormsg-container').style.display='flex';
+    document.getElementById('main-searchPoke-container').style.display='none';
+    let container = `
+      <div class="main-errormsg">
+        <div class="main-errormsg-message">
+          <p>¡Ups! No encontramos ningun pokemon con ese nombre</p>
+        </div>
+        <figure>
+          <img src="./assets/pikachu-search.png">
+        </figure>
+      </div>
+      <div>
+        <button class= "main-errormsg-button-back" id= "main-errormsg-button-back">Regresar al inicio</button>
+      </div>
+    `
+    document.getElementById('main-errormsg-container').innerHTML = container;
+    document.getElementById('main-errormsg-button-back').addEventListener("click", function() {
+    document.getElementById('home-pokemon-info-container').style.display='block';
+    });
+  }
+  
+  document.getElementById('main-searchPoke-container');
+  let button = document.createElement('button');
+  button.className = 'main-search-button-back';
+  button.innerText= 'Regresar al inicio';
+  button.setAttribute = ('onclick');
+  button.onclick = function () {document.getElementById('home-pokemon-info-container').style.display='grid';};
+  document.getElementById('main-searchPoke-container').appendChild(button);
+})
+
+
+
+/*searchPoke.addEventListener("click", function() {
+  document.getElementById('home-pokemon-info-container').style.display= 'none';
+  //document.getElementById('home-section-info-container').style.display= 'flex';
   let namePokeToSearch = document.getElementById("namePokeToSearch").value.toLowerCase();
   let pokeFounded = searchPokemon(allPokemon, namePokeToSearch);
   let pokeFoundedInfo = infoEachPokePrinc(pokeFounded[0]);
-  document.getElementById('home-pokemon-info-container').innerHTML = pokeFoundedInfo;
-  let container = document.getElementById('home-pokemon-info-container');
+  document.getElementById('main-searchPoke-container').style.display= 'flex';
+  document.getElementById('main-searchPoke-container').innerHTML = pokeFoundedInfo;
+  let container = document.getElementById('main-searchPoke-container');
   let child = container.getElementsByClassName('buttonEachPokeC');
   setFunction(child);
-})
+})*/

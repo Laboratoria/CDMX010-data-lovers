@@ -1,6 +1,7 @@
 
 import data from './data/pokemon/pokemon.js';
 let allPokemon = data.pokemon;
+let evolution = 0;
 
 export function searchPokemon(data, pokeToSearch) {
   let pokemonFounded = data.filter((searchName) => {
@@ -11,19 +12,21 @@ export function searchPokemon(data, pokeToSearch) {
 
 export let searchEvolutions = (pokemon, evolName, array) => {
   function filterPokeEv (pokemon){
-    let evolution = pokemon.evolution;
+    evolution = pokemon.evolution;
     if (Object.keys(evolution).includes(evolName)) {
       let nextEvName = evolution[evolName][0]['name'];
-      let nextEv = allPokemon.filter((pokemon) => pokemon.name === nextEvName);
+      let nextEv = allPokemon.find((pokemon) => pokemon.name === nextEvName);
+      console.log(nextEv);
       if (evolName == 'next-evolution') {
         array.push(nextEv);
-        filterPokeEv(nextEv[0]);
+        filterPokeEv(nextEv);
       } else {
         array.unshift(nextEv);
-        filterPokeEv(nextEv[0]);
+        filterPokeEv(nextEv);
       }
     }
   }
   filterPokeEv(pokemon);
   return array;
 }
+
