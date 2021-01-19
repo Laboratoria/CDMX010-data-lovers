@@ -5,7 +5,7 @@ import{weaknessesNumberFilterAdd, weaknessesNumberFilterQuit, pokemonTypeFilterA
 
 
 let allPokemon = data.pokemon;
-console.log(typeof allPokemon);
+//console.log(typeof allPokemon);
 let namePokemon = [];
 
 let nameAllPokemon = [];
@@ -142,9 +142,9 @@ let finalFilter = nameAllPokemon;
 /// AL PRESIONAR ENTER EN EL BUSCADOR SE EJECUTA LA FUNCIÓN DEL BOTÓN SEARCH
 let input = document.getElementById('namePokeToSearch');
 input.addEventListener("keyup", e => {
-  console.log(e.key);
+  //console.log(e.key);
   if(e.key=='Enter'){
-    console.log('e.key');
+    //console.log('e.key');
     e.preventDefault();
     document.getElementById("searchByNameButton").click();
   /// AL ESCRIBIR EN EL INPUT SEARCH SE EJECUTA LA FUNCIÓN "REAL TIME SEARCH"
@@ -239,7 +239,7 @@ function checkedChangesRadiosWeaknesses(radioWeaknesses){
   radioWeaknesses.addEventListener('change', e => {
     if(e.target.checked){
       valorFiltro = parseInt(radioWeaknesses.value);
-      console.log(valorFiltro);
+      //console.log(valorFiltro);
       filterNumber= valorFiltro; 
       finalFilter= weaknessesNumberFilterAdd(filterNumber, allPokemon, finalFilter);
       document.getElementById('removeFilterOption').style.display= 'block';
@@ -313,8 +313,8 @@ function checkedChangesCheckboxes(checkboxTypePokemon, positionArrayTypeDefiniti
   if(e.target.checked){
     typeDefinition= checkboxTypePokemon.value;
     positionArrayType = positionArrayTypeDefinition;
-    console.log(typeDefinition);
-    console.log(positionArrayType);
+    //console.log(typeDefinition);
+    //console.log(positionArrayType);
     finalFilter= pokemonTypeFilterAdd(typeDefinition, allPokemon, positionArrayType, finalFilter);
     getObjects(finalFilter);
     if(finalFilter.length==0){
@@ -323,8 +323,8 @@ function checkedChangesCheckboxes(checkboxTypePokemon, positionArrayTypeDefiniti
   }else{ /////QUITAR FILTRO TIPO POKEMON///////////
     typeDefinition= checkboxTypePokemon.value;
     positionArrayType = positionArrayTypeDefinition;
-    console.log(typeDefinition);
-    console.log(positionArrayType);
+    //console.log(typeDefinition);
+    //console.log(positionArrayType);
     finalFilter= pokemonTypeFilterQuit(positionArrayType, finalFilter, nameAllPokemon);
     getObjects(finalFilter);
   }
@@ -351,11 +351,9 @@ checkedChangesCheckboxes(checkboxTypePokemon18, positionArrayType18);
 
 // UNCHECKED FILTROS PRESENTES AL DAR CLICK AL INPUT SEARCH//
 input.addEventListener('click', ()=>{
-  if(radioQuitFilter.checked){
-    console.log('no hay filtro por debilidades');
-
-  }else{
+  if(radioQuitFilter.checked == false){
     radioQuitFilter.click();
+    //console.log('retirandofiltro debilidades');
   }
   if(checkboxTypePokemon1.checked){
     checkboxTypePokemon1.click();
