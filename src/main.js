@@ -6,11 +6,11 @@ console.log(data);
 function createCard(pokemon) {
   let card = `
     <div class="pokemon-card">
-      <img src="" alt="">
+      <img src="${pokemon.img}" alt="">
       <div class="circulo"></div>   
-      <h5 class="pokemon-id">${pokemon.id}</h5>
+      <h5 class="pokemon-id">${pokemon.num}</h5>
       <h5 class="pokemon-nombre">${pokemon.name}</h5>
-      <h5 class="tipo">${pokemon.type}</h5>
+      <h5 class="tipo">${pokemon.type}</h5>  
     </div>
   `;
 

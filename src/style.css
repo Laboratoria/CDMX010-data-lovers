@@ -8,7 +8,8 @@
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;
+  font-size: .7em;*/
 	color: #212529;
 	height: 100%;
 	display: flex;
@@ -28,7 +29,7 @@ h1 {
   letter-spacing: 5px;
   font-size: 2.5em;
   line-height: 1.2;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   margin-top: 50px;
 }
 
@@ -83,28 +84,42 @@ h2{
 }
 
 .pokemon-id{
-  margin-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-size: .7em;
+  margin-top: 5px;
   border-radius: 20px;
   padding: 3px 10px;
-  font-size: 1.1em;
   background: rgba(0, 0, 0, 0.2);
 }
 
+.pokemon-nombre{
+  font-family: 'Bangers', cursive;
+  font-size: 1em;
+  text-align: center;
+  letter-spacing: .5em;
+  color: black;
+}
+
+.tipo {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-size: .7em;
+}
+
 img{
-  width: 70%;
+  width: 65%;
+  margin: auto 0;
 }
 
 .circulo{
   padding: 65px;
   position: absolute;
   background: rgba(255, 255, 255, 0.5);
+  opacity: 70%;
   border-radius: 50%;
   top: 6%;
   z-index: -1;
-}
-
-.pokemon-nombre{
-  font-weight: bold;
 }
 
 
@@ -151,5 +166,9 @@ button:hover {
 
 .social-bar P {
   background: black;
+  font-family: 'Bangers', cursive;
+  letter-spacing: .2em;
+  color: white;
+  font-size: .7em;
 }
 
