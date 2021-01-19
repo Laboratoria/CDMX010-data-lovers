@@ -114,15 +114,13 @@ input.addEventListener("keyup", e => {
     console.log('e.key');
     e.preventDefault();
     document.getElementById("searchByNameButton").click();
-  /// AL ESCRIBIR EN EL INPUT SEARCH SE EJECUTA LA FUNCIÓN BUSCADOR EN TIEMPO REAL
+  /// AL ESCRIBIR EN EL INPUT SEARCH SE EJECUTA LA FUNCIÓN "REAL TIME SEARCH"
   }else{
     realTimeSearch();
-    //console.log(arraySearch);
-
   }
 });
 
-
+//FUNCIÓN "REAL TIME SEARCH"
 function realTimeSearch(){
   finalFilter = [];
   let texto = input.value.toLowerCase();
@@ -132,8 +130,8 @@ function realTimeSearch(){
     }
   }
   getObjects(finalFilter);
-  //console.log(arraySearch);
 }
+
 // AL PRESIONAR EL BOTON "X" (CLEAR) DEL INPUT SEARCH
 input.onsearch= ()=>{
   finalFilter= nameAllPokemon
