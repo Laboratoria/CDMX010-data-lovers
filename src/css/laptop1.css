@@ -1,3 +1,8 @@
+.home-pokemon-info-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
 
 .home-main-section--img {
     display: flex;
@@ -16,6 +21,19 @@
     margin-left: 10%;
 }
 
+
+.data-sheet {
+    position: fixed;
+    top: 2%;
+    bottom: 2%;
+    left: 25%;
+    right: 25%;
+    width: 60%;
+}
+
+.ind-info-pokemon-container {
+    max-width: 230px;
+}
 
 
 
