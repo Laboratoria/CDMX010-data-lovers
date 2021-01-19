@@ -86,7 +86,9 @@ main {
         border: 1px solid white;
  }
 
-th {
+ th, td {
+        text-transform: capitalize;
+        text-align: center;
         height:auto;
         width:24%;
         align-items: space-between;
