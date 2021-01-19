@@ -154,8 +154,6 @@ img{
 
 
 /*INICIA BOTON 01*/
-
-
 button {
   width: 80px;
   height: 40px;
@@ -201,4 +199,3 @@ button:hover {
   color: white;
   font-size: .7em;
 }
-
