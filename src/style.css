@@ -7,10 +7,6 @@
 html{
     font-size: 62.5%;
     font-family: 'Lato', sans-serif;
-    background-image: url('./assets/background-principal.jpg');
-    background-position: center;
-    background-repeat: repeat-y;
-    background-size: cover;
 }
 
 :root {
@@ -36,6 +32,13 @@ nav {
     display: grid;
 }
 
+body {
+    background-image: url('./assets/background-principal.jpg');
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
 .home-header-button--container {
     width: 100%;
@@ -66,6 +69,7 @@ nav {
     min-width: 500px;
     height: auto;
     background-color: rgba(243, 243, 243,0.5);
+    background-attachment: fixed;
 }
 
 .home-main-section--welcome{
@@ -134,7 +138,7 @@ nav {
 }
 
 .home-section-info-container {
-    display: grid;
+    display: none;
     grid-template-columns: 2fr 3fr 2fr;
     grid-column-start: 1;
     grid-column-end: 4;
@@ -150,7 +154,7 @@ nav {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 3;
-    grid-row-gap: 0.2%;
+    grid-row-gap: 0.05%;
     justify-items: center;
     align-items: center;
     width: 100%;
@@ -163,10 +167,11 @@ nav {
     align-items: center;
     width: 65%;
     height: 100%;
-    min-height: 120px;
-    /*max-height: 230px;*/
+    min-height: 150px;
+    max-height: 230px;
     /*min-width: 203px;*/
-    min-width: 130px;
+    min-width: 200px;
+    max-width: 210px;
     margin: 20px;
     padding: 3px;
     background-color: var(--secondary-blue);
@@ -193,32 +198,35 @@ nav {
     display: flex;
     justify-content: space-around;
     width: 90%;
-    height: 30px;
-    margin-top: 15px;
-    padding-top: 5spx;
+    height: 60%;
+    margin-top: 8%; /*15px*/
+    padding-top: 5px;
     background-color: var(--background-gray);
     border-radius: 5px;
 }
 
 .ind-info-pokemon-container p {
     height: 30px;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     text-transform: capitalize;
     text-align: center;
+    margin: auto 0;
 }
 
 .ind-info-pokemon-container button {
     border: none;
     width: 60%;
     height: 70%;
+    border-radius: 5px;
 }
 
 .ind-info-pokemon-container button:hover {
-    background-color: #a1d2eb9c;
+    background-color: #7092a56b;
     transition: background-color .5s;
 }
 
 .main-logo-container {
+    display: none;
     width: auto;
     height: auto;
     align-items: center;
@@ -240,11 +248,12 @@ nav {
 }
 
 .main-filter-container {
+    display: none;
     grid-column: 2;
     align-items: center;
     justify-content: center;
     width: 70%;
-    min-width: 250px;
+    min-width: 350px;
     height: auto;
     min-height: 80%;
     margin: auto;
@@ -253,6 +262,7 @@ nav {
     padding-bottom: 10px;
     background-color: var(--secondary-blue);
     border-radius: 5px;
+    box-shadow: 5px 5px 10px var(--shadow-button);
 }
 
 .main-filter-container form {
@@ -305,7 +315,7 @@ nav {
 }
 
 .checkboxes label:hover {
-    background-color: #1e90ff;
+    background-color: var(--button-blue);
 }
 
 
@@ -327,7 +337,6 @@ nav {
 .main-search-input-container input {
     width: 90%;
     height: 30px;
-    /*background: var(--background-gray);*/
     border: none;
     font-size: 1.6rem;
     float: left;
@@ -340,11 +349,18 @@ nav {
 .main-search-input-container .searchByNameButton {
     position: absolute;
     top: 50%;
-    margin-left: 10px;
-    margin-top: 12px;
+    width: 7%;
+    height: 30px;
+    margin-top: 5px;
     border: none;
+    border-radius: 4px;
     /*z-index: 1;*/
     color: #4f5b66;
+}
+
+.searchByNameButton:hover {
+    background-color: #7092a586;
+    transition: background-color .5s;
 }
 
 .data-sheet-container {
@@ -354,7 +370,7 @@ nav {
     bottom: 0%;
     left: 0%;
     right: 0%;
-    background-color:rgb(243, 243, 243,0.2);
+    background-color:rgb(243, 243, 243,0.01);
     color: #FFFFFF;
 }
 
@@ -374,12 +390,7 @@ nav {
 }
 
 .data-sheet {
-    background-color: rgba(250, 244, 244, 0.671);
-    position: fixed;
-    top: 5%;
-    bottom: 2%;
-    left: 25%;
-    right: 25%;
+    width: 100%;
     height: fit-content;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -387,23 +398,29 @@ nav {
     padding-right: 2%;
     margin: 0%;
     font-size: 2rem;
-    }
+    background-color: #ABD2E8;
+    border: 15px solid rgba(250, 244, 244, 0.671);
+    border-radius: 5px;
+    background-clip: padding-box;
+}
 
 .data-sheet-head {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    display: flex;
+    flex-wrap: wrap;
     max-height: 30%;
-    justify-content: center;
-    padding: 4%;
-    background-color: #D7DFE3;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #afbec58f;
+    border-radius: 5px;
     }
 
 .data-sheet-img-container {
     display: flex;
-    grid-column-start: 1;
-    max-width: 80%;
+    width: 150px;
     height: 100%;
     justify-content: center;
+    align-self: center;
+    margin: 10px 0;
     padding: 10px;
     border-radius: 5%;
     background-image: url('./assets/background-pokemon.jpg');
@@ -411,139 +428,164 @@ nav {
     background-size: cover;
 }
 .data-sheet-img-container img {
-    width: 50%;
+    width: 100%;
     min-width: 100px;
+    background-color: rgba(250, 244, 244, 0.178);
     /*height: 0%;*/
 }
 
 .general-data {
-    display: inline;
-    grid-column-start: 2;
-    max-width: 100%;
-    height: 100%;
-    text-align: center;
-    padding: 4%;
-    border-radius: 5%;
-    font-size: small ;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 60%;
+    padding: 3%;
+    border-radius: 5px;
+    font-size: 1.8rem;
     font-family: lato;
     background-color: #E9D17B ;
+    border: 5px solid white;
     color: black;
+}
+
+.general-data p {
+    width: 50%;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 3px;
 }
 
 .general-data h2 {
     text-transform: capitalize;
+    margin-bottom: 10px;
 }
 
 .data-sheet-body {
-    display: grid;
-    grid-template-rows: 1fr 1.5fr;
-    height: 300px;
-    padding: 4%;
-    background-color: #D1F4EE;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    background-color: #ABD2E8;
     color: black;
 
 }
 
 .data-sheet-body-section1 {
-    display: grid;
-    grid-row-start: 1;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    height: auto;
+    width: 100%;
+    min-width: 600px;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.data-sheet-resistant-container {
-    grid-column-start: 1;
-    width: 75%;
-    height: 100%;
-    border-radius: 5%;
+.data-sheet-resistant-container, .data-sheet-weaknesses-container {
+    width: 40%;
+    min-width: 200px;
+    height: 205px;
+    align-items: center;
+    border-radius: 5px;
     text-align: center;
-    justify-self: center;
-    padding: 4%;
-    background-color: rgb(251, 251, 251);
+    padding: 2%;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: #d0d0f3;
+    border: 5px solid white;
+}
+
+.data-sheet-resistant-container h3, .data-sheet-weaknesses-container h3 {
+    margin-bottom: 5px;
+}
+
+.data-sheet-resistant-container p {
+    margin-bottom: 3px;
 }
 .data-sheet-weaknesses-container {
-    grid-column-start: 2;
-    width: 75%;
-    height: 100%;
-    text-align: center;
-    justify-self: center;
-    padding: 4%;
-    border-radius: 5%;
     background-color: rgb(248, 218, 183);
 }
 
 .data-sheet-body-section2 {
-    display: grid;
-    grid-row-start: 2;
-    grid-template-columns: 2fr 1fr;
-    padding-top: 4%;
-    height: initial;
+    display: flex;
 }
 
 .physical-data-container {
     display: flex;
-    grid-column-start: 1;
-    grid-column-end: 3;
     align-items: center;
     justify-content: space-around;
-    width: 60%;
-    height: 60%;
+    width: 500px;
+    height: 100px;
     text-align: center;
-    padding: 4%;
-    border-radius: 5%;
+    margin: 0 auto;
+    padding: 30px 40px;
+    border-radius: 5px;
     justify-self: center;
-    background-color: rgb(171, 210, 232);
+    background-color: rgb(128, 187, 156);
+    border: 5px solid white;
 }
-
-
 
 .data-sheet-footer {
     width: 100%;
-    height: 250px;
+    height: 200px;
     /*background-color: #ADDAAC;*/
 }
 
 .evolution-container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     width: 100%;
     height: 200px;
     padding: 10px;
-    background-color: #F1EDED;
+    background-color: #f1ededce;
+    border-radius: 5px;
 }
 
-.evolution-container img {
-    width: 80%;
-    align-self: center;
+.imgEvolution-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
 }
 
-.evolution-container h1 {
-    margin-bottom: 20px;
-    font-size: 1.6rem;
+.imgEvolution-container img {
+    width: 90%;
+}
+
+.evolution-container h4 {
+    margin-bottom: 10px;
     font-family: 'Lato', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     color: black;
 }
 
-.preEvolution-container {
+.preEvolution-container, .nextEvolution-container, .currencyState-container {
     display: flex;
-    width: 40%;
-    height: auto;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin:0 5px;
+    width: auto; /*300px*/
+    min-width: 30%;
     border-radius: 5px;
-    background-color: #C6A5A5;
+    background-color: #99aceb;
+}
+
+.preEvolution-container p, .nextEvolution-container p, .currencyState-container p {
+    text-transform: capitalize;
+    margin: 0 auto;
+    font-weight: normal;
+    font-size: 1.3rem;
+    color: black;
 }
 
 .nextEvolution-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 30%;
-    min-width: 40%;
     background-color: #C6A5A5;
-    border-radius: 5px;
 }
 
 .nextEvolutionImg-container, .preEvolutionImg-container  {
@@ -554,14 +596,91 @@ nav {
 }
 
 .currencyState-container {
+    background-color: #ADDAAC;
+}
+
+.nextEvolutionCandies-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: ;
+    margin-left: 25px;
+}
+
+.main-searchPoke-container {
+    display: none;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 3;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 10%;
+    margin: 0 auto;
+    max-height: 100%;
+}
+.main-errormsg-container {
+    display: none;
+    grid-column-start: 1;
+    grid-column-end: 4;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 30%;
-    min-width: 20%;
-    background-color: #ADDAAC;
+    justify-content: center;
+    grid-row: 3;
+    padding: 15px;
+    margin: 0 10px 20px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 100%;
     border-radius: 5px;
+    box-shadow: 5px 5px 10px var(--shadow-button);
+}
+
+.main-errormsg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    border: 15px solid rgba(189, 179, 179, 0.781);
+}
+
+.main-errormsg-container button, .main-search-button-back {
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    background-color: var(--button-blue);
+    letter-spacing: 0.1rem;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px var(--shadow-button);
+}
+
+.main-errormsg-message {
+    width: 90%;
+    text-align: center;
+    height: 10%;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.main-errormsg-container figure {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px 0;
+}
+
+.main-errormsg-container img {
+    width: 80%;
 }
 
 

@@ -11,7 +11,6 @@
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 70px;
 }
 
 .main-logo-container {
@@ -92,3 +91,32 @@
 .checkboxes label:hover {
     background-color: #1e90ff;
 }
+
+.main-searchPoke-container {
+    grid-column-start: 2;
+    margin: 20% auto;
+    padding: 0;
+}
+
+.ind-info-pokemon-container {
+    max-width: 215px;
+    min-height: 230px;
+}
+
+.data-sheet {
+    position: fixed;
+    top: 2%;
+    bottom: 2%;
+    left: 25%;
+    right: 25%;
+    width: 50%;
+}
+
+.main-errormsg-container {
+    display: none;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    width: 500px;
+    margin: 20% auto;
+}
+
