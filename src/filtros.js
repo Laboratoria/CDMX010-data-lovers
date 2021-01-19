@@ -14,7 +14,7 @@ export const weaknessesNumberFilterAdd = (filterNumber, allPokemon, finalFilter)
         } 
     }
     allPokemon.forEach(namesToWeaknessesNumber);
-    console.log(conjunto[filterNumber]);
+    //console.log(conjunto[filterNumber]);
     resultFilterWeaknessesNumber = conjunto[filterNumber];
   ////COMBINANDO FILTROS////
     finalFilter = [];
@@ -30,7 +30,7 @@ export const weaknessesNumberFilterAdd = (filterNumber, allPokemon, finalFilter)
             }
         }
     }
-    console.log(finalFilter);
+    //console.log(finalFilter);
     return finalFilter;
 }
 //////////QUITAR FILTRO NUM DEBILIDADES//////////
@@ -43,7 +43,7 @@ export const weaknessesNumberFilterQuit= (finalFilter, nameAllPokemon) =>{
     } else if(resultFilterWeaknessesNumber.length==0 && resultFilterType.length==0){
         finalFilter= nameAllPokemon;
     }
-    console.log(finalFilter);
+    //console.log(finalFilter);
 
     return finalFilter; 
 }
@@ -61,9 +61,9 @@ export const pokemonTypeFilterAdd= (typeDefinition, allPokemon, positionArrayTyp
         }
     }
     allPokemon.forEach(namesToPokemonType);
-    console.log(allPokemon);
-    console.log(conjunto[typeDefinition]);
-    //para colocar el arreglo en su posición asignada
+    //console.log(allPokemon);
+    //console.log(conjunto[typeDefinition]);
+    //para colocar el arreglo en su posición asignada///
     let positionInarray= positionArrayType -1;
     namePokePoke.splice(positionInarray,1,conjunto[typeDefinition]);
     // PARA TENER TODOS LOS NOMBRES DE LOS FILROS EN UN SOLO ARREGLO.
@@ -83,12 +83,12 @@ export const pokemonTypeFilterAdd= (typeDefinition, allPokemon, positionArrayTyp
             }
         }
     }
-    console.log(namePokePoke);
-    console.log(TodosLosNombresJuntos);
+    //console.log(namePokePoke);
+    //console.log(TodosLosNombresJuntos);
     let deleteNamesRepeat = TodosLosNombresJuntos.filter((item,index)=>{
         return TodosLosNombresJuntos.indexOf(item) === index;
     })
-    console.log(deleteNamesRepeat);
+    //console.log(deleteNamesRepeat);
     resultFilterType= deleteNamesRepeat;
     ////COMBINANDO FILTROS////
     finalFilter = [];
@@ -104,7 +104,7 @@ export const pokemonTypeFilterAdd= (typeDefinition, allPokemon, positionArrayTyp
             }
         }
     }
-    console.log(finalFilter);
+    //console.log(finalFilter);
     return finalFilter;
 }
 
@@ -113,7 +113,7 @@ export const pokemonTypeFilterQuit= (positionArrayType, finalFilter, nameAllPoke
     //para retirar el arreglo correspondiente
     let positionInarray= positionArrayType -1;
     namePokePoke.splice(positionInarray,1,'t' + positionArrayType);
-    console.log(namePokePoke); 
+    //console.log(namePokePoke); 
     // PARA TENER TODOS LOS NOMBRES DE LOS FILROS EN UN SOLO ARREGLO.
     let TodosLosNombresJuntos = [];
     for (const value of namePokePoke){
@@ -131,11 +131,11 @@ export const pokemonTypeFilterQuit= (positionArrayType, finalFilter, nameAllPoke
             }
         }
     }
-    console.log(TodosLosNombresJuntos);
+    //console.log(TodosLosNombresJuntos);
     let deleteNamesRepeat = TodosLosNombresJuntos.filter((item,index)=>{
         return TodosLosNombresJuntos.indexOf(item) === index;
     })
-    console.log(deleteNamesRepeat);
+    //console.log(deleteNamesRepeat);
     resultFilterType= deleteNamesRepeat;
     ////COMBINANDO FILTROS////
     finalFilter = [];
@@ -155,6 +155,6 @@ export const pokemonTypeFilterQuit= (positionArrayType, finalFilter, nameAllPoke
     } else if(resultFilterWeaknessesNumber.length==0 && resultFilterType==0){
         finalFilter= nameAllPokemon;
     }
-    console.log(finalFilter);
+    //console.log(finalFilter);
     return finalFilter;
 }
