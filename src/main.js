@@ -41,11 +41,16 @@ function agregarClase (elements) {
 }
 
 let expanded = false;
+let expanded2 = false;
 function showCheckboxesNumber() {
   let checkboxes = document.getElementById("checkboxesNumber");
   if (!expanded) {
     checkboxes.style.display = "block";
     expanded = true;
+    if(expanded2==true){
+      document.getElementById("selectPokemonType").click();
+    }
+    
   } else {
     checkboxes.style.display = "none";
     expanded = false;
@@ -56,12 +61,16 @@ document.getElementById("selectWeaknessesNumber").addEventListener('click', show
 
 function showCheckboxesType() {
   let checkboxes = document.getElementById("checkboxesType");
-  if (!expanded) {
+  if (!expanded2) {
     checkboxes.style.display = "block";
-    expanded = true;
+    expanded2 = true;
+    if(expanded==true){
+      document.getElementById("selectWeaknessesNumber").click();
+    }
+    //document.getElementById("selectWeaknessesNumber").click();
   } else {
       checkboxes.style.display = "none";
-      expanded = false;
+      expanded2 = false;
     }
 }
 
@@ -94,10 +103,10 @@ searchPoke.addEventListener("click", function() {
   agregarClase(child);
 })
 
-
+//  VARIABLE FINAL DE TODOS LOS FILTROS ///
 let finalFilter = nameAllPokemon;
-/// AL PRESIONAR ENTER EN EL BUSCADOR SE EJECUTA LA FUNCIÓN DE BUSCAR
-let arraySearch = [];
+
+/// AL PRESIONAR ENTER EN EL BUSCADOR SE EJECUTA LA FUNCIÓN DEL BOTÓN SEARCH
 let input = document.getElementById('namePokeToSearch');
 input.addEventListener("keyup", e => {
   console.log(e.key);
@@ -105,24 +114,30 @@ input.addEventListener("keyup", e => {
     console.log('e.key');
     e.preventDefault();
     document.getElementById("searchByNameButton").click();
+  /// AL ESCRIBIR EN EL INPUT SEARCH SE EJECUTA LA FUNCIÓN BUSCADOR EN TIEMPO REAL
   }else{
-    buscar();
+    realTimeSearch();
     //console.log(arraySearch);
-     
+
   }
 });
-let finalFilterS = [];
-function buscar(){
-  //finalFilter = [];
-  finalFilterS = [];
+
+
+function realTimeSearch(){
+  finalFilter = [];
   let texto = input.value.toLowerCase();
-  for( const nombre of finalFilter){
+  for( const nombre of nameAllPokemon){
     if(nombre.indexOf(texto)!==-1){
-      finalFilterS.push(nombre);
+      finalFilter.push(nombre);
     }
   }
-  getObjects(finalFilterS);
+  getObjects(finalFilter);
   //console.log(arraySearch);
+}
+// AL PRESIONAR EL BOTON "X" (CLEAR) DEL INPUT SEARCH
+input.onsearch= ()=>{
+  finalFilter= nameAllPokemon
+  getObjects(finalFilter);
 }
 
 
@@ -303,3 +318,67 @@ checkedChangesCheckboxes(checkboxTypePokemon15, positionArrayType15);
 checkedChangesCheckboxes(checkboxTypePokemon16, positionArrayType16);
 checkedChangesCheckboxes(checkboxTypePokemon17, positionArrayType17);
 checkedChangesCheckboxes(checkboxTypePokemon18, positionArrayType18);
+
+// UNCHECKED FILTROS PRESENTES AL DAR CLICK AL INPUT SEARCH//
+input.addEventListener('click', ()=>{
+  if(radioQuitFilter.checked){
+    console.log('no hay filtro por debilidades');
+
+  }else{
+    radioQuitFilter.click();
+  }
+  if(checkboxTypePokemon1.checked){
+    checkboxTypePokemon1.click();
+  }
+  if(checkboxTypePokemon2.checked){
+    checkboxTypePokemon2.click();
+  }
+  if(checkboxTypePokemon3.checked){
+    checkboxTypePokemon3.click();
+  }
+  if(checkboxTypePokemon4.checked){
+    checkboxTypePokemon4.click();
+  }
+  if(checkboxTypePokemon5.checked){
+    checkboxTypePokemon5.click();
+  }
+  if(checkboxTypePokemon6.checked){
+    checkboxTypePokemon6.click();
+  }
+  if(checkboxTypePokemon7.checked){
+    checkboxTypePokemon7.click();
+  }
+  if(checkboxTypePokemon8.checked){
+    checkboxTypePokemon8.click();
+  }
+  if(checkboxTypePokemon9.checked){
+    checkboxTypePokemon9.click();
+  }
+  if(checkboxTypePokemon10.checked){
+    checkboxTypePokemon10.click();
+  }
+  if(checkboxTypePokemon11.checked){
+    checkboxTypePokemon11.click();
+  }
+  if(checkboxTypePokemon12.checked){
+    checkboxTypePokemon12.click();
+  }
+  if(checkboxTypePokemon13.checked){
+    checkboxTypePokemon13.click();
+  }
+  if(checkboxTypePokemon14.checked){
+    checkboxTypePokemon14.click();
+  }
+  if(checkboxTypePokemon15.checked){
+    checkboxTypePokemon15.click();
+  }
+  if(checkboxTypePokemon16.checked){
+    checkboxTypePokemon16.click();
+  }
+  if(checkboxTypePokemon17.checked){
+    checkboxTypePokemon17.click();
+  }
+  if(checkboxTypePokemon18.checked){
+    checkboxTypePokemon18.click();
+  }
+})
