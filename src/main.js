@@ -1,15 +1,22 @@
-<<<<<<< HEAD
+
 // import { example } from './data.js';
 // // import data from './data/lol/lol.js';
 //  import data from './data/pokemon/pokemon.json';
 // // import data from './data/rickandmorty/rickandmorty.js';
+<<<<<<< HEAD
 // const tableElements = [document.getElementById('id-r1', 'name-r1', 'region-r1')];
 // const resultado = document.getElementById('table-poke');
 // function renderPokemon(imagen) {
 //     $pokemon.setAttribute('src', imagen)
 // }
+=======
 
-fetch('./data/pokemon/pokemon.json')
+const resultado = document.getElementById('table-poke');
+const url = './data/pokemon/pokemon.json';
+
+>>>>>>> e6e97dd512fe216984ddf1256ee7f54e4f087885
+
+fetch(url)
     .then(response => response.json())
     .then(data => {
          debugger
@@ -51,14 +58,6 @@ const renderData = (pokemones) => {
         resultado.insertAdjacentHTML("beforeend", dataPokemones);
     });
 }
-=======
-//import { example } from './data.js';
-
-
-//import data from './data/pokemon/pokemon.js';
-
-const searchResult = document.getElementById("tbody");
-const url = './data/pokemon/pokemon.json';
 
 let pokedex = fetch (url)
     .then((response)=> response.json ())
@@ -72,6 +71,7 @@ let pokedex = fetch (url)
         return 0;
     });
     console.log(pokedex);
+<<<<<<< HEAD
     })
 
 function dataResults(pokedex){
@@ -93,3 +93,6 @@ function dataResults(pokedex){
    searchResult.insertAdjacentHTML ("beforeend", dataPokedex)*/
 >>>>>>> talia
 >>>>>>> c9fd450bf920ddcb6fc4d2bd7d7e0f18d0ed9715
+=======
+});
+>>>>>>> e6e97dd512fe216984ddf1256ee7f54e4f087885
