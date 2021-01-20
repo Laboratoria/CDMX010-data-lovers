@@ -1,18 +1,18 @@
-export function templateCard(propiedades) {
-  return `<div class="cards" data-id="${propiedades.id}">
-    <div class="card" >
+export function templateCard(information) {
+  const { id, image, name, status, species, gender, origin } = information;
+  return `
+    <div class="card" data-id="${id}">
       <div class="card-image">
-        <img src="${propiedades.image}" />
+        <img  class="btnmodal" src="${image}" />
       </div>
       <div class="details">
-        <p class="card-name"><h2>${propiedades.name}</h2></p>
-        <p class="card-status">Estatus: ${propiedades.status}</p>
-        <p class="card-specie">Especie: ${propiedades.species}</p>
-        <p class="card-origin">Origen: ${propiedades.origin.name}</p>
-        <p class="card-gender">Genero: ${propiedades.gender}</p>
+        <p class="card-name"><h2>${name}</h2></p>
+        <p class="card-status">Estatus: ${status}</p>
+        <p class="card-specie">Especie: ${species}</p>
+        <p class="card-gender">Genero: ${gender}</p>
+        <p class="card-origin">Origen: ${origin.name}</p>
       </div>
-    </div>
-  </div>`;
+    </div>`;
 }
 export function filterElements(characters, key, value) {
   const results = characters.filter((character) => {
@@ -52,4 +52,36 @@ export function filterSearch(characters, textInput) {
     return character.name.toLowerCase().includes(textInput.toLowerCase());
   });
   return names;
+}
+
+export function openModals(information) {
+  const {
+    id,
+    image,
+    name,
+    status,
+    species,
+    type,
+    gender,
+    origin,
+    location,
+    episode,
+  } = information;
+  return `<div class="modal-info" data-id="${id}">
+    <div class="card" >
+      <div class="modal-image">
+        <img  src="${image}" />
+      </div>
+      <div >
+        <p ><h2>${name}</h2></p>
+        <p >Estatus: ${status}</p>
+        <p >Especie: ${species}</p>
+        <p">Tipo: ${type}</p>
+        <p >Genero: ${gender}</p>
+        <p >Origen: ${origin.name}</p>
+        <p >Localizacion: ${location.name}</p>
+        <p >Episodios: ${episode}</p>
+      </div>
+    </div>
+  </div>`;
 }

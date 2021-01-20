@@ -74,8 +74,9 @@ nav div {
 
 main {
   margin-top: 10%;
-  display: flex;
-  width: 100px;
+    display: flex;
+    width: 100%;
+  
 }
 .card-filter {
   outline: 2px solid blue;
@@ -87,21 +88,22 @@ main {
 
 /*ESTILOS DE LAS CARDS*/
 #data {
-  margin-top: 70px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  
 }
-.cards {
-  display: flex;
-  padding: 30px;
-  /*background-color:pink ;se quita*/
-}
+
 .card {
   background-color: #07b0ce;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 18);
-  width: 250px;
-  line-height: 23px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    width: 20%;
+    max-width: 250px;
+    line-height: 23px;
+    margin: 2%;
+  
+  
 }
 .card-image {
   display: flex;
@@ -127,6 +129,32 @@ main {
 .details h2 {
   color: #ecec11;
   text-align: center;
-  margin-bottom: 25px;
-  font-family: "Coming Soon", cursive;
+  margin-top: -14px;
+  font-family: "Schoolbell", cursive;
 }
+/*VENTANA MODAL*/
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("./imagen/imgModal.jpg");
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+  max-height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+/*1rem=16px 

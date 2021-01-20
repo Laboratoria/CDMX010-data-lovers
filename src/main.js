@@ -4,9 +4,11 @@ import {
   filterSearch,
   filterElements,
   sortElements,
+  openModals,
 } from "./data.js";
 //variable global para tener acceso a todo el arreglo desde cualquier funcion
 window.characters = data.results;
+
 //recibe listado de los personajes
 function renderCards(list) {
   let elements = "";
@@ -47,3 +49,14 @@ inputSearch.addEventListener("change", function (e) {
   console.log(names);
   renderCards(names);
 });
+
+//datos de modal
+/*function modalsInfo(table) {
+  let info = "";
+  table.forEach((datosGrales) => {
+    info += modals(datosGrales);
+  });
+  document.getElementById("div-img-modal").innerHTML = info;
+}
+
+modalsInfo(data.results);*/
