@@ -1,22 +1,29 @@
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1" charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <div class="image"></div>
-    <div id="info">
-      <p> INICIO Rick y Morty es una serie de televisión estadounidense de animación para adultos creada por Justin Roiland y
-        Dan Harmon en 2013 para Adult Swim. La serie sigue las desventuras de un científico, Rick, y su fácilmente
-        influenciable nieto, Morty, quienes pasan el tiempo entre la vida doméstica y los viajes espaciales, temporales e
-        intergalácticos.</p>
-    </div>
-    <div id="about">
-       <p>Descubre en esta web toda la información que necesitas sobre los personajes de la serie. </p> 
-    </div>
-      
-    </div>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1" charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="root"></div>
+ <!-- Aquí inicia nuestra dada-->
+ <div class="information">
+ <template id="card">
+    
+    <div class="information">
+      <h2 class="name"></h2>
+      <img src=" "> 
+      <p class="descr"> Descripción</p>
+      <p class="a1"></p>
+      <p class="a2"></p>
+      <p class="a3"></p>
+      <p class="a4"></p>
+      <p class="a5"></p>
+      <p class="a6"></p>
+      </div>
+  </template>
+</div> 
+    <aside>
     <div id="filter">
       <p>Filtrar personajes por:</p>
       <select class="form">
@@ -36,8 +43,8 @@
     <div id="agregate">
       <button id="dataPlus">¡Descubre cuál personaje aparece en más capítulos!</button>
     </div>
-    <footer id="footer"> DataLovers Laboratoria CDMX </footer> 
-    <script src="main.js" type="module"></script>
-  </body>
-  
-  </html>
+  </aside> 
+  <footer id="footer"> DataLovers Laboratoria CDMX </footer>
+  <script src="main.js" type="module"></script>
+</body>
+</html>
