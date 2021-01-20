@@ -20,33 +20,39 @@
   </header>
   <main>
     <div id="div-buttonshowall">
-  <button class="buttonshowall"><i class="fas fa-search"></i>   Show all</button>
+  <button id="buttonShowAll" class="buttonshowall"><i class="fas fa-search"></i>Show all</button>
   <input name="search" type="search" placeholder="Search by words" class="search1">
 </div>
   <br>
   <br>
   <div id="div-menusdecategorias">
-  <i class="fas fa-globe-americas"></i><input name="country" type="country" placeholder="Country" class="inputs"> 
-  <i class="fas fa-venus-mars"></i><input name="search" type="search" placeholder="Gender" class="inputs">
+  <i class="fas fa-globe-americas"></i><input id="teamInput" name="teamInput" type="text" placeholder="Country" class="inputs"> 
+  <i class="fas fa-venus-mars"></i><input id="genderInput" name="search" type="search" placeholder="Gender" class="inputs">
   <i class="fas fa-running"></i><input name="search" type="search" placeholder="Sport" class="inputs">
   <i class="fas fa-swimmer"></i><input name="search" type="search" placeholder="Event" class="inputs">
   <i class="fas fa-medal"></i><input name="search" type="search" placeholder="Medal" class="inputs">
 </div>
   <br>
   <br>
-  <button class="buttonsearch2"><i class="fas fa-search"></i> Search</button>
+  <button class="buttonsearch2" id="buttonsearch2"><i class="fas fa-search"></i> Search</button>
   <br>
   <br>
   <div class="results">
-  <h3>Results</h3>
-<span class="cabecera-tabla">Name</span>
+  <div id="resultados">
+    <div class="contenedor">
+
+
+    </div>
+  </div>
+<!--<span class="cabecera-tabla">Name</span>
 <span class="cabecera-tabla">Country</span>
 <span class="cabecera-tabla">Gender</span>
 <Span class="cabecera-tabla">Sport</Span>
 <Span class="cabecera-tabla">Event</Span>
-<span class="cabecera-tabla">Medal</span>
+<span class="cabecera-tabla">Medal</span>!-->
+
+
 </div>
-  
   </main>
     <script src="main.js" type="module"></script>
   </body>
