@@ -2,15 +2,15 @@ export function templateCard(information) {
   const { id, image, name, status, species, gender, origin } = information;
   return `
     <div class="card" data-id="${id}">
-      <div class="card-image">
-        <img  class="btnmodal" src="${image}" />
+      <div class="card-image" data-id="${id}">
+        <img  class="btnmodal" data-id="${id}" src="${image}" />
       </div>
-      <div class="details">
-        <p class="card-name"><h2>${name}</h2></p>
-        <p class="card-status">Estatus: ${status}</p>
-        <p class="card-specie">Especie: ${species}</p>
-        <p class="card-gender">Genero: ${gender}</p>
-        <p class="card-origin">Origen: ${origin.name}</p>
+      <div class="details" data-id="${id}">
+        <p class="card-name" data-id="${id}">${name}</p>
+        <p class="card-status" data-id="${id}">Estatus: ${status}</p>
+        <p class="card-specie" data-id="${id}">Especie: ${species}</p>
+        <p class="card-gender" data-id="${id}">Genero: ${gender}</p>
+        <p class="card-origin" data-id="${id}">Origen: ${origin.name}</p>
       </div>
     </div>`;
 }
@@ -54,7 +54,7 @@ export function filterSearch(characters, textInput) {
   return names;
 }
 
-export function openModals(information) {
+export function renderModals(information) {
   const {
     id,
     image,
@@ -67,9 +67,8 @@ export function openModals(information) {
     location,
     episode,
   } = information;
-  return `<div class="modal-info" data-id="${id}">
-    <div class="card" >
-      <div class="modal-image">
+  return `<div data-id="${id}">
+      <div>
         <img  src="${image}" />
       </div>
       <div >
@@ -82,6 +81,13 @@ export function openModals(information) {
         <p >Localizacion: ${location.name}</p>
         <p >Episodios: ${episode}</p>
       </div>
-    </div>
+    
   </div>`;
+}
+
+export function findCharacter(characters, id) {
+  const result = characters.find((character) => {
+    return character.id === id;
+  });
+  return result;
 }

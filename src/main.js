@@ -4,7 +4,8 @@ import {
   filterSearch,
   filterElements,
   sortElements,
-  openModals,
+  renderModals,
+  findCharacter,
 } from "./data.js";
 //variable global para tener acceso a todo el arreglo desde cualquier funcion
 window.characters = data.results;
@@ -22,6 +23,7 @@ renderCards(data.results);
 const menuElements = document.getElementsByClassName("menu-element");
 console.log(menuElements);
 const inputSearch = document.getElementById("search");
+
 //Filtrado gral
 const filterCards = (e) => {
   console.log("click", e.target);
@@ -49,14 +51,21 @@ inputSearch.addEventListener("change", function (e) {
   console.log(names);
   renderCards(names);
 });
-
-//datos de modal
-/*function modalsInfo(table) {
-  let info = "";
-  table.forEach((datosGrales) => {
-    info += modals(datosGrales);
-  });
-  document.getElementById("div-img-modal").innerHTML = info;
-}
-
-modalsInfo(data.results);*/
+const modalContent = document.getElementById("content");
+const modal = document.getElementById("modal");
+const showModal = (e) => {
+  const valueCard = parseInt(e.target.dataset.id);
+  console.log(valueCard);
+  const characterInfo = findCharacter(window.characters, valueCard);
+  modalContent.innerHTML = renderModals(characterInfo);
+  modal.classList.toggle("modal-active");
+};
+modal.addEventListener("click", () => {
+  modal.classList.toggle("modal-active");
+});
+const cardsElements = document.querySelectorAll(".card");
+console.log(cardsElements);
+cardsElements.forEach((cardElement) => {
+  cardElement.addEventListener("click", showModal);
+  // console.log(cardElement.current);
+});

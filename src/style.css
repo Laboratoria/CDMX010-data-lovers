@@ -17,7 +17,6 @@ header {
   bottom: 10px;
 }
 .div-img-banner {
-  outline: 1px solid rgb(239, 237, 241);
   background-color: black;
   width: 70%;
   height: 100%;
@@ -33,6 +32,7 @@ header img {
 #menu {
   position: absolute;
   display: flex;
+  margin: 10px;
   left: 30px;
   width: 25px;
 }
@@ -40,46 +40,56 @@ header img {
 nav {
   width: 100%;
   height: 30px;
-  outline: 2px solid salmon;
   position: fixed;
   top: 60px;
   display: flex;
-  background-color: rgb(14, 13, 13);
-  align-items: baseline;
+  background-color: black;
+  align-items: center;
   justify-content: flex-end;
 }
 
 nav div {
-  outline: 2px solid #ecec11;
   display: flex;
   margin-right: 10px;
 }
 
 .filter-name {
-  outline: 2px solid rgb(224, 20, 58);
-  height: 100%;
+  height: 25px;
+  width: 100%;
+  max-width: 350px;
 }
 .orders {
-  outline: 2px solid rgb(84, 187, 187);
+  display: block;
+  width: 200px;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.3;
+  max-width: 150px;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 0 1px rgb(0, 0, 0, 0.03);
+  border-radius: 0.3em;
+  background-color: #ffff;
 }
-.icone-name {
-  outline: 2px solid ghostwhite;
-  display: flex;
+.icon-name {
+  width: 20px;
+  margin-right: 5px;
 }
 #search {
   height: 20px;
-  margin-top: 5px;
-  margin-left: 0%;
+  width: 100%;
+  max-width: 300px;
+  margin: auto auto;
 }
 
 main {
   margin-top: 10%;
-    display: flex;
-    width: 100%;
-  
+  display: flex;
+  width: 100%;
 }
 .card-filter {
-  outline: 2px solid blue;
   display: flex;
   width: 200px;
   padding: 5px;
@@ -89,21 +99,18 @@ main {
 /*ESTILOS DE LAS CARDS*/
 #data {
   display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-  
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
+  display: block;
   background-color: #07b0ce;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-    width: 20%;
-    max-width: 250px;
-    line-height: 23px;
-    margin: 2%;
-  
-  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  max-width: 200px;
+  line-height: 23px;
+  margin: 2%;
 }
 .card-image {
   display: flex;
@@ -126,15 +133,16 @@ main {
   font-family: "Coming Soon", cursive;
   font-weight: bolder;
 }
-.details h2 {
+.details .card-name {
   color: #ecec11;
   text-align: center;
-  margin-top: -14px;
+  margin-top: 5px;
   font-family: "Schoolbell", cursive;
+  font-size: 1.5rem;
 }
 /*VENTANA MODAL*/
 .modal {
-  display: flex;
+  display: none;
   position: fixed;
   z-index: 1;
   align-items: center;
@@ -149,12 +157,17 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("./imagen/imgModal.jpg");
   width: 100%;
   height: 100%;
   max-width: 700px;
   max-height: 500px;
   border-radius: 8px;
   overflow: hidden;
+  background: #ecec11;
+  text-align: center;
 }
-/*1rem=16px 
+
+/*1rem=16px */
+.modal-active {
+  display: flex;
+}
