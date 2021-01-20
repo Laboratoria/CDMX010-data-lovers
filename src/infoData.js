@@ -2,7 +2,7 @@ import data from './data/pokemon/pokemon.js';
 import {searchEvolutions} from './data.js';
 
 let allPokemon = data.pokemon;
-let namePokemon = [];
+//let namePokemon = [];
 let nameAllPokemon = [];
 
 
@@ -10,7 +10,7 @@ let nameAllPokemon = [];
 export const infoEachPokePrinc = (pokemon) => {
   function infoPokeContainer (pokemon) {
     return `
-    <div class = 'ind-info-pokemon-container' id= 'ind-info-pokemon-container'>
+    <div class = 'ind-info-pokemon-container' id= 'ind-info-pokemon-container-${pokemon.name}'>
       <div class = 'img-pokemon-container'>
         <button class= "buttonEachPokeC" value='${pokemon.name}'>
           <a>
@@ -24,7 +24,7 @@ export const infoEachPokePrinc = (pokemon) => {
       </div>
     </div>`
   }
-  namePokemon = nameAllPokemon.push(pokemon.name);
+  nameAllPokemon.push(pokemon.name);
   let infoPrinPoke = infoPokeContainer(pokemon);
   return infoPrinPoke;
   }
@@ -123,8 +123,8 @@ function evolutions (pokemon) {
   evaluate(nextEvolutions, nextEvoCont, 'nextEvolutionImg-container', 'nextEvolution-container');
   evaluate(prevEvolutions, prevEvoCont, 'prevEvolutionImg-container', 'prevEvolution-container');
   addCandies(nextEvolutions, candiesCont);
-  console.log(nextEvolutions);
-  console.log(candiesCont);
+  //console.log(nextEvolutions);
+  //console.log(candiesCont);
   document.getElementById('currencyStateImg-container').innerHTML = currencyPoke;
 }
 
@@ -155,23 +155,23 @@ function addImgs (pokemon) {
 }
 
 function addCandies (arrayNextEv, arrayCandies) {
-  console.log(arrayNextEv);
+  //console.log(arrayNextEv);
   arrayNextEv.forEach((pokemon) => {
     arrayCandies += createContCandy(pokemon);
-    console.log(arrayCandies);
+    //console.log(arrayCandies);
   });
   document.getElementById("nextEvolutionCandies-container").innerHTML= arrayCandies;
-  console.log(arrayCandies);
+  //console.log(arrayCandies);
   return arrayCandies
 }
 
 function createContCandy (pokemon) {
-  console.log(pokemon);
+  //console.log(pokemon);
   let candies = pokemon.evolution['prev-evolution'][0]['candy-cost'];
   let candiesCont = `
   <p>${candies} caramelos</p>
   `;
-  console.log(candies);
+  //console.log(candies);
   return candiesCont
 }
 
