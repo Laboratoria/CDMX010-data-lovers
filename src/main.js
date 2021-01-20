@@ -6,7 +6,31 @@
 
 const resultado = document.getElementById('table-poke');
 const url = './data/pokemon/pokemon.json';
+//Ordenar lista de nombre A - Z
+const orderAz = (listaPokex) => {
+    listaPokex.sort(function compare(a, b) {
+    if  (a.name < b.name
+    ) return -1;
+    if (a.name > b.name
+    ) return 1;
+      return 0;
+    })
+    console.log(listaPokex)
+};
 
+//Ordenar lista de nombres Z - A
+const orderZa = (listaPokex_) => {
+    listaPokex_.sort(function compare(b, a) {
+    if (a.name < b.name
+    ) return 1;
+    if (a.name > b.name
+    ) return -1;
+      return 0;
+    })
+    console.log(listaPokex_)
+};
+
+//Método Fetch
 fetch(url)
     .then(response => response.json())
     .then(data => {
