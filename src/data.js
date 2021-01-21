@@ -16,7 +16,7 @@ export let searchEvolutions = (pokemon, evolName, array) => {
     if (Object.keys(evolution).includes(evolName)) {
       let nextEvName = evolution[evolName][0]['name'];
       let nextEv = allPokemon.find((pokemon) => pokemon.name === nextEvName);
-      console.log(nextEv);
+     // console.log(nextEv);
       if (evolName == 'next-evolution') {
         array.push(nextEv);
         filterPokeEv(nextEv);
