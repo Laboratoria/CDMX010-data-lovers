@@ -1,7 +1,7 @@
 export function templateCard(information) {
   const { id, image, name, status, species, gender, origin } = information;
   return `
-    <div class="card" data-id="${id}">
+    <div class="card" id="${id}" data-id="${id}">
       <div class="card-image" data-id="${id}">
         <img  class="btnmodal" data-id="${id}" src="${image}" />
       </div>

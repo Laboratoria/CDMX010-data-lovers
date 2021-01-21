@@ -10,6 +10,11 @@ import {
 //variable global para tener acceso a todo el arreglo desde cualquier funcion
 window.characters = data.results;
 
+const menuElements = document.querySelectorAll(".menu-element");
+console.log(menuElements);
+const inputSearch = document.getElementById("search");
+const modalContent = document.getElementById("content");
+const modal = document.getElementById("modal");
 //recibe listado de los personajes
 function renderCards(list) {
   let elements = "";
@@ -18,12 +23,7 @@ function renderCards(list) {
     elements += templateCard(character);
   });
   document.getElementById("data").innerHTML = elements;
-} //renderiza todos
-renderCards(data.results);
-const menuElements = document.getElementsByClassName("menu-element");
-console.log(menuElements);
-const inputSearch = document.getElementById("search");
-
+}
 //Filtrado gral
 const filterCards = (e) => {
   console.log("click", e.target);
@@ -31,28 +31,11 @@ const filterCards = (e) => {
   console.log(filterType);
   const filterValue = e.target.dataset.value;
   window.characters = filterElements(data.results, filterType, filterValue);
-  return renderCards(window.characters);
+
+  renderCards(window.characters);
+  modalLisener();
 };
-Array.from(menuElements).forEach((menuElement) => {
-  menuElement.addEventListener("click", filterCards);
-});
-//FUNCION DE ORDENADO
-document.getElementById("sort").addEventListener("change", (e) => {
-  console.log(e.target.value);
-  const sortedElements = sortElements(window.characters, e.target.value);
-  console.log(sortedElements);
-  renderCards(sortedElements);
-});
-//filtrado por nombre
-inputSearch.addEventListener("change", function (e) {
-  let text = e.currentTarget.value;
-  console.log(text);
-  const names = filterSearch(data.results, text);
-  console.log(names);
-  renderCards(names);
-});
-const modalContent = document.getElementById("content");
-const modal = document.getElementById("modal");
+
 const showModal = (e) => {
   const valueCard = parseInt(e.target.dataset.id);
   console.log(valueCard);
@@ -60,12 +43,40 @@ const showModal = (e) => {
   modalContent.innerHTML = renderModals(characterInfo);
   modal.classList.toggle("modal-active");
 };
+
+const modalLisener = () => {
+  const cardsElements = document.querySelectorAll(".card");
+  cardsElements.forEach((cardElement) => {
+    cardElement.addEventListener("click", showModal);
+  });
+};
+//FUNCION DE ORDENADO
+document.getElementById("sort").addEventListener("change", (e) => {
+  console.log(e.target.value);
+  const sortedElements = sortElements(window.characters, e.target.value);
+  console.log(sortedElements);
+
+  renderCards(sortedElements);
+  modalLisener();
+});
+
+//filtrado por nombre
+inputSearch.addEventListener("change", function (e) {
+  let text = e.currentTarget.value;
+  console.log(text);
+  const names = filterSearch(data.results, text);
+  console.log(names);
+  renderCards(names);
+  modalLisener();
+});
+menuElements.forEach((menuElement) => {
+  menuElement.addEventListener("click", filterCards);
+});
 modal.addEventListener("click", () => {
   modal.classList.toggle("modal-active");
 });
-const cardsElements = document.querySelectorAll(".card");
-console.log(cardsElements);
-cardsElements.forEach((cardElement) => {
-  cardElement.addEventListener("click", showModal);
-  // console.log(cardElement.current);
-});
+
+//renderiza todos
+renderCards(data.results);
+//asocia el evento clic a cada una de las tarjetas para abrir el modal
+modalLisener();
