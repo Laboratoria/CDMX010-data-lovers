@@ -2,15 +2,10 @@ import { infoEachPokePrinc, infoEachPoke} from './infoData.js';
 import {/*searchEvolutions,*/ searchPokemon} from './data.js';
 import data from './data/pokemon/pokemon.js';
 import{weaknessesNumberFilterAdd, weaknessesNumberFilterQuit, pokemonTypeFilterAdd, pokemonTypeFilterQuit}from'./filtros.js';
-
+import{getObjects}from './getObjects.js';
 
 let allPokemon = data.pokemon;
-//console.log(typeof allPokemon);
-//let namePokemon = [];
-
 let nameAllPokemon = [];
-
-
 let infoPrincPokemon = document.getElementById("home-main--button");
 
 infoPrincPokemon.addEventListener("click", function () {
@@ -30,7 +25,7 @@ infoPrincPokemon.addEventListener("click", function () {
   setFunction(elements);
 })
 
-function setFunction (elements) {
+export function setFunction (elements) {
   for(var i = 0; i < elements.length; i++){
     elements[i].addEventListener('click',function(){
     //alert('Hola' + ' ' + this.value);
@@ -66,7 +61,6 @@ function showCheckboxesType() {
     if(expanded==true){
       document.getElementById("selectWeaknessesNumber").click();
     }
-    //document.getElementById("selectWeaknessesNumber").click();
   } else {
       checkboxes.style.display = "none";
       expanded2 = false;
@@ -85,7 +79,6 @@ searchPoke.addEventListener("click", function() {
   let namePokeToSearch = document.getElementById("namePokeToSearch").value.toLowerCase();
   document.getElementById('home-pokemon-info-container').style.display='none';
   if (nameAllPokemon.includes(namePokeToSearch)) {
-    document.getElementById('main-errormsg-container').style.display='none';
     document.getElementById('main-searchPoke-container').style.display='flex';
     pokeFounded = searchPokemon(allPokemon, namePokeToSearch);
     let pokeFoundedInfo = infoEachPokePrinc(pokeFounded[0]);
@@ -95,64 +88,25 @@ searchPoke.addEventListener("click", function() {
     setFunction(child);
   } else {
     document.getElementById('main-errormsg-container').style.display='flex';
-    document.getElementById('main-searchPoke-container').style.display='none';
-    let container = `
-      <div class="main-errormsg">
-        <div class="main-errormsg-message">
-          <p>¡Ups! No encontramos ningun pokemon con ese nombre</p>
-        </div>
-        <figure>
-          <img src="./assets/pikachu-search.png">
-        </figure>
-      </div>
-      <div>
-        <button class= "main-errormsg-button-back" id= "main-errormsg-button-back">Regresar al inicio</button>
-      </div>
-    `
-    document.getElementById('main-errormsg-container').innerHTML = container;
-    document.getElementById('main-errormsg-button-back').addEventListener("click", function() {
-      document.getElementById('main-errormsg-container').style.display='none';
-      input.onsearch();
-      document.getElementById("namePokeToSearch").value='';
-      document.getElementById('home-pokemon-info-container').style.display='grid';
-    });
+    document.getElementById('main-searchPoke-container').style.display='none';  
   }
+  
   document.getElementById('main-searchPoke-container');
   let button = document.createElement('button');
   button.className = 'main-search-button-back';
   button.innerText= 'Regresar al inicio';
   button.setAttribute = ('onclick');
   button.onclick = function () {
-    document.getElementById('home-pokemon-info-container').style.display='grid';
-    input.onsearch();
-    document.getElementById("namePokeToSearch").value='';
+    backToTop()
     document.getElementById('main-searchPoke-container').style.display='none';
   };
   document.getElementById('main-searchPoke-container').appendChild(button);
 })
 
-
-
-/*searchPoke.addEventListener("click", function() {
-  document.getElementById('home-pokemon-info-container').style.display= 'none';
-  //document.getElementById('home-section-info-container').style.display= 'flex';
-  let namePokeToSearch = document.getElementById("namePokeToSearch").value.toLowerCase();
-  let pokeFounded = searchPokemon(allPokemon, namePokeToSearch);
-  let pokeFoundedInfo = infoEachPokePrinc(pokeFounded[0]);
-  document.getElementById('main-searchPoke-container').style.display= 'flex';
-  document.getElementById('main-searchPoke-container').innerHTML = pokeFoundedInfo;
-  let container = document.getElementById('main-searchPoke-container');
-  let child = container.getElementsByClassName('buttonEachPokeC');
-  setFunction(child);
-})*/
-
-
 /// AL PRESIONAR ENTER EN EL BUSCADOR SE EJECUTA LA FUNCIÓN DEL BOTÓN SEARCH
 let input = document.getElementById('namePokeToSearch');
 input.addEventListener("keyup", e => {
-  //console.log(e.key);
   if(e.key=='Enter'){
-    //console.log('e.key');
     e.preventDefault();
     document.getElementById("searchByNameButton").click();
   /// AL ESCRIBIR EN EL INPUT SEARCH SE EJECUTA LA FUNCIÓN "REAL TIME SEARCH"
@@ -170,38 +124,31 @@ function realTimeSearch(){
       finalFilter.push(nombre);
     }
   }
-  getObjects(finalFilter);
+  getObjects(finalFilter, nameAllPokemon, allPokemon);
 }
+
+document.getElementById('main-errormsg-container').style.display='none';
+
+function backToTop(){
+  document.getElementById("namePokeToSearch").value='';
+  finalFilter= nameAllPokemon
+  getObjects(finalFilter, nameAllPokemon, allPokemon);
+  document.getElementById('home-pokemon-info-container').style.display='grid';
+}
+
+document.getElementById('main-errormsg-button-back').addEventListener("click", ()=>{ 
+  backToTop()
+  document.getElementById('main-errormsg-container').style.display='none';
+});
 
 // AL PRESIONAR EL BOTON "X" (CLEAR) DEL INPUT SEARCH
 input.onsearch= ()=>{
-  finalFilter= nameAllPokemon
-  getObjects(finalFilter);
+  backToTop()
+  document.getElementById('main-errormsg-container').style.display='none';
+  document.getElementById('main-searchPoke-container').style.display='none';
 }
 
-//código agregado para mostrar resultados
 
-function getObjects (nameFiltred) {
-let indexNamesFiltredFinal = []; //metí esta variable  la función para que quedara vacía en cada función
-let objectsPokeFil = []; // y esta también :)
-  nameFiltred.forEach((element) => {
-    let indexNamesFiltred = nameAllPokemon.indexOf(element);
-    indexNamesFiltredFinal.push(indexNamesFiltred);
-    let objectsPoke = allPokemon[indexNamesFiltred];
-    objectsPokeFil.push(objectsPoke);
-    //console.log(objectsPoke);
-  })
-  let infoPrinPokeFil = "";
-  objectsPokeFil.forEach((pokemon) => {
-    infoPrinPokeFil += infoEachPokePrinc(pokemon);
-  });
-  document.getElementById('home-pokemon-info-container').innerHTML = infoPrinPokeFil;
-  let container = document.getElementById('home-pokemon-info-container');
-  let child = container.getElementsByClassName('buttonEachPokeC');
-  //console.log(child);
-  setFunction(child);
-  //console.log(infoPrinPokeFil);
-}
 
 ////////VARIABLES PARA FILTRO DEBILIDADES Y TIPO///////
 //let finalFilter = nameAllPokemon;
@@ -225,12 +172,15 @@ labelQuitFilter.style.display= 'none';
 function checkedChangesRadiosWeaknesses(radioWeaknesses){
   radioWeaknesses.addEventListener('change', e => {
     if(e.target.checked){
+      if(input!=""){
+        input.onsearch();
+      }
       valorFiltro = parseInt(radioWeaknesses.value);
       //console.log(valorFiltro);
       filterNumber= valorFiltro; 
       finalFilter= weaknessesNumberFilterAdd(filterNumber, allPokemon, finalFilter);
       document.getElementById('removeFilterOption').style.display= 'block';
-      getObjects(finalFilter);
+      getObjects(finalFilter, nameAllPokemon, allPokemon);
       if(finalFilter.length==0){
         alert('oops! No hay pokemones que cumplan con estas características, prueba con otro filtrado');
       }
@@ -244,7 +194,7 @@ function removeNumberWeaknesseFilter(){
     if(e.target.checked){
       finalFilter= weaknessesNumberFilterQuit(finalFilter, nameAllPokemon);
       labelQuitFilter.style.display= 'none';
-      getObjects(finalFilter);
+      getObjects(finalFilter, nameAllPokemon, allPokemon);
     }
   });
 }
@@ -295,25 +245,26 @@ let positionArrayType15 = 15;
 let positionArrayType16 = 16;
 let positionArrayType17 = 17;
 let positionArrayType18 = 18;
+
 function checkedChangesCheckboxes(checkboxTypePokemon, positionArrayTypeDefinition){
   checkboxTypePokemon.addEventListener('change', e => {
   if(e.target.checked){
+    if(input!=""){
+      input.onsearch();
+    }
     typeDefinition= checkboxTypePokemon.value;
     positionArrayType = positionArrayTypeDefinition;
-    //console.log(typeDefinition);
-    //console.log(positionArrayType);
     finalFilter= pokemonTypeFilterAdd(typeDefinition, allPokemon, positionArrayType, finalFilter);
-    getObjects(finalFilter);
+    getObjects(finalFilter, nameAllPokemon, allPokemon);
     if(finalFilter.length==0){
       alert('oops! No hay pokemones que cumplan con estas características, prueba con otro filtrado');
     }
+    document.getElementById("namePokeToSearch").value='';
   }else{ /////QUITAR FILTRO TIPO POKEMON///////////
     typeDefinition= checkboxTypePokemon.value;
     positionArrayType = positionArrayTypeDefinition;
-    //console.log(typeDefinition);
-    //console.log(positionArrayType);
     finalFilter= pokemonTypeFilterQuit(positionArrayType, finalFilter, nameAllPokemon);
-    getObjects(finalFilter);
+    getObjects(finalFilter, nameAllPokemon, allPokemon);
   }
 });
 }
@@ -338,9 +289,14 @@ checkedChangesCheckboxes(checkboxTypePokemon18, positionArrayType18);
 
 // UNCHECKED FILTROS PRESENTES AL DAR CLICK AL INPUT SEARCH//
 input.addEventListener('click', ()=>{
+  if(expanded==true){
+    document.getElementById("selectWeaknessesNumber").click();
+  }
+  if(expanded2==true){
+    document.getElementById("selectPokemonType").click();
+  }
   if(radioQuitFilter.checked == false){
     radioQuitFilter.click();
-    //console.log('retirandofiltro debilidades');
   }
   if(checkboxTypePokemon1.checked){
     checkboxTypePokemon1.click();
