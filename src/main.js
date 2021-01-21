@@ -7,7 +7,8 @@ import{getObjects}from './getObjects.js';
 let allPokemon = data.pokemon;
 let nameAllPokemon = [];
 let infoPrincPokemon = document.getElementById("home-main--button");
-
+let arreglosbotonpokemon= [];
+let arreglonames= [];
 infoPrincPokemon.addEventListener("click", function () {
   document.getElementById("home-section-info-container").style.display = 'grid';
   document.getElementById("home-main-section--welcome").style.display = 'none';
@@ -16,20 +17,31 @@ infoPrincPokemon.addEventListener("click", function () {
   document.getElementById("main-filter-container").style.display = 'flex';
   let infoPrinPoke = "";
   allPokemon.forEach((pokemon) => {
-    infoPrinPoke += infoEachPokePrinc(pokemon);
+    let arregloFinal = infoEachPokePrinc(pokemon);
+    infoPrinPoke += arregloFinal[0];
     nameAllPokemon.push(pokemon.name);
+    arreglosbotonpokemon.push(arregloFinal[1]);
+    arreglonames.push(arregloFinal[2]);
+    //asignarBoton(arregloFinal);
   });
   document.getElementById('home-pokemon-info-container').innerHTML = (infoPrinPoke);
-  let elements = document.getElementsByClassName('buttonEachPokeC');
+  
+  for(let b = 0; b < arreglonames.length; b++){
+    let valueB =  document.getElementById(arreglosbotonpokemon[b]).value;
+    document.getElementById(arreglosbotonpokemon[b]).addEventListener('click', infoEachPoke(valueB));
+    console.log(arreglosbotonpokemon[b]);
+  }
+  //let elements = document.getElementsByClassName('buttonEachPokeC');
   //console.log(elements);
-  setFunction(elements);
+  //setFunction(elements);
 })
+
 
 export function setFunction (elements) {
   for(var i = 0; i < elements.length; i++){
     elements[i].addEventListener('click',function(){
-    //alert('Hola' + ' ' + this.value);
-    infoEachPoke(this);
+    alert('Hola' + ' ' + this.value);
+    //infoEachPoke(this);
     });
   }
 }
@@ -131,7 +143,7 @@ document.getElementById('main-errormsg-container').style.display='none';
 
 function backToTop(){
   document.getElementById("namePokeToSearch").value='';
-  finalFilter= nameAllPokemon
+  finalFilter= nameAllPokemon;
   getObjects(finalFilter, nameAllPokemon, allPokemon);
   document.getElementById('home-pokemon-info-container').style.display='grid';
 }

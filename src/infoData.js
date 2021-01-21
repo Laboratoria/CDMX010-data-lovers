@@ -12,7 +12,7 @@ export const infoEachPokePrinc = (pokemon) => {
     return `
     <div class = 'ind-info-pokemon-container' id= 'ind-info-pokemon-container-${pokemon.name}'>
       <div class = 'img-pokemon-container'>
-        <button class= "buttonEachPokeC" value='${pokemon.name}'>
+        <button class= "buttonEachPokeC" value='${pokemon.name}' id="button-viewDataSheet-${pokemon.name}">
           <a>
             <img src = '${pokemon.img}'>
           </a>
@@ -25,13 +25,17 @@ export const infoEachPokePrinc = (pokemon) => {
     </div>`
   }
   nameAllPokemon.push(pokemon.name);
+  let botonPokemon= "button-viewDataSheet-" +pokemon.name;
+  let pokeNombre = pokemon.name;
   let infoPrinPoke = infoPokeContainer(pokemon);
-  return infoPrinPoke;
+  let arregloFinal =[infoPrinPoke, botonPokemon, pokeNombre];
+  //console.log(arregloFinal);
+  return arregloFinal;
   }
 
 export const infoEachPoke = (btnValNamePoke) => {
   document.getElementById("data-sheet-container").style.display = 'flex';
-  let namePoke = btnValNamePoke.value;
+  let namePoke = btnValNamePoke;
   let index = parseInt(nameAllPokemon.indexOf(namePoke));
   let objectPoke = allPokemon[index];
   let rarityPoke = objectPoke["pokemon-rarity"];
@@ -98,7 +102,7 @@ export const infoEachPoke = (btnValNamePoke) => {
 
   otherCharacteristicsPoke('data-sheet-weaknesses-container', objectPoke.weaknesses);
   otherCharacteristicsPoke('data-sheet-resistant-container', objectPoke.resistant);
-  evolutions(objectPoke);
+  //evolutions(objectPoke);
 }
 
 function otherCharacteristicsPoke (parentNode, property) {
