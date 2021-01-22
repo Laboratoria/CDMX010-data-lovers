@@ -47,32 +47,32 @@
           <option value="asc">Ascendente (A-Z)</option>
           <option value="desc">Descendente (z-A)</option>
         </select>
-      </div>
-     
+      </div> 
     </nav>
-    <main>
-      <section class="filtros">
+    <div id="menu-filter" class="filtros-active">
+      <ul class="menu">
+        <li class="filter-one">Especie:
           <ul>
-            <li class="filter-one">Especie
-              <ul>
-              <li class="menu-element" data-filter="species" data-value="Human">Human</li>
-              <li class="menu-element" data-filter="species" data-value="Alien">Alien</li>
-            </ul> 
-          </li>
-          <li class="filter_two">Estatus
-            <ul>
-            <li class="menu-element" data-filter="status" data-value="Alive">Vivo</li>
-            <li class="menu-element" data-filter="status" data-value="Dead">Muerto</li>
-          </ul>
-          <li class="filter-three">Genero
-            <ul>
-              <li class="menu-element" data-filter="gender" data-value="Female">Femenino</li>
-              <li class="menu-element" data-filter="gender" data-value="Male">Masculino</li>
-            </ul>
-          </li>
-          </li>
-          </ul>
-      </section>
+          <li class="menu-element" data-filter="species" data-value="Human">Human</li>
+          <li class="menu-element" data-filter="species" data-value="Alien">Alien</li>
+          </ul> 
+      </li>
+      <li class="filter-two">Estatus:
+        <ul>
+        <li class="menu-element" data-filter="status" data-value="Alive">Vivo</li>
+        <li class="menu-element" data-filter="status" data-value="Dead">Muerto</li>
+      </ul>
+      <li class="filter-three">Genero:
+        <ul>
+          <li class="menu-element" data-filter="gender" data-value="Female">Femenino</li>
+          <li class="menu-element" data-filter="gender" data-value="Male">Masculino</li>
+        </ul>
+      </li>
+      </li>
+      </ul>
+  </div>
+      <main>
+       
       <section id="data"></section>
     </main>
     <div id="modal" class="modal">

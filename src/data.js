@@ -1,7 +1,7 @@
 export function templateCard(information) {
   const { id, image, name, status, species, gender, origin } = information;
   return `
-    <div class="card" id="${id}" data-id="${id}">
+    <div class="card"  data-id="${id}">
       <div class="card-image" data-id="${id}">
         <img  class="btnmodal" data-id="${id}" src="${image}" />
       </div>
@@ -53,7 +53,6 @@ export function filterSearch(characters, textInput) {
   });
   return names;
 }
-
 export function renderModals(information) {
   const {
     id,
@@ -65,26 +64,24 @@ export function renderModals(information) {
     gender,
     origin,
     location,
-    episode,
   } = information;
-  return `<div data-id="${id}">
+  return `<div class="modal-info" data-id="${id}">
       <div>
         <img  src="${image}" />
       </div>
       <div >
-        <p ><h2>${name}</h2></p>
+        <h2>${name}</h2>
         <p >Estatus: ${status}</p>
         <p >Especie: ${species}</p>
-        <p">Tipo: ${type}</p>
+        <p>Tipo: ${type}</p>
         <p >Genero: ${gender}</p>
         <p >Origen: ${origin.name}</p>
         <p >Localizacion: ${location.name}</p>
-        <p >Episodios: ${episode}</p>
+       
       </div>
     
   </div>`;
 }
-
 export function findCharacter(characters, id) {
   const result = characters.find((character) => {
     return character.id === id;

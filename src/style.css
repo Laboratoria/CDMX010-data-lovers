@@ -35,6 +35,7 @@ header img {
   margin: 10px;
   left: 30px;
   width: 25px;
+  cursor: pointer;
 }
 /*ESTILO DEL NAV (MENU) */
 nav {
@@ -85,10 +86,51 @@ nav div {
 }
 
 main {
-  margin-top: 10%;
+  margin-top: 15%;
   display: flex;
   width: 100%;
 }
+
+/*Estilo del menu lateral*/
+.menu {
+  position: fixed;
+  background: rgb(8, 8, 8, 0.7);
+  box-shadow: 2px 0px 5px 2px rgb(0, 0, 0);
+  height: 100%;
+  padding: 80px 0px 20px 0px;
+  margin: 10px 0;
+  width: 40%;
+  padding-left: 3px;
+  overflow: hidden;
+  z-index: 10;
+  transition: all 0.5s ease;
+}
+.menu li {
+  list-style: none;
+  padding: 6px 3px;
+  margin: 5px;
+  line-height: 1em;
+  color: #fff;
+  display: block;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.menu li ul {
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  line-height: 1em;
+  cursor: pointer;
+}
+.menu li ul li:hover {
+  background-color: rgba(204, 204, 228, 0.719);
+  color: #000;
+}
+.filtros-active {
+  transform: translate(-600px);
+}
+
 .card-filter {
   display: flex;
   width: 200px;
@@ -108,9 +150,11 @@ main {
   display: block;
   background-color: #07b0ce;
   box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-  max-width: 200px;
+  max-width: 250px;
+  max-height: 400px;
   line-height: 23px;
   margin: 2%;
+  overflow: hidden;
 }
 .card-image {
   display: flex;
@@ -118,9 +162,9 @@ main {
 }
 
 .card-image img {
-  width: 85%;
+  width: 90%;
   display: block;
-  border: 5px solid rgba(9, 10, 73, 0.719);
+  border: 3px solid rgba(204, 204, 228, 0.719);
   margin-top: 1em;
   border-radius: 6px;
   box-shadow: 0 0 5px;
@@ -136,7 +180,8 @@ main {
 .details .card-name {
   color: #ecec11;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 0.5em;
+  margin-bottom: 0.7em;
   font-family: "Schoolbell", cursive;
   font-size: 1.5rem;
 }
@@ -157,10 +202,10 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  max-width: 700px;
-  max-height: 500px;
+  width: 90%;
+  height: 90%;
+  max-width: 600px;
+  max-height: 550px;
   border-radius: 8px;
   overflow: hidden;
   background: #ecec11;
@@ -170,4 +215,27 @@ main {
 /*1rem=16px */
 .modal-active {
   display: flex;
+}
+
+/*Diseño del contenido de cada modal*/
+.modal-info {
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 auto;
+  line-height: 0.7em;
+  width: 90%;
+  max-width: 700px;
+  overflow: hidden;
+  color: #1f2056;
+  font-size: 1em;
+  font-family: "Coming Soon", cursive;
+  font-weight: bold;
+}
+.modal-info img {
+  margin-top: 10px;
+  width: 90%;
+  max-width: 300px;
+  border: 5px solid rgba(204, 204, 228, 0.719);
+  border-radius: 6px;
+  box-shadow: 0 0 5px;
 }
