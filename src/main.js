@@ -7,8 +7,7 @@ import{getObjects}from './getObjects.js';
 let allPokemon = data.pokemon;
 let nameAllPokemon = [];
 let infoPrincPokemon = document.getElementById("home-main--button");
-let arreglosbotonpokemon= [];
-let arreglonames= [];
+
 infoPrincPokemon.addEventListener("click", function () {
   document.getElementById("home-section-info-container").style.display = 'grid';
   document.getElementById("home-main-section--welcome").style.display = 'none';
@@ -17,34 +16,24 @@ infoPrincPokemon.addEventListener("click", function () {
   document.getElementById("main-filter-container").style.display = 'flex';
   let infoPrinPoke = "";
   allPokemon.forEach((pokemon) => {
-    let arregloFinal = infoEachPokePrinc(pokemon);
-    infoPrinPoke += arregloFinal[0];
+    infoPrinPoke += infoEachPokePrinc(pokemon);
     nameAllPokemon.push(pokemon.name);
-    arreglosbotonpokemon.push(arregloFinal[1]);
-    arreglonames.push(arregloFinal[2]);
-    //asignarBoton(arregloFinal);
   });
   document.getElementById('home-pokemon-info-container').innerHTML = (infoPrinPoke);
-  
-  for(let b = 0; b < arreglonames.length; b++){
-    let valueB =  document.getElementById(arreglosbotonpokemon[b]).value;
-    document.getElementById(arreglosbotonpokemon[b]).addEventListener('click', infoEachPoke(valueB));
-    console.log(arreglosbotonpokemon[b]);
-  }
-  //let elements = document.getElementsByClassName('buttonEachPokeC');
+  let elements = document.getElementsByClassName('buttonEachPokeC');
   //console.log(elements);
-  //setFunction(elements);
+  setFunction(elements);
 })
-
 
 export function setFunction (elements) {
   for(var i = 0; i < elements.length; i++){
     elements[i].addEventListener('click',function(){
-    alert('Hola' + ' ' + this.value);
-    //infoEachPoke(this);
+    //alert('Hola' + ' ' + this.value);
+    infoEachPoke(this);
     });
   }
 }
+
 
 let expanded = false;
 let expanded2 = false;
@@ -190,7 +179,7 @@ function checkedChangesRadiosWeaknesses(radioWeaknesses){
       valorFiltro = parseInt(radioWeaknesses.value);
       //console.log(valorFiltro);
       filterNumber= valorFiltro; 
-      finalFilter= weaknessesNumberFilterAdd(filterNumber, allPokemon, finalFilter);
+      finalFilter= weaknessesNumberFilterAdd(filterNumber);//, allPokemon, finalFilter);
       document.getElementById('removeFilterOption').style.display= 'block';
       getObjects(finalFilter, nameAllPokemon, allPokemon);
       if(finalFilter.length==0){
@@ -204,7 +193,7 @@ function checkedChangesRadiosWeaknesses(radioWeaknesses){
 function removeNumberWeaknesseFilter(){
   radioQuitFilter.addEventListener('change', e => {
     if(e.target.checked){
-      finalFilter= weaknessesNumberFilterQuit(finalFilter, nameAllPokemon);
+      finalFilter= weaknessesNumberFilterQuit();//(finalFilter, nameAllPokemon);
       labelQuitFilter.style.display= 'none';
       getObjects(finalFilter, nameAllPokemon, allPokemon);
     }
@@ -265,8 +254,11 @@ function checkedChangesCheckboxes(checkboxTypePokemon, positionArrayTypeDefiniti
       input.onsearch();
     }
     typeDefinition= checkboxTypePokemon.value;
+    //console.log(typeDefinition);
     positionArrayType = positionArrayTypeDefinition;
-    finalFilter= pokemonTypeFilterAdd(typeDefinition, allPokemon, positionArrayType, finalFilter);
+    //console.log(positionArrayType);
+    finalFilter= pokemonTypeFilterAdd(typeDefinition, positionArrayType);//, allPokemon, finalFilter);
+    //console.log(finalFilter);
     getObjects(finalFilter, nameAllPokemon, allPokemon);
     if(finalFilter.length==0){
       alert('oops! No hay pokemones que cumplan con estas características, prueba con otro filtrado');
@@ -275,7 +267,7 @@ function checkedChangesCheckboxes(checkboxTypePokemon, positionArrayTypeDefiniti
   }else{ /////QUITAR FILTRO TIPO POKEMON///////////
     typeDefinition= checkboxTypePokemon.value;
     positionArrayType = positionArrayTypeDefinition;
-    finalFilter= pokemonTypeFilterQuit(positionArrayType, finalFilter, nameAllPokemon);
+    finalFilter= pokemonTypeFilterQuit(positionArrayType);//, finalFilter, nameAllPokemon);
     getObjects(finalFilter, nameAllPokemon, allPokemon);
   }
 });
@@ -334,3 +326,11 @@ input.addEventListener('click', ()=>{
   uncheckedCheckboxesFilterType(checkboxTypePokemon17);
   uncheckedCheckboxesFilterType(checkboxTypePokemon18);
 })
+
+/*noSe();
+function noSe(){
+  let holi= pokemonTypeFilterAdd('dragon', 16);
+  console.log(typeof pokemonTypeFilterAdd);
+  console.log(holi);
+}*/
+

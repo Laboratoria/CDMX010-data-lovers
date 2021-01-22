@@ -1,9 +1,20 @@
+import data from './data/pokemon/pokemon.js';
 let conjunto=[];
 let resultFilterWeaknessesNumber=[];
 let namePokePoke = ['t1','t2','t3','t4','t5','t6','t7','t8','t9','t10','t11','t12','t13','t14','t15','t16','t17','t18'];
 let resultFilterType= [];
+
+let allPokemon = data.pokemon;
+let nameAllPokemon =[];
+function allnames(){
+    allPokemon.forEach((pokemon)=>{
+        nameAllPokemon.push(pokemon.name);
+    })
+}
+allnames();
+let finalFilter= [];
 ///////////FILTRO NUM DEBILIDADES/////////////////
-export const weaknessesNumberFilterAdd = (filterNumber, allPokemon, finalFilter) =>{
+export const weaknessesNumberFilterAdd = (filterNumber)=>{//, allPokemon, finalFilter) =>{
     conjunto[filterNumber] = [];
     let namesToWeaknessesNumber = function(element){
     let memoria= element.weaknesses;
@@ -34,7 +45,7 @@ export const weaknessesNumberFilterAdd = (filterNumber, allPokemon, finalFilter)
     return finalFilter;
 }
 //////////QUITAR FILTRO NUM DEBILIDADES//////////
-export const weaknessesNumberFilterQuit= (finalFilter, nameAllPokemon) =>{
+export const weaknessesNumberFilterQuit= ()=>{//(finalFilter, nameAllPokemon) =>{
     resultFilterWeaknessesNumber =[];
     ////COMBINANDO FILTROS////
     finalFilter = [];
@@ -49,7 +60,7 @@ export const weaknessesNumberFilterQuit= (finalFilter, nameAllPokemon) =>{
 }
 
 //////////FILRO TIPO POKEMON//////////
-export const pokemonTypeFilterAdd= (typeDefinition, allPokemon, positionArrayType, finalFilter) =>{
+export const pokemonTypeFilterAdd= (typeDefinition,positionArrayType)=>{ //allPokemon, , finalFilter) =>{
     conjunto[typeDefinition] = [];
     let namesToPokemonType = function(element){
         let memoriaT= element.type;
@@ -109,7 +120,7 @@ export const pokemonTypeFilterAdd= (typeDefinition, allPokemon, positionArrayTyp
 }
 
 //////////QUITAR FILTRO TIPO POKEMON//////////
-export const pokemonTypeFilterQuit= (positionArrayType, finalFilter, nameAllPokemon)=>{
+export const pokemonTypeFilterQuit= (positionArrayType)=>{ //, finalFilter, nameAllPokemon)=>{
     //para retirar el arreglo correspondiente
     let positionInarray= positionArrayType -1;
     namePokePoke.splice(positionInarray,1,'t' + positionArrayType);
