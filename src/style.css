@@ -29,6 +29,7 @@ body {
         flex-flow: column wrap;
     }
         .menu {
+           /* position: fixed;*/
             background: rgba(0, 0, 0, .5);
             display: flex;
             flex-flow: row nowrap;
@@ -47,6 +48,7 @@ body {
 
                 .nav {
                     padding: 30px 30px;
+
                 }
 
                 .nav select,
@@ -90,6 +92,10 @@ section {
 /*Estilos TABLE*/
 .main-table {
         border: 1px solid white;
+ }
+.titulo h1 {
+        font-weight: 400;
+         color: black;
  }
 
 th, td {
@@ -141,6 +147,13 @@ footer .img{
        margin: 0 15px;
 }
 
+/*Botones Paginacion*/
+.link {
+        margin: auto;
+        text-align: center;
+        font-size: 20px;
+        padding: 30px;
+      }
 /* @media (max-width: 800px) {
        .header {
 
