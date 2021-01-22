@@ -5,6 +5,42 @@
 // // import data from './data/rickandmorty/rickandmorty.js';
 const resultado = document.getElementById('table-poke');
 const url = './data/pokemon/pokemon.json';
+<<<<<<< HEAD
+//Ordenar lista de nombre A - Z
+const orderAz = (listaPokex) => {
+    listaPokex.sort(function compare(a, b) {
+    if  (a.name < b.name
+    ) return -1;
+    if (a.name > b.name
+    ) return 1;
+      return 0;
+    })
+    console.log(listaPokex)
+};
+
+//Ordenar lista de nombres Z - A
+const orderZa = (listaPokex_) => {
+    listaPokex_.sort(function compare(b, a) {
+    if (a.name < b.name
+    ) return 1;
+    if (a.name > b.name
+    ) return -1;
+      return 0;
+    })
+    console.log(listaPokex_)
+};
+
+//Método Fetch
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        // debugger
+        // renderPokemon(data.img)
+        let pokemones = data.pokemon;
+        renderData(pokemones);
+    })
+
+=======
 let resultOrderAZ = document.getElementById('resultadosAZ');
 let resultOrderZA = document.getElementById('resultadosZA');
 let links = document.getElementById('links');
@@ -38,6 +74,7 @@ let links = document.getElementById('links');
 // }
 
 // Funcion Leer Datos
+>>>>>>> a03a87c631c23d25d8311829e9c3acbe73ab5311
 const renderData = (pokemones) => {
     pokemones.forEach((index) => {
         let dataPokemones = `
@@ -168,3 +205,20 @@ fetch(url)
 // orderDataZA(dataInversa);
 // });
 
+<<<<<<< HEAD
+let pokedexList = fetch (url)
+    .then((response)=> response.json ())
+    .then((data) => {
+    let pokedexList = data.pokemon;
+    pokedexList.sort(function compare (b, a) {
+   if (b.name < a.name
+   ) return 1;
+   if (b.name > a.name
+   ) return -1;
+   return 0;
+});
+    console.log(pokedexList)
+});
+
+=======
+>>>>>>> a03a87c631c23d25d8311829e9c3acbe73ab5311
