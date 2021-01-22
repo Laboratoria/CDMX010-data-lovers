@@ -114,7 +114,6 @@ h2{
   box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
   border-radius: 20px;
   background: rgba(0, 0, 0, 0.2);
-
 }
 
 .pokemon-card{
@@ -164,22 +163,43 @@ img{
 
 
 /*INICIA BOTON 01*/
+.botones {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 5em;
+  align-items: center;
+  /*padding: 1em 40em;*/
+}
+
 button {
-  width: 80px;
-  height: 40px;
-  border: 2px solid black;
+  border: 3px solid black;
   color: black;
-  background-color: #f6f0c4;
-  font-size: .6em;
+  background-color: white;
+  font-size: .3em;
   letter-spacing: 2px;
   font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 50%;
+
+  width: 40px;
+     height: 40px;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
 }
 
 button:hover {
   cursor:pointer;
   transform: scale(1.2);
+}
+
+button:hover {
+  color: /*#c77aee*/ white;
+  background-color: black;
 }
 
 /*FOOTER*/

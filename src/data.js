@@ -1,72 +1,69 @@
-// estas funciones son de ejemplo
-/*
-export const example = () => {
-  /*example.filter(lugar => example.name === "kanto")
-  const datos = require ('./pokemon/pokemon.js');
-  fetch(datos)
-    .then((res) => {
-      return res.json();
-    })
-    .then((data)=> {
-      console.log(data);
+import data from './data/pokemon/pokemon.js';
 
-      /* OPCION 1
-      const pokemon = {};
-      pokemon['name'] = data.name;
-      */
 
-      /* OPCION 2
-      pokemon.name.forEach(nombre => {
-      pokemon['nombre'] = pokemon['nombre'] + ', ' + nombre.name
-      });
-      console.log(pokemon);
-      
-    })
-  return 'example';
-};
+export const filterByRegion = (region) => {
+  const pokemons = data.pokemon.filter(item =>{
+    return item.generation.name === region
+  })
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+  return pokemons;
+}
 
-*/
+export const getPokemonKanto = data.pokemon.filter(item =>{
+  return item.generation.name === 'kanto'
+})
 
-/*MI COMENTARIO
-let region = data.filter(lugar => lugar.name === "kanto")
-console.log(region)*/
+export const getPokemonJohto = data.pokemon.filter(item =>{
+  return item.generation.name === 'johto'
+})
+
+
+
+//import data from './data/pokemon/pokemon.js';
+//import { createCard } from './main.js';
+
+
+// tarea: domContentLoaded
+// tarea: window.addEventListener
+
+
+
+
+
 
 
 
 
 /*
-export const example = () => {
-  /*example.filter(lugar => example.name === "kanto")
-  const datos = require ('./pokemon/pokemon.js');
-  fetch(datos)
-    .then((res) => {
-      return res.json();
-    })
-    .then((data)=> {
-      console.log(data);
+function cartasKanto () {
+  let result;
+  if (card === 'kanto) 
 
-      /* OPCION 1
-      const pokemon = {};
-      pokemon['name'] = data.name;
-      */
+}
+*/
 
-      /* OPCION 2
-      pokemon.name.forEach(nombre => {
-      pokemon['nombre'] = pokemon['nombre'] + ', ' + nombre.name
-      });
-      console.log(pokemon);
-      
-    })
+/*
 
-  return 'example';
-};
+let pkm = [];
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+const allPokemon = pkm;
+console.log(allPokemon);
+
+
+
+let pokemonRegion = allPokemon.filter(e => e.name === 'kanto');
+console.log(pokemonRegion);
 
 */
+
+/*export const pokemonRegion= () => { //PARA USAR ESTA FUNCIÓN EN OTRO JS DE TIPO MODULO
+  //treaer la data
+  //manipular la data por fecth y manipularla
+  //¿cómo acceder a los elementos de la lista?
+  //
+ //map/filter/  acción de filtrar u ordenar
+  return 'pokemonRegion';
+};*/
+
+
+
