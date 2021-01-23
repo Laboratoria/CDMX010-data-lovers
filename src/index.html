@@ -12,11 +12,48 @@
 
 <body>
   <div id="root">
-    <div id="firstscreen" class="screen">
-      <h1 class="title"> ¡Bienvenido a tu nuevo Pokédex!</h1>
-      <a href="" class="button new"><span>Soy nuevo </span></a>
-      <a href="" class="button expert"><span>Soy experto en Pokemon</span></a>
+    <div class= "menucolor">
+      <p class="title">Pokédex</p>
+      <nav class="startmenu">
+
+
+        <a href="#">Inicio</a>
+        <a href="#">Acerca de </a>
+        <a href="#">Galería</a>
+        <a href="#">Recomendaciones</a>
+      </nav>
     </div>
+    <div id="starting" class="starting">
+      <!--FirstScreen cambió a Starting-->
+
+
+      <div class="startcontainer">
+        <!--Divisor donde se mostrarán las imgenes/gifs de pokemones-->
+        <div class="image"> <img src="images/Charmander.gif"></div>
+        <div class= "starttext"><h2><br>¡Conoce más sobre tus pokemones
+          <br>para ser el mejor maestro!
+        </h2>
+
+
+        </div>
+      <div class="containerbuttons">
+        <!--Container de los botones interactivos de tipos-->
+
+        <button class="buttonfilter insect-button" id="insect-button"><label>Insecto</label></button>
+        <button class="buttonfilter plant-button" id="grass-button"><label>Planta</label></button>
+        <button class="buttonfilter water-button" id="water-button"><label>Agua</label></button>
+        <button class="buttonfilter fire-button" id="fire-button"><label>Fuego</label></button>
+        <button class="buttonfilter psychic-button" id="psychic-button"><label>Psíquico</label></button>
+        <button class="buttonfilter all-button" id="all-button"><label>Ver todos</label></button>
+
+      </div> <!-- Cierre del div container de los botones de tipo-->
+    </div>
+    <!--Cierre de container Pantalla Starting-->
+
+    <!--BOTONES ANTERIORES:
+      <a href="" class="button new"><span>Soy nuevo </span></a>
+      <a href="" class="button expert"><span>Soy experto en Pokemon</span></a>-->
+
 
     <div id="secondscreen" class="screen-two">
       <h2>POKÉDEX</h2>
@@ -73,13 +110,13 @@
           <option value="fairy">Fairy</option>
           <option value="steel">Steel</option>
         </select>
-        
-          <select name="select" id="selector3">
-            <option value="rarityselector">Rareza</option>
-            <option value="legendary">Legendary</option>
-            <option value="mythic">Mythic</option>
-            <option value="normal">Normal</option>
-          </select>
+
+        <select name="select" id="selector3">
+          <option value="rarityselector">Rareza</option>
+          <option value="legendary">Legendary</option>
+          <option value="mythic">Mythic</option>
+          <option value="normal">Normal</option>
+        </select>
       </nav>
 
       <aside>
@@ -94,11 +131,12 @@
 
     </div>
     <footer>
-      <p>      Pokédex site created by :
+      <p> Pokédex site created by :
         <br>
         Anahí Hernandez
         <br>
-        Anahí Rosas</p>
+        Anahí Rosas
+      </p>
 
     </footer>
 
