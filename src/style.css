@@ -1,3 +1,4 @@
+/* --- Page style --- */
 body { 
     background: url("assets/fondoRickAndMortyPaginaInicio.png");
     background-size: 100%;
@@ -26,6 +27,30 @@ body {
     text-align: center;
     margin-bottom: 1rem;
     text-decoration: none;
+  }
+
+  .bton:hover{
+
+    background-color: #000000;
+    color:  #6af049;
+    border-color: black;
+  
+  }
+  /*---Filtrado.html style start here---*/
+  .boxrm {
+    height: 120px;
+    margin: 20px;
+    padding-bottom: 20px;
+  }
+/*---Drop-down menu start here---*/
+
+  nav{
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+
   }
 
   #menu ul{
@@ -74,46 +99,8 @@ button:hover {
 #menu #item:hover #desple{
     display: block;
 }
-/*
-  background: url("assets/fondoRickAndMortyPaginaInicio.png");
-  background-size: 100%;
-  background-color: black;
-}
 
-.box{
-
-  width: 600px;
-  padding: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-
-}
-
-.bton{
-  display: block;
-  width: 100px;
-  height: 15px;
-  padding: 20px;
-  margin: 0 auto;
-  background-color: #6af049;
-  font-family: 'Orbitron', sans-serif;
-  color: #000;
-  text-align: center;
-  margin-bottom: 1rem;
-  text-decoration: none;
-}
-
-.bton:hover{
-
-  background-color: #000000;
-  color: rgb(72, 255, 0);
-  border-color: black;
-
-}
-
+/*---lugar donde se mostrará la data---*/
 #container-characters {
 
   display: flex;
@@ -121,13 +108,8 @@ button:hover {
   justify-content: space-around;
   
 }
-/* This code is for the rickandmorty logo*/
 
-.boxrm {
-  height: 120px;
-  margin: 20px;
-  padding-bottom: 20px;
-}
+/*Credential styles start here*/
 
 .card{
   
@@ -141,8 +123,6 @@ button:hover {
   height: 262px;
   background: url(assets/credentialBackground.png)
   
-  
-
 }
 
 .card:hover{
