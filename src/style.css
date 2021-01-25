@@ -1,15 +1,134 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 .title{
     margin-top:0;
-    color: #fff;
+    color:black;
+    text-align: left;
+    font-size: 2.5em;
+    width: 25%;
+    font-family: 'Bangers', cursive;
+    display: block;
+    float:left;
+}
+h2{
+    font-family: 'Bangers', cursive;
+    font-size: 3em;
     text-align: center;
-    line-height: 100px;
-    font-size: 4em;
+}
+.menucolor{
+      width: 100%; 
+    padding:30px;
+    height: 50px;
 
 }
+.startmenu{
+     float: right;
+    width: 75%;
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+   
+}
+ .startmenu a{
+     text-decoration: none;
+     color: black;
+     
+     
+    }
+ .startcontainer{
+     height: 100vh;
+ }
+ .image{
+     height: 33.33%;
+ }
+ .starttext{
+     height: 33.33%;
+ }
+.menu {
+     float: right;
+    background-color:#e0e0e0;
+    width: 75%;
+    text-align: right;
+    padding: 30px;
+
+}
+.menu select{
+    margin-right: 30px;
+    padding: 10px; 
+    margin-left: auto;
+    
+}
+.menu li{
+    display: inline-flex;
+    font-family: 'Open Sans', sans-serif;
+    flex-direction: row-reverse;    
+}
+.menu ul li{
+    cursor: pointer;
+}
+.menu ul{
+    float: right;
+    margin-right: 40px;
+}
+.screen-two{
+    padding: 0 10%;
+}
+.list-item{
+    position: absolute;
+    width: auto;
+    background-color: aqua;
+    margin-top: 20px;
+    display: none;
+    padding: 15px;
+}
+.list-item li{
+    display: list-item;
+    position: relative;
+    list-style: none;
+    margin-top: 20px;
+    text-align: left;
+}
+.menu ul li:hover .list-item{
+    display: block;
+}
+.menu ul li a{
+    text-decoration: none;
+}
+.screen-two{
+    min-height: 100vh;
+    width: 100%;
+}
+.pokemonlist{
+    width: 60%;
+    float: left;
+
+}
+.w30{
+    width: 33.33%;
+    float: left;
+    display: block;
+}
+.pokemon-box{
+    width: 33.33%;
+    float: left;
+}
+
+aside {
+     width: 15%;
+    min-height: 400px;
+    float: left;
+    text-align: center;
+    border-right: solid 1px #519657;
+    margin-right: 0%;
+
+}
+
 .screen{
     width: 100%;
     height: 100vh;
@@ -18,6 +137,109 @@ body{
     font-family: 'Bangers', cursive;
     display: flex;
     align-items: center;
-    justify-content: center;
+      
+}
+.button {
+    background-color: #ffeb3b;
+    padding: 15px;
+    border: none;
+    text-transform: uppercase; 
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    color:black; 
+    display: block;
+    transition: all 0.2s;
+}
+.button:hover{
+    background-color: #519657 ;
+    color:white;
+}
+.button.new {
+    position: absolute;
+    margin-top:40%;
+    left: 10%;
+}
+.button.expert{
+    position: absolute;
+    margin-top: 40%;
+    right: 10%;
+}
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.2s;
     
+  }
+  
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.2s;
+    color: white;
+  }
+    .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  footer{
+    display: block;
+    float: left;
+    margin-top: auto;
+    background-color: #ffeb3b;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    text-align: center;
+    
+  }
+
+  .buttonfilter{
+    font-family: 'Bangers', cursive;
+    font-size: 2em;
+    padding: .5em 1.5em;
+    color:white;
+    cursor: pointer;
+    border: none;
+    transform: rotate(10deg);
+    margin-left: 2em;
+
+  }
+  .insect-button{
+    background-color: rgba(100, 57, 28, 0.781);
+    transform: rotate(10deg);
+    
+    }
+.plant-button{
+    background-color: green;
+    transform: rotate(-10deg);
+}
+.water-button{
+  background-color: blue;
+  transform: rotate(10deg);
+  
+}
+.fire-button{
+  background-color: red;
+  transform: rotate(-10deg);
+ 
+}
+.psychic-button{
+  background-color: gray ;
+  transform: rotate(10deg);
+}
+.all-button{
+    background-color: rgb(136, 128, 18);
+    transform: rotate(0deg);
+    float:right;
+    margin-top: 30px;
 }

@@ -1,15 +1,146 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-       <div id="root">
-      <div id="firstscreen" class="screen">
-      <h1 class="title"> ¡Bienvenido a tu nuevo Pokédex!</h1>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="root">
+    <div class= "menucolor">
+      <p class="title">Pokédex</p>
+      <nav class="startmenu">
+
+
+        <a href="#">Inicio</a>
+        <a href="#">Acerca de </a>
+        <a href="#">Galería</a>
+        <a href="#">Recomendaciones</a>
+      </nav>
+    </div>
+    <div id="starting" class="starting">
+      <!--FirstScreen cambió a Starting-->
+
+
+      <div class="startcontainer">
+        <!--Divisor donde se mostrarán las imgenes/gifs de pokemones-->
+        <div class="image"> <img src="images/Charmander.gif"></div>
+        <div class= "starttext"><h2><br>¡Conoce más sobre tus pokemones
+          <br>para ser el mejor maestro!
+        </h2>
+
+
+        </div>
+      <div class="containerbuttons">
+        <!--Container de los botones interactivos de tipos-->
+
+        <button class="buttonfilter insect-button" id="insect-button"><label>Insecto</label></button>
+        <button class="buttonfilter plant-button" id="grass-button"><label>Planta</label></button>
+        <button class="buttonfilter water-button" id="water-button"><label>Agua</label></button>
+        <button class="buttonfilter fire-button" id="fire-button"><label>Fuego</label></button>
+        <button class="buttonfilter psychic-button" id="psychic-button"><label>Psíquico</label></button>
+        <button class="buttonfilter all-button" id="all-button"><label>Ver todos</label></button>
+
+      </div> <!-- Cierre del div container de los botones de tipo-->
+    </div>
+    <!--Cierre de container Pantalla Starting-->
+
+    <!--BOTONES ANTERIORES:
+      <a href="" class="button new"><span>Soy nuevo </span></a>
+      <a href="" class="button expert"><span>Soy experto en Pokemon</span></a>-->
+
+
+    <div id="secondscreen" class="screen-two">
+      <h2>POKÉDEX</h2>
+      <!--
+              <select name="select" id="selector">
+              <option value="grass">Grass</option>
+              <option value="flying">flying</option>
+            </select>   
+            <Este es el ejemplo del selector que puso Raul-->
+
+
+
+      <nav class="menu">
+        <select name="select" id="selector">
+          <option value="typeselector">Tipo:</option>
+          <option value="grass">Grass</option>
+          <option value="flying">Flying</option>
+          <option value="fire">Fire</option>
+          <option value="water">Water</option>
+          <option value="bug">bug</option>
+          <option value="normal">normal</option>
+          <option value="poison">poison</option>
+          <option value="electric">electric</option>
+          <option value="ground">Ground</option>
+          <option value="Psychic">Physic</option>
+          <option value="flighting">Flighting</option>
+          <option value="rock">Rock</option>
+          <option value="ghost">Ghost</option>
+          <option value="ice">Ice</option>
+          <option value="dragon">Dragon</option>
+          <option value="dark">Dark</option>
+          <option value="fairy">Fairy</option>
+          <option value="steel">Steel</option>
+        </select>
+
+        <select name="select" id="selector">
+          <option value="typeselector">Debilidad</option>
+          <option value="grass">Grass</option>
+          <option value="flying">Flying</option>
+          <option value="fire">Fire</option>
+          <option value="water">Water</option>
+          <option value="bug">bug</option>
+          <option value="normal">normal</option>
+          <option value="poison">poison</option>
+          <option value="electric">electric</option>
+          <option value="ground">Ground</option>
+          <option value="Psychic">Physic</option>
+          <option value="flighting">Flighting</option>
+          <option value="rock">Rock</option>
+          <option value="ghost">Ghost</option>
+          <option value="ice">Ice</option>
+          <option value="dragon">Dragon</option>
+          <option value="dark">Dark</option>
+          <option value="fairy">Fairy</option>
+          <option value="steel">Steel</option>
+        </select>
+
+        <select name="select" id="selector3">
+          <option value="rarityselector">Rareza</option>
+          <option value="legendary">Legendary</option>
+          <option value="mythic">Mythic</option>
+          <option value="normal">Normal</option>
+        </select>
+      </nav>
+
+      <aside>
+        <p>¿Quieres conocer las características físicas de tus pokemones?</p>
+
+      </aside>
+      <div class="pokemonlist" id="pokemonlist">
+
+
+
       </div>
+
+    </div>
+    <footer>
+      <p> Pokédex site created by :
+        <br>
+        Anahí Hernandez
+        <br>
+        Anahí Rosas
+      </p>
+
+    </footer>
+
     <script src="main.js" type="module"></script>
-  </body>
+</body>
+
 </html>
