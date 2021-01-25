@@ -1,21 +1,12 @@
 body { 
+
   background: url("assets/fondoRickAndMortyPaginaInicio.png");
   background-size: 100%;
   background-color: black;
 }
 
-#container-characters {
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  
-  
-
-}
-
-
 .box{
+
   width: 600px;
   padding: 40px;
   position: absolute;
@@ -23,6 +14,7 @@ body {
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: center;
+
 }
 
 .bton{
@@ -38,56 +30,29 @@ body {
   margin-bottom: 1rem;
   text-decoration: none;
 }
+
+.bton:hover{
+
+  background-color: #000000;
+  color: rgb(72, 255, 0);
+  border-color: black;
+
+}
+
+#container-characters {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
 /* This code is for the rickandmorty logo*/
 
 .boxrm {
-  height: 90px;
-  padding: 20px;
+  height: 120px;
+  margin: 20px;
+  padding-bottom: 20px;
 }
-
-/*This code is for the Nav*/
-
-
-#menu {
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
- 
-
-}
-
-#menu>li {
-  
-  background-color: #5CAEA9;
-  
-  padding: 10px;
-  margin-right: 50px;
-  padding-left: 5px;
-  padding-right: 90px; 
-  
-  justify-content: space-around;
-  font-family: 'Orbitron', sans-serif;
-  color:white;
-  font-weight: bolder;
-  text-align: center;   
-  
-}
-
-main{
-  
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-}
-
-/*This code is for the card container, 
-the place where all the credential will be*/
-
-
-
-/*This code is for the credential*/
 
 .card{
   
@@ -96,7 +61,7 @@ the place where all the credential will be*/
   border-style: solid;
   bottom: 2px;
   margin-left: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
   width: 432px;
   height: 262px;
   background: url(assets/credentialBackground.png)
@@ -107,22 +72,11 @@ the place where all the credential will be*/
 
 .card:hover{
 
-  filter: drop-shadow(0 10px 10px rgba(72, 255, 0, 0.7));
+  filter: drop-shadow(0 5px 5px rgb(21, 255, 0));
 
 }
 
-p{
-
-  color: black;
-  font-family: 'Orbitron', sans-serif;;
-  font-weight: bolder;
-  font-size: 12px;
-  
-
-
-}
-
-.characterImage{
+.characterImage{ /*this code gives formats the imageCharacters */
   
   margin-top: 85px;
   margin-left: 20px;
@@ -130,12 +84,9 @@ p{
   border-color: black;
   border-style: solid;
 
- 
-
-  
 }
 
-.status{
+.status{/*this code gives formats the status text */
 
     width: fit-content;
     height: fit-content;
@@ -144,7 +95,7 @@ p{
     text-align: center;
 }
 
-.boxName{
+.boxName{ /*this code gives formats the Name Character */
 
   width: fit-content;
   height: fit-content;
@@ -154,11 +105,11 @@ p{
 
 }
 
-.name{
+.name{/*this code gives formats the Name Character */
+
     
     font-family:'Schoolbell';
     color:  rgba(39, 119, 138, 1);
-    stroke: rgba(39, 119, 138, 1); ;
     font-weight: bolder;
     margin-top: 40px;
     margin-left: 28px;
@@ -169,12 +120,12 @@ p{
 
 }
 
-
-
-
-
-
-
+p{
+  font-family: 'Orbitron', sans-serif;
+  color: #000;
+  font-size: 11px; 
+  font-weight: bolder;
+}
 
 
 
