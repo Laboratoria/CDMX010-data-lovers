@@ -7,6 +7,7 @@
 //   })
 
 var button = document.getElementById("btn-menu");
+var content = document.getElementById("content");
 
 function showMenu() {
     var menu = document.getElementById("nav");
@@ -14,12 +15,18 @@ function showMenu() {
     if(menu.classList.contains("disable-menu")){
         menu.classList.remove("disable-menu");
         menu.classList.add("enable-menu");
+        content.classList.remove("content");
+        content.classList.add("content1");
     }
     else{
         menu.classList.remove("enable-menu");
         menu.classList.add("disable-menu");
+        content.classList.remove("content1");
+        content.classList.add("content");   
     }
 }
+
+
 
 button.addEventListener("click", showMenu);
 

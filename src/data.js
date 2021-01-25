@@ -1,10 +1,5 @@
-// estas funciones son de ejemplo
+//El proposito de data.js es manipular la data.... SOLO LA DATA
 
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
-
+export function filterAlgo(caracteristica){
+  return `${caracteristica}´jajajajaja`
+}

@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -13,50 +11,68 @@
 
   <body>
 
-    <header>
-      <div class="menuIcon">
-    
-        <a class="btn-menu" id="btn-menu" href="#"><img src="img/menu-icon.png" alt="Menu"></a>
-      </div>     
-      <h1>Rick and Morty</h1>
-    </header>
-
-    <main>
-      <nav class="nav disable-menu" id="nav">
-          <ul>
-            <li><a href="#">Premise</a></li>
-            <li id="submenu"><a href="#">Characters ↆ</a></li>
-              <ul class="show" id="itemList">
-                <li><input type="checkbox" name="name" id="name"><label for="name">Name</label></li>
-                <li><input type="checkbox" name="status" id="status"><label for="status">Status</label></li>
-                <li><input type="checkbox" name="species" id="species"><label for="species">Species</label></li>
-                <li><input type="checkbox" name="type" id="type"><label for="type">Type</label></li>
-                <li><input type="checkbox" name="gender" id="gender"><label for="gender">Gender</label></li>
-                <li><input type="checkbox" name="origin" id="origin"><label for="origin">Origin</label></li>
-                <li><input type="checkbox" name="location" id="location"><label for="location">Location</label></li>
-                <li><input type="checkbox" name="episodes" id="episodes"><label for="episodes">Episodes</label></li>
-              </ul>
-            <li><a href="#">Cast</a></li>
-            <li><a href="#">Episodes</a></li>
-            <li><a href="#">Awards and nominations</a></li>
-            <li><a href="#">Reception</a></li>
-            <li><a href="#">Media and products</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a target="_blank" href="https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215?si=OSM9W15WQBKjyA_k0oPXBg"><img src="img/spotify.png" alt="spotify"></a>
-                <a target="_blank" href="https://www.instagram.com/rickandmorty/?hl=es"><img src="img/instagram.png" alt="instagram"></a></li>
-          </ul>
-      </nav>
-
-      <div id="content">
-
-          <section id="character"></section>
-          <!-- <button id="button1">Character</button> -->
-
-      </div>
-
-    </main>
-
-    <div id="root"></div>
+      <header>
+        <div class="menuIcon">
+          <nav class="nav disable-menu" id="nav">
+            <ul>
+              <li class="blanco"><a href="#">Premise</a></li>
+              <li id="submenu"><a href="#">Characters ↆ</a></li>
+                <ul class="show" id="itemList">
+                  <select name="specie" id="specie" class="specie select">
+                    <option value="">Select the Specie</option>
+                    <option value="Human">Human</option>
+                    <option value="Alien">Alien</option>
+                    <option value="Humanoid">Humanoid</option>
+                    <option value="Unknown">Unknown</option>
+                    <option value="Animal">Animal</option>
+                    <option value="Poopybutthole">Poopybutthole</option>
+                    <option value="Mytholog">Mytholog</option>
+                    <option value="Vampire">Vampire</option>
+                    <option value="Robot">Robot</option>
+                    <option value="Cronenberg">Cronenberg</option>
+                    <option value="Disease">Disease</option>
+                    <option value="Parasite">Parasite</option>
+                  </select>
+                  <select name="status" id="status" class="status select">
+                    <option value="">Select a Status</option>
+                    <option value="Alive">Alive</option>
+                    <option value="Dead">Dead</option>
+                    <option value="Unknown">Unknown</option>
+                  </select>
+                  <select name="gender" id="gender" class="gender select">
+                    <option value="">Select a Gender</option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Human</option>
+                    <option value="Genderless">Genderless</option>
+                    <option value="Unknown">Unknown</option>
+                  </select>
+                  
+                </ul>
+              <li><a href="#">Cast</a></li>
+              <li><a href="#">Episodes</a></li>
+              <li><a href="#">Awards and nominations</a></li>
+              <li><a href="#">Reception</a></li>
+              <li><a href="#">Media and products</a></li>
+              <li><a href="#">Contact</a></li>
+              <li id="Icon-box"><a target="_blank" href="https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215?si=OSM9W15WQBKjyA_k0oPXBg"><img class="Icons" src="img/spotify.png" alt="spotify"></a>
+                  <a target="_blank" href="https://www.instagram.com/rickandmorty/?hl=es"><img class="Icons" src="img/instagram.png" alt="instagram"></a></li>
+            </ul>
+        </nav>
+      
+          <a class="btn-menu" id="btn-menu" href="#"><img class="box" src="img/menu-icon.png" alt="Menu"></a>
+        </div>  
+        <div>
+          <h1>Rick and Morty</h1>
+        </div>   
+      </header>
+  
+      <main>
+        <div id="content" class="content">
+            <section id="character"></section>
+        </div>
+      </main>
+  
+    <!-- <div id="root"></div> -->
 
     <script src="main.js" type="module"></script>
     <script src="menu.js"></script>
