@@ -43,9 +43,13 @@ h2{
     }
  .startcontainer{
      height: 100vh;
+     background-color: aqua;
+     transition: all .5s;
  }
  .image{
      height: 33.33%;
+     background: url("./images/Charmander.gif") no-repeat center;
+     background-size: contain;
  }
  .starttext{
      height: 33.33%;
@@ -217,8 +221,7 @@ aside {
   .insect-button{
     background-color: rgba(100, 57, 28, 0.781);
     transform: rotate(10deg);
-    
-    }
+}
 .plant-button{
     background-color: green;
     transform: rotate(-10deg);
