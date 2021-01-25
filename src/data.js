@@ -29,4 +29,3 @@ export let searchEvolutions = (pokemon, evolName, array) => {
   filterPokeEv(pokemon);
   return array;
 }
-
