@@ -3,9 +3,7 @@ body {
     background-size: 100%;
     background-color: black;
   }
-  
 
-  
   .box{
     width: 600px;
     padding: 40px;
@@ -15,7 +13,7 @@ body {
     transform: translate(-50%,-50%);
     text-align: center;
   }
-  
+
   .bton{
     display: block;
     width: 100px;
@@ -29,3 +27,51 @@ body {
     margin-bottom: 1rem;
     text-decoration: none;
   }
+
+  #menu ul{
+      list-style: none;
+      margin:0;
+      padding:0;
+  }
+
+  #menu #item{
+      float:left;
+  }
+
+  #menu #item a{
+      background: rgb(70, 190, 164);
+      color: white;
+      padding: 12px 22px;
+      display: block;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 16px;
+      text-decoration: none;
+  }
+  
+  #menu #desple{
+    display: none;
+    position: absolute;
+    min-width: 100px;
+}
+
+
+#menu #item a:hover{
+    background:rgb(26, 78, 67)
+}
+
+button{
+  background: rgb(70, 190, 164);
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  text-decoration: none;
+}
+
+button:hover {
+  background:rgb(26, 78, 67)
+}
+
+
+#menu #item:hover #desple{
+    display: block;
+}
+
