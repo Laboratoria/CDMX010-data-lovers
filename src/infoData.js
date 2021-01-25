@@ -2,20 +2,14 @@ import data from './data/pokemon/pokemon.js';
 import {searchEvolutions} from './data.js';
 
 let allPokemon = data.pokemon;
-//let namePokemon = [];
 let nameAllPokemon = [];
 
-
-
 export const infoEachPokePrinc = (pokemon) => {
-  function infoPokeContainer (pokemon) {
-    return `
-    <div class = 'ind-info-pokemon-container' id= 'ind-info-pokemon-container-${pokemon.name}'>
+    let containerPrinc = `
+    <div class = 'ind-info-pokemon-container'>
       <div class = 'img-pokemon-container'>
-        <button class= "buttonEachPokeC" value='${pokemon.name}'>
-          <a>
+        <button class= "buttonEachPokeC" id= '${pokemon.num}'>
             <img src = '${pokemon.img}'>
-          </a>
         </button>
       </div>
       <div class = 'text-pokemon-container'>
@@ -23,24 +17,20 @@ export const infoEachPokePrinc = (pokemon) => {
         <p>${pokemon.num}</p>
       </div>
     </div>`
-  }
-  nameAllPokemon.push(pokemon.name);
-  let infoPrinPoke = infoPokeContainer(pokemon);
-  return infoPrinPoke;
+    nameAllPokemon.push(pokemon.name);
+    return containerPrinc
   }
 
-export const infoEachPoke = (btnValNamePoke) => {
-  document.getElementById("data-sheet-container").style.display = 'flex';
-  let namePoke = btnValNamePoke.value;
-  let index = parseInt(nameAllPokemon.indexOf(namePoke));
-  let objectPoke = allPokemon[index];
+function infoEachPoke (pokemon) {
+  //console.log(pokemon)
+  let objectPoke = pokemon;
   let rarityPoke = objectPoke["pokemon-rarity"];
   let sizePoke= objectPoke.size;
 
   let dataSheet = `
       <div class = "data-sheet" id= "${objectPoke.name}">
         <div class = "exit-container">
-          <button class = "exit-button" id= "${objectPoke.num}">
+          <button class = "exit-button">
             <img src= "./assets/icon-Xgray.svg" class= "exit-icon">
           </button>
         </div>
@@ -86,19 +76,31 @@ export const infoEachPoke = (btnValNamePoke) => {
             <div class= "nextEvolutionCandies-container" id = "nextEvolutionCandies-container"></div>
           </div>
       </div>`
-  document.getElementById('data-sheet-container').innerHTML = dataSheet;
-  //Borrar ficha técnica
-  let nodoABorrar = document.getElementById(objectPoke.name);
-  let exit = document.getElementById(objectPoke.num);
-  exit.addEventListener('click', function () {
-    nodoABorrar.parentNode.removeChild(nodoABorrar);
-    document.getElementById('data-sheet-container').style.display = 'none';
+  return dataSheet
+}
+
+export const getFunction = (pokemon) => {
+  //console.log(pokemon);
+  let dataSheet = "";
+  let element = document.getElementById(pokemon.num);
+  //console.log(element);
+    document.getElementById(pokemon.num).addEventListener('click', function () {
+      //console.log('Hola');
+    document.getElementById('data-sheet-container').style.display= 'flex';
+    dataSheet = infoEachPoke(pokemon);
+    //console.log(dataSheet);
+    document.getElementById('data-sheet-container').innerHTML = dataSheet;
+    otherCharacteristicsPoke('data-sheet-weaknesses-container', pokemon.weaknesses);
+    otherCharacteristicsPoke('data-sheet-resistant-container', pokemon.resistant);
+    evolutions(pokemon);
+    let nodoABorrar = document.getElementById(pokemon.name);
+    let exit = document.getElementsByClassName('exit-button');
+    for (const buttonExit of exit) { 
+      buttonExit.addEventListener('click', function () {
+      nodoABorrar.parentNode.removeChild(nodoABorrar);
+      document.getElementById('data-sheet-container').style.display = 'none';
+  })}
   })
-
-
-  otherCharacteristicsPoke('data-sheet-weaknesses-container', objectPoke.weaknesses);
-  otherCharacteristicsPoke('data-sheet-resistant-container', objectPoke.resistant);
-  evolutions(objectPoke);
 }
 
 function otherCharacteristicsPoke (parentNode, property) {
@@ -123,8 +125,6 @@ function evolutions (pokemon) {
   evaluate(nextEvolutions, nextEvoCont, 'nextEvolutionImg-container', 'nextEvolution-container');
   evaluate(prevEvolutions, prevEvoCont, 'prevEvolutionImg-container', 'prevEvolution-container');
   addCandies(nextEvolutions, candiesCont);
-  //console.log(nextEvolutions);
-  //console.log(candiesCont);
   document.getElementById('currencyStateImg-container').innerHTML = currencyPoke;
 }
 
@@ -155,22 +155,17 @@ function addImgs (pokemon) {
 }
 
 function addCandies (arrayNextEv, arrayCandies) {
-  //console.log(arrayNextEv);
   arrayNextEv.forEach((pokemon) => {
     arrayCandies += createContCandy(pokemon);
-    //console.log(arrayCandies);
   });
   document.getElementById("nextEvolutionCandies-container").innerHTML= arrayCandies;
-  //console.log(arrayCandies);
   return arrayCandies
 }
 
 function createContCandy (pokemon) {
-  //console.log(pokemon);
   let candies = pokemon.evolution['prev-evolution'][0]['candy-cost'];
   let candiesCont = `
   <p>${candies} caramelos</p>
   `;
-  //console.log(candies);
   return candiesCont
 }

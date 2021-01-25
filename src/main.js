@@ -301,4 +301,11 @@ input.addEventListener('click', ()=>{
   uncheckedCheckboxesFilterType(checkboxTypePokemon16);
   uncheckedCheckboxesFilterType(checkboxTypePokemon17);
   uncheckedCheckboxesFilterType(checkboxTypePokemon18);
-});
+})
+
+/*noSe();
+function noSe(){
+  let holi= pokemonTypeFilterAdd('dragon', 16);
+  console.log(typeof pokemonTypeFilterAdd);
+  console.log(holi);
+}*/

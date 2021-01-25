@@ -1,8 +1,15 @@
+import { infoEachPokePrinc, getFunction} from './infoData.js';
+import data from './data/pokemon/pokemon.js';
 
-import { infoEachPokePrinc} from './infoData.js';
-import{setFunction} from './main.js'
-
-export const getObjects = (nameFiltred, nameAllPokemon, allPokemon)=>{
+let allPokemon = data.pokemon;
+let nameAllPokemon =[];
+function allnames(){
+    allPokemon.forEach((pokemon)=>{
+        nameAllPokemon.push(pokemon.name);
+    })
+}
+allnames();
+export const getObjects = (nameFiltred)=>{
     let indexNamesFiltredFinal = [];
     let objectsPokeFil = []; 
     nameFiltred.forEach((element) => {
@@ -16,7 +23,7 @@ export const getObjects = (nameFiltred, nameAllPokemon, allPokemon)=>{
         infoPrinPokeFil += infoEachPokePrinc(pokemon);
     });
     document.getElementById('home-pokemon-info-container').innerHTML = infoPrinPokeFil;
-    let container = document.getElementById('home-pokemon-info-container');
-    let child = container.getElementsByClassName('buttonEachPokeC');
-    setFunction(child);
+    objectsPokeFil.forEach ((pokemon) => {
+    getFunction(pokemon);
+    });
 }

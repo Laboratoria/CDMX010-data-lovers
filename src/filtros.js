@@ -118,7 +118,7 @@ export const pokemonTypeFilterAdd= (typeDefinition,positionArrayType)=>{ //allPo
     //console.log(finalFilter);
     return finalFilter;
 }
-
+console.log(typeof pokemonTypeFilterAdd)
 //////////QUITAR FILTRO TIPO POKEMON//////////
 export const pokemonTypeFilterQuit= (positionArrayType)=>{ //, finalFilter, nameAllPokemon)=>{
     //para retirar el arreglo correspondiente
