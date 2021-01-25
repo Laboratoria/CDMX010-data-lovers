@@ -74,4 +74,134 @@ button:hover {
 #menu #item:hover #desple{
     display: block;
 }
+/*
+  background: url("assets/fondoRickAndMortyPaginaInicio.png");
+  background-size: 100%;
+  background-color: black;
+}
+
+.box{
+
+  width: 600px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+
+}
+
+.bton{
+  display: block;
+  width: 100px;
+  height: 15px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #6af049;
+  font-family: 'Orbitron', sans-serif;
+  color: #000;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.bton:hover{
+
+  background-color: #000000;
+  color: rgb(72, 255, 0);
+  border-color: black;
+
+}
+
+#container-characters {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+/* This code is for the rickandmorty logo*/
+
+.boxrm {
+  height: 120px;
+  margin: 20px;
+  padding-bottom: 20px;
+}
+
+.card{
+  
+  display: flex;
+  border-color: black;
+  border-style: solid;
+  bottom: 2px;
+  margin-left: 5px;
+  margin-bottom: 50px;
+  width: 432px;
+  height: 262px;
+  background: url(assets/credentialBackground.png)
+  
+  
+
+}
+
+.card:hover{
+
+  filter: drop-shadow(0 5px 5px rgb(21, 255, 0));
+
+}
+
+.characterImage{ /*this code gives formats the imageCharacters */
+  
+  margin-top: 85px;
+  margin-left: 20px;
+  Height: 122px; 
+  border-color: black;
+  border-style: solid;
+
+}
+
+.status{/*this code gives formats the status text */
+
+    width: fit-content;
+    height: fit-content;
+    margin-top: 202px;
+    margin-left: -95px;
+    text-align: center;
+}
+
+.boxName{ /*this code gives formats the Name Character */
+
+  width: fit-content;
+  height: fit-content;
+  justify-content: center;
+  margin-left: 50px;
+  margin-top: 50px;
+
+}
+
+.name{/*this code gives formats the Name Character */
+
+    
+    font-family:'Schoolbell';
+    color:  rgba(39, 119, 138, 1);
+    font-weight: bolder;
+    margin-top: 40px;
+    margin-left: 28px;
+    font-size: 27px;
+    height: fit-content;
+    text-align: center;
+    margin-bottom: 2px;
+
+}
+
+p{
+  font-family: 'Orbitron', sans-serif;
+  color: #000;
+  font-size: 11px; 
+  font-weight: bolder;
+}
+
+
+
 
