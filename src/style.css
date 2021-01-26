@@ -22,7 +22,6 @@ header {
   height: 100%;
   display: flex;
   justify-content: center;
-  margin-right: 300px;
 }
 
 header img {
@@ -33,7 +32,6 @@ header img {
 #menu {
   position: absolute;
   display: flex;
-
   left: 30px;
   top: 20px;
   width: 25px;
@@ -42,7 +40,8 @@ header img {
 }
 #home {
   display: flex;
-
+  position: absolute;
+  right: 30px;
   width: 30px;
   cursor: pointer;
 }
