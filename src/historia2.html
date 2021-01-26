@@ -7,38 +7,13 @@
 <body>
   <div id="Menu"></div>
   <!-- Botones laterales-->
-  <aside class="lateral">
-    <div id="filter">
-      <p class="character1">Ver personajes por: </p>
-      <p class="character2">Estatus</p>
-      <div class=buttonStatus>
-        <button class="status" id="alive"> Vivo </button>
-        <button class="status" id="dead"> Muerto </button>
-      </div>
-    </div>
-
-    <div id="order">
-      <p class="characters">Especies</p>
-      <button class="species" id="alive"> Human </button>
-      <button class="species" id="dead"> Alien </button>
-      <button class="species" id="alive"> Human </button>
-      <button class="species" id="dead"> Alien </button>
-      <button class="species" id="alive"> Human </button>
-      <button class="species" id="dead"> Alien </button>
-      <button class="species" id="alive"> Human </button>
-      <button class="species" id="dead"> Alien </button>
-    </div>
-
-    <div class="agregate">
-      <button class="dataPlus" id="dataPlus">¡Descubre cuál personaje aparece en más capítulos!</button>
-    </div>
-  </aside>
-
+  <div id="container" class="container">
+  
   <!-- Template -->
   <div class="information">
     <template id="card">
-
-      <div class="information">
+      
+      <div class="card">
         <h2 class="name"></h2>
         <img src=" ">
         <p class="descr"> Descripción</p>
@@ -51,6 +26,37 @@
       </div>
     </template>
   </div>
+
+  <div class="filters">
+    <div class="lateral">
+      <div id="filter">
+        <p class="character1">Ver personajes por: </p>
+        <p class="character2">Estatus</p>
+        <div class=buttonStatus>
+          <button class="status" id="alive"> Vivo </button>
+          <button class="status" id="dead"> Muerto </button>
+        </div>
+      </div>
+
+      <div id="order">
+        <p class="characters">Especies</p>
+       <div class="buttonSpecies">
+        <button class="species" id="alive"> Human </button>
+        <button class="species" id="dead"> Alien </button>
+        <button class="species" id="alive"> Human </button>
+        <button class="species" id="dead"> Alien </button>
+        <button class="species" id="alive"> Human </button>
+        <button class="species" id="dead"> Alien </button>
+        <button class="species" id="alive"> Human </button>
+        <button class="species" id="dead"> Alien </button>
+      </div>
+    </div>
+      <!--<div class="agregate">
+        <button class="dataPlus" id="dataPlus">¡Descubre cuál personaje aparece en más capítulos!</button>
+      </div>-->
+    </div>
+  </div>
+</div>
   <!-- Footer -->
   <div class= "final">
     <footer class="footer"> DataLovers Laboratoria CDMX </footer>
