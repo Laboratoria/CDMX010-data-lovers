@@ -1,7 +1,7 @@
-import data from './data/pokemon/pokemon.js';
+//import data from './data/pokemon/pokemon.js';
 import {searchEvolutions} from './data.js';
 
-let allPokemon = data.pokemon;
+//let allPokemon = data.pokemon;
 let nameAllPokemon = [];
 
 export const infoEachPokePrinc = (pokemon) => {
@@ -82,7 +82,7 @@ function infoEachPoke (pokemon) {
 export const getFunction = (pokemon) => {
   //console.log(pokemon);
   let dataSheet = "";
-  let element = document.getElementById(pokemon.num);
+  //let element = document.getElementById(pokemon.num);
   //console.log(element);
     document.getElementById(pokemon.num).addEventListener('click', function () {
       //console.log('Hola');

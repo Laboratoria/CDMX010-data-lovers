@@ -16,20 +16,17 @@ let finalFilter= [];
 ///////////FILTRO NUM DEBILIDADES/////////////////
 export const weaknessesNumberFilterAdd = (filterNumber)=>{//, allPokemon, finalFilter) =>{
     conjunto[filterNumber] = [];
-    let namesToWeaknessesNumber = function(element){
-    let memoria= element.weaknesses;
+    allPokemon.forEach((element) =>{
+        let memoria= element.weaknesses;
         if(memoria.length== filterNumber){
             let nameWeaknesses= element.name; 
             conjunto[filterNumber].push(nameWeaknesses);
-        
         } 
-    }
-    allPokemon.forEach(namesToWeaknessesNumber);
-    //console.log(conjunto[filterNumber]);
+    });
     resultFilterWeaknessesNumber = conjunto[filterNumber];
   ////COMBINANDO FILTROS////
     finalFilter = [];
-    if(resultFilterType==0){
+    if(resultFilterType.length==0){
         finalFilter= resultFilterWeaknessesNumber;
     } else{
         for(const value of resultFilterWeaknessesNumber){
@@ -54,8 +51,6 @@ export const weaknessesNumberFilterQuit= ()=>{//(finalFilter, nameAllPokemon) =>
     } else if(resultFilterWeaknessesNumber.length==0 && resultFilterType.length==0){
         finalFilter= nameAllPokemon;
     }
-    //console.log(finalFilter);
-
     return finalFilter; 
 }
 
@@ -72,8 +67,6 @@ export const pokemonTypeFilterAdd= (typeDefinition,positionArrayType)=>{ //allPo
         }
     }
     allPokemon.forEach(namesToPokemonType);
-    //console.log(allPokemon);
-    //console.log(conjunto[typeDefinition]);
     //para colocar el arreglo en su posición asignada///
     let positionInarray= positionArrayType -1;
     namePokePoke.splice(positionInarray,1,conjunto[typeDefinition]);
@@ -94,8 +87,6 @@ export const pokemonTypeFilterAdd= (typeDefinition,positionArrayType)=>{ //allPo
             }
         }
     }
-    //console.log(namePokePoke);
-    //console.log(TodosLosNombresJuntos);
     let deleteNamesRepeat = TodosLosNombresJuntos.filter((item,index)=>{
         return TodosLosNombresJuntos.indexOf(item) === index;
     })
@@ -118,7 +109,7 @@ export const pokemonTypeFilterAdd= (typeDefinition,positionArrayType)=>{ //allPo
     //console.log(finalFilter);
     return finalFilter;
 }
-console.log(typeof pokemonTypeFilterAdd)
+
 //////////QUITAR FILTRO TIPO POKEMON//////////
 export const pokemonTypeFilterQuit= (positionArrayType)=>{ //, finalFilter, nameAllPokemon)=>{
     //para retirar el arreglo correspondiente

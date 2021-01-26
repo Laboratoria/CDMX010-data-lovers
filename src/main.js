@@ -106,8 +106,8 @@ document.getElementById("selectPokemonType").addEventListener('click',  showChec
 //let finalFilter = nameAllPokemon;
 let valorFiltro = 0;
 let filterNumber = 0;
-let typeDefinition= "grass"; 
-let positionArrayType = 7;
+let typeDefinition= ""; 
+let positionArrayType = 0;
 
 ///////////FILTRO NUM DEBILIDADES/////////////////
 let radioWeaknesses1 = document.getElementById('one');
@@ -135,6 +135,7 @@ function checkedChangesRadiosWeaknesses(radioWeaknesses){
       if(finalFilter.length==0){
         alert('oops! No hay pokemones que cumplan con estas características, prueba con otro filtrado');
       }
+      //console.log(finalFilter);
     }
   });
 }
@@ -208,7 +209,7 @@ function checkedChangesCheckboxes(checkboxTypePokemon, positionArrayTypeDefiniti
     if(finalFilter.length==0){
       alert('oops! No hay pokemones que cumplan con estas características, prueba con otro filtrado');
     }
-    document.getElementById("namePokeToSearch").value='';
+    //console.log(finalFilter);
   }else{ /////QUITAR FILTRO TIPO POKEMON///////////
     typeDefinition= checkboxTypePokemon.value;
     positionArrayType = positionArrayTypeDefinition;
