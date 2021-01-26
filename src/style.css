@@ -127,13 +127,14 @@ h3{
 .cardAthletes{
     width: 25rem;
     height: 40rem;
-    margin-left: 2rem;
     border: rgb(18, 12, 97) 15px solid;
-    display:block; 
+    /*display:block; */
     margin: 0 auto;
-    display:inline-block;
+    /*display:inline-block;*/
     border-radius:6px;
+    margin-bottom: 50px;
 }
+
 h2{font-family: rubik;
     font-size: 1.6rem;
     color:rgb(3, 70, 129);
@@ -158,4 +159,9 @@ h2{font-family: rubik;
     width: 35%;
     display:block;
     margin:auto;
+}
+.resultados{
+display:flex;
+flex-wrap: wrap;
+justify-content: space-around;
 }
