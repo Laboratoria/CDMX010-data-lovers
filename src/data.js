@@ -2,13 +2,38 @@
 //import data from "./data/pokemon/pokemon.js"
 export const URL= "./data/pokemon/pokemon.json";
 export const container = document.getElementById("pokemonlist")
+
 fetch(URL)
 .then((res)=> res.json())
 .then((data)=> {
   let items = data.pokemon;
   console.log(items);
   printData(items)
+  filtro(items)
 });
+/* import data  from './data/pokemon/pokemon.js'
+export const filtroTipo = (type) => { // type = 'poison'
+  const pokemonsByType = data.pokemon.filter(function(pokemon) {
+    return pokemon.type.includes(type)
+  })
+
+  return pokemonsByType
+}
+console.log(filtroTipo('water')); */
+
+export const filtro = (pokemones, type) => {
+  const filteredPokemones = pokemones.pokemon.filter(pokemon => pokemon.type === type);
+  console.log(filteredPokemones);
+  return filteredPokemones;
+  // const filterByType = (type) => { 
+  // const pokemonsByType = data.pokemon.filter(function(pokemon) {
+  // return pokemon.type.includes(type)
+  
+    // return pokemonsByType
+}
+
+
+
 //export const pokemons= data.pokemon;
 //const container= document.getElementById("pokemonlist");
 export const printData = (datos) =>{
@@ -23,6 +48,18 @@ datos.forEach((e)=>{
 }
 )
 };
+
+/* import data  from './data/pokemon/pokemon.js'
+export const pokemons = data.pokemon
+export const filterByType = (type) => { // type = 'poison'
+  const pokemonsByType = data.pokemon.filter(function(pokemon) {
+    return pokemon.type.includes(type)
+  })
+
+  return pokemonsByType
+}
+
+console.log(filterByType); */
 
 /*export const anotherExample = () => {
   return 'OMG';
