@@ -29,6 +29,14 @@ const $dataCards= document.querySelector(".information"),
 
 
 
+
+
+
+
+
+
+
+      
      /* let tarjetas=document.getElementById("tarjetas")
 let tarjets =""
 let pokemons = data.pokemon.forEach(p=>{

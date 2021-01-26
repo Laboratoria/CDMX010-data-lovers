@@ -5,46 +5,57 @@
 </head>
 
 <body>
-  <div id="root"></div>
- <!-- Aquí inicia nuestra dada-->
- <div class="information">
- <template id="card">
-    
-    <div class="information">
-      <h2 class="name"></h2>
-      <img src=" "> 
-      <p class="descr"> Descripción</p>
-      <p class="a1"></p>
-      <p class="a2"></p>
-      <p class="a3"></p>
-      <p class="a4"></p>
-      <p class="a5"></p>
-      <p class="a6"></p>
-      </div>
-  </template>
-</div> 
-    <aside>
+  <div id="Menu"></div>
+  <!-- Botones laterales-->
+  <aside class="lateral">
     <div id="filter">
-      <p>Filtrar personajes por:</p>
-      <select class="form">
-        <option> Origen </option>
-        <option> Estatus </option>
-        <option> Genero </option>
-      </select>
+      <p class="character1">Ver personajes por: </p>
+      <p class="character2">Estatus</p>
+      <div class=buttonStatus>
+        <button class="status" id="alive"> Vivo </button>
+        <button class="status" id="dead"> Muerto </button>
+      </div>
     </div>
+
     <div id="order">
-      <p>Ordenar personajes por:</p>
-      <select class="form">
-        <option>Capítulos</option>
-        <option>Order alfabético a-z</option>
-        <option> Especie </option>
-      </select>
+      <p class="characters">Especies</p>
+      <button class="species" id="alive"> Human </button>
+      <button class="species" id="dead"> Alien </button>
+      <button class="species" id="alive"> Human </button>
+      <button class="species" id="dead"> Alien </button>
+      <button class="species" id="alive"> Human </button>
+      <button class="species" id="dead"> Alien </button>
+      <button class="species" id="alive"> Human </button>
+      <button class="species" id="dead"> Alien </button>
     </div>
-    <div id="agregate">
-      <button id="dataPlus">¡Descubre cuál personaje aparece en más capítulos!</button>
+
+    <div class="agregate">
+      <button class="dataPlus" id="dataPlus">¡Descubre cuál personaje aparece en más capítulos!</button>
     </div>
-  </aside> 
-  <footer id="footer"> DataLovers Laboratoria CDMX </footer>
+  </aside>
+
+  <!-- Template -->
+  <div class="information">
+    <template id="card">
+
+      <div class="information">
+        <h2 class="name"></h2>
+        <img src=" ">
+        <p class="descr"> Descripción</p>
+        <p class="a1"></p>
+        <p class="a2"></p>
+        <p class="a3"></p>
+        <p class="a4"></p>
+        <p class="a5"></p>
+        <p class="a6"></p>
+      </div>
+    </template>
+  </div>
+  <!-- Footer -->
+  <div class= "final">
+    <footer class="footer"> DataLovers Laboratoria CDMX </footer>
+  </div>
   <script src="main.js" type="module"></script>
 </body>
+
 </html>

@@ -1,57 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@300;400&display=swap');
-*{
-    box-sizing: border-box;
-} 
 body {
      background:linear-gradient(160deg, #4888B9, #45BD79, #61C362, #A4D02A, #FEC600);
+     width: 100%;
+     height: 100%;
      }
-image {
-    background-image: url(https://hipertextual.com/files/2017/07/rick-morty-.jpg);
-    box-sizing:border-box;
-    display:row;
-    justify-content: space-around;
-    margin-right: 5%;
-    margin-left: 5%;
-    max-width: 40%;
-    max-height: 40%;
+.container1{
+   position: fixed;
+  top:0;
+  width: 100%;
+  height: 7%;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  background: #CDF267;
+  } 
+    .links{
+      color: black;
+      background: #CDF267;
+      font-family: 'Grandstander', cursive;
+      flex-direction: row;
+      margin: 5px;
+      width: auto;
+      height: 30px;
+      text-align: center;
+      border:none;
+      font-size: 2 vw;
+  }  
+      .links:hover{
+        cursor: pointer;
+        transition: transform 150ms;
+        transform: scale(1.2);
+        background: black;
+        color: #CDF267;
+    }
+
+  .image2{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+   } 
+      .imagerm{
+      width: 30%;
+      justify-content: center;
+      align-items: center;
+      }
+.info{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
 }
-.links{ 
-   display: flex;
-   flex-flow: nowrap;
-   flex-direction: column;
-   justify-content: center;
-   margin-right: 5%;
-   margin-left: 5%;
-   font-size: 1.5vw;
-   font-family: 'Grandstander', cursive;
-   font-weight: 300;
+    .text{
+    font-family: "Grandstander";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    color: #020202;
+    }
+.agregate{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-.info{ 
-    display: flex;
-    flex-direction:column;
-    justify-content: space-around;
-    margin-right: 5%;
-    margin-left: 5%;
-    font-size:1.5vw;
-    font-family: 'Grandstander', cursive;
-    font-weight: 300;
- }
-.about{ 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 5%;
-    margin-left: 5%;
-    font-size:1.5vw;
-    font-family: 'Grandstander', cursive;
-    font-weight: 400;
- }
- .Next{
-    display: inline;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    font-size:1 vw;
+    .Next{
+      width: 223px;
+   height: 54px;
+    font-size: 1 vw;
     font-family: 'Grandstander', cursive;
     font-weight: 300;
     padding: 1rem 0;
@@ -59,25 +84,29 @@ image {
     text-align: center;
     margin: 1rem;
     background-color: #CDF267;
- }
- .Next:hover{
+    }
+
+    .Next:hover{
     cursor: pointer;
     transition: transform 150ms;
     transform: scale(1.2);
     background: black;
     color: #CDF267;
  }
-
 .footer{
   position: fixed;
-  left: 0;
-  bottom: 0;
+  bottom:0;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:flex-end;
   width: 100%;
-  height:6%;
+  height:5%;
   background-color:#CDF267;
   color: #6A6A6A;
   text-align: center;
-  font-size:.5 vw;
+  font-size:1.5 vw;
   font-family: 'Grandstander', cursive;
   font-weight: 300;
- } 
+}
