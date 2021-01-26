@@ -50,7 +50,6 @@ const allPokemon = pkm;
 console.log(allPokemon);
 
 
-
 let pokemonRegion = allPokemon.filter(e => e.name === 'kanto');
 console.log(pokemonRegion);
 

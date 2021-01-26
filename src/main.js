@@ -39,8 +39,18 @@ btnKanto.addEventListener ('click',function () {
   console.log(pokemonsKanto); //ver que estoy trayendo la información
   setCards(pokemonsKanto); //
   //console.log(setCards(pokemonsKanto));
-  document.querySelector('.regionKanto').innerHTML = setCards(pokemonsKanto); //pintar esa funcion en la pantalla
-})
+  //document.querySelector('.regionKanto').innerHTML = setCards(pokemonsKanto); //pintar esa funcion en la pantalla
+});
+
+
+let btnJohto = document.querySelector('.regionJohto'); //selecciono el boton kanto
+btnJohto.addEventListener ('click',function () {
+  const pokemonsJohto = filterByRegion('johto'); //funcion para el filtrado de kanto
+  console.log(pokemonsJohto); //ver que estoy trayendo la información
+  setCards(pokemonsJohto); //
+  //console.log(setCards(pokemonsKanto));
+  //document.querySelector('.regionJohto').innerHTML = setCards(pokemonsJohto); //pintar esa funcion en la pantalla
+});
 
 
 
