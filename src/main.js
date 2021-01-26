@@ -1,5 +1,8 @@
-import {URL, printData} from './data.js';
+import pokemones from './data/pokemon/pokemon.js';
+import {printData, filtro} from './data.js';
 //const container= document.getElementById("pokemonlist");
+
+console.log('pokemones', pokemones.pokemon)
 document.getElementById("insect-button").addEventListener("mouseover", function(){
     document.getElementById("back").style.backgroundColor = "black";
     document.getElementById("image").style.backgroundImage = "url('./images/Yanma.gif')";
@@ -8,6 +11,18 @@ document.getElementById("insect-button").addEventListener("mouseleave", function
     document.getElementById("back").style.backgroundColor = "yellow";
     document.getElementById("image").style.backgroundImage = "url('./images/Charmander.gif')";
 });
+
+let buttonWater = document.getElementById("water-button");
+buttonWater.addEventListener("click",function(){
+     const contenedor = document.getElementById("pokemonlist");
+     const pokemonesAgua = filtro(pokemones, buttonWater.value);
+     contenedor.innerHTML = pokemonesAgua;
+     
+     console.log(pokemonesAgua);
+  
+})
+
+
 
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
