@@ -4,7 +4,7 @@
 
 - [1. Introducción](#1-Introducción)
 
-- [2. Definición del Producto](#2-Definición-del.Producto)
+- [2. Definición del Producto](#2-Definición-del-Producto)
 
 - [3. Historias de Usuario](#3-Historias-de-Usuario)
 

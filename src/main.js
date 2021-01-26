@@ -16,10 +16,10 @@ const modal = document.getElementById("modal");
 const iconMenu = document.getElementById("menu");
 const menu = document.querySelector("#menu-filter");
 //recibe listado de los personajes
-function renderCards(list) {
+function renderCards(characters) {
   let elements = "";
   //construye los HTML
-  list.forEach((character) => {
+  characters.forEach((character) => {
     elements += templateCard(character);
   });
   document.getElementById("data").innerHTML = elements;
@@ -46,9 +46,7 @@ const modalLisener = () => {
 };
 //FUNCION DE ORDENADO
 document.getElementById("sort").addEventListener("change", (e) => {
-  console.log(e.target.value);
   const sortedElements = sortElements(window.characters, e.target.value);
-  console.log(sortedElements);
   renderCards(sortedElements);
   modalLisener();
 });

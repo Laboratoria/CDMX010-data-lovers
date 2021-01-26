@@ -22,6 +22,7 @@ header {
   height: 100%;
   display: flex;
   justify-content: center;
+  margin-right: 300px;
 }
 
 header img {
@@ -32,9 +33,17 @@ header img {
 #menu {
   position: absolute;
   display: flex;
-  margin: 10px;
+
   left: 30px;
+  top: 20px;
   width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+#home {
+  display: flex;
+
+  width: 30px;
   cursor: pointer;
 }
 /*ESTILO DEL NAV (MENU) */
@@ -138,8 +147,11 @@ main {
   background-color: #2c3e50;
   color: #fff;
 }
+.filtros {
+  display: none;
+}
 .filtros-active {
-  transform: translate(-600px);
+  display: flex;
 }
 
 .card-filter {
