@@ -5,7 +5,7 @@
      }
  /* data */
  .information{
-   flex: 3;
+  flex: 3;
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -13,17 +13,15 @@
   align-items: center;
   line-height: .4vw; 
 }
-.filters {
-   flex: 1;
+.infoFilter{
+   flex: 3;
+   display:flex;
    flex-direction: row;
-   display: inline-flex;
-   flex-direction:row;
    flex-wrap: wrap;
-   justify-content:center;
-   align-items: flex-start;
-   width: 20%;
-   }
-
+   justify-content: center;
+   align-items: center;
+   line-height: .4vw; 
+ }
 .card{
    text-align: center;
    font-size:1 vw; 
@@ -35,6 +33,16 @@
    border-radius: .5rem;
    
 }
+.filters {
+   flex: 1;
+   flex-direction: row;
+   display: inline-flex;
+   flex-direction:row;
+   flex-wrap: wrap;
+   justify-content:center;
+   align-items: flex-start;
+   width: 20%;
+   }
    .name{
       font-size:.8 vw; 
       font-family: 'Grandstander';
