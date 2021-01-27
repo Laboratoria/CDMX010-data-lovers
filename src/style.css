@@ -68,7 +68,6 @@ h1{
     border-bottom: 2px solid #c7c7c7; 
 }
 
-
 .buttonsearch2{
     font-family: Rubik;
     font-size:1.6rem;
@@ -123,6 +122,18 @@ h3{
 
 #div-menusdecategorias{
     display: inline-block;
+}
+
+select {
+    display: inline-block;
+    font-family: Rubik;
+    font-size:1.3rem;
+    font-weight: bold;    
+    color: rgb(28, 156, 2);
+    width: 13%;
+    margin:5px;
+    border:1px;
+    border-bottom: 2px solid #c7c7c7; 
 }
 
 .cardAthletes{
