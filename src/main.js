@@ -34,7 +34,6 @@ function createCard(character) {
     ;
     return card;
 }
-
 function renderCards() {
 
     let container = document.getElementById('container-characters');
@@ -61,21 +60,49 @@ renderCards();
 let genderFilter=
 */  
 
+let botonAlive = document.getElementById("alive");
+
+    botonAlive.addEventListener('click', function(){
+        let container2 = document.getElementById("container-characters");
+        let html2 = ""
+
+            const aliveFilter = characters.filter(character => character.status === "Alive");
+                aliveFilter.forEach((character) => html2 += createCard(character));
+                container2.innerHTML=html2;
+    }
+    );
+
+let botonDead = document.getElementById("dead");
+
+    botonDead.addEventListener('click', function(){
+        let container2 = document.getElementById("container-characters");
+        let html2 = ""
+
+            const deadFilter = characters.filter(character => character.status === "Dead");
+                deadFilter.forEach((character) => html2 += createCard(character));
+                container2.innerHTML=html2;
+    }
+    );
+
+
 
     const fiterCharacterGenderFemale=characters.filter(character => character.gender =="Female")
     const filterCharactersGenderMale = characters.filter(character => character.gender == "Male" )
     const filterCharactersGenderUnknown = characters.filter(character => character.gender == "unknown" )
     const filterCharactersSpecies = characters.filter(character => character.species.length)
+    const fiterCharacterAlive=characters.filter(character => character.status =="Alive")
+    const filterCharactersDead = characters.filter(character => character.status == "Dead")
 
+         
+
+
+        //console.log (fiterCharacterGenderFemale);
+        //console.log (filterCharactersGenderMale);
+        //console.log (filterCharactersGenderUnknown);
+       
+        //console.log (filterCharactersSpecies);
+        //console.log (fiterCharacterAlive);
+        //console.log (filterCharactersDead);
 
         
-        console.log (fiterCharacterGenderFemale);
-        console.log (filterCharactersGenderMale);
-        console.log (filterCharactersGenderUnknown);
-       
-        console.log (filterCharactersSpecies);
-
-    
-
-
 
