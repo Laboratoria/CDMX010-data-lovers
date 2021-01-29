@@ -4,7 +4,10 @@
      background-attachment: fixed;
      }
  /* data */
- .information{
+ .container {
+   display: flex;
+}
+.information{
   flex: 3;
   display:flex;
   flex-direction: row;
@@ -13,27 +16,16 @@
   align-items: center;
   line-height: .4vw; 
 }
-.infoFilter{
-   flex: 3;
-   display:flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
-   line-height: .4vw; 
- }
 .card{
    text-align: center;
-   font-size:1 vw; 
    font-family: 'Grandstander';
    line-height: .4vw;
    background: #CDF267;  
    max-height: 720px;
    margin: .5rem;
    border-radius: .5rem;
-   
-}
-.filters {
+ }   
+ .filters {
    flex: 1;
    flex-direction: row;
    display: inline-flex;
@@ -43,6 +35,7 @@
    align-items: flex-start;
    width: 20%;
    }
+ 
    .name{
       font-size:.8 vw; 
       font-family: 'Grandstander';
@@ -231,6 +224,3 @@ font-weight: 300;
 
 }
 
-.container {
-   display: flex;
-}

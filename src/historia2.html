@@ -8,48 +8,10 @@
   <div id="Menu"></div>
   <!-- Botones laterales-->
   <div id="container" class="container">
-  
-  <!-- Template -->
-  <div class="information" id="b">
-    <template id="card">
-      
-      <div class="card">
-        <h2 class="name"></h2>
-        <img src=" ">
-        <p class="descr"> Descripción</p>
-        <p class="a1"></p>
-        <p class="a2"></p>
-        <p class="a3"></p>
-        <p class="a4"></p>
-        <p class="a5"></p>
-        <p class="a6"></p>
-      </div>
-    </template>
-  </div>
-
-  <div class="filters">
-    <div class="lateral">
-      <div id="filter">
-        <p class="character1">Ver personajes por: </p>
-        <p class="character2">Estatus</p>
-        <div class=buttonStatus>
-          <button class="status" id="alive"> Vivo </button>
-          <button class="status" id="dead"> Muerto </button>
-        </div>
-      </div>
-
-      <div id="order">
-        <p class="characters">Género</p>
-       <div class="buttonSpecies">
-        <button class="species" id="female"> Mujer</button>
-        <button class="species" id="male"> Hombre </button>
-       </div>
-    </div>
-
-    <div class="infoFilter" id="c">
-      <template id="aliveFilter">
-        
-        <div class="card">
+   <!-- Template toda la data -->
+    <div class="information" id="b">
+      <template id="card">
+        <div  class="card">
           <h2 class="name"></h2>
           <img src=" ">
           <p class="descr"> Descripción</p>
@@ -62,14 +24,51 @@
         </div>
       </template>
     </div>
-      <!--<div class="agregate">
+    <!-- Template de filtros -->
+    <div class="infoFilter" id="c">
+      <template id="aliveFilter" >
+        <div  class="card">
+          <h2 class="name"></h2>
+          <img src=" ">
+          <p class="descr"> Descripción</p>
+          <p class="a1"></p>
+          <p class="a2"></p>
+          <p class="a3"></p>
+          <p class="a4"></p>
+          <p class="a5"></p>
+          <p class="a6"></p>
+        </div>
+      </template>
+    </div>
+    <!-- Botones -->
+    <div class="filters">
+      <div class="lateral">
+        <div id="filter">
+          <p class="character1">Ver personajes por: </p>
+          <p class="character2">Estatus</p>
+          <div class=buttonStatus>
+            <button class="status" id="alive"> Vivo </button>
+            <button class="status" id="dead"> Muerto </button>
+          </div>
+        </div>
+        <div id="order">
+          <p class="characters">Género</p>
+          <div class="buttonSpecies">
+            <button class="species" id="female"> Mujer</button>
+            <button class="species" id="male"> Hombre </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<div class="agregate">
         <button class="dataPlus" id="dataPlus">¡Descubre cuál personaje aparece en más capítulos!</button>
       </div>-->
-    </div>
+  
   </div>
-</div>
+  </div>
+</div>  
   <!-- Footer -->
-  <div class= "final">
+  <div class="final">
     <footer class="footer"> DataLovers Laboratoria CDMX </footer>
   </div>
   <script src="main.js" type="module"></script>
