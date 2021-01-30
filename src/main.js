@@ -1,5 +1,5 @@
 import data from './data/rickandmorty/rickandmorty.js';
-import {rickandmorty, filterAlive, filterDead, filterFemale, filterMale } from './data.js';
+import {rickandmorty, filterAlive, filterDead, filterFemale, filterMale, orderAz, } from './data.js';
 
 console.log(rickandmorty);
 
@@ -126,8 +126,7 @@ const $dataCards= document.querySelector(".information"),
         const $template= document.getElementById("aliveFilter").content,
               $dataCards= document.querySelector(".infoFilter"),
               $fragment= document.createDocumentFragment();
-      
-       //Toda la data//       
+                  
               dataFilter.forEach( (allData) => {
                 $template.querySelector("h2").textContent = allData.name;
                 $template.querySelector("img").setAttribute("src",allData.image);
@@ -146,7 +145,64 @@ const $dataCards= document.querySelector(".information"),
             $dataCards.appendChild($fragment);
       });
 
-      
 
-   
+//PRUEBAS//
 
+const nameOrder = data.results; 
+     console.log(orderAz(nameOrder,'name'));
+     let abcOrder = document.getElementById("abc");
+   abcOrder.addEventListener("click", () => {
+      document.getElementById("b").style.display = "none";
+      document.getElementById("c").style.display = "block";
+  let orderData = orderAz(nameOrder, 'name');
+  const $template= document.getElementById("aliveFilter").content,
+  $dataCards= document.querySelector(".infoFilter"),
+  $fragment= document.createDocumentFragment()
+
+  orderData.forEach( (allData) => {
+    $template.querySelector("h2").textContent = allData.name;
+    $template.querySelector("img").setAttribute("src",allData.image);
+    $template.querySelector(".a1").textContent = allData.status;
+    $template.querySelector(".a2").textContent = allData.species;
+    $template.querySelector(".a3").textContent = allData.type;
+    $template.querySelector(".a4").textContent = allData.gender;
+    $template.querySelector(".a5").textContent = allData.origin.name;
+    $template.querySelector(".a6").textContent = allData.location.name;
+
+    let $clone = document.importNode($template, true);
+      $fragment.appendChild($clone);
+    
+});
+
+$dataCards.appendChild($fragment);
+});
+
+//  de la Z a la A//
+// const nameOrderZa = data.results; 
+//      console.log(orderZa(nameOrderZa,'name'));
+  
+//    let abcOrderZa = document.getElementById("abc");
+//    abcOrderZa.addEventListener("click", () => {
+//       //aquí va lo que oculta la data//
+//   let orderDataZa = orderZa(nameOrderZa, 'name');
+//   const $template= document.getElementById("aliveFilter").content,
+//   $dataCards= document.querySelector(".infoFilter"),
+//   $fragment= document.createDocumentFragment()
+
+//   orderDataZa.forEach( (allData) => {
+//     $template.querySelector("h2").textContent = allData.name;
+//     $template.querySelector("img").setAttribute("src",allData.image);
+//     $template.querySelector(".a1").textContent = allData.status;
+//     $template.querySelector(".a2").textContent = allData.species;
+//     $template.querySelector(".a3").textContent = allData.type;
+//     $template.querySelector(".a4").textContent = allData.gender;
+//     $template.querySelector(".a5").textContent = allData.origin.name;
+//     $template.querySelector(".a6").textContent = allData.location.name;
+
+//     let $clone = document.importNode($template, true);
+//       $fragment.appendChild($clone);
+    
+// });
+
+// $dataCards.appendChild($fragment);
+// });

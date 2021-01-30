@@ -7,6 +7,8 @@
  .container {
    display: flex;
 }
+
+/* template 1*/
 .information{
   flex: 3;
   display:flex;
@@ -25,17 +27,7 @@
    margin: .5rem;
    border-radius: .5rem;
  }   
- .filters {
-   flex: 1;
-   flex-direction: row;
-   display: inline-flex;
-   flex-direction:row;
-   flex-wrap: wrap;
-   justify-content:center;
-   align-items: flex-start;
-   width: 20%;
-   }
- 
+  
    .name{
       font-size:.8 vw; 
       font-family: 'Grandstander';
@@ -82,8 +74,19 @@
       line-height: .5vw;  
       font-weight: 300;     
    }
+ 
 
 /*botones*/
+.filters { /*nombre del div del boton*/
+   flex: 1;
+   flex-direction: row;
+   display: inline-flex;
+   flex-direction:row;
+   flex-wrap: wrap;
+   justify-content:center;
+   align-items: flex-start;
+   width: 20%;
+   }
 
        .character1{
        font-family: 'Grandstander';
@@ -96,11 +99,11 @@
        align-items: center;
      }
      .buttonStatus{
-        display: inline-flex;
+         display: inline-flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
+        align-items: center; 
      }
      .status{
         font-size:1 vw;
@@ -128,40 +131,33 @@ color: #CDF267;
    flex-direction:row;
    flex-wrap: wrap;
    justify-content:center;
-   align-items: center;
+   align-items: flex-start;
    width: 20%;
     }
 
-    .characters{
-    display: flex;
-    flex-direction:column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    line-height: 3px; 
-    font-family: 'Grandstander';
-    font-weight: 400;
+/* boton de género */
+    .characters{ /*texto*/
+      font-family: 'Grandstander';
+      font-weight: 400;
+      align-items: center;
      }
      .buttonSpecies{
-      display: inline-flex;
+      display: block;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
    }
      .species{
-        display: inline-flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        font-size:1 vw;
-        font-family: 'Grandstander', cursive;
-        font-weight: 300;
-        padding: 2%;
-        text-align: center;
-        margin: 10%;
-        background-color: #CDF267;
+      font-size:1 vw;
+      font-family: 'Grandstander', cursive;
+      font-weight: 300;
+      padding: 1rem 0;
+      width: 10rem;
+      text-align: center;
+      margin: .5rem;
+      background-color: #CDF267;
+      width: 100px;
         }
         .species:hover{
          cursor: pointer;
@@ -169,39 +165,49 @@ color: #CDF267;
          transform: scale(1.2);
          background: black;
          color: #CDF267;
+}
+
+/*boton orden AZ*/
+.alphabetic{
+   flex: 1;
+   flex-direction: row;
+   display: inline-flex;
+   flex-direction:row;
+   flex-wrap: wrap;
+   justify-content:center;
+   align-items: flex-start;
+   width: 20%;
+}
+.letters{
+   font-family: 'Grandstander';
+   font-weight: 400;
+   align-items: center;
+}   
+.buttonAZ{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   }
+.order{
+   font-size:1 vw;
+   font-family: 'Grandstander', cursive;
+   font-weight: 300;
+   padding: 1rem 0;
+   width: 10rem;
+   text-align: center;
+   margin: .5rem;
+   background-color: #CDF267;
+   width: 100px;
 
 }
-  .agregate{
-    display: flex;
-    flex-direction:column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    line-height: 3px; 
-    font-family: 'Grandstander';
-    font-weight: 400;
-     }
-     .dataPlus{
-        display: inline-flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        font-size:1 vw;
-        font-family: 'Grandstander', cursive;
-        font-weight: 300;
-        padding: 2%;
-        text-align: center;
-        margin: 10%;
-        background-color: #CDF267;
-        }
-        .dataPlus:hover{
-         cursor: pointer;
-         transition: transform 150ms;
-         transform: scale(1.2);
-         background: black;
-         color: #CDF267;
-
+.order:hover{
+   cursor: pointer;
+   transition: transform 150ms;
+   transform: scale(1.2);
+   background: black;
+   color: #CDF267;
 }
 .final{
 display: flex;

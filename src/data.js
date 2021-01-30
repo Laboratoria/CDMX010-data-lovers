@@ -20,7 +20,7 @@ export function filterDead(statusDead, status) {
 
 export function filterFemale(genderFemale, gender) {
 
-  const filterForFemale= genderFemale.filter(allData=> allData.gender===gender);
+  const filterForFemale= genderFemale.filter(b => b.gender===gender);
   
   return filterForFemale;
 };
@@ -33,4 +33,63 @@ export function filterMale(genderMale, gender) {
 };
  
 
-//PRUEBAS//
+ 
+// export function orderAz(nameOrder, name) { 
+
+//   const oorderSort = nameOrder.sort(allData => allData.name===name);
+//  const orderSort= nameOrder.sort( allData => allData.name===name);
+//  return (oorderSort < orderSort); 
+
+//     const orderToAZ = nameOrder.sort((a-b) => allData.name ====name); 
+
+//  return (a.name < b.name);
+ 
+     
+//  };
+ 
+   /*Const oorderSort= nameOrder.sort( a => a.name===name);
+ const orderSort= nameOrder.sort( b => b.name===name);
+ return (oorderSort < orderSort); */
+/* const orderToAZ = nameOrder.sort((a-b) => allData.name ====name); */
+
+// function myFunction() {
+//   fruits.sort();
+//   fruits.reverse();
+// }
+
+
+// var items = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
+// items.sort(function (a, b) {
+//   return a.localeCompare(b);
+// });
+
+// 
+
+export function orderAz(s){
+  const orderSort= s.sort((a, b) =>{
+    if (a.name > b.name ) {
+      return 1;
+    }
+    if (a.name < b.name){
+      return -1;
+    }
+    return 0;
+  });
+  return orderSort;
+};
+// // console.log(orderAz);
+
+// export function orderZa(sZa){
+//   const orderSortZa= sZa.sort((c, d) =>{
+//     if (c.name < d.name ) {
+//       return 1;
+//     }
+//     if (c.name > d.name){
+//       return -1;
+//     }
+//     return 0;
+//   });
+//    return orderSortZa;
+// };
+
+//console.log(orderZa);
