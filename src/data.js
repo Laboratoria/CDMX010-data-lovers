@@ -93,3 +93,21 @@ export function orderAz(s){
 // };
 
 //console.log(orderZa);
+
+// export function reduceCa(capitulos,){
+
+//   let reduceA = capitulos.reduce(capitulos * 100)/31 
+
+//   return reduceA;
+
+// };
+
+
+export function reduceType (type){
+
+  let typeReduce = type.reduce((acc, el) => ({
+    ...acc,
+    [el.type]: el,
+  }), {})
+      return typeReduce;
+  };

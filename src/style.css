@@ -79,6 +79,7 @@
 /*botones*/
 .filters { /*nombre del div del boton*/
    flex: 1;
+   order:4;
    flex-direction: row;
    display: inline-flex;
    flex-direction:row;
@@ -126,6 +127,7 @@ color: #CDF267;
 }
 #order{
    flex: 1;
+   order:4;
    flex-direction: row;
    display: inline-flex;
    flex-direction:row;
@@ -149,7 +151,7 @@ color: #CDF267;
       align-items: center;
    }
      .species{
-      font-size:1 vw;
+      /* font-size:1 vw; */
       font-family: 'Grandstander', cursive;
       font-weight: 300;
       padding: 1rem 0;
@@ -169,7 +171,9 @@ color: #CDF267;
 
 /*boton orden AZ*/
 .alphabetic{
+   
    flex: 1;
+   order:4;
    flex-direction: row;
    display: inline-flex;
    flex-direction:row;
@@ -209,6 +213,9 @@ color: #CDF267;
    background: black;
    color: #CDF267;
 }
+
+/*footer*/ 
+
 .final{
 display: flex;
 flex-direction:column;

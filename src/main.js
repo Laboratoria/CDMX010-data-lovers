@@ -1,5 +1,5 @@
 import data from './data/rickandmorty/rickandmorty.js';
-import {rickandmorty, filterAlive, filterDead, filterFemale, filterMale, orderAz, } from './data.js';
+import {rickandmorty, filterAlive, filterDead, filterFemale, filterMale, orderAz, reduceType } from './data.js';
 
 console.log(rickandmorty);
 
@@ -206,3 +206,33 @@ $dataCards.appendChild($fragment);
 
 // $dataCards.appendChild($fragment);
 // });
+
+      // console.log(reduceCa(capitulos, "episode"));
+      const typeReduce = data.results; 
+      console.log(reduceType(typeReduce,'type'));
+      let tReduce = document.getElementById("pruebas");
+    tReduce.addEventListener("click", () => {
+       document.getElementById("b").style.display = "none";
+       document.getElementById("c").style.display = "block";
+   let reducedData = reduceType(typeReduce,'type');
+   const $template= document.getElementById("aliveFilter").content,
+   $dataCards= document.querySelector(".infoFilter"),
+   $fragment= document.createDocumentFragment()
+ 
+   reducedData.forEach( (allData) => {
+     $template.querySelector("h2").textContent = allData.name;
+     $template.querySelector("img").setAttribute("src",allData.image);
+     $template.querySelector(".a1").textContent = allData.status;
+     $template.querySelector(".a2").textContent = allData.species;
+     $template.querySelector(".a3").textContent = allData.type;
+     $template.querySelector(".a4").textContent = allData.gender;
+     $template.querySelector(".a5").textContent = allData.origin.name;
+     $template.querySelector(".a6").textContent = allData.location.name;
+ 
+     let $clone = document.importNode($template, true);
+       $fragment.appendChild($clone);
+     
+ });
+ 
+ $dataCards.appendChild($fragment);
+ });      
