@@ -1,5 +1,5 @@
 import data from './data/rickandmorty/rickandmorty.js';
-import {rickandmorty, filterAlive, filterDead, filterFemale, filterMale, orderAz, reduceType } from './data.js';
+import {rickandmorty, filterAlive, filterDead, filterFemale, filterMale, orderAz, reduceSpecie } from './data.js';
 
 console.log(rickandmorty);
 
@@ -208,13 +208,13 @@ $dataCards.appendChild($fragment);
 // });
 
       // console.log(reduceCa(capitulos, "episode"));
-      const typeReduce = data.results; 
-      console.log(reduceType(typeReduce,'type'));
-      let tReduce = document.getElementById("pruebas");
-    tReduce.addEventListener("click", () => {
+      const specieReduce = data.results; 
+      console.log(reduceSpecie(specieReduce,'species'));
+      let tSpecie = document.getElementById("pruebas");
+    tSpecie.addEventListener("click", () => {
        document.getElementById("b").style.display = "none";
        document.getElementById("c").style.display = "block";
-   let reducedData = reduceType(typeReduce,'type');
+   let reducedData = reduceSpecie(specieReduce,'species');
    const $template= document.getElementById("aliveFilter").content,
    $dataCards= document.querySelector(".infoFilter"),
    $fragment= document.createDocumentFragment()

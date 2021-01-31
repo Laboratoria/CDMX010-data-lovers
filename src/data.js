@@ -103,11 +103,11 @@ export function orderAz(s){
 // };
 
 
-export function reduceType (type){
+export function reduceSpecie (species){
 
-  let typeReduce = type.reduce((acc, el) => ({
+  let typeSpecie = species.reduce((acc, el) => ({
     ...acc,
-    [el.type]: el,
+    [el.species]: el,
   }), {})
-      return typeReduce;
+      return typeSpecie;
   };
