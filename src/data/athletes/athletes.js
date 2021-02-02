@@ -1,4 +1,4 @@
-export default {
+export const theAthletes = {
   "games": "Olympic Games",
   "year": 2016,
   "season": "summer",
