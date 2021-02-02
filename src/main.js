@@ -23,6 +23,9 @@ butShowAll.addEventListener ("click", function showCards() {
     document.getElementById("resultados").innerHTML= cardsFunction
 });
 
+
+
+
 const selectGender = document.querySelector("#genderFilter");
 const selectMedal = document.querySelector("#medalFilter");
 const selectTeam = document.querySelector("#teamFilter");
