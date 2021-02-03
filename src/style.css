@@ -190,8 +190,36 @@ h2{
     margin: auto;
 }
 
+
 .resultados{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.cardTeam {
+    display: flex;
+    flex-wrap: wrap;
+    width: 128rem;
+    height: 10rem;
+    border: rgb(3, 70, 129) 2px solid;
+}
+
+
+.mediumLogo{
+    display:flex;
+    width: 10%;
+    display:block;
+    margin:auto;
+}
+
+.itemTeam {
+    display: inline-block; 
+    width: 208px; 
+    font-family: rubik;
+    font-size: 1.6rem;
+    color: black;
+    text-align: left;
+    border-collapse: collapse;
+    border: rgb(3, 70, 129) 2px solid;
 }

@@ -1,6 +1,5 @@
 import {theAthletes} from './data/athletes/athletes.js';
 
-
 const butShowAll= document.getElementById("buttonShowAll");
 butShowAll.addEventListener ("click", function showCards() {
     const losAtletas = theAthletes.athletes;
@@ -75,7 +74,7 @@ buttonSearch.addEventListener("click", function theGenderFilter() {
     nav.innerHTML = theTotal;
     console.log(filterGender.length);
 
-});
+});  
 
 const losAtletas2 = theAthletes.athletes;
 losAtletas2.sort( function (a,b) {
@@ -88,4 +87,51 @@ losAtletas2.sort( function (a,b) {
     return 0;
 });
 
+// muestra una lista con total de los equipos ganadores 
 
+document.getElementById("allCountries").addEventListener("click", function () {
+    const importedAthletes=theAthletes.athletes;
+    let countries = importedAthletes.slice(0);
+    countries.sort(function(a,b) {
+         var x = a.team.toLowerCase(); 
+         var y = b.team.toLowerCase(); 
+        return x < y ? -1 : x > y ? 1 : 0;
+    });
+    let countriesOne = [...new Set(countries.map(item => item.team))];
+  
+    //const countTeams=countriesOne.length;
+    //let element = document.createElement("p");
+    //element.textContent = `${countTeams} Equipos ganaron medallas `;
+    //const parrafonuevo = document.querySelector("#totalTeams");
+    //parrafonuevo.appendChild(element);
+    //parrafonuevo.innerHTML =  element.textContent;
+    //console.log(countTeams);
+    //console.log(countriesOne.length);
+    //<div id="totalTeams"></div>  
+    
+    let cardsFunction22 = () => {
+        let containerCards22 = document.getElementById("card");
+      let html = `
+       <div class="cardTeam" >
+                 <img src="assets/logo rio de janeiro.png" class="mediumLogo">
+                              
+       </div>
+      <table>  
+        <tr>
+        `;
+          countriesOne.map(( country ) => {
+            let card22 = `
+                 <td class="itemTeam"> ${country} </td> 
+                 `
+                html += card22 ;                     
+          }); 
+          html += `
+        </tr>
+      </table>
+          `; 
+      containerCards22.innerHTML = html;
+    };
+    cardsFunction22()
+  });
+  
+  
