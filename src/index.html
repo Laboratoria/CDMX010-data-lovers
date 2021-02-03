@@ -1,84 +1,84 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página de los juegos olímpicos Rio 2016 organizados en Rio de Janeiro
-    que muestra, filtra y ordena por diversas categorias, los medallistas de esos juegos">
-    <title>Río de Janeiro 2016</title>
-    <link rel="stylesheet" href="style.css"/>
-    <script src="https://kit.fontawesome.com/8095b5a0de.js" crossorigin="anonymous"></script>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Página de los juegos olímpicos Rio 2016 organizados en Rio de Janeiro
+      que muestra, filtra y ordena por diversas categorias, los medallistas de esos juegos">
+      <title>Río de Janeiro 2016</title>
+      <link rel="stylesheet" href="style.css"/>
+      <script src="https://kit.fontawesome.com/8095b5a0de.js" crossorigin="anonymous"></script>
 
-  </head>
-  <body>
-    <div id="root"></div>
-    <header>
-      <h1>Welcome to the Site of Olympics Games</h1>
-      <img src="assets/logo rio de janeiro.png" class="logo">
-      <br>
-      <br>
-    </header>
-    <main>
-      <div id="div-buttonshowall">
-        <button id="buttonShowAll" class="buttonshowall">Show all</button>
-        <input name="search" type="text" id="searchB" placeholder="Type the name..." class="search1">
-        <button id="buttonFinder" class="buttonsearch2">Search by name</button>
+    </head>
+    <body>
+      <div id="root"></div>
+      <header>
+        <h1>Welcome to the Site of Olympics Games</h1>
+        <img src="assets/logo rio de janeiro.png" class="logo">
+        <br>
+        <br>
+      </header>
+      <main>
+        <div id="div-buttonshowall">
+          <button id="buttonShowAll" class="buttonshowall">Show all</button>
+          <input name="search" type="text" id="searchB" placeholder="Type the name..." class="search1">
+          <button id="buttonFinder" class="buttonsearch2">Search by name</button>
+        </div>
+
+        <br>
+        <br>
+        <div id="div-menusdecategorias">
+          <i class="fas fa-globe-americas"></i>
+          <input class="buttonsearch2" type="submit" id="allCountries"  value="All Teams">
+          
+        </div>   
+        <div class="filterBox">  
+        
+          <i class="fas fa-globe-americas"></i> 
+          <select class="inputs" id="pais">
+            <option value="">Country</option>
+          </select>
+
+          <i class="fas fa-venus-mars"></i>
+          <select name="genderFilter" id="genderFilter">
+            <option value="">Gender</option>
+            <option value="F">Female</option>
+            <option value="M">Male</option>
+          </select>
+
+          <i class="fas fa-running"></i> 
+          <select class="inputs" id="sportSelector">
+            <option value="">Sport</option>
+          </select>
+
+          <i class="fas fa-medal"></i><select name="medalFilter" id="medalFilter">
+            <option value="">Medal</opion>
+            <option value="Gold">Gold</opion>
+            <option value="Silver">Silver</option>
+            <option value="Bronze">Bronze</option>
+          </select>
+
+        
+        </Div>
+        <br>
+        <br>
+        <div id="totalFilter">Athletes</div>
+        <br>
+        <br>
+        <button class="buttonsearch2" id="buttonsearch2"><i class="fas fa-search"></i> Search</button>
+        <br>
+        <br>
+        <div class="resultados" id="resultados"></div>
+        <div class="contenedor">  </div> 
+
+
+        <div id="card"></div>
+
       </div>
-
-      <br>
-      <br>
-      <div id="div-menusdecategorias">
-        <i class="fas fa-globe-americas"></i>
-        <input class="buttonsearch2" type="submit" id="allCountries"  value="All Teams">
-        
-      </div>   
-      <div class="filterBox">  
-      
-        <i class="fas fa-globe-americas"></i> 
-        <select class="inputs" id="pais">
-          <option value="">Country</option>
-        </select>
-
-        <i class="fas fa-venus-mars"></i>
-        <select name="genderFilter" id="genderFilter">
-          <option value="">Gender</option>
-          <option value="F">Female</option>
-          <option value="M">Male</option>
-        </select>
-
-        <i class="fas fa-running"></i> 
-        <select class="inputs" id="sportSelector">
-          <option value="">Sport</option>
-        </select>
-
-        <i class="fas fa-medal"></i><select name="medalFilter" id="medalFilter">
-          <option value="">Medal</opion>
-          <option value="Gold">Gold</opion>
-          <option value="Silver">Silver</option>
-          <option value="Bronze">Bronze</option>
-        </select>
-
-      
-      </Div>
-      <br>
-      <br>
-      <div id="totalFilter">Athletes</div>
-      <br>
-      <br>
-      <button class="buttonsearch2" id="buttonsearch2"><i class="fas fa-search"></i> Search</button>
-      <br>
-      <br>
-      <div class="resultados" id="resultados"></div>
-      <div class="contenedor">  </div> 
+      </main>
+      <script src="main.js" type="module"></script>
+    </body>
+  </html>
 
 
-      <div id="card"></div>
-
-    </div>
-    </main>
-    <script src="main.js" type="module"></script>
-  </body>
-</html>
-
-
-        
+          
