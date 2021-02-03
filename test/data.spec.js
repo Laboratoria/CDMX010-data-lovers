@@ -1,5 +1,4 @@
-import { example, anotherExample } from '../src/data.js';
-
+import { orderData, filterData, searchPokemon} from '../src/data.js';
 
 describe('example', () => {
   it('is a function', () => {

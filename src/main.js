@@ -1,14 +1,9 @@
 //Importaciones
 import {orderData, filterData, searchPokemon} from './data.js';
+import {url, btnAllData, containerAllData, order, types, btnSearch} from './variables.js';
 
-//Variables
-const url = './data/pokemon/pokemon.json';
-let btnAllData = document.getElementById('viewAll')
+//Eventos
 btnAllData.addEventListener("click", getData)
-let containerAllData = document.getElementById("containerData")
-let order = document.querySelector("#order")
-let types = document.querySelector("#types")
-let btnSearch = document.getElementById("search")
 btnSearch.addEventListener("click", searchData)
 
 //Funcion principal
@@ -116,9 +111,9 @@ function searchData() {
         let textName = (document.getElementById("namePoke").value).toLowerCase();
         let pokemonSearch = searchPokemon(pokemones,textName);
         document.getElementById("containerData").innerHTML="";
-
-        pokemonSearch.forEach((index) => {containerAllData.innerHTML += `
-        <div class="card">
+        pokemonSearch.forEach((index) => {
+            containerAllData.innerHTML += `
+        <div class="card" id="showSearch">
         <div class="img-container">
             <img src="${index.img}">
         </div>
@@ -135,8 +130,6 @@ function searchData() {
         </div>
         </div>
         `;
-
-
         })
 })
 }

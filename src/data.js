@@ -27,13 +27,6 @@ const filterData = (pokemones, tipo) => {
   return filterType;
 }
 
-// //Limpiar datos
-// const clearData = (container) => {
-//   while(container.hasChildNodes()) {
-//     container.removeChild(container.firstChild)
-//   }
-// }
-
 //Busqueda por Nombre
 const searchPokemon = (pokemones, nombre) => {
   let searchName = pokemones.filter(unpokemon => unpokemon.name.includes(nombre));
