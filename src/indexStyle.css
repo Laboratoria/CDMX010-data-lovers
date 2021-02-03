@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@300;400&display=swap');
 body {
-     background:linear-gradient(160deg, #4888B9, #45BD79, #61C362, #A4D02A, #FEC600);
-     width: 100%;
-     height: 100%;
+  background:linear-gradient(160deg, #4888B9, #45BD79, #61C362, #A4D02A, #FEC600);
+  background-attachment: fixed;
      }
-.container1{
+.container{
+  display: flex;
+  font-family: 'Grandstander';
+}     
+.head{
+  font-family: 'Grandstander';
    position: fixed;
   top:0;
   width: 100%;
@@ -13,68 +17,79 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: baseline;
-  background: #CDF267;
+  align-items: center;
+  background:black ;
+  color:  #CDF267;
   } 
     .links{
-      color: black;
-      background: #CDF267;
-      font-family: 'Grandstander', cursive;
+      font-family: 'Grandstander';
+      color: #CDF267;
+      background: black;
       flex-direction: row;
-      margin: 5px;
+      justify-content: space-around;
+
+      margin: 10px;
+      padding: 5px 5px 5px 5px;     
       width: auto;
       height: 30px;
       text-align: center;
+      border-radius: 5px;
       border:none;
-      font-size: 2 vw;
+      font-size: 1vw;
   }  
       .links:hover{
         cursor: pointer;
         transition: transform 150ms;
         transform: scale(1.2);
-        background: black;
-        color: #CDF267;
+        background:  #CDF267;
+        color:black;
     }
 
   .image2{
   display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: baseline;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
    } 
       .imagerm{
-      width: 30%;
+      width: 25%;
       justify-content: center;
       align-items: center;
       }
 .info{
   display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: baseline;
-}
-    .text{
-    font-family: "Grandstander";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.5vw;
-    line-height: 1.5vw;
-    width: auto;
-    justify-content: center;
-    align-items: center;
-    color: #020202;
-    }
-.agregate{
-  display:flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
+    .text{
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    width: 90%;
+    justify-content: center;
+    align-content:center;
+    align-items: center;
+    color: #020202;
+    }
+
+    .button{
+      font-size: 15vw;
+      display:flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content:center;
+      align-items: center;
+      justify-content: center;
+      border:none;
+      border-radius: 5px;
+      
+    }
     .Next{
-      width: 223px;
+     width: 223px;
    height: 54px;
     font-size: 1 vw;
     font-family: 'Grandstander', cursive;
@@ -84,6 +99,11 @@ body {
     text-align: center;
     margin: 1rem;
     background-color: #CDF267;
+    justify-content: center;
+    align-content:center;
+    align-items: center;
+    border:none;
+    border-radius: 5px;
     }
 
     .Next:hover{
@@ -100,11 +120,12 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: center;
   align-items:flex-end;
   width: 100%;
   height:5%;
-  background-color:#CDF267;
-  color: #6A6A6A;
+  background-color:black;
+  color: #CDF267;
   text-align: center;
   font-size:1.5 vw;
   font-family: 'Grandstander', cursive;

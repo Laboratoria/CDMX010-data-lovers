@@ -1,238 +1,85 @@
 import data from './data/rickandmorty/rickandmorty.js';
-import {rickandmorty, filterAlive, filterDead, filterFemale, filterMale, orderAz, reduceSpecie } from './data.js';
+import {filterAlive, filterDead, filterFemale, filterMale, orderAz, } from './data.js';
 
-console.log(rickandmorty);
+document.addEventListener('DOMContentLoaded',()=>{
+    showCards(char)
+})
 
-const $dataCards= document.querySelector(".information"),
-      $template= document.getElementById("card").content,
-      $fragment= document.createDocumentFragment(),
-      char= data.results;
+const char = data.results;
 
-      char.forEach( (allData) => {
-          $template.querySelector("h2").textContent = allData.name;
-          $template.querySelector("img").setAttribute("src",allData.image);
-          $template.querySelector(".a1").textContent = allData.status;
-          $template.querySelector(".a2").textContent = allData.species;
-          $template.querySelector(".a3").textContent = allData.type;
-          $template.querySelector(".a4").textContent = allData.gender;
-          $template.querySelector(".a5").textContent = allData.origin.name;
-          $template.querySelector(".a6").textContent = allData.location.name;
+    function Card(personaje) {
+        return `
+                <div class="information" >
+                   <h2>${personaje.name}</h2>
+                   <img src= "${personaje.image}"
+                   <br>
+                   <p>Status: ${personaje.status}</p>
+                   <p>Specie: ${personaje.species}</p>
+                   <p>Gender: ${personaje.gender}</p>
+                   <p>Origin: ${personaje.origin.name}</p>
+                <p>Location: ${personaje.location.name}</p>
+                </div>
+        
+               `
+    }
 
-          let $clone = document.importNode($template, true);
-            $fragment.appendChild($clone);
-      });
-      $dataCards.appendChild($fragment);
-     
-//FILTRADO VIVOS//
+    function showCards(personajes) {
+        const Cards = document.getElementById('container')
+        
+        let conteiner = ''
+        personajes.forEach((personaje) =>  {
+            conteiner += Card(personaje)
+        });
+       
+        Cards.innerHTML = conteiner;
 
-      const statusAlive = data.results;
-      console.log(filterAlive(statusAlive, 'Alive'));
-      let bo = document.getElementById("alive");
-      bo.addEventListener("click", () =>  {
-         document.getElementById("b").style.display = "none";
-         document.getElementById("c").style.display = "block";
-        let dataFilter= filterAlive(statusAlive, 'Alive');
-        const $template= document.getElementById("aliveFilter").content,
-              $dataCards= document.querySelector(".infoFilter"),
-              $fragment= document.createDocumentFragment();
-      
-       //Toda la data//       
-              dataFilter.forEach( (allData) => {
-                $template.querySelector("h2").textContent = allData.name;
-                $template.querySelector("img").setAttribute("src",allData.image);
-                $template.querySelector(".a1").textContent = allData.status;
-                $template.querySelector(".a2").textContent = allData.species;
-                $template.querySelector(".a3").textContent = allData.type;
-                $template.querySelector(".a4").textContent = allData.gender;
-                $template.querySelector(".a5").textContent = allData.origin.name;
-                $template.querySelector(".a6").textContent = allData.location.name;
-      
-                let $clone = document.importNode($template, true);
-                  $fragment.appendChild($clone);
-                
-            });
-      
-            $dataCards.appendChild($fragment);
-      });
-//FILTRADO MUERTOS
-      const statusDead = data.results;
-     console.log(filterDead(statusDead, 'Dead'));
-      let boo = document.getElementById("dead");
-      boo.addEventListener("click", () =>  {
-         document.getElementById("b").style.display = "none";
-         document.getElementById("c").style.display = "block";
-        let dataFilter = filterDead(statusDead, 'Dead');
-        const $template= document.getElementById("aliveFilter").content,
-              $dataCards= document.querySelector(".infoFilter"),
-              $fragment= document.createDocumentFragment();
-      
-       //Toda la data//       
-              dataFilter.forEach( (allData) => {
-                $template.querySelector("h2").textContent = allData.name;
-                $template.querySelector("img").setAttribute("src",allData.image);
-                $template.querySelector(".a1").textContent = allData.status;
-                $template.querySelector(".a2").textContent = allData.species;
-                $template.querySelector(".a3").textContent = allData.type;
-                $template.querySelector(".a4").textContent = allData.gender;
-                $template.querySelector(".a5").textContent = allData.origin.name;
-                $template.querySelector(".a6").textContent = allData.location.name;
-      
-                let $clone = document.importNode($template, true);
-                  $fragment.appendChild($clone);
-                
-            });
-      
-            $dataCards.appendChild($fragment);
-      });
+    }
 
-      const genderFemale = data.results;
-     console.log(filterFemale(genderFemale, 'Female'));
-      let booo = document.getElementById("female");
-      booo.addEventListener("click", () =>  {
-         document.getElementById("b").style.display = "none";
-         document.getElementById("c").style.display = "block";
-        let dataFilter = filterFemale(genderFemale, 'Female');
-        const $template= document.getElementById("aliveFilter").content,
-              $dataCards= document.querySelector(".infoFilter"),
-              $fragment= document.createDocumentFragment();
-      
-       //Toda la data//       
-              dataFilter.forEach( (allData) => {
-                $template.querySelector("h2").textContent = allData.name;
-                $template.querySelector("img").setAttribute("src",allData.image);
-                $template.querySelector(".a1").textContent = allData.status;
-                $template.querySelector(".a2").textContent = allData.species;
-                $template.querySelector(".a3").textContent = allData.type;
-                $template.querySelector(".a4").textContent = allData.gender;
-                $template.querySelector(".a5").textContent = allData.origin.name;
-                $template.querySelector(".a6").textContent = allData.location.name;
-      
-                let $clone = document.importNode($template, true);
-                  $fragment.appendChild($clone);
-                
-            });
-      
-            $dataCards.appendChild($fragment);
-      });
+    // let bottonStart = document.getElementById("go")
+    //     bottonStart.addEventListener("click", () => {
+    //     const personajes = rickandmorty(char,)
+         
+    //       showCards(personajes)
 
+    // });
 
-      const genderMale = data.results;
-     console.log(filterMale(genderMale, 'Male'));
-      let boooo = document.getElementById("male");
-      boooo.addEventListener("click", () =>  {
-         document.getElementById("b").style.display = "none";
-         document.getElementById("c").style.display = "block";
-        let dataFilter = filterMale(genderMale, 'Male');
-        const $template= document.getElementById("aliveFilter").content,
-              $dataCards= document.querySelector(".infoFilter"),
-              $fragment= document.createDocumentFragment();
-                  
-              dataFilter.forEach( (allData) => {
-                $template.querySelector("h2").textContent = allData.name;
-                $template.querySelector("img").setAttribute("src",allData.image);
-                $template.querySelector(".a1").textContent = allData.status;
-                $template.querySelector(".a2").textContent = allData.species;
-                $template.querySelector(".a3").textContent = allData.type;
-                $template.querySelector(".a4").textContent = allData.gender;
-                $template.querySelector(".a5").textContent = allData.origin.name;
-                $template.querySelector(".a6").textContent = allData.location.name;
-      
-                let $clone = document.importNode($template, true);
-                  $fragment.appendChild($clone);
-                
-            });
-      
-            $dataCards.appendChild($fragment);
-      });
+    let bottonAlive = document.getElementById("alive")
+        bottonAlive.addEventListener("click", () => {
+        const personajes = filterAlive(char, 'Alive')
+         
+          showCards(personajes)
 
+    });
 
-//PRUEBAS//
+    let bottonDead = document.getElementById("dead")
+        bottonDead.addEventListener("click", () => {
+        const personajes = filterDead(char, 'Dead')
+         
+          showCards(personajes)
 
-const nameOrder = data.results; 
-     console.log(orderAz(nameOrder,'name'));
-     let abcOrder = document.getElementById("abc");
-   abcOrder.addEventListener("click", () => {
-      document.getElementById("b").style.display = "none";
-      document.getElementById("c").style.display = "block";
-  let orderData = orderAz(nameOrder, 'name');
-  const $template= document.getElementById("aliveFilter").content,
-  $dataCards= document.querySelector(".infoFilter"),
-  $fragment= document.createDocumentFragment()
+    });
 
-  orderData.forEach( (allData) => {
-    $template.querySelector("h2").textContent = allData.name;
-    $template.querySelector("img").setAttribute("src",allData.image);
-    $template.querySelector(".a1").textContent = allData.status;
-    $template.querySelector(".a2").textContent = allData.species;
-    $template.querySelector(".a3").textContent = allData.type;
-    $template.querySelector(".a4").textContent = allData.gender;
-    $template.querySelector(".a5").textContent = allData.origin.name;
-    $template.querySelector(".a6").textContent = allData.location.name;
+    let bottonFemale = document.getElementById("female")
+        bottonFemale.addEventListener("click", () => {
+        const personajes = filterFemale(char, 'Female')
+         
+          showCards(personajes)
 
-    let $clone = document.importNode($template, true);
-      $fragment.appendChild($clone);
-    
-});
+    });
 
-$dataCards.appendChild($fragment);
-});
+    let bottonMale = document.getElementById("male")
+        bottonMale.addEventListener("click", () => {
+        const personajes = filterMale(char, 'Male')
+         
+          showCards(personajes)
 
-//  de la Z a la A//
-// const nameOrderZa = data.results; 
-//      console.log(orderZa(nameOrderZa,'name'));
-  
-//    let abcOrderZa = document.getElementById("abc");
-//    abcOrderZa.addEventListener("click", () => {
-//       //aquí va lo que oculta la data//
-//   let orderDataZa = orderZa(nameOrderZa, 'name');
-//   const $template= document.getElementById("aliveFilter").content,
-//   $dataCards= document.querySelector(".infoFilter"),
-//   $fragment= document.createDocumentFragment()
+    });
 
-//   orderDataZa.forEach( (allData) => {
-//     $template.querySelector("h2").textContent = allData.name;
-//     $template.querySelector("img").setAttribute("src",allData.image);
-//     $template.querySelector(".a1").textContent = allData.status;
-//     $template.querySelector(".a2").textContent = allData.species;
-//     $template.querySelector(".a3").textContent = allData.type;
-//     $template.querySelector(".a4").textContent = allData.gender;
-//     $template.querySelector(".a5").textContent = allData.origin.name;
-//     $template.querySelector(".a6").textContent = allData.location.name;
+    let bottonABC = document.getElementById("abc")
+        bottonABC.addEventListener("click", () => {
+        const personajes = orderAz(char,)
+         
+          showCards(personajes)
 
-//     let $clone = document.importNode($template, true);
-//       $fragment.appendChild($clone);
-    
-// });
+    });
 
-// $dataCards.appendChild($fragment);
-// });
-
-      // console.log(reduceCa(capitulos, "episode"));
-      const specieReduce = data.results; 
-      console.log(reduceSpecie(specieReduce,'species'));
-      let tSpecie = document.getElementById("pruebas");
-    tSpecie.addEventListener("click", () => {
-       document.getElementById("b").style.display = "none";
-       document.getElementById("c").style.display = "block";
-   let reducedData = reduceSpecie(specieReduce,'species');
-   const $template= document.getElementById("aliveFilter").content,
-   $dataCards= document.querySelector(".infoFilter"),
-   $fragment= document.createDocumentFragment()
- 
-   reducedData.forEach( (allData) => {
-     $template.querySelector("h2").textContent = allData.name;
-     $template.querySelector("img").setAttribute("src",allData.image);
-     $template.querySelector(".a1").textContent = allData.status;
-     $template.querySelector(".a2").textContent = allData.species;
-     $template.querySelector(".a3").textContent = allData.type;
-     $template.querySelector(".a4").textContent = allData.gender;
-     $template.querySelector(".a5").textContent = allData.origin.name;
-     $template.querySelector(".a6").textContent = allData.location.name;
- 
-     let $clone = document.importNode($template, true);
-       $fragment.appendChild($clone);
-     
- });
- 
- $dataCards.appendChild($fragment);
- });      

@@ -1,239 +1,134 @@
+/*Info general*/
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@300;400&display=swap');
- body {
-     background:linear-gradient(160deg, #4888B9, #45BD79, #61C362, #A4D02A, #FEC600);
-     background-attachment: fixed;
+body {
+background:linear-gradient(160deg, #4888B9, #45BD79, #61C362, #A4D02A, #FEC600);
+background-attachment: fixed;
      }
- /* data */
- .container {
-   display: flex;
+
+header{
+  width: 100%;
+  height:20%;
+   font-family: 'Grandstander';
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  background: #000000;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.space{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height:10%;
+
 }
 
 /* template 1*/
+ #container{
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  line-height: .4vw; 
+} 
 .information{
-  flex: 3;
+   text-align: center;
+   font-family: 'Grandstander';
+   flex-direction: wrap;
+   line-height: .4vw;
+   background: #CDF267; 
+  max-width: 50%;
+   max-height: 25% ;
+   margin: 2rem;
+   padding: 2rem;
+   border-radius: .5rem;
+   font-size:1 vw; 
+   font-weight: 300;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+} 
+.information:hover{
+  cursor: pointer;
+  transition: transform 150ms;
+  transform: scale(1);
+  background: black;
+  color: #CDF267;
+  border-radius: 5px;
+  }
+.information name{
+  font-size:.8 vw; 
+  font-family: 'Grandstander';
+  font-weight: 400;
+  text-align: center;
+  } 
+.information img{
+  max-width: 60%;
+  border-radius: 1rem;
+
+}
+
+.character{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size:1vw;
+  color: #CDF267;
+
+}
+
+.buttonFunction{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonStyle{
+font-size:1vw;
+font-family: 'Grandstander', cursive;
+font-weight: 300;
+padding: 1rem 0;
+width: 7rem;
+text-align: center;
+margin: .5rem;
+background-color: black;
+color: #CDF267;
+border:none;
+border-radius: 5px;
+}
+
+.buttonStyle:hover{
+cursor: pointer;
+transition: transform 150ms;
+transform: scale(1.2);
+background: #CDF267;
+color: black;
+border-radius: 5px;
+}
+
+
+/*footer*/ 
+
+.footer{
+  position: fixed;
+  bottom:0;
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  line-height: .4vw; 
-}
-.card{
-   text-align: center;
-   font-family: 'Grandstander';
-   line-height: .4vw;
-   background: #CDF267;  
-   max-height: 720px;
-   margin: .5rem;
-   border-radius: .5rem;
- }   
-  
-   .name{
-      font-size:.8 vw; 
-      font-family: 'Grandstander';
-      font-weight: 400;
-           
-   }
-   .descr{
-      font-size:1 vw; 
-      font-family: 'Grandstander';
-      font-weight: 300;      
-   }
-   .a1{
-      font-size:.9 vw; 
-      font-family: 'Grandstander';
-      font-weight: 300;     
-   }
-   .a2{
-      font-size:.9 vw; 
-      font-family: 'Grandstander';
-      line-height: .5vw; 
-      font-weight: 300;      
-   }
-   .a3{
-      font-size:.9 vw; 
-      font-family: 'Grandstander';
-      line-height: .5vw; 
-      font-weight: 300;      
-   }
-   .a4{
-      font-size:.9 vw; 
-      font-family: 'Grandstander';
-      line-height: .5vw;     
-      font-weight: 300;  
-   }
-   .a5{
-      font-size:.9 vw; 
-      font-family: 'Grandstander';
-      line-height: .5vw; 
-      font-weight: 300;      
-   }
-   .a6{
-      font-size:.9 vw; 
-      font-family: 'Grandstander';
-      line-height: .5vw;  
-      font-weight: 300;     
-   }
- 
-
-/*botones*/
-.filters { /*nombre del div del boton*/
-   flex: 1;
-   order:4;
-   flex-direction: row;
-   display: inline-flex;
-   flex-direction:row;
-   flex-wrap: wrap;
-   justify-content:center;
-   align-items: flex-start;
-   width: 20%;
-   }
-
-       .character1{
-       font-family: 'Grandstander';
-       font-weight: 400;
-       align-items: center;
-     }
-     .character2{
-       font-family: 'Grandstander';
-       font-weight: 400;
-       align-items: center;
-     }
-     .buttonStatus{
-         display: inline-flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center; 
-     }
-     .status{
-        font-size:1 vw;
-        font-family: 'Grandstander', cursive;
-        font-weight: 300;
-        padding: 1rem 0;
-        width: 10rem;
-        text-align: center;
-        margin: .5rem;
-        background-color: #CDF267;
-        width: 100px;
-     }
-     .status:hover{
-cursor: pointer;
-transition: transform 150ms;
-transform: scale(1.2);
-background: black;
-color: #CDF267;
-
-}
-#order{
-   flex: 1;
-   order:4;
-   flex-direction: row;
-   display: inline-flex;
-   flex-direction:row;
-   flex-wrap: wrap;
-   justify-content:center;
-   align-items: flex-start;
-   width: 20%;
-    }
-
-/* boton de género */
-    .characters{ /*texto*/
-      font-family: 'Grandstander';
-      font-weight: 400;
-      align-items: center;
-     }
-     .buttonSpecies{
-      display: block;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-   }
-     .species{
-      /* font-size:1 vw; */
-      font-family: 'Grandstander', cursive;
-      font-weight: 300;
-      padding: 1rem 0;
-      width: 10rem;
-      text-align: center;
-      margin: .5rem;
-      background-color: #CDF267;
-      width: 100px;
-        }
-        .species:hover{
-         cursor: pointer;
-         transition: transform 150ms;
-         transform: scale(1.2);
-         background: black;
-         color: #CDF267;
-}
-
-/*boton orden AZ*/
-.alphabetic{
-   
-   flex: 1;
-   order:4;
-   flex-direction: row;
-   display: inline-flex;
-   flex-direction:row;
-   flex-wrap: wrap;
-   justify-content:center;
-   align-items: flex-start;
-   width: 20%;
-}
-.letters{
-   font-family: 'Grandstander';
-   font-weight: 400;
-   align-items: center;
-}   
-.buttonAZ{
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
-   }
-.order{
-   font-size:1 vw;
-   font-family: 'Grandstander', cursive;
-   font-weight: 300;
-   padding: 1rem 0;
-   width: 10rem;
-   text-align: center;
-   margin: .5rem;
-   background-color: #CDF267;
-   width: 100px;
-
-}
-.order:hover{
-   cursor: pointer;
-   transition: transform 150ms;
-   transform: scale(1.2);
-   background: black;
-   color: #CDF267;
-}
-
-/*footer*/ 
-
-.final{
-display: flex;
-flex-direction:column;
-flex-wrap: wrap;
-justify-content:flex-end;
-align-items: flex-end;
-width: 20%;
-}
-.footer{
-position:fixed;
-width: 100%;
-height: 6%;
-background-color:#CDF267;
-color: #6A6A6A;
-text-align: center;
-font-size:.5 vw;
-font-family: 'Grandstander', cursive;
-font-weight: 300;
-
-}
-
+  align-content: center;
+  align-items:flex-end;
+  width: 100%;
+  height:5%;
+  background-color:black;
+  color: #CDF267;
+  text-align: center;
+  font-size:1.5 vw;
+  font-family: 'Grandstander', cursive;
+  font-weight: 300;
+   } 
