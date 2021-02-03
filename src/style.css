@@ -1,4 +1,9 @@
 /*Estilos GENERALES*/
+
+.hide{
+    display: none !important;
+}
+
 * {
         margin: 0;
         padding: 0;
@@ -6,7 +11,7 @@
 }
 
 body {
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
         background: white;
 }
 
@@ -52,88 +57,78 @@ body {
                 }
 
                 .nav select,
-                .nav input {
+                .nav input,
+                .nav button {
                     padding: 8px 16px;
                     opacity: 60%;
                     display: inline-flex;
                     border-radius: 5px;
                 }
+
 /*Estilos SLIDES*/
 .texto-inicial {
         /* background:tomato */
-        height: 500px;
+        height: 300px;
         display: flex;
         align-items: center;
     }
         h1 {
-            font-family: 'Open Sans', serif;
-            font-size: 21px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
             color: #fff;
             font-weight: 300;
             text-align: center;
             line-height: 1.6;
         }
-/*Estilos TABLA*/
 
 /*Estilos MAIN*/
 section {
-        border: 2px solid gray;
-        border-radius: 1em/2em;
         width:90%;
         height:auto;
         margin: auto;
-        font-family: black,'Segoe Ui', sans-serif;
-        display: inline-block;
         align-items: space-between;
         margin-top: 15px;
         margin-bottom: 10px;
 }
 
-/*Estilos TABLE*/
-.main-table {
-        border: 1px solid white;
- }
-.titulo h1 {
-        font-weight: 400;
-         color: black;
- }
-
-th, td {
-        text-transform: capitalize;
-        text-align: center;
-        /* border: 1px solid black; */
-        height:auto;
-        width:24%;
-        align-items: space-between;
+/*Estilo Card*/
+.show {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
 }
 
-.fila1 {
-        border: 1px #f4f6ff;
-        font-family: black,'Segoe Ui', sans-serif;
-        height:auto;
-}
-.fila2 {
-        border: 1px #f4f6ff;
-        font-family: black,'Segoe Ui', sans-serif;
-        height:auto;
-}
-.fila3 {
-        border: 1px #f4f6ff;
-        font-family: black,'Segoe Ui', sans-serif; height:20px;
-        height:auto;
-}
-.fila4 {
-        border: 1px #f4f6ff;
-        font-family: black,'Segoe Ui', sans-serif;
-        height:auto;
-        
-}
-.fila5 {
-        border: 1px  #f4f6ff;
-        font-family: black,'Segoe Ui', sans-serif;
-        height:auto;
+.card {
+    font-family: 'Roboto', sans-serif;
+    background: white;
+    width: 200px;
+    height: 240px;
+    display: inline-block;
+    margin: 20px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    box-shadow: -1px 10px 30px -12px rgb(0, 0, 0);
+    z-index: 9999;
 }
 
+.card .img-container {
+    position:sticky;
+    top: -65px;
+    left: -70px;
+}
+
+.card span,h3 {
+    text-transform:capitalize;
+}
+
+.card .info p {
+    margin: 5px;
+    display: flex;;
+    font-size: 11px;
+}
+
+/*Estilo Footer*/
 footer {
         background-color:#F3C623;
         height: 50px;
@@ -147,6 +142,7 @@ footer .img{
        margin: 0 15px;
 }
 
+<<<<<<< HEAD
 /*Botones Paginacion*/
 .link {
         margin: auto;
@@ -169,3 +165,9 @@ footer .img{
         }
         
        } */
+=======
+/*Media Queris*/
+@media screen and (max-wid: 800px) {
+    
+}
+>>>>>>> Valeria
