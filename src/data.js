@@ -1,9 +1,43 @@
-// estas funciones son de ejemplo
+//Funcion ordenar A-Z
+const orderData = (pokemones, order) => {
+  if(order == "a-z") {
+    const orderAZ = pokemones.sort(function compare(a,b) {
+              if (a.name > b.name)
+                  return 1;
+              if (a.name < b.name)
+                  return -1;
+              return 0;
+          })
+    return orderAZ;
+  } else if (order == "z-a") {
+    const orderZA = pokemones.sort(function compare(a,b) {
+              if (a.name > b.name)
+                  return -1;
+              if (a.name < b.name)
+                  return 1;
+              return 0;
+          })
+          return orderZA;
+  }
+}
 
-export const example = () => {
-  return 'example';
-};
+//Funcion por tipo
+const filterData = (pokemones, tipo) => {
+  let filterType = pokemones.filter(unpokemon => unpokemon.type.includes(tipo));
+  return filterType;
+}
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+// //Limpiar datos
+// const clearData = (container) => {
+//   while(container.hasChildNodes()) {
+//     container.removeChild(container.firstChild)
+//   }
+// }
+
+//Busqueda por Nombre
+const searchPokemon = (pokemones, nombre) => {
+  let searchName = pokemones.filter(unpokemon => unpokemon.name.includes(nombre));
+  return searchName;
+}
+
+export {orderData, filterData, searchPokemon};
