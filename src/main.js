@@ -11,7 +11,6 @@ butShowAll.addEventListener ("click", function showCards() {
 // ya aniadi las variables
 
 
-
 let cards = (athlete) => {
     let card = `
     <div class="cardAthletes">
