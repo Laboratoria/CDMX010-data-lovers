@@ -1,143 +1,142 @@
-// import { example } from './data.js';
-// // import data from './data/lol/lol.js';
-//  import data from './data/pokemon/pokemon.json';
-// // import data from './data/rickandmorty/rickandmorty.js';
-const resultado = document.getElementById('table-poke');
+//Importaciones
+import {orderData, filterData, searchPokemon} from './data.js';
+
+//Variables
 const url = './data/pokemon/pokemon.json';
-let resultOrderAZ = document.getElementById('resultadosAZ');
-let resultOrderZA = document.getElementById('resultadosZA');
-let links = document.getElementById('links');
+let btnAllData = document.getElementById('viewAll')
+btnAllData.addEventListener("click", getData)
+let containerAllData = document.getElementById("containerData")
+let order = document.querySelector("#order")
+let types = document.querySelector("#types")
+let btnSearch = document.getElementById("search")
+btnSearch.addEventListener("click", searchData)
 
-//Funcion Leer Datos-Paginacion
-// function readData(url) {
-//     if (url) {
-//         resultado.innerHTML = "";
-
-//         fetch(url)
-//             .then(response => response.json())
-//             .then(response => {
-//                 for(let i of response.pokemon) {
-//                     fetch(i.url)
-//                         .then(x => x.json())
-//                         .then(x => {
-//                             resultado.innerHTML +=  `
-//                             <td><img  src="${index.img}" height="100"/></td>
-//                             <td>${index.num}</td>
-//                             <td>${index.name}</td>
-//                             <td>${index.generation.name}</td>
-//                             <td><a href="#"><img src="./img/pokebola.png" alt=""></a></td>
-//                              `;
-//                         });
-//                 };
-//                 links.innerHTML = (response.previous) ? `<button onclick="updatePokemons('${response.previous}')">Atrás</button>` : "";
-//         //Botón hacia adelante
-//         links.innerHTML += (response.next) ? `<button onclick="updatePokemons('${response.next}')">Siguiente</button>` : "";
-//             });
-//     }
-// }
-
-// Funcion Leer Datos
-const renderData = (pokemones) => {
-    pokemones.forEach((index) => {
-        let dataPokemones = `
-       <td><img  src="${index.img}" height="100"/></td>
-       <td>${index.num}</td>
-       <td>${index.name}</td>
-       <td>${index.generation.name}</td>
-       <td><a href="#"><img src="./img/pokebola.png" alt=""></a></td>
-        `;
-        resultado.insertAdjacentHTML("beforeend", dataPokemones);
-    });
+//Funcion principal
+function getData() {
+    //Peticion-promesa y data en HTML
+    fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            let pokemones = data.pokemon;
+            //251 Pokemones 
+            document.getElementById("containerData").innerHTML="";
+            pokemones.forEach((index) => {
+                containerAllData.innerHTML += `
+                    <div class="card">
+                    <div class="img-container">
+                        <img src="${index.img}">
+                    </div>
+                    <div class="info">
+                        <span class= "number"> ${index.num}</span> 
+                        <h3>${index.name}</h3>
+                        <small class="type">Type: <span>${index.type}</span></small>
+                    </div>
+                    <div class="weight">
+                        <small class="type">Weight: <span>${index.size.weight}</span></small>
+                    </div>
+                    <div class="height">
+                        <small class="type">Height: <span>${index.size.height}</span></small>
+                    </div>
+                    </div>
+                `
+            });
+    }); // Termina la peticion a ApiPoke --Local
 }
 
-//Funcion Orden A-Z
-// const orderDataAZ = (pokemonesData) => {
-//     pokemonesData.sort(function compare(a,b) {
-//         if (a.name > b.name)
-//             return 1;
-//         if (a.name < b.name)
-//             return -1;
-//         return 0;
-//     })
-//     //Operador Terniarios
-//     // pokemonesData.sort((a, b) => (a.name > b.name) ? 1 : (b.name > a.name) ? -1 : 0);
-//     pokemonesData.forEach((position) => {
-//         let dataOrder  = `
-//         <td><img  src="${position.img}" height="100"/></td>
-//         <td>${position.num}</td>
-//         <td>${position.name}</td>
-//         <td>${position.generation.name}</td>
-//         <td class="fila1" id="details-r1">
-//              <a class="img"><img id="detail" src="img/pokebola.png"/></a>
-//          </td>
-//          `;
-//          resultOrderAZ.insertAdjacentHTML("beforeend", dataOrder);
-//     })
-// }
-
-//Funcion Ordenamiento Z-A
-// const orderDataZA = (pokemonesData) => {
-//     pokemonesData.sort(function compare(a,b) {
-//         if (a.name > b.name)
-//             return -1;
-//         if (a.name < b.name)
-//             return 1;
-//         return 0;
-//     })
-//     // Operador Terniario
-//     // pokemonesData.sort((a, b) => (a.name > b.name) ? -1 : (b.name > a.name) ? 1 : 0);
-//     pokemonesData.forEach((position) => {
-//         let dataOrder  = `
-//         <td><img  src="${position.img}" height="100"/></td>
-//         <td>${position.num}</td>
-//         <td>${position.name}</td>
-//         <td>${position.generation.name}</td>
-//         <td class="fila1" id="details-r1">
-//              <a class="img">${<img id="detail" src="img/pokebola.png"/>}</a>
-//          </td>
-//          `;
-//          resultOrderZA.insertAdjacentHTML("beforeend", dataOrder);
-//     })
-// }
-
-// Fetch Leer Data
+// Evento orderData
 fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        // debugger
-        // renderPokemon(data.img)
-        let pokemones = data.pokemon;
-        renderData(pokemones);
-
-        $(document).ready(function(){
-            $('#example').DataTable({
-                data: pokemones,
-                columns : [
-                    {img: "Pokemon"},
-                    {num: "Identificador"},
-                    {name: "Nombre"},
-                    {generation: "Region"},
-                    {details: "Detalles"},
-                ]
-            });
-        });
+.then((response) => response.json())
+.then((data) => {
+    let pokemones = data.pokemon;
+    order.addEventListener('change', (e) => {
+        let orderPoke = orderData(pokemones,e.target.value);
+        // console.log(orderPoke);
+        document.getElementById("containerData").innerHTML="";
+        orderPoke.forEach((index) => {
+            containerAllData.innerHTML += `
+            <div class="card">
+            <div class="img-container">
+                <img src="${index.img}">
+            </div>
+            <div class="info">
+                <span class= "number"> ${index.num}</span> 
+                <h3>${index.name}</h3>
+                <small class="type">Type: <span>${index.type}</span></small>
+            </div>
+            <div class="weight">
+                <small class="type">Weight: <span>${index.size.weight}</span></small>
+            </div>
+            <div class="height">
+                <small class="type">Height: <span>${index.size.height}</span></small>
+            </div>
+            </div>
+            `;
+        })
     })
+})
 
-// // Fetch Orden A-Z
-//     fetch (url)
-//     .then((response)=> response.json ())
-//     .then((data) => {
-//     // debugger
-//     let pokedex = data.pokemon;
-//     orderDataAZ(pokedex);
-// });
+//Evento filtro
+fetch(url)
+.then((response) => response.json())
+.then((data) => {
+    let pokemones = data.pokemon;
+    types.addEventListener('change', (e) => {
+        let typePoke = filterData(pokemones,e.target.value);
+        // console.log(typePoke);
+        document.getElementById("containerData").innerHTML="";
+        typePoke.forEach((index) => {
+            containerAllData.innerHTML += `
+            <div class="card">
+            <div class="img-container">
+                <img src="${index.img}">
+            </div>
+            <div class="info">
+                <span class= "number"> ${index.num}</span> 
+                <h3>${index.name}</h3>
+                <small class="type">Type: <span>${index.type}</span></small>
+            </div>
+            <div class="weight">
+                <small class="type">Weight: <span>${index.size.weight}</span></small>
+            </div>
+            <div class="height">
+                <small class="type">Height: <span>${index.size.height}</span></small>
+            </div>
+            </div>
+            `;
+        })
+    })
+})
 
-// //Fetch Orden Z-A
-// fetch (url)
-// .then((response)=> response.json ())
-// .then((data) => {
-// // debugger
-// let dataInversa = data.pokemon;
-// orderDataZA(dataInversa);
-// });
+//Evento Buscar por nombre
+function searchData() {
+    fetch(url)
+    .then((response)=> response.json())
+    .then((data) => {
+        let pokemones = data.pokemon;
+        let textName = (document.getElementById("namePoke").value).toLowerCase();
+        let pokemonSearch = searchPokemon(pokemones,textName);
+        document.getElementById("containerData").innerHTML="";
 
+        pokemonSearch.forEach((index) => {containerAllData.innerHTML += `
+        <div class="card">
+        <div class="img-container">
+            <img src="${index.img}">
+        </div>
+        <div class="info">
+            <span class= "number"> ${index.num}</span> 
+            <h3>${index.name}</h3>
+            <small class="type">Type: <span>${index.type}</span></small>
+        </div>
+        <div class="weight">
+            <small class="type">Weight: <span>${index.size.weight}</span></small>
+        </div>
+        <div class="height">
+            <small class="type">Height: <span>${index.size.height}</span></small>
+        </div>
+        </div>
+        `;
+
+
+        })
+})
+}
