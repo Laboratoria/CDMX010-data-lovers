@@ -2,32 +2,15 @@ import {theAthletes} from './data/athletes/athletes.js';
 
 const butShowAll= document.getElementById("buttonShowAll");
 butShowAll.addEventListener ("click", function showCards() {
-    const losAtletas = theAthletes.athletes;
-    let cardsFunction = losAtletas.map((athlete)=>{
-        return  `
-        <div class="cardAthletes">
-        <img class="logochico" src="assets/logo rio de janeiro.png">
-        <h1 class="name">Name: ${athlete.name}</h1>
-        <h2>Gender: ${athlete.gender}</h2>
-        <h2>Height: ${athlete.height}</h2>
-        <h2>Weight: ${athlete.weight}</h2>
-        <h2>Sport: ${athlete.sport}</h2>
-        <h2>Team: ${athlete.team}</h2>
-        <h2>Age: ${athlete.age}</h2>
-        <h2>Event: ${athlete.event}</h2>
-        <h2>Medal: ${athlete.medal}</h2>
-        </div>
-        `
+    let cardsFunction = losAtletas.map((e)=>{
+        return cards(e);
     }).join(" ");
     document.getElementById("resultados").innerHTML= cardsFunction
 });
 
 // ya aniadi las variables
 
-const selectGender = document.querySelector("#genderFilter");
-const selectMedal = document.querySelector("#medalFilter");
-const selectTeam = document.querySelector("#teamFilter");
-const buttonSearch = document.getElementById("buttonsearch2");
+
 
 let cards = (athlete) => {
     let card = `
@@ -47,12 +30,18 @@ let cards = (athlete) => {
     return card;
 }
 
+const selectGender = document.querySelector("#genderFilter");
+const selectMedal = document.querySelector("#medalFilter");
+const selectTeam = document.querySelector("#pais");
+const selectSport = document.querySelector('#sportSelector')
+const buttonSearch = document.getElementById("buttonsearch2");
+
 buttonSearch.addEventListener("click", function theGenderFilter() {
     let athletesFilter = theAthletes.athletes;
     let html1 = ""
     let results = document.querySelector("#resultados");
    
-    let filterGender = athletesFilter.filter( athlete => athlete.gender === selectGender.value && athlete.medal === selectMedal.value && athlete.team === selectTeam.value)
+    let filterGender = athletesFilter.filter( athlete => athlete.sport === selectSport.value && athlete.gender === selectGender.value && athlete.medal === selectMedal.value && athlete.team === selectTeam.value)
     filterGender.forEach( athlete => { html1 += cards(athlete)})
         
     console.log('filterGender',filterGender);
@@ -86,9 +75,7 @@ losAtletas2.sort( function (a,b) {
     }
     return 0;
 });
-
 // muestra una lista con total de los equipos ganadores 
-
 document.getElementById("allCountries").addEventListener("click", function () {
     const importedAthletes=theAthletes.athletes;
     let countries = importedAthletes.slice(0);
@@ -98,16 +85,6 @@ document.getElementById("allCountries").addEventListener("click", function () {
         return x < y ? -1 : x > y ? 1 : 0;
     });
     let countriesOne = [...new Set(countries.map(item => item.team))];
-  
-    //const countTeams=countriesOne.length;
-    //let element = document.createElement("p");
-    //element.textContent = `${countTeams} Equipos ganaron medallas `;
-    //const parrafonuevo = document.querySelector("#totalTeams");
-    //parrafonuevo.appendChild(element);
-    //parrafonuevo.innerHTML =  element.textContent;
-    //console.log(countTeams);
-    //console.log(countriesOne.length);
-    //<div id="totalTeams"></div>  
     
     let cardsFunction22 = () => {
         let containerCards22 = document.getElementById("card");
@@ -156,7 +133,6 @@ function cargarCountries(){
         cargarCountries();
     //Termina la función que carga el menu desplegable de paises
 
-
     //imprime el menu de deportes
     function cargarSports (){
         let allSports = ["Archery", "Athletics", "Badminton", "Basketball", "Beach Volleyball", "Boxing", "Canoeing",
@@ -171,7 +147,6 @@ function cargarCountries(){
         sportSelector.appendChild(option);
         }}
         cargarSports();
-
 
 //Inicia la función que busca por coincidenicia de nombre
 const losAtletas= theAthletes.athletes
