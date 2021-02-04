@@ -1,11 +1,6 @@
-// estas funciones son de ejemplo
+import data from './data/rickandmorty/rickandmorty.js';
 
-// export const rickandmorty = () => {
-//   return 'rickandmorty';
-// };
-// export function rickandmorty () {
-//   return 'rickandmorty';
-// };
+
 
 export function filterAlive(personajes, status) {
 

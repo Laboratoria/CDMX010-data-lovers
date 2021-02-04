@@ -66,42 +66,43 @@ body {
   align-items: center;
 }
     .text{
-    font-size: 1.5vw;
-    line-height: 1.5vw;
-    width: 90%;
+    font-size: 1.1vw;
+    line-height: 1.1vw;
+    width: 85%;
     justify-content: center;
     align-content:center;
     align-items: center;
+    text-align: center;
     color: #020202;
     }
 
     .button{
+      height:10%;
       font-size: 15vw;
       display:flex;
       flex-direction: column;
       flex-wrap: wrap;
       justify-content: center;
-      align-content:center;
-      align-items: center;
-      justify-content: center;
+      align-content: center;
+      align-items: flex-start;
+     
       border:none;
       border-radius: 5px;
       
     }
     .Next{
      width: 223px;
-   height: 54px;
-    font-size: 1 vw;
+     height: 54px;
+    font-size: 1vw;
     font-family: 'Grandstander', cursive;
     font-weight: 300;
-    padding: 1rem 0;
-    width: 10rem;
+     width: 10rem;
     text-align: center;
     margin: 1rem;
     background-color: #CDF267;
     justify-content: center;
     align-content:center;
-    align-items: center;
+    align-items: flex-start;
     border:none;
     border-radius: 5px;
     }

@@ -35,13 +35,6 @@ const char = data.results;
 
     }
 
-    // let bottonStart = document.getElementById("go")
-    //     bottonStart.addEventListener("click", () => {
-    //     const personajes = rickandmorty(char,)
-         
-    //       showCards(personajes)
-
-    // });
 
     let bottonAlive = document.getElementById("alive")
         bottonAlive.addEventListener("click", () => {
@@ -72,6 +65,7 @@ const char = data.results;
         const personajes = filterMale(char, 'Male')
          
           showCards(personajes)
+        
 
     });
 
