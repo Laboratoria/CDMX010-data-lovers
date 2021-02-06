@@ -5,23 +5,57 @@
     <!--<meta name=“viewport” content=“width=500, initial-scale=1”>-->
     <title>Data Lovers-15</title>
     <link rel="stylesheet" href="style.css"/>
-
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
+      <!--CABECERA-->
       <div class="cabecera">
-        <div class="cabecera-bloque1"><video autoplay loop muted><source src="img/pokemon-video2.mp4" type="video/mp4"></video><!--<img src="img/pokemon-02.jpg" alt="pokemon-fantasy" />--></div>
+        <div class="cabecera-bloque1"><video autoplay loop muted><source src="img/pokemon-video3.mp4" type="video/mp4"></video><!--<img src="img/pokemon-02.jpg" alt="pokemon-fantasy" />--></div>
         <div class="cabecera-bloque2"><h1>Pokémon APP</h1></div>
       </div>
     </header>
-    <div class="botones">
-      <button class="regionKanto">Kanto</button>
-      <button class="regionJohto">Johto</button>
-    </div>
+    <!--INICIAN BOTONES-->
+    <nav>
+      <div class="botones">
+        <div class="desplegable">
+          <button class="btnDesplegable">Sort</button>
+            <div class="contenido-desplegable">
+              <span><p class="order"># Mayor</p></span>
+              <span><p class="order2"># Menor</p></span>
+              <span><p class="sortNames">A-Z</p></span>
+              <span><p class="sortNames1">Z-B</p></span>
+            </div>
+        </div>
+        <button class="region" id="kanto">Kanto</button>
+        <button class="region" id="johto">Johto</button>
+        <div class="desplegable">
+          <button class="btnDesplegable">Type</button>
+          <div class="contenido-desplegable">
+            <span><p class="types" id="grass">Grass</p></span>
+            <span><p class="types" id="water">Water</p></span>
+            <span><p class="types" id="fire">Fire</p></span>
+            <span><p class="types" id="normal">Normal</p></span>
+            <span><p class="types" id="fighting">Fighting</p></span>
+            <span><p class="types" id="flying">Flying</p></span>
+            <span><p class="types" id="poison">Poison</p></span>
+            <span><p class="types" id="ground">Ground</p></span>
+            <span><p class="types" id="rock">Rock</p></span>
+            <span><p class="types" id="bug">Bug</p></span>
+            <span><p class="types" id="ghost">Ghost</p></span>
+            <span><p class="types" id="steel">Steel</p></span>
+            <span><p class="types" id="electric">Electric</p></span>
+            <span><p class="types" id="psychic">Psychic</p></span>
+            <span><p class="types" id="ice">Ice</p></span>
+            <span><p class="types" id="dragon">Dragon</p></span>
+            <span><p class="types" id="dark">Dark</p></span>
+            <span><p class="types" id="fairy">Fairy</p></span>
+          </div>
+        </div>
+      </div>
+    </nav>
     <!--INICIA POKEDEX-->
       <div id="contenedor-pokemon" class="contenedor-pokemon">
-
       </div>
     <!--FOOTER-->
     <footer id="footer-container">
