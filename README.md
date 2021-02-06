@@ -87,7 +87,7 @@ El desarrollo de la interfaz fue gracias a la secuencia de las siguientes histor
 - 5. Yo como usuario quiero poder ordenar alfabéticamente los nombres de los Pokémon para ubicarlos en la lista rápidamente.
 
 ### Documentación de bocetos
-![Alt Text](/src/img/img_readme/01.jpg)
+![Screenshot](/src/img/img_readme/01.jpg)
 ![image](/src/img/img_readme/02.png)
 ![image](/src/img/img_readme/03.png)
 ![image](/src/img/img_readme/04.png)
