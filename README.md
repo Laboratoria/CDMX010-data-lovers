@@ -87,12 +87,11 @@ El desarrollo de la interfaz fue gracias a la secuencia de las siguientes histor
 - 5. Yo como usuario quiero poder ordenar alfabéticamente los nombres de los Pokémon para ubicarlos en la lista rápidamente.
 
 ### Documentación de bocetos
-<img src="src/img/img_readme/01.jpg" width="300" height="300"/>
-![Screenshot](/src/img/img_readme/01.jpg)
-![image](/src/img/img_readme/02.png)
-![image](/src/img/img_readme/03.png)
-![image](/src/img/img_readme/04.png)
-![image](/src/img/img_readme/05.png)
+<img src="src/img/img_readme/01.jpg" width="700" height="700"/>
+<img src="src/img/img_readme/02.png" width="850" height="437"/>
+<img src="src/img/img_readme/03.png" width="850" height="510"/>
+<img src="src/img/img_readme/04.png" width="700" height="500"/>
+<img src="src/img/img_readme/05.png" width="700" height="500"/>
 
 ## 5. Objetivos de aprendizaje
 El objetivo principal de este proyecto es que aprendas a diseñar y construir una
