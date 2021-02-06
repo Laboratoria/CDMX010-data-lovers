@@ -88,10 +88,10 @@ El desarrollo de la interfaz fue gracias a la secuencia de las siguientes histor
 
 ### Documentación de bocetos
 ![image](/src/img/img_readme/01.jpg)
-![image](/src/img/img_readme/02.jpg)
-![image](/src/img/img_readme/03.jpg)
-![image](/src/img/img_readme/04.jpg)
-![image](/src/img/img_readme/05.jpg)
+![image](/src/img/img_readme/02.png)
+![image](/src/img/img_readme/03.png)
+![image](/src/img/img_readme/04.png)
+![image](/src/img/img_readme/05.png)
 
 ## 5. Objetivos de aprendizaje
 El objetivo principal de este proyecto es que aprendas a diseñar y construir una
