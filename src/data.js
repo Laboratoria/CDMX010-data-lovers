@@ -1,6 +1,15 @@
-import data from './data/rickandmorty/rickandmorty.js';
+// import data from './data/rickandmorty/rickandmorty.js';
 
 
+
+// export const filterAlive = (personaje) => {
+
+//   const personajes = personaje.filter(all => {
+//     return all.status === status;
+//   });
+  
+//   return personajes;
+// }
 
 export function filterAlive(personajes, status) {
 
@@ -8,6 +17,7 @@ export function filterAlive(personajes, status) {
   
   return personajesFiltrados;
 }
+
 
 export function filterDead(statusDead, status) {
 

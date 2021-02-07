@@ -37,12 +37,20 @@ const char = data.results;
 
 
     let bottonAlive = document.getElementById("alive")
-        bottonAlive.addEventListener("click", () => {
-        const personajes = filterAlive(char, 'Alive')
-         
-          showCards(personajes)
+    bottonAlive.addEventListener("click", () => {
+    const personajes = filterAlive(char, 'Alive')
+     
+      showCards(personajes)
 
-    });
+});
+
+    // let bottonAlive = document.getElementById("alive")
+    //     bottonAlive.addEventListener("click", () => {
+    //     const personajes = filterAlive(char, 'Alive')
+         
+    //       showCards(personajes)
+    //       console.log(filterAlive(char, 'Alive'));
+    // });
 
     let bottonDead = document.getElementById("dead")
         bottonDead.addEventListener("click", () => {
