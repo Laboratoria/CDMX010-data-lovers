@@ -1,22 +1,12 @@
-import { orderData, filterData, searchPokemon} from '../src/data.js';
+import {getPokemones, orderData} from '../src/data.js';
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
+describe('Probar Async/Await', () => {
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
+    it('Realizar peticion a una api', async () => {
+        await getPokemones().then(data => {
+            expect(data.results).toBeGreaterThan[0];
+        });
+    });
 
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
+    it('Ordenar de A-Z', )
 });

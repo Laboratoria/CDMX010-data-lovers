@@ -1,3 +1,11 @@
+import fetch from 'cross-fetch';
+//Funcion Get Data
+async function getPokemones() {
+  const response = await fetch('https://raw.githack.com/triptofanita/CDMX010-data-lovers/master/src/data/pokemon/pokemon.json');
+  const data =  await response.json();
+  return data;
+}
+
 //Funcion ordenar A-Z
 const orderData = (pokemones, order) => {
   if(order == "a-z") {
@@ -33,4 +41,4 @@ const searchPokemon = (pokemones, nombre) => {
   return searchName;
 }
 
-export {orderData, filterData, searchPokemon};
+export {filterData, searchPokemon, orderData, getPokemones};
