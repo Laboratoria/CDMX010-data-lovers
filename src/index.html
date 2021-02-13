@@ -3,10 +3,68 @@
   <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <div class="contenedor-padre">
+        
+        <header class="header margen-interno">
+            <div class="menu">
+                <div class="logo">
+                    <a href="#"><img src="./img/logo.png" alt=""></a>
+                </div>
+                <nav class="nav">
+                    <button type="submit" id="viewAll">Pokemones</button>
+                    <select id="order">
+                            <option value="">Ordenar por:</option>
+                            <option value="a-z">A - Z</option>
+                            <option value="z-a">Z - A</option>
+                    </select>
+                    <select id="types">
+                            <option>Tipo:</option>
+                            <option value="poison">Poison</option>
+                            <option value="fire">Fire</option>
+                            <option value="grass">Grass</option>
+                            <option value="electric">Electric</option>
+                            <option value="normal">Normal</option>
+                            <option value="ice">Ice</option>
+                            <option value="fighting">Fighting</option>
+                            <option value="water">Water</option>
+                            <option value="dragon">Dragon</option>
+                            <option value="flying">Flying</option>
+                            <option value="psychic">Psychic</option>
+                            <option value="bug">Bug</option>
+                            <option value="rock">Rock</option>
+                            <option value="dragon">Dragon</option>
+                            <option value="ground">Ground</option>
+                    </select>
+                    <input type="text" id="namePoke" placeholder="Buscar por nombre: ">
+                    <button id="search">Buscar</button>
+                </nav>
+            </div>
+            <div class="texto-inicial">
+                <h1>Pokémon GO es un videojuego de realidad aumentada basado en la localización desarrollado por Niantic.
+                    <br>El juego consiste en buscar y capturar personajes de la saga Pokémon escondidos en ubicaciones del mundo real 
+                    y luchar con ellos,<br> lo que implica desplazarse físicamente por las calles de la ciudad para progresar. La aplicación 
+                    comporta un elemento de interacción social,  ya que promueve reuniones físicas de los usuarios en distintas ubicaciones
+                    de sus poblaciones y bosques entre otros.
+                </h1>
+            </div>
+        </header>
+        <div id="containerData" class="show" ></div>
+
+        <div >
+            <footer class="footer margen-interno">
+                <a class="img" href="https://www.youtube.com/pokemongo"><img id="tw" src="img/youtube.png"/></a>
+                <a class="img" href="https://www.facebook.com/PokemonGO"><img id="fb" src="img/facebook.png"/></a>
+                <a class="img" href="https://www.instagram.com/pokemongoapp"><img id= "ig" src="img/instagram.png"/></a>
+            </footer>
+        </div>
+        </div>
+
+        <script src="./main.js" type="module"></script>
+        <script src="../node_modules/cross-fetch/" type="module"></script>
   </body>
 </html>

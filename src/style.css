@@ -1,0 +1,430 @@
+/*Estilos GENERALES*/
+
+.hide{
+    display: none !important;
+}
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+body {
+        font-family: 'Roboto', sans-serif;
+        background: white;
+}
+
+.contenedor-padre{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    
+    .margen-interno {
+        padding: 3px 50px;
+    }
+
+/*Estilos Header*/
+.header {
+        background: url("./img/slide-2.png");
+        background-position: center;
+        background-attachment: contain;
+        background-size: cover;
+        display: flex;
+        flex-flow: column wrap;
+    }
+        .menu {
+           /* position: fixed;*/
+            background:  rgba(100, 100, 100, 0.5);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgb(255, 255, 255, .5);
+        }
+            .logo {
+                flex: 1 1 auto;
+                padding: 30px 30px;
+            }
+                .logo img {
+                   width: 100px;
+                   height: auto;
+                }
+
+                .nav {
+                    padding: 30px 30px;
+
+                }
+
+                .nav select,
+                .nav input,
+                .nav button {
+                    padding: 8px 16px;
+                    opacity: 60%;
+                    display: inline-flex;
+                    border-radius: 5px;
+                }
+/*Estilos SLIDES*/
+.texto-inicial {
+        /* background:tomato */
+        height: 300px;
+        display: flex;
+        align-items: center;
+    }
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            color: #fff;
+            font-weight: 300;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+/*Estilo Card*/
+.show {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    margin-left: 80px;
+    margin-right: 70px;
+}
+
+.card {
+    font-family: 'Roboto', sans-serif;
+    background: white;
+    width: 160px;
+    height: 260px;
+    display: inline-block;
+    margin: 20px;
+    padding:20px;
+    border-radius: 10px;
+    position:relative;
+    text-align: center;
+    box-shadow: -1px 10px 30px -12px rgb(0, 0, 0);
+    z-index: 9999;
+}
+
+.card .img-container {
+    position: sticky;
+    top: -70px;
+    left: -70px;
+    background-color: rgba(204, 209, 228, 0.6);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+}
+
+
+.card span,h3 {
+    text-transform:capitalize;
+}
+
+.card .info p {
+    margin: 5px;
+    display: flex;;
+    font-size: 11px;
+}
+
+/*Estilo Footer*/
+footer {
+        background-color:#F3C623;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+}
+
+footer .img{
+       margin: 0 15px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    .hide{
+        display: none !important;
+    }
+    /*Estilos Header*/
+    .header {
+            background: url("./img/slide-2.png");
+            background-position: center;
+            background-attachment: contain;
+            background-size: cover;
+            display: flex;
+            flex-flow: column wrap;
+        }
+            .menu {
+               /* position: fixed;*/
+                background: rgba(100, 100, 100, 0.5);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: -50px;
+                margin-top: -10px;
+                margin-bottom: 15px;
+                border-bottom: 1px solid rgb(255, 255, 255, .5);
+                font-size: 30px;
+            }
+                .logo {
+                    flex: 1 1 auto;
+                    padding: 30px 30px;
+                }
+                    .logo img {
+                       width: 120px;
+                       height: auto;
+                    }
+    
+                    .nav {
+                        padding: 30px 30px;
+    
+                    }
+    
+                    .nav select,
+                    .nav input,
+                    .nav button {
+                        width: 120px;
+                        height: 35px;
+                        padding: 8px 16px;
+                        opacity: 60%;
+                        display: inline-flex;
+                        border-radius: 5px;
+                        margin-left: 20px;
+                    }
+    /*Estilos SLIDES*/
+    .texto-inicial {
+            /* background:tomato */
+            visibility:hidden;
+    } 
+    /*Estilo Card*/
+    .show {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .hide{
+        display: none !important;
+    }    
+    /*Estilos Header*/
+    .header {
+            background: url("./img/slide-2.png");
+            background-position: center;
+            background-attachment: contain;
+            background-size: cover;
+            display: flex;
+            flex-flow: column wrap;
+        }
+            .menu {
+               /* position: fixed;*/
+                background: rgba(100, 100, 100, 0.5);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid rgb(255, 255, 255, .5);
+                font-size: 30px;
+            }
+                .logo {
+                    flex: 1 1 auto;
+                    padding: 30px 30px;
+                }
+                    .logo img {
+                       width: 100px;
+                       height: auto;
+                    }
+    
+                    .nav {
+                        padding: 30px 30px;
+    
+                    }
+    
+                    .nav select,
+                    .nav input,
+                    .nav button {
+                        width: 130px;
+                        height: 35px;
+                        padding: 8px 16px;
+                        opacity: 60%;
+                        border-radius: 5px;
+                    }
+    /*Estilos SLIDES*/
+    .texto-inicial {
+            /* background:tomato */
+            visibility:visible;
+            height: 300px;
+            width: 80%;
+            margin-left:65px;
+            margin-right:40px;
+            text-align: center;
+        }
+            h1 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+                color: #fff;
+                font-weight: 300;
+                text-align: center;
+                line-height: 1.6;
+            }
+
+    /*Estilos MAIN*/
+    .show {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1224px){
+    .hide{
+        display: none !important;
+    }
+    /*Estilos Header*/
+    .header {
+            height: auto;
+            background: url("./img/slide-2.png");
+            background-position: center;
+            background-attachment: contain;
+            background-size: cover;
+            display: flex;
+            flex-flow: column wrap;
+        }
+            .menu {
+               /* position: fixed;*/
+                background: rgba(100, 100, 100, 0.5);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid rgb(255, 255, 255, .5);
+            }
+                .logo {
+                    flex: 1 1 auto;
+                    padding: 30px 30px;
+                }
+                    .logo img {
+                       width: 150px;
+                       height: auto;
+                    }
+    
+                    .nav {
+                        padding: 30px 30px;
+    
+                    }
+    
+                    .nav select,
+                    .nav input,
+                    .nav button {
+                        padding: 8px 16px;
+                        opacity: 60%;
+                        display: inline-flex;
+                        border-radius: 5px;
+                    }
+    /*Estilos SLIDES*/
+    .texto-inicial {
+            /* background:tomato */
+            height: 300px;
+            display: flex;
+            align-items: center;
+            margin-right:50px;
+            margin-left:50px;
+        }
+            h1 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+                color: #fff;
+                font-weight: 400px;
+                text-align: center;
+                line-height: 1.6;
+            }
+    
+    /*Estilo Card*/
+    .show {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        width:100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 1824px){
+    .hide{
+        display: none !important;
+    }
+
+    /*Estilos Header*/
+    .header {
+            height: auto;
+            background: url("./img/slide-2.png");
+            background-position: center;
+            background-attachment: contain;
+            background-size: cover;
+            display: flex;
+            flex-flow: column wrap;
+        }
+            .menu {
+               /* position: fixed;*/
+                background: rgba(100, 100, 100, 0.5);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid rgb(255, 255, 255, .5);
+            }
+                .logo {
+                    flex: 1 1 auto;
+                    padding: 30px 30px;
+                }
+                    .logo img {
+                       width: 200px;
+                       height: auto;
+                    }
+    
+                    .nav {
+                        padding: 30px 30px;
+    
+                    }
+    
+                    .nav select,
+                    .nav input,
+                    .nav button {
+                        width: 150px;
+                        padding: 8px 16px;
+                        opacity: 60%;
+                        display: inline-flex;
+                        border-radius: 5px;
+                    }
+    /*Estilos SLIDES*/
+    .texto-inicial {
+            /* background:tomato */
+            height: 500px;
+            display: flex;
+            align-items: center;
+            margin-right:160px;
+            margin-left:160px;
+        }
+            h1 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 25px;
+                color: #fff;
+                font-weight: 400px;
+                text-align: center;
+                line-height: 1.6;
+            }
+    
+    /*Estilo Card*/
+    .show {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        width:100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
